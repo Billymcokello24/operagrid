@@ -75,34 +75,164 @@ The provider translates our `{ role: 'system' }` messages to Gemini's top-level 
 
 ### ollama (recommended for dev)
 
+Ollama is the recommended zero-cost path for local development. It lets new contributors run Deskive's AI features without setting up any paid API keys.
+
+#### 1) Install Ollama
+
+Install Ollama from [ollama.com](https://ollama.com/download) or use the platform-specific install method documented there.
+
+#### 2) Pull the required models
+
+```bash
+ollama pull llama3.2
+ollama pull llava
+ollama pull nomic-embed-text
 ```
+
+- `llama3.2` → text model
+- `llava` → vision model
+- `nomic-embed-text` → embeddings model
+
+#### 3) Configure `.env`
+
+```env
 AI_PROVIDER=ollama
-OLLAMA_BASE_URL=http://localhost:11434    # default
-AI_MODEL=llama3.2                         # text model
-AI_VISION_MODEL=llava                     # vision model
+OLLAMA_BASE_URL=http://localhost:11434
+AI_MODEL=llama3.2
+AI_VISION_MODEL=llava
 AI_EMBEDDING_MODEL=nomic-embed-text
 ```
 
-Install and pull models once:
+`OLLAMA_BASE_URL` defaults to `http://localhost:11434`, but setting it explicitly makes local setup easier to verify.
+
+#### 4) Start or restart the backend
+
+After updating `.env`, restart the backend so the new provider configuration is picked up.
+
+If Ollama is not already running, start it with:
 
 ```bash
-# One-time setup
-ollama pull llama3.2
-ollama pull llava               # for vision
-ollama pull nomic-embed-text    # for embeddings
+ollama serve
 ```
 
-Or run via Docker once the install wizard PR (#27) lands:
+#### 5) Verify the setup
+
+Use any Deskive route or feature that calls the AI provider and confirm it responds successfully.
+
+If you want to sanity-check the Ollama server itself first, this should return the locally available models:
+
+```bash
+curl http://localhost:11434/api/tags
+```
+
+#### Troubleshooting
+
+- **`ECONNREFUSED` / unreachable `OLLAMA_BASE_URL`**
+  - Ollama is probably not running yet.
+  - Start it with `ollama serve` and try again.
+- **First response is slow**
+  - The first inference can take noticeably longer while Ollama loads the model into memory.
+- **Vision requests fail**
+  - Make sure `llava` was pulled successfully and `AI_VISION_MODEL=llava` is set.
+- **Embedding requests fail**
+  - Make sure `nomic-embed-text` is installed and `AI_EMBEDDING_MODEL=nomic-embed-text` is set.
+
+#### Docker Compose note
+
+Once the install wizard / Ollama profile workflow from PR #27 is fully available, contributors may also be able to run:
 
 ```bash
 docker compose --profile ollama up -d
 ```
 
+Until then, prefer the standard local Ollama flow above.
+
 **JSON mode**: native via `format: 'json'`.
 
-**Vision**: accepts `data:` URIs and public URLs. For URLs, the provider fetches the image and base64-encodes it before sending (Ollama doesn't accept remote URLs directly).
+**Vision**: accepts `data:` URIs and public URLs. For URLs, the provider fetches the image and base64-encodes it before sending (Ollama does not accept remote URLs directly).
 
-**Reachability**: if Ollama isn't running, the provider throws `AiProviderNotConfiguredError` on first call with a clear message: `"OLLAMA_BASE_URL (http://localhost:11434 unreachable — start with 'ollama serve' or 'docker compose --profile ollama up -d')"`.
+**Reachability**: if Ollama is not running, the provider throws `AiProviderNotConfiguredError` on first call with a clear message pointing to `ollama serve` or the Docker profile flow.
+
+### ollama (recommended for dev)
+
+Ollama is the recommended zero-cost path for local development. It lets new contributors run Deskive's AI features without setting up any paid API keys.
+
+#### 1) Install Ollama
+
+Install Ollama from [ollama.com](https://ollama.com/download) or use the platform-specific install method documented there.
+
+#### 2) Pull the required models
+
+```bash
+ollama pull llama3.2
+ollama pull llava
+ollama pull nomic-embed-text
+```
+
+- `llama3.2` → text model
+- `llava` → vision model
+- `nomic-embed-text` → embeddings model
+
+#### 3) Configure `.env`
+
+```env
+AI_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+AI_MODEL=llama3.2
+AI_VISION_MODEL=llava
+AI_EMBEDDING_MODEL=nomic-embed-text
+```
+
+`OLLAMA_BASE_URL` defaults to `http://localhost:11434`, but setting it explicitly makes local setup easier to verify.
+
+#### 4) Start or restart the backend
+
+After updating `.env`, restart the backend so the new provider configuration is picked up.
+
+If Ollama is not already running, start it with:
+
+```bash
+ollama serve
+```
+
+#### 5) Verify the setup
+
+Use any Deskive route or feature that calls the AI provider and confirm it responds successfully.
+
+If you want to sanity-check the Ollama server itself first, this should return the locally available models:
+
+```bash
+curl http://localhost:11434/api/tags
+```
+
+#### Troubleshooting
+
+- **`ECONNREFUSED` / unreachable `OLLAMA_BASE_URL`**
+  - Ollama is probably not running yet.
+  - Start it with `ollama serve` and try again.
+- **First response is slow**
+  - The first inference can take noticeably longer while Ollama loads the model into memory.
+- **Vision requests fail**
+  - Make sure `llava` was pulled successfully and `AI_VISION_MODEL=llava` is set.
+- **Embedding requests fail**
+  - Make sure `nomic-embed-text` is installed and `AI_EMBEDDING_MODEL=nomic-embed-text` is set.
+
+#### Docker Compose note
+
+Once the install wizard / Ollama profile workflow from PR #27 is fully available, contributors may also be able to run:
+
+```bash
+docker compose --profile ollama up -d
+```
+
+Until then, prefer the standard local Ollama flow above.
+
+**JSON mode**: native via `format: 'json'`.
+
+**Vision**: accepts `data:` URIs and public URLs. For URLs, the provider fetches the image and base64-encodes it before sending (Ollama does not accept remote URLs directly).
+
+**Reachability**: if Ollama is not running, the provider throws `AiProviderNotConfiguredError` on first call with a clear message pointing to `ollama serve` or the Docker profile flow.
+```
 
 ### groq
 

@@ -310,6 +310,8 @@ npm run dev
 
 Frontend: `http://localhost:5175` | Backend: `http://localhost:3000`
 
+If you want a zero-cost local AI setup for development, see the [Ollama quick start](backend/docs/providers/ai.md#ollama-recommended-for-dev).
+
 ### One-Command Start
 
 For development environments:
