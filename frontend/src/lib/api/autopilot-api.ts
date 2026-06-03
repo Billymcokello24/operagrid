@@ -93,7 +93,7 @@ export const autopilotApi = {
     const url = `${baseUrl}/autopilot/execute/stream`;
 
     // Get user's current locale from localStorage or browser
-    const userLocale = localStorage.getItem('deskive_locale') || navigator.language || 'en';
+    const userLocale = localStorage.getItem('operagrid_locale') || navigator.language || 'en';
 
     const response = await fetch(url, {
       method: 'POST',

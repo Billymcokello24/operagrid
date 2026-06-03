@@ -316,7 +316,7 @@ export function SmtpImapConnect({ onBack, onSuccess }: SmtpImapConnectProps) {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     {testResult.smtp.success ? (
-                      <CheckCircle2 className="h-4 w-4 text-green-500" />
+                      <CheckCircle2 className="h-4 w-4 text-blue-500" />
                     ) : (
                       <XCircle className="h-4 w-4 text-red-500" />
                     )}
@@ -324,7 +324,7 @@ export function SmtpImapConnect({ onBack, onSuccess }: SmtpImapConnectProps) {
                   </div>
                   <div className="flex items-center gap-2">
                     {testResult.imap.success ? (
-                      <CheckCircle2 className="h-4 w-4 text-green-500" />
+                      <CheckCircle2 className="h-4 w-4 text-blue-500" />
                     ) : (
                       <XCircle className="h-4 w-4 text-red-500" />
                     )}

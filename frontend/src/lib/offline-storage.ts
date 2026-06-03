@@ -3,7 +3,7 @@
  * Handles local caching of files for offline access
  */
 
-const DB_NAME = 'deskive-offline-files';
+const DB_NAME = 'operagrid-offline-files';
 const DB_VERSION = 1;
 
 // Store names

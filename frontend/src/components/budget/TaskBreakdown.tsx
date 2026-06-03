@@ -135,13 +135,13 @@ export function TaskBreakdown({ expenses, tasks, currency, totalBudget, workspac
           const assigneeName = assignee ? (assignee.name || assignee.email) : 'Unknown';
 
           return (
-            <div key={timer.id} className="flex items-center gap-2 p-2 bg-green-50 dark:bg-green-950 rounded-md border border-green-200 dark:border-green-800">
-              <Clock className="w-4 h-4 text-green-600 dark:text-green-400 animate-pulse" />
+            <div key={timer.id} className="flex items-center gap-2 p-2 bg-blue-50 dark:bg-blue-950 rounded-md border border-blue-200 dark:border-blue-800">
+              <Clock className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
               <div className="flex-1">
-                <div className="text-sm font-medium text-green-700 dark:text-green-300">
+                <div className="text-sm font-medium text-blue-700 dark:text-blue-300">
                   {assigneeName}: {formatDuration(timerDurations[timer.id] || 0)}
                 </div>
-                <div className="text-xs text-green-600 dark:text-green-400">
+                <div className="text-xs text-blue-600 dark:text-blue-400">
                   {formatCurrency(timer.billingRate || 0)}/hr
                 </div>
               </div>

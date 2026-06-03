@@ -74,7 +74,7 @@ const ANALYTICS_TABS = [
 ];
 
 // Chart colors
-const CHART_COLORS = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#3b82f6', '#ef4444'];
+const CHART_COLORS = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b', '#2563eb', '#3b82f6', '#ef4444'];
 
 const AnalyticsPage: React.FC = () => {
   const { workspaceId } = useParams<{ workspaceId: string }>();
@@ -187,7 +187,7 @@ const AnalyticsPage: React.FC = () => {
             <p className="text-2xl font-semibold text-gray-900">{value}</p>
             {trend && (
               <div className={`ml-2 flex items-center text-sm ${
-                trend.isPositive ? 'text-green-600' : 'text-red-600'
+                trend.isPositive ? 'text-blue-600' : 'text-red-600'
               }`}>
                 {trend.isPositive ? (
                   <TrendingUp className="w-4 h-4 mr-1" />
@@ -262,7 +262,7 @@ const AnalyticsPage: React.FC = () => {
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="users" stroke="#6366f1" name="Active Users" />
-                <Line type="monotone" dataKey="projects" stroke="#10b981" name="Project Progress" />
+                <Line type="monotone" dataKey="projects" stroke="#2563eb" name="Project Progress" />
                 <Line type="monotone" dataKey="productivity" stroke="#f59e0b" name="Productivity" />
               </LineChart>
             </ResponsiveContainer>
@@ -335,19 +335,19 @@ const AnalyticsPage: React.FC = () => {
             <div className="space-y-3">
               <div className="flex justify-between">
                 <span className="text-gray-600">User Growth:</span>
-                <span className={`font-medium ${growth.userGrowthRate >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                <span className={`font-medium ${growth.userGrowthRate >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                   {growth.userGrowthRate > 0 ? '+' : ''}{growth.userGrowthRate}%
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Project Growth:</span>
-                <span className={`font-medium ${growth.projectGrowthRate >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                <span className={`font-medium ${growth.projectGrowthRate >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                   {growth.projectGrowthRate > 0 ? '+' : ''}{growth.projectGrowthRate}%
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Content Growth:</span>
-                <span className={`font-medium ${growth.contentGrowthRate >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                <span className={`font-medium ${growth.contentGrowthRate >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                   {growth.contentGrowthRate > 0 ? '+' : ''}{growth.contentGrowthRate}%
                 </span>
               </div>
@@ -508,7 +508,7 @@ const AnalyticsPage: React.FC = () => {
                 <XAxis type="number" />
                 <YAxis type="category" dataKey="name" />
                 <Tooltip />
-                <Bar dataKey="score" fill="#10b981" />
+                <Bar dataKey="score" fill="#2563eb" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -644,7 +644,7 @@ const AnalyticsPage: React.FC = () => {
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="uploads" stroke="#6366f1" name="Uploads" />
-                <Line type="monotone" dataKey="downloads" stroke="#10b981" name="Downloads" />
+                <Line type="monotone" dataKey="downloads" stroke="#2563eb" name="Downloads" />
                 <Line type="monotone" dataKey="shares" stroke="#f59e0b" name="Shares" />
               </LineChart>
             </ResponsiveContainer>

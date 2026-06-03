@@ -15,7 +15,7 @@ import {
 
 /**
  * LiveKit Client Wrapper for Video Calls
- * Integrates with deskive backend video conferencing
+ * Integrates with operagrid backend video conferencing
  */
 export class LiveKitClient {
   private room: Room | null = null;

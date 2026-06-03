@@ -91,10 +91,10 @@ const SmartToolsSection: React.FC = () => {
                   <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                   </div>
                   <div className="flex-1 bg-white rounded-lg px-4 py-2 text-sm text-gray-600 font-medium shadow-sm">
-                    https://deskive.com/ai
+                    https://operagrid.com/ai
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm">
@@ -107,7 +107,7 @@ const SmartToolsSection: React.FC = () => {
                 <div className="relative bg-gray-900">
                   <img
                     src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&h=900&fit=crop&q=90"
-                    alt="Deskive AI Assistant"
+                    alt="OperaGrid AI Assistant"
                     className="w-full h-auto object-cover"
                     style={{ aspectRatio: '16/10' }}
                   />
@@ -120,7 +120,7 @@ const SmartToolsSection: React.FC = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-white text-lg">
-                          Deskive Brain
+                          OperaGrid Brain
                         </h4>
                         <p className="text-sm text-white/80">
                           AI-powered assistant for all your work
@@ -260,10 +260,10 @@ const SmartToolsSection: React.FC = () => {
                     <div className="flex gap-2">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                     </div>
                     <div className="flex-1 bg-white rounded-lg px-4 py-2 text-sm text-gray-600 font-medium shadow-sm">
-                      https://deskive.com/search
+                      https://operagrid.com/search
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm">

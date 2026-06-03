@@ -334,7 +334,7 @@ export const MessageActions: React.FC<MessageActionsProps> = ({
             </DropdownMenuItem>
 
             <DropdownMenuItem onClick={handleAICreateProject}>
-              <FolderPlus className="mr-2 h-4 w-4 text-green-500" />
+              <FolderPlus className="mr-2 h-4 w-4 text-blue-500" />
               Create Project
             </DropdownMenuItem>
 

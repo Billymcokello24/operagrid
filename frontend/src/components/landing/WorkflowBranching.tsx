@@ -80,7 +80,7 @@ const WorkflowBranching: React.FC = () => {
       icon: CheckSquare,
       label: intl.formatMessage({ id: 'featuresGrid.tasks' }),
       description: intl.formatMessage({ id: 'smartTools.features.breakDownWork' }),
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-blue-500 to-blue-500',
       content: {
         type: 'tasks',
         tasks: [
@@ -470,26 +470,26 @@ const WorkflowBranching: React.FC = () => {
                             {/* Created From Badge */}
                             <div className="flex items-center gap-0.5 bg-sky-100 px-1.5 py-0.5 rounded-full mb-1">
                               <FileText className="w-2 h-2 text-sky-600" />
-                              <ArrowRight className="w-2 h-2 text-green-600" />
-                              <CheckSquare className="w-2 h-2 text-green-600" />
-                              <span className="text-[7px] text-green-700 font-semibold ml-0.5">Tasks from notes</span>
+                              <ArrowRight className="w-2 h-2 text-blue-600" />
+                              <CheckSquare className="w-2 h-2 text-blue-600" />
+                              <span className="text-[7px] text-blue-700 font-semibold ml-0.5">Tasks from notes</span>
                             </div>
 
                             {/* Tasks Content - Todo List Style */}
-                            <div className="bg-white/90 rounded border border-green-200 px-1.5 py-1 space-y-1">
+                            <div className="bg-white/90 rounded border border-blue-200 px-1.5 py-1 space-y-1">
                               {/* Tasks Header */}
-                              <div className="flex items-center justify-between pb-0.5 border-b border-green-100">
+                              <div className="flex items-center justify-between pb-0.5 border-b border-blue-100">
                                 <div className="flex items-center gap-1">
-                                  <div className="w-1.5 h-1.5 rounded-sm bg-green-500"></div>
-                                  <p className="text-[8px] text-green-900 font-bold">Dashboard Tasks</p>
+                                  <div className="w-1.5 h-1.5 rounded-sm bg-blue-500"></div>
+                                  <p className="text-[8px] text-blue-900 font-bold">Dashboard Tasks</p>
                                 </div>
                               </div>
 
                               {/* Task Items */}
                               <div className="space-y-0.5">
                                 {(node.content.tasks || []).map((task: any, idx: number) => (
-                                  <div key={idx} className={`flex items-center gap-1 px-1 py-0.5 rounded ${task.done ? 'bg-green-50' : 'bg-gray-50'}`}>
-                                    <div className={`w-2.5 h-2.5 rounded border-2 ${task.done ? 'bg-green-500 border-green-500' : 'border-gray-300'} flex items-center justify-center flex-shrink-0`}>
+                                  <div key={idx} className={`flex items-center gap-1 px-1 py-0.5 rounded ${task.done ? 'bg-blue-50' : 'bg-gray-50'}`}>
+                                    <div className={`w-2.5 h-2.5 rounded border-2 ${task.done ? 'bg-blue-500 border-blue-500' : 'border-gray-300'} flex items-center justify-center flex-shrink-0`}>
                                       {task.done && <span className="text-white text-[6px] font-bold">✓</span>}
                                     </div>
                                     <span className={`text-[8px] flex-1 ${task.done ? 'text-gray-500 line-through' : 'text-gray-800'}`}>
@@ -500,12 +500,12 @@ const WorkflowBranching: React.FC = () => {
                               </div>
 
                               {/* Progress Footer */}
-                              <div className="flex items-center justify-between pt-0.5 border-t border-green-100">
+                              <div className="flex items-center justify-between pt-0.5 border-t border-blue-100">
                                 <div className="flex items-center gap-1">
                                   <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" className="w-2.5 h-2.5 rounded-full" alt="" />
                                   <span className="text-[7px] text-gray-600">Assigned to Mike</span>
                                 </div>
-                                <span className="text-[7px] text-green-600 font-bold">
+                                <span className="text-[7px] text-blue-600 font-bold">
                                   {(node.content.tasks || []).filter((t: any) => t.done).length}/{(node.content.tasks || []).length}
                                 </span>
                               </div>
@@ -564,8 +564,8 @@ const WorkflowBranching: React.FC = () => {
                         {node.content.type === 'report' && (
                           <div className="space-y-1">
                             {/* Created From Badge */}
-                            <div className="flex items-center gap-0.5 bg-green-100 px-1.5 py-0.5 rounded-full mb-1">
-                              <CheckSquare className="w-2 h-2 text-green-600" />
+                            <div className="flex items-center gap-0.5 bg-blue-100 px-1.5 py-0.5 rounded-full mb-1">
+                              <CheckSquare className="w-2 h-2 text-blue-600" />
                               <ArrowRight className="w-2 h-2 text-sky-600" />
                               <BarChart3 className="w-2 h-2 text-sky-600" />
                               <span className="text-[7px] text-sky-700 font-semibold ml-0.5">Live analytics</span>
@@ -579,7 +579,7 @@ const WorkflowBranching: React.FC = () => {
                                   <div className="w-1.5 h-1.5 rounded-sm bg-sky-500"></div>
                                   <p className="text-[8px] text-sky-900 font-bold">Project Analytics</p>
                                 </div>
-                                <span className="text-[6px] text-green-600 bg-green-100 px-1 py-0.5 rounded-full font-bold">LIVE</span>
+                                <span className="text-[6px] text-blue-600 bg-blue-100 px-1 py-0.5 rounded-full font-bold">LIVE</span>
                               </div>
 
                               {/* Metrics */}
@@ -602,7 +602,7 @@ const WorkflowBranching: React.FC = () => {
                               <div className="flex items-center justify-between pt-0.5 border-t border-sky-100">
                                 <div className="flex items-center gap-1">
                                   <span className="text-[8px]">🎯</span>
-                                  <p className="text-[8px] text-green-600 font-bold">{node.content.insight}</p>
+                                  <p className="text-[8px] text-blue-600 font-bold">{node.content.insight}</p>
                                 </div>
                                 <span className="text-[6px] text-gray-500">Updated now</span>
                               </div>

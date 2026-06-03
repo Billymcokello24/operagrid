@@ -58,7 +58,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery: _se
   const getResultColor = (type: string) => {
     switch (type) {
       case 'message': return 'text-blue-600';
-      case 'file': return 'text-green-600';
+      case 'file': return 'text-blue-600';
       case 'project': return 'text-purple-600';
       case 'note': return 'text-yellow-600';
       case 'calendar': return 'text-red-600';
@@ -146,7 +146,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery: _se
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-green-600" />
+                      <FileText className="h-4 w-4 text-blue-600" />
                       <span className="text-sm">Documents</span>
                     </div>
                     <span className="text-sm font-medium">1,293</span>
@@ -173,12 +173,12 @@ export function SearchResults({ results, searchType, isLoading, searchQuery: _se
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-5 w-5 text-green-600" />
+                  <Clock className="h-5 w-5 text-blue-600" />
                   <h3 className="font-semibold">Recent Activity</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium">New document uploaded</p>
                       <p className="text-xs text-muted-foreground">Q3 Marketing Strategy.pdf • 2 min ago</p>
@@ -214,7 +214,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery: _se
                     <p className="text-sm font-medium">📊 Show me this week's project updates</p>
                     <p className="text-xs text-muted-foreground mt-1">Find recent progress reports and status updates</p>
                   </div>
-                  <div className="p-3 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg cursor-pointer hover:shadow-sm transition-shadow">
+                  <div className="p-3 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-lg cursor-pointer hover:shadow-sm transition-shadow">
                     <p className="text-sm font-medium">💡 What decisions were made in recent meetings?</p>
                     <p className="text-xs text-muted-foreground mt-1">Search meeting notes for action items</p>
                   </div>
@@ -458,7 +458,7 @@ function getResultIcon(type: string) {
 function getResultBgColor(type: string) {
   switch (type) {
     case 'message': return 'bg-blue-600';
-    case 'file': return 'bg-green-600';
+    case 'file': return 'bg-blue-600';
     case 'project': return 'bg-purple-600';
     case 'note': return 'bg-yellow-600';
     case 'calendar': return 'bg-red-600';

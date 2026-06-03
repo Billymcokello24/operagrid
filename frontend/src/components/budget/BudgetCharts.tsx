@@ -30,7 +30,7 @@ const COLORS = {
   spent: '#f97316', // orange
   remaining: '#22c55e', // green
   overbudget: '#ef4444', // red
-  categories: ['#3b82f6', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b', '#6366f1', '#10b981', '#f43f5e'],
+  categories: ['#3b82f6', '#8b5cf6', '#ec4899', '#3b82f6', '#f59e0b', '#6366f1', '#6366f1', '#f43f5e'],
 };
 
 export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
@@ -362,7 +362,7 @@ export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
               {/* Daily Burn Rate */}
               <div className="space-y-2">
                 <div className="text-sm text-muted-foreground">{formatMessage({ id: 'budget.charts.idealDailyRate' })}</div>
-                <div className="text-2xl font-bold text-green-500">
+                <div className="text-2xl font-bold text-blue-500">
                   {formatCurrency(Number(burnRateData.idealBurnRate))}
                 </div>
                 <div className="text-xs text-muted-foreground">{formatMessage({ id: 'budget.charts.perDay' })}</div>
@@ -381,8 +381,8 @@ export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
                     </>
                   ) : (
                     <>
-                      <TrendingDown className="w-3 h-3 text-green-500" />
-                      <span className="text-green-500">{formatMessage({ id: 'budget.charts.onTrack' })}</span>
+                      <TrendingDown className="w-3 h-3 text-blue-500" />
+                      <span className="text-blue-500">{formatMessage({ id: 'budget.charts.onTrack' })}</span>
                     </>
                   )}
                 </div>
@@ -415,7 +415,7 @@ export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
                       })}
                     </span>
                   ) : (
-                    <span className="text-green-500">{formatMessage({ id: 'budget.charts.withinBudget' })}</span>
+                    <span className="text-blue-500">{formatMessage({ id: 'budget.charts.withinBudget' })}</span>
                   )}
                 </div>
               </div>
@@ -429,7 +429,7 @@ export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
                   className={
                     Number(burnRateData.budgetPercentageUsed) > Number(burnRateData.percentageComplete)
                       ? 'text-red-500'
-                      : 'text-green-500'
+                      : 'text-blue-500'
                   }
                 >
                   {Number(burnRateData.budgetPercentageUsed) > Number(burnRateData.percentageComplete)
@@ -463,7 +463,7 @@ export function BudgetCharts({ summary, expenses }: BudgetChartsProps) {
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-green-500"
+                      className="h-full bg-blue-500"
                       style={{ width: `${burnRateData.percentageComplete}%` }}
                     />
                   </div>

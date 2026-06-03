@@ -79,7 +79,7 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
     statusColumns: [
       { id: '1', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.toDo', defaultMessage: 'To Do' }), color: 'bg-blue-500' },
       { id: '2', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.inProgress', defaultMessage: 'In Progress' }), color: 'bg-yellow-500' },
-      { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-green-500' }
+      { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-blue-500' }
     ]
   })
   const [attachments, setAttachments] = useState<RichTextAttachment[]>([])
@@ -207,13 +207,13 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
       const hexToTailwind: Record<string, string> = {
         '#3B82F6': 'bg-blue-500',
         '#EAB308': 'bg-yellow-500',
-        '#22C55E': 'bg-green-500',
+        '#22C55E': 'bg-blue-500',
         '#EF4444': 'bg-red-500',
         '#A855F7': 'bg-purple-500',
         '#F97316': 'bg-orange-500',
         '#EC4899': 'bg-pink-500',
         '#6366F1': 'bg-indigo-500',
-        '#14B8A6': 'bg-teal-500',
+        '#14B8A6': 'bg-blue-500',
         '#06B6D4': 'bg-cyan-500'
       }
 
@@ -237,7 +237,7 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
         : [
             { id: '1', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.toDo', defaultMessage: 'To Do' }), color: 'bg-blue-500' },
             { id: '2', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.inProgress', defaultMessage: 'In Progress' }), color: 'bg-yellow-500' },
-            { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-green-500' }
+            { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-blue-500' }
           ]
 
       // Convert API attachments to UI format
@@ -350,13 +350,13 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
       const colorMap: Record<string, string> = {
         'bg-blue-500': '#3B82F6',
         'bg-yellow-500': '#EAB308',
-        'bg-green-500': '#22C55E',
+        'bg-blue-500': '#22C55E',
         'bg-red-500': '#EF4444',
         'bg-purple-500': '#A855F7',
         'bg-orange-500': '#F97316',
         'bg-pink-500': '#EC4899',
         'bg-indigo-500': '#6366F1',
-        'bg-teal-500': '#14B8A6',
+        'bg-blue-500': '#14B8A6',
         'bg-cyan-500': '#06B6D4'
       }
 
@@ -487,7 +487,7 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
         intl.formatMessage({ id: 'modules.projects.createProject.projectType.kanban.features.leadTime', defaultMessage: 'Lead time tracking' }),
         intl.formatMessage({ id: 'modules.projects.createProject.projectType.kanban.features.cumulativeFlow', defaultMessage: 'Cumulative flow' })
       ],
-      color: 'bg-green-200/30 dark:bg-green-900/30 border-green-500/30'
+      color: 'bg-blue-200/30 dark:bg-blue-900/30 border-blue-500/30'
     },
     {
       type: 'SCRUM' as ProjectType,
@@ -562,13 +562,13 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
   const statusColors = [
     'bg-blue-500',
     'bg-yellow-500',
-    'bg-green-500',
+    'bg-blue-500',
     'bg-red-500',
     'bg-purple-500',
     'bg-orange-500',
     'bg-pink-500',
     'bg-indigo-500',
-    'bg-teal-500',
+    'bg-blue-500',
     'bg-cyan-500'
   ]
 
@@ -720,7 +720,7 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
       statusColumns: [
         { id: '1', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.toDo', defaultMessage: 'To Do' }), color: 'bg-blue-500' },
         { id: '2', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.inProgress', defaultMessage: 'In Progress' }), color: 'bg-yellow-500' },
-        { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-green-500' }
+        { id: '3', name: intl.formatMessage({ id: 'modules.projects.createProject.status.defaults.done', defaultMessage: 'Done' }), color: 'bg-blue-500' }
       ]
     })
   }
@@ -899,7 +899,7 @@ export function CreateProjectModal({ open, onOpenChange, workspaceId, onProjectC
                             <div className={cn(
                               "text-muted-foreground",
                               attachment.type === 'notes' && "text-blue-500",
-                              attachment.type === 'events' && "text-green-500",
+                              attachment.type === 'events' && "text-blue-500",
                               attachment.type === 'files' && "text-orange-500"
                             )}>
                               {getAttachmentIcon(attachment.type)}

@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import LanguageSwitcher from '../LanguageSwitcher';
 
-const GITHUB_REPO = 'deskive/deskive';
+const GITHUB_REPO = 'operagrid/operagrid';
 const GITHUB_URL = `https://github.com/${GITHUB_REPO}`;
 
 const formatStarCount = (count: number): string => {
@@ -30,7 +30,7 @@ const GitHubStarsButton: React.FC = () => {
     let cancelled = false;
     const cached = (() => {
       try {
-        const raw = localStorage.getItem('deskive:github-stars');
+        const raw = localStorage.getItem('operagrid:github-stars');
         if (!raw) return null;
         const parsed = JSON.parse(raw) as { count: number; ts: number };
         if (Date.now() - parsed.ts < 60 * 60 * 1000) return parsed.count;
@@ -52,7 +52,7 @@ const GitHubStarsButton: React.FC = () => {
         const count = Number(data.stargazers_count) || 0;
         setStars(count);
         try {
-          localStorage.setItem('deskive:github-stars', JSON.stringify({ count, ts: Date.now() }));
+          localStorage.setItem('operagrid:github-stars', JSON.stringify({ count, ts: Date.now() }));
         } catch {
           /* ignore */
         }
@@ -72,7 +72,7 @@ const GitHubStarsButton: React.FC = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 transition-colors whitespace-nowrap text-sm font-semibold text-gray-800"
-      aria-label="Star Deskive on GitHub"
+      aria-label="Star OperaGrid on GitHub"
     >
       <Github className="w-4 h-4" />
       <span className="hidden lg:inline">Star</span>
@@ -118,7 +118,7 @@ const ModernHeader: React.FC = () => {
       icon: Calendar,
       name: intl.formatMessage({ id: 'header.products.calendar.name' }),
       description: intl.formatMessage({ id: 'header.products.calendar.description' }),
-      color: 'from-emerald-500 to-emerald-600'
+      color: 'from-blue-500 to-blue-600'
     },
     {
       icon: FileText,
@@ -250,13 +250,13 @@ const ModernHeader: React.FC = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3">
               <img
-                src="https://cdn.deskive.com/deskive/logo.png"
-                alt="Deskive Logo"
+                src="/logo.png"
+                alt="OperaGrid Logo"
                 className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 transition-all duration-300 group-hover:scale-110"
               />
               <div className="flex items-center gap-2 sm:gap-3">
                 <span className="text-gray-900 font-black text-lg sm:text-xl md:text-2xl tracking-tight">
-                  Deskive
+                  OperaGrid
                 </span>
               </div>
             </div>

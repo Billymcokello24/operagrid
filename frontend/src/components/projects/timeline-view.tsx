@@ -49,14 +49,14 @@ export function TimelineView({ tasks, onAddTask }: TimelineViewProps) {
     switch (priority) {
       case 'high': return 'bg-red-500'
       case 'medium': return 'bg-yellow-500'
-      case 'low': return 'bg-green-500'
+      case 'low': return 'bg-blue-500'
       default: return 'bg-gray-500'
     }
   }
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return 'bg-green-100 text-green-800'
+      case 'completed': return 'bg-blue-100 text-blue-800'
       case 'in_progress': return 'bg-blue-100 text-blue-800'
       case 'review': return 'bg-purple-100 text-purple-800'
       default: return 'bg-gray-100 text-gray-800'
@@ -170,7 +170,7 @@ export function TimelineView({ tasks, onAddTask }: TimelineViewProps) {
                 <span className="text-sm">Medium Priority</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                 <span className="text-sm">Low Priority</span>
               </div>
             </div>

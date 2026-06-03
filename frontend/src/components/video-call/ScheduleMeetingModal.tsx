@@ -67,7 +67,7 @@ export function ScheduleMeetingModal({ open, onOpenChange, defaultDate, defaultH
   const { data: workspaceMembers = [] } = useWorkspaceMembers(workspaceId || '')
 
   // Basic meeting details
-  const [selectedPlatform, setSelectedPlatform] = useState<string>('deskive-video')
+  const [selectedPlatform, setSelectedPlatform] = useState<string>('operagrid-video')
   const [meetingTitle, setMeetingTitle] = useState('')
   const [meetingDescription, setMeetingDescription] = useState('')
   const [isCreating, setIsCreating] = useState(false)
@@ -108,21 +108,21 @@ export function ScheduleMeetingModal({ open, onOpenChange, defaultDate, defaultH
 
   const platforms: MeetingPlatform[] = [
     {
-      id: 'deskive-video',
+      id: 'operagrid-video',
       name: intl.formatMessage({ id: 'modules.videoCallsApp.modal.platforms.video' }),
       icon: <Video className="h-5 w-5" />,
       color: 'gradient-primary',
       description: intl.formatMessage({ id: 'modules.videoCallsApp.modal.platforms.videoDescription' })
     },
     {
-      id: 'deskive-audio',
+      id: 'operagrid-audio',
       name: intl.formatMessage({ id: 'modules.videoCallsApp.modal.platforms.audio' }),
       icon: <Mic className="h-5 w-5" />,
-      color: 'bg-gradient-to-r from-green-500 to-blue-500',
+      color: 'bg-gradient-to-r from-blue-500 to-blue-500',
       description: intl.formatMessage({ id: 'modules.videoCallsApp.modal.platforms.audioDescription' })
     },
     {
-      id: 'deskive-webinar',
+      id: 'operagrid-webinar',
       name: intl.formatMessage({ id: 'modules.videoCallsApp.modal.platforms.webinar' }),
       icon: <Users className="h-5 w-5" />,
       color: 'bg-gradient-to-r from-purple-500 to-pink-500',
@@ -295,11 +295,11 @@ export function ScheduleMeetingModal({ open, onOpenChange, defaultDate, defaultH
 
       // Build context based on meeting details
       const contextParts: string[] = []
-      if (selectedPlatform === 'deskive-video') {
+      if (selectedPlatform === 'operagrid-video') {
         contextParts.push('Video conference meeting')
-      } else if (selectedPlatform === 'deskive-audio') {
+      } else if (selectedPlatform === 'operagrid-audio') {
         contextParts.push('Audio-only conference call')
-      } else if (selectedPlatform === 'deskive-webinar') {
+      } else if (selectedPlatform === 'operagrid-webinar') {
         contextParts.push('Webinar presentation')
       }
 

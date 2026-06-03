@@ -372,20 +372,20 @@ export class DropboxController {
     };
   }
 
-  // ==================== Import to Deskive ====================
+  // ==================== Import to OperaGrid ====================
 
   @Post('import')
   @UseGuards(AuthGuard, WorkspaceGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: 'Import a file from Dropbox to Deskive storage' })
+  @ApiOperation({ summary: 'Import a file from Dropbox to OperaGrid storage' })
   @ApiParam({ name: 'workspaceId', description: 'Workspace ID' })
-  @ApiResponse({ status: 201, description: 'File imported to Deskive' })
+  @ApiResponse({ status: 201, description: 'File imported to OperaGrid' })
   async importFile(
     @Param('workspaceId') workspaceId: string,
     @CurrentUser('sub') userId: string,
     @Body() dto: DropboxImportFileDto,
   ) {
-    const result = await this.dropboxService.importFileToDeskive(
+    const result = await this.dropboxService.importFileToOperaGrid(
       userId,
       workspaceId,
       dto.path,
@@ -402,14 +402,14 @@ export class DropboxController {
   @Post('export')
   @UseGuards(AuthGuard, WorkspaceGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: 'Export a Deskive file to Dropbox' })
+  @ApiOperation({ summary: 'Export a OperaGrid file to Dropbox' })
   @ApiParam({ name: 'workspaceId', description: 'Workspace ID' })
   @ApiBody({
     schema: {
       type: 'object',
       required: ['fileId'],
       properties: {
-        fileId: { type: 'string', description: 'Deskive file ID to export' },
+        fileId: { type: 'string', description: 'OperaGrid file ID to export' },
         targetPath: {
           type: 'string',
           description: 'Dropbox path (optional, defaults to root with file name)',

@@ -417,7 +417,7 @@ export function VideoCallInterface({ className }: VideoCallInterfaceProps) {
                 "text-2xl font-bold text-white",
                 isCurrentUser
                   ? "bg-gradient-to-br from-blue-500 to-indigo-600"
-                  : "bg-gradient-to-br from-green-500 to-blue-600"
+                  : "bg-gradient-to-br from-blue-500 to-blue-600"
               )}>
                 {isCurrentUser ? 'You' : (participant.name || 'U').split(' ').map((n: string) => n[0]).join('')}
               </AvatarFallback>
@@ -448,7 +448,7 @@ export function VideoCallInterface({ className }: VideoCallInterfaceProps) {
         {/* Speaking indicator */}
         {participant.isSpeaking && !participant.isAudioMuted && (
           <div className="absolute top-2 right-2 z-10">
-            <div className="bg-green-500 rounded-full p-2 animate-pulse shadow-lg">
+            <div className="bg-blue-500 rounded-full p-2 animate-pulse shadow-lg">
               <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
           </div>
@@ -555,9 +555,9 @@ export function VideoCallInterface({ className }: VideoCallInterfaceProps) {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             {callType === 'video' ? (
-              <Video className="h-5 w-5 text-green-400" />
+              <Video className="h-5 w-5 text-blue-400" />
             ) : (
-              <Mic className="h-5 w-5 text-green-400" />
+              <Mic className="h-5 w-5 text-blue-400" />
             )}
             <span className="font-medium">
               {isGroupCall ? `Group ${callType} call` : `${callType} call`}
@@ -572,7 +572,7 @@ export function VideoCallInterface({ className }: VideoCallInterfaceProps) {
           )}
 
           {isCaptionsEnabled && (
-            <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/30">
+            <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
               <Captions className="h-3 w-3 mr-1" />
               CC
             </Badge>
@@ -818,7 +818,7 @@ export function VideoCallInterface({ className }: VideoCallInterfaceProps) {
             onClick={toggleCaptions}
             className={cn(
               "rounded-full h-12 w-12 p-0 shadow-lg hover:scale-105 transition-transform",
-              isCaptionsEnabled && "bg-green-600 hover:bg-green-700"
+              isCaptionsEnabled && "bg-blue-600 hover:bg-blue-700"
             )}
             title={isCaptionsEnabled ? "Turn off captions" : "Turn on captions"}
           >

@@ -74,7 +74,7 @@ export default function ErrorPage({ error, resetErrorBoundary }: ErrorPageProps)
           </p>
           <div className="flex justify-center">
             <a 
-              href="mailto:support@deskive.com"
+              href="mailto:support@operagrid.com"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <Mail className="h-4 w-4" />

@@ -109,7 +109,7 @@ export default function AISearchInterface({
           channel: 'general',
           channelType: 'public',
           timestamp: new Date().toISOString(),
-          source: 'deskive',
+          source: 'operagrid',
           metadata: {
             channelId: 'general',
             authorName: 'John Doe',
@@ -127,7 +127,7 @@ export default function AISearchInterface({
           fileType: 'application/pdf',
           fileSize: 2048000,
           filePath: '/files/Q3-Budget-Report.pdf',
-          source: 'deskive',
+          source: 'operagrid',
           metadata: {
             authorName: 'Jane Smith',
           }
@@ -649,7 +649,7 @@ function SearchResultCard({ result, onSelect, query }: SearchResultCardProps) {
     const iconMap = {
       message: <MessageSquare className="h-4 w-4 text-blue-500" />,
       file: <FileText className="h-4 w-4 text-gray-500" />,
-      note: <FileText className="h-4 w-4 text-green-500" />,
+      note: <FileText className="h-4 w-4 text-blue-500" />,
       task: <Target className="h-4 w-4 text-orange-500" />,
       project: <Folder className="h-4 w-4 text-purple-500" />,
       event: <Calendar className="h-4 w-4 text-red-500" />,

@@ -105,7 +105,7 @@ const getCoreModules = (intl: ReturnType<typeof useIntl>) => [
     id: 'files',
     icon: FileText,
     name: intl.formatMessage({ id: 'interconnectedEcosystem.modules.files.name' }),
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-blue-500 to-blue-500',
     desc: intl.formatMessage({ id: 'interconnectedEcosystem.modules.files.desc' }),
     features: getFeatures('files', intl),
     botCapabilities: getBotCapabilities('files', intl)
@@ -437,7 +437,7 @@ const InterconnectedEcosystemSection: React.FC = () => {
                       playsInline
                       className="w-full h-full object-cover"
                     >
-                      <source src="https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/927b0ab9-10b3-426f-a787-a7a6c9d0cd74-1768897335558-1768897334075-ai_background.mp4" type="video/mp4" />
+                      <source src="https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/927b0ab9-10b3-426f-a787-a7a6c9d0cd74-1768897335558-1768897334075-ai_background.mp4" type="video/mp4" />
                     </video>
                   </div>
 
@@ -574,7 +574,7 @@ const InterconnectedEcosystemSection: React.FC = () => {
 
                     <div className={`relative w-14 h-14 rounded-full shadow-lg border-3 border-white transition-all duration-300 overflow-hidden ${activatedModule === module.id ? 'ring-2 ring-purple-400 ring-offset-2' : ''}`}>
                       <img
-                        src="https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/4c7ab96c-fdef-49e4-a805-cac0ac155312-1768971083162-1768971081319-chatbot.gif"
+                        src="https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/4c7ab96c-fdef-49e4-a805-cac0ac155312-1768971083162-1768971081319-chatbot.gif"
                         alt="AI Bot"
                         className="w-full h-full object-cover"
                       />
@@ -680,7 +680,7 @@ const InterconnectedEcosystemSection: React.FC = () => {
                                 transition={{ delay: idx * 0.05 }}
                                 className="text-xs text-gray-600 flex items-start gap-1.5"
                               >
-                                <span className="text-green-500 mt-0.5">✓</span>
+                                <span className="text-blue-500 mt-0.5">✓</span>
                                 <span>{feature}</span>
                               </motion.li>
                             ))}
@@ -691,9 +691,9 @@ const InterconnectedEcosystemSection: React.FC = () => {
                   </AnimatePresence>
 
                   {/* Active Indicator */}
-                  <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-green-500 rounded-full">
+                  <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-blue-500 rounded-full">
                     <motion.div
-                      className="absolute inset-0 bg-green-500 rounded-full"
+                      className="absolute inset-0 bg-blue-500 rounded-full"
                       animate={{ scale: [1, 1.5, 1], opacity: [1, 0, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     />

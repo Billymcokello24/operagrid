@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Deskive",
+  "productName": "OperaGrid",
   "version": "1.0.1",
   "identifier": "com.deskive.app",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Deskive - All-in-One Workspace",
+        "title": "OperaGrid - All-in-One Workspace",
         "width": 1400,
         "height": 900,
         "minWidth": 1000,

@@ -4,7 +4,7 @@ import { SearchProviderService } from './search-provider.service';
 
 /**
  * Pluggable keyword search module — exposes SearchProviderService for
- * full-text + faceted search over deskive workspace content (workspaces,
+ * full-text + faceted search over operagrid workspace content (workspaces,
  * projects, tasks, channels, files, calendar events). Coexists with the
  * existing SearchModule under `modules/search/` which handles Qdrant-
  * based semantic / vector search.

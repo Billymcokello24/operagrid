@@ -111,7 +111,7 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   // Get initial locale from localStorage or default to 'en'
   const [locale, setLocaleState] = useState<SupportedLocale>(() => {
-    const savedLocale = localStorage.getItem('deskive_locale');
+    const savedLocale = localStorage.getItem('operagrid_locale');
     if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as SupportedLocale)) {
       return savedLocale as SupportedLocale;
     }
@@ -120,7 +120,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
   const setLocale = (newLocale: SupportedLocale) => {
     setLocaleState(newLocale);
-    localStorage.setItem('deskive_locale', newLocale);
+    localStorage.setItem('operagrid_locale', newLocale);
   };
 
   useEffect(() => {

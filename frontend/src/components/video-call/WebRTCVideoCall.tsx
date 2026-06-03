@@ -121,7 +121,7 @@ export const WebRTCVideoCall: React.FC<WebRTCVideoCallProps> = ({
         <div className="bg-gray-900 rounded-lg p-4 shadow-xl w-80">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
               <span className="text-white text-sm font-medium">
                 Call with {remoteUserName}
               </span>
@@ -166,7 +166,7 @@ export const WebRTCVideoCall: React.FC<WebRTCVideoCallProps> = ({
               <div
                 className={cn(
                   'w-2 h-2 rounded-full',
-                  callState.connectionState === 'connected' && 'bg-green-500 animate-pulse',
+                  callState.connectionState === 'connected' && 'bg-blue-500 animate-pulse',
                   callState.connectionState === 'connecting' && 'bg-yellow-500 animate-pulse',
                   callState.connectionState === 'failed' && 'bg-red-500'
                 )}

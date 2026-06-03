@@ -7,7 +7,7 @@ import { ConfigService } from '@nestjs/config';
 import nock from 'nock';
 import { TrelloService } from '../trello.service';
 import { TrelloOAuthService } from '../trello-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import { TestFixture } from '../../../../../test/helpers/connector-test.helper';
 
 import createCardFixture from './fixtures/create_card.json';
@@ -43,7 +43,7 @@ describe('TrelloService - Actions', () => {
           },
         },
         {
-          provide: deskiveService,
+          provide: operagridService,
           useValue: {
             findOne: jest.fn().mockResolvedValue(mockConnection),
           },

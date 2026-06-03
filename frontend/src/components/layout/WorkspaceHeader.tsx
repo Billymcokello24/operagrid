@@ -48,12 +48,12 @@ export function WorkspaceHeader() {
           title="Go to Home"
         >
           <img
-            src="https://cdn.deskive.com/deskive/logo.png"
-            alt="Deskive Logo"
+            src="/logo.png"
+            alt="OperaGrid Logo"
             className="w-8 h-8 transition-all duration-300 group-hover:scale-110"
           />
-          <span className="font-bold text-lg bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-            Deskive
+          <span className="font-bold text-lg bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
+            OperaGrid
           </span>
         </Link>
 
@@ -95,7 +95,7 @@ export function WorkspaceHeader() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="rounded-full">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                 {user?.avatarUrl ? (
                   <img
                     src={user.avatarUrl}

@@ -1383,7 +1383,7 @@ Please provide a friendly, concise summary of what was done for the user.`;
    */
   private getSystemPrompt(userLanguage: string = 'en'): string {
     const languageInstructions = this.getLanguageInstructions(userLanguage);
-    return `You are AutoPilot, an advanced AI assistant for Deskive - a comprehensive workspace management platform.
+    return `You are AutoPilot, an advanced AI assistant for OperaGrid - a comprehensive workspace management platform.
 
 ${languageInstructions}
 

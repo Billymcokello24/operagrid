@@ -87,7 +87,7 @@ export default function ResetPassword() {
           <Card className="shadow-2xl border-0 bg-white/80 backdrop-blur-sm">
             <CardHeader className="space-y-6 pb-8">
               <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-center space-y-2">
@@ -103,8 +103,8 @@ export default function ResetPassword() {
 
             <CardContent className="space-y-6">
               <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                  <Key className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                  <Key className="w-8 h-8 text-blue-600" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {intl.formatMessage({ id: 'auth.resetPassword.redirectMessage' })}

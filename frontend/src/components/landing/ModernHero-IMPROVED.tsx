@@ -138,7 +138,7 @@ const ModernHero: React.FC = () => {
       features: [
         { icon: Brain, text: intl.formatMessage({ id: 'hero.slides.welcome.features.aiPowered' }), color: 'text-violet-600' },
         { icon: MessageSquare, text: intl.formatMessage({ id: 'hero.slides.welcome.features.realTime' }), color: 'text-blue-600' },
-        { icon: Shield, text: intl.formatMessage({ id: 'hero.slides.welcome.features.smartProject' }), color: 'text-emerald-600' },
+        { icon: Shield, text: intl.formatMessage({ id: 'hero.slides.welcome.features.smartProject' }), color: 'text-blue-600' },
       ],
       animation: 'welcome' as const,
       screenshot: '/dashboard_light.png',
@@ -238,15 +238,15 @@ const ModernHero: React.FC = () => {
       id: 'project-management',
       type: 'feature' as const,
       badge: intl.formatMessage({ id: 'hero.slides.projectManagement.badge' }),
-      badgeColor: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+      badgeColor: 'bg-blue-100 text-blue-700 border-blue-200',
       icon: Kanban,
-      iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+      iconBg: 'bg-gradient-to-br from-blue-500 to-blue-600',
       title: intl.formatMessage({ id: 'hero.slides.projectManagement.title' }),
       description: intl.formatMessage({ id: 'hero.slides.projectManagement.description' }),
       features: [
-        { icon: Kanban, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.kanbanBoards' }), color: 'text-emerald-600' },
-        { icon: Clock, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.timeTracking' }), color: 'text-teal-600' },
-        { icon: TrendingUp, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.aiInsights' }), color: 'text-green-600' },
+        { icon: Kanban, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.kanbanBoards' }), color: 'text-blue-600' },
+        { icon: Clock, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.timeTracking' }), color: 'text-blue-600' },
+        { icon: TrendingUp, text: intl.formatMessage({ id: 'hero.slides.projectManagement.features.aiInsights' }), color: 'text-blue-600' },
       ],
       animation: 'project-management' as const,
       screenshot: '/project_web_dark.png',
@@ -344,7 +344,7 @@ const ModernHero: React.FC = () => {
         {intl.formatMessage(
           { id: 'hero.valueProposition' },
           {
-            bold: <span className="font-bold text-green-600">{intl.formatMessage({ id: 'hero.subtitleBold' })}</span>,
+            bold: <span className="font-bold text-blue-600">{intl.formatMessage({ id: 'hero.subtitleBold' })}</span>,
             end: intl.formatMessage({ id: 'hero.subtitleEnd' })
           }
         )}
@@ -370,7 +370,7 @@ const ModernHero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex items-center gap-2"
         >
-          <TrendingUp className="w-5 h-5 text-green-600" />
+          <TrendingUp className="w-5 h-5 text-blue-600" />
           <div className="text-left">
             <div className="font-black text-xl text-gray-900">{intl.formatMessage({ id: 'hero.stats.freePlanLabel' })}</div>
             <div className="text-xs text-gray-600">{intl.formatMessage({ id: 'hero.stats.freePlan' })}</div>
@@ -522,7 +522,7 @@ const ModernHero: React.FC = () => {
                       <div className="flex items-center gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
                       </div>
                       {/* URL bar */}
                       <div className="flex-1 mx-2">
@@ -531,8 +531,8 @@ const ModernHero: React.FC = () => {
                             ? 'bg-gray-700'
                             : 'bg-white border border-gray-300'
                         }`}>
-                          <Shield className={`w-2.5 h-2.5 ${isDarkScreenshot ? 'text-green-400' : 'text-green-600'}`} />
-                          <span className={`text-[10px] truncate ${isDarkScreenshot ? 'text-gray-400' : 'text-gray-600'}`}>https://deskive.com</span>
+                          <Shield className={`w-2.5 h-2.5 ${isDarkScreenshot ? 'text-blue-400' : 'text-blue-600'}`} />
+                          <span className={`text-[10px] truncate ${isDarkScreenshot ? 'text-gray-400' : 'text-gray-600'}`}>https://operagrid.com</span>
                         </div>
                       </div>
                       {/* Browser actions */}
@@ -681,7 +681,7 @@ const ModernHero: React.FC = () => {
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
-        videoUrl="https://cdn.deskive.com/deskive/screen-capture.mp4"
+        videoUrl="https://cdn.operagrid.com/operagrid/screen-capture.mp4"
       />
 
       <style>{`

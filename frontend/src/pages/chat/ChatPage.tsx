@@ -199,7 +199,7 @@ const createMessageConverter = (workspaceMembers: any[], currentUser: any) => {
 };
 
 // LocalStorage key for last accessed chat per workspace
-const getLastAccessedChatKey = (workspaceId: string) => `deskive_last_chat_${workspaceId}`;
+const getLastAccessedChatKey = (workspaceId: string) => `operagrid_last_chat_${workspaceId}`;
 
 const ChatPage: React.FC = () => {
   const intl = useIntl();
@@ -2052,7 +2052,7 @@ const ChatPage: React.FC = () => {
           otherUser = {
             user: {
               name: bot.displayName || bot.name,
-              email: `${bot.name}@bot.deskive.ai`
+              email: `${bot.name}@bot.operagrid.ai`
             }
           } as any;
         }
@@ -2098,7 +2098,7 @@ const ChatPage: React.FC = () => {
                 otherUser = {
                   user: {
                     name: bot.displayName || bot.name,
-                    email: `${bot.name}@bot.deskive.ai`
+                    email: `${bot.name}@bot.operagrid.ai`
                   }
                 } as any;
               }

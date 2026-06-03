@@ -107,8 +107,8 @@ export function NotificationBell() {
       const plainTextMessage = stripHtml(notification.message || '');
       const notif = new Notification(notification.title, {
         body: plainTextMessage,
-        icon: 'https://cdn.deskive.com/deskive/logo.png',
-        badge: 'https://cdn.deskive.com/deskive/logo.png',
+        icon: '/logo.png',
+        badge: '/logo.png',
         tag: notification.id,
         requireInteraction: notification.priority === 'urgent' || notification.priority === 'high',
         silent: !notification.soundEnabled, // Control sound based on user preference

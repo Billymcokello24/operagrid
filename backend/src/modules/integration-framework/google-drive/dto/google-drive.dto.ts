@@ -187,7 +187,7 @@ export class ImportFileDto {
   @IsString()
   fileId: string;
 
-  @ApiPropertyOptional({ description: 'Target folder ID in Deskive (optional)' })
+  @ApiPropertyOptional({ description: 'Target folder ID in OperaGrid (optional)' })
   @IsOptional()
   @IsString()
   targetFolderId?: string;
@@ -215,7 +215,7 @@ export class ImportFileResponseDto {
   mimeType: string;
 
   @ApiPropertyOptional()
-  deskiveFileId?: string;
+  operagridFileId?: string;
 
   @ApiPropertyOptional()
   url?: string;

@@ -92,7 +92,7 @@ export default function AIChatFeature() {
 
           <Card className="border-gray-200 dark:border-gray-700">
             <CardContent className="p-6">
-              <Brain className="w-10 h-10 text-green-600 mb-4" />
+              <Brain className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">{intl.formatMessage({ id: 'featurePages.aiChat.features.contextAwareness' })}</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 {intl.formatMessage({ id: 'featurePages.aiChat.features.contextAwarenessDesc' })}
@@ -150,7 +150,7 @@ export default function AIChatFeature() {
                 <ul className="space-y-3">
                   {intl.formatMessage({ id: 'featurePages.aiChat.useCases.forDevelopersDesc' }).split(', ').map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-600 dark:text-gray-400">{item}</span>
                     </li>
                   ))}
@@ -163,7 +163,7 @@ export default function AIChatFeature() {
                 <ul className="space-y-3">
                   {intl.formatMessage({ id: 'featurePages.aiChat.useCases.forTeamsDesc' }).split(', ').map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-600 dark:text-gray-400">{item}</span>
                     </li>
                   ))}

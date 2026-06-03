@@ -761,7 +761,7 @@ export class AuthService {
    * This is called by frontend after receiving database token from OAuth redirect
    *
    * database's job: Create/authenticate user in database database, return tokens and user info
-   * Deskive's job: Just pass through database's tokens (no own JWT generation needed)
+   * OperaGrid's job: Just pass through database's tokens (no own JWT generation needed)
    */
   async exchangeOAuthToken(authToken: string, userId: string, email: string) {
     try {

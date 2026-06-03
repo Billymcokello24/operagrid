@@ -395,7 +395,7 @@ export function ShareModal({
                             onClick={() => handleCopyLink(link)}
                           >
                             {copiedId === link.id ? (
-                              <Check className="h-3 w-3 text-green-500" />
+                              <Check className="h-3 w-3 text-blue-500" />
                             ) : (
                               <Copy className="h-3 w-3" />
                             )}

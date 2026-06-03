@@ -163,7 +163,7 @@ export function StandaloneVideoCall() {
             </Button>
             <Button
               onClick={handleLoginRedirect}
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-blue-600 hover:bg-blue-700"
             >
               <LogIn className="h-4 w-4 mr-2" />
               Login to Join

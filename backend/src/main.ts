@@ -91,7 +91,7 @@ async function bootstrap() {
 
   // Swagger documentation (setup regardless of environment for now, can be restricted later)
   const config = new DocumentBuilder()
-    .setTitle('Deskive API')
+    .setTitle('OperaGrid API')
     .setDescription('Comprehensive Workspace Management Platform')
     .setVersion('1.0')
     .addBearerAuth()
@@ -121,7 +121,7 @@ async function bootstrap() {
   const port = configService.get('PORT') || 3002;
   await app.listen(port, '0.0.0.0');
 
-  console.log(`🚀 Deskive Backend is running on: http://localhost:${port}`);
+  console.log(`🚀 OperaGrid Backend is running on: http://localhost:${port}`);
   console.log(`📚 API Documentation: http://localhost:${port}/api-docs`);
   console.log(`🌐 API Endpoint: http://localhost:${port}/${apiPrefix}`);
   console.log(`⚡ WebSocket Server: ws://localhost:${port}`);

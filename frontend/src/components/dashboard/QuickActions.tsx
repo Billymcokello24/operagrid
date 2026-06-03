@@ -36,9 +36,9 @@ const defaultActions: QuickAction[] = [
     icon: MessageSquare,
     path: '/messages/new',
     color: {
-      icon: 'text-green-600',
-      bg: 'bg-green-50',
-      hover: 'hover:bg-green-100',
+      icon: 'text-blue-600',
+      bg: 'bg-blue-50',
+      hover: 'hover:bg-blue-100',
     },
   },
   {

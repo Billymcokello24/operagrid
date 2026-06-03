@@ -1,5 +1,5 @@
 /**
- * Provider health service for deskive.
+ * Provider health service for operagrid.
  *
  * Reports the runtime status of each pluggable infrastructure concern
  * (storage, ai, email, push, search, auth, video). Consumed by

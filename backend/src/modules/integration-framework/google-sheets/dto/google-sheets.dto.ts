@@ -327,7 +327,7 @@ export enum SyncFrequency {
   DAILY = 'daily',
 }
 
-export enum DeskiveEntity {
+export enum OperaGridEntity {
   TASKS = 'tasks',
   CONTACTS = 'contacts',
   CUSTOM = 'custom',
@@ -350,9 +350,9 @@ export class CreateSyncConfigDto {
   @IsEnum(SyncType)
   syncType: SyncType;
 
-  @ApiProperty({ enum: DeskiveEntity })
-  @IsEnum(DeskiveEntity)
-  deskiveEntity: DeskiveEntity;
+  @ApiProperty({ enum: OperaGridEntity })
+  @IsEnum(OperaGridEntity)
+  operagridEntity: OperaGridEntity;
 
   @ApiPropertyOptional({ description: 'Column mapping configuration' })
   @IsObject()
@@ -407,8 +407,8 @@ export class SyncConfigDto {
   @ApiProperty({ enum: SyncType })
   syncType: SyncType;
 
-  @ApiProperty({ enum: DeskiveEntity })
-  deskiveEntity: DeskiveEntity;
+  @ApiProperty({ enum: OperaGridEntity })
+  operagridEntity: OperaGridEntity;
 
   @ApiProperty()
   columnMapping: Record<string, string>;

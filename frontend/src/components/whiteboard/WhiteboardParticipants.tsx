@@ -137,7 +137,7 @@ export function WhiteboardParticipants({
       case 'admin':
         return <Crown className="h-3 w-3 text-yellow-500" />
       case 'editor':
-        return <Edit className="h-3 w-3 text-green-500" />
+        return <Edit className="h-3 w-3 text-blue-500" />
       case 'viewer':
         return <Eye className="h-3 w-3 text-gray-500" />
       default:
@@ -179,7 +179,7 @@ export function WhiteboardParticipants({
         
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
             <span>{onlineCount} online</span>
           </div>
           {!showOffline && totalCount > onlineCount && (
@@ -222,7 +222,7 @@ export function WhiteboardParticipants({
                 {/* Online/Offline indicator */}
                 <div className={cn(
                   "absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-white",
-                  participant.isOnline ? "bg-green-500" : "bg-gray-400"
+                  participant.isOnline ? "bg-blue-500" : "bg-gray-400"
                 )} />
 
                 {/* Cursor indicator for active users */}

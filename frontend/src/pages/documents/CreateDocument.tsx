@@ -87,7 +87,7 @@ export const CreateDocument: React.FC = () => {
                   key={category.id}
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={selectedCategory === category.id ? 'bg-emerald-600 hover:bg-emerald-700' : ''}
+                  className={selectedCategory === category.id ? 'bg-blue-600 hover:bg-blue-700' : ''}
                 >
                   <Icon className="w-4 h-4 mr-2" />
                   {category.name}
@@ -98,12 +98,12 @@ export const CreateDocument: React.FC = () => {
 
           {/* Blank Document Card */}
           <Card
-            className="mb-6 border-2 border-dashed border-emerald-300 hover:border-emerald-500 hover:shadow-lg transition-all cursor-pointer bg-gradient-to-br from-emerald-50 to-teal-50"
+            className="mb-6 border-2 border-dashed border-blue-300 hover:border-blue-500 hover:shadow-lg transition-all cursor-pointer bg-gradient-to-br from-blue-50 to-blue-50"
             onClick={handleBlankDocument}
           >
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                   <Plus className="w-8 h-8 text-white" />
                 </div>
                 <div className="flex-1">
@@ -112,7 +112,7 @@ export const CreateDocument: React.FC = () => {
                     Create a custom document from scratch with our editor
                   </p>
                 </div>
-                <Sparkles className="w-6 h-6 text-emerald-600" />
+                <Sparkles className="w-6 h-6 text-blue-600" />
               </div>
             </CardContent>
           </Card>
@@ -120,7 +120,7 @@ export const CreateDocument: React.FC = () => {
           {/* Templates Grid */}
           {isLoading ? (
             <div className="flex items-center justify-center py-16">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
             </div>
           ) : templates.length === 0 ? (
             <Card>
@@ -144,17 +144,17 @@ export const CreateDocument: React.FC = () => {
                       {template.thumbnailUrl ? (
                         <img src={template.thumbnailUrl} alt={template.name} className="w-full h-full object-cover" />
                       ) : (
-                        <FileText className="w-16 h-16 text-gray-400 group-hover:text-emerald-600 transition-colors" />
+                        <FileText className="w-16 h-16 text-gray-400 group-hover:text-blue-600 transition-colors" />
                       )}
                     </div>
 
                     {/* Template Info */}
                     <div className="p-4">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                        <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                           {template.name}
                         </h3>
-                        <Badge className="bg-emerald-500 text-white ml-2 flex-shrink-0">
+                        <Badge className="bg-blue-500 text-white ml-2 flex-shrink-0">
                           {template.documentType}
                         </Badge>
                       </div>

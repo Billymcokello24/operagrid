@@ -70,7 +70,7 @@ export function MemberProfilePanel({
 
     switch (status.toLowerCase()) {
       case 'active':
-        return 'bg-green-500/10 text-green-500 border-green-500/20';
+        return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
       case 'inactive':
         return 'bg-gray-500/10 text-gray-500 border-gray-500/20';
       default:
@@ -270,7 +270,7 @@ export function MemberProfilePanel({
                   <div
                     className={cn(
                       'h-2 w-2 rounded-full',
-                      member.status === 'active' ? 'bg-green-500' : 'bg-gray-400'
+                      member.status === 'active' ? 'bg-blue-500' : 'bg-gray-400'
                     )}
                   />
                   <span className="text-sm">

@@ -50,7 +50,7 @@ export function StorageStats({ files = [], stats }: StorageStatsProps) {
   const planMaxStorageGb = stats?.plan?.max_storage_gb ?? 1;
 
   const getUsageColor = (percentage: number) => {
-    if (percentage < 60) return 'text-green-600';
+    if (percentage < 60) return 'text-blue-600';
     if (percentage < 80) return 'text-yellow-600';
     return 'text-red-600';
   };
@@ -121,7 +121,7 @@ export function StorageStats({ files = [], stats }: StorageStatsProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>{intl.formatMessage({ id: 'modules.files.storage.available', defaultMessage: 'Available:' }).replace(':', '')}</span>
-                    <span className="font-medium text-green-600">
+                    <span className="font-medium text-blue-600">
                       {formatFileSize(availableSpace)}
                     </span>
                   </div>

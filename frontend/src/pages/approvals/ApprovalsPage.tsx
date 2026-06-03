@@ -43,7 +43,7 @@ function StatusBadge({ status }: { status: RequestStatus }) {
   const { formatMessage } = useIntl();
   const config = {
     [RequestStatus.PENDING]: { label: formatMessage({ id: 'approvals.status.pending', defaultMessage: 'Pending' }), icon: Clock, className: 'text-yellow-600 border-yellow-600' },
-    [RequestStatus.APPROVED]: { label: formatMessage({ id: 'approvals.status.approved', defaultMessage: 'Approved' }), icon: CheckCircle, className: 'text-green-600 border-green-600' },
+    [RequestStatus.APPROVED]: { label: formatMessage({ id: 'approvals.status.approved', defaultMessage: 'Approved' }), icon: CheckCircle, className: 'text-blue-600 border-blue-600' },
     [RequestStatus.REJECTED]: { label: formatMessage({ id: 'approvals.status.rejected', defaultMessage: 'Rejected' }), icon: XCircle, className: 'text-red-600 border-red-600' },
     [RequestStatus.CANCELLED]: { label: formatMessage({ id: 'approvals.status.cancelled', defaultMessage: 'Cancelled' }), icon: AlertCircle, className: 'text-gray-600 border-gray-600' },
   }[status];
@@ -66,7 +66,7 @@ function ApproverStatusBadge({ status }: { status: ApproverStatus }) {
   const { formatMessage } = useIntl();
   const config = {
     [ApproverStatus.PENDING]: { label: formatMessage({ id: 'approvals.approverStatus.pending', defaultMessage: 'Pending' }), className: 'bg-yellow-100 text-yellow-700' },
-    [ApproverStatus.APPROVED]: { label: formatMessage({ id: 'approvals.approverStatus.approved', defaultMessage: 'Approved' }), className: 'bg-green-100 text-green-700' },
+    [ApproverStatus.APPROVED]: { label: formatMessage({ id: 'approvals.approverStatus.approved', defaultMessage: 'Approved' }), className: 'bg-blue-100 text-blue-700' },
     [ApproverStatus.REJECTED]: { label: formatMessage({ id: 'approvals.approverStatus.rejected', defaultMessage: 'Rejected' }), className: 'bg-red-100 text-red-700' },
   }[status];
   return <Badge variant="secondary" className={config.className}>{config.label}</Badge>;
@@ -289,7 +289,7 @@ function ApprovalsList() {
             <Card><CardContent className="p-4 flex items-center gap-3"><div className="p-2 rounded-lg bg-primary/10"><ClipboardCheck className="w-5 h-5 text-primary" /></div><div><p className="text-2xl font-bold">{stats.totalRequests}</p><p className="text-xs text-muted-foreground">{formatMessage({ id: 'approvals.stats.total', defaultMessage: 'Total' })}</p></div></CardContent></Card>
             <Card><CardContent className="p-4 flex items-center gap-3"><div className="p-2 rounded-lg bg-yellow-100"><Clock className="w-5 h-5 text-yellow-600" /></div><div><p className="text-2xl font-bold">{stats.pendingRequests}</p><p className="text-xs text-muted-foreground">{formatMessage({ id: 'approvals.stats.pending', defaultMessage: 'Pending' })}</p></div></CardContent></Card>
             <Card><CardContent className="p-4 flex items-center gap-3"><div className="p-2 rounded-lg bg-orange-100"><AlertCircle className="w-5 h-5 text-orange-600" /></div><div><p className="text-2xl font-bold">{stats.pendingMyApproval}</p><p className="text-xs text-muted-foreground">{formatMessage({ id: 'approvals.stats.awaitingMyApproval', defaultMessage: 'Awaiting My Approval' })}</p></div></CardContent></Card>
-            <Card><CardContent className="p-4 flex items-center gap-3"><div className="p-2 rounded-lg bg-green-100"><CheckCircle className="w-5 h-5 text-green-600" /></div><div><p className="text-2xl font-bold">{stats.approvedRequests}</p><p className="text-xs text-muted-foreground">{formatMessage({ id: 'approvals.stats.approved', defaultMessage: 'Approved' })}</p></div></CardContent></Card>
+            <Card><CardContent className="p-4 flex items-center gap-3"><div className="p-2 rounded-lg bg-blue-100"><CheckCircle className="w-5 h-5 text-blue-600" /></div><div><p className="text-2xl font-bold">{stats.approvedRequests}</p><p className="text-xs text-muted-foreground">{formatMessage({ id: 'approvals.stats.approved', defaultMessage: 'Approved' })}</p></div></CardContent></Card>
           </div>
         )}
 
@@ -299,8 +299,8 @@ function ApprovalsList() {
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-green-100">
-                    <Sheet className="w-5 h-5 text-green-600" />
+                  <div className="p-2 rounded-lg bg-blue-100">
+                    <Sheet className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">{formatMessage({ id: 'approvals.googleSheets.title', defaultMessage: 'Google Sheets Integration' })}</h3>
@@ -354,7 +354,7 @@ function ApprovalsList() {
               {sheetsConnection?.isActive && (
                 <div className="mt-3 pt-3 border-t">
                   <p className="text-xs text-muted-foreground">
-                    {formatMessage({ id: 'approvals.googleSheets.description', defaultMessage: 'When a new request is submitted, it will automatically be added to a Google Sheet named "Deskive Approvals". Each request type will have its own sheet tab.' })}
+                    {formatMessage({ id: 'approvals.googleSheets.description', defaultMessage: 'When a new request is submitted, it will automatically be added to a Google Sheet named "OperaGrid Approvals". Each request type will have its own sheet tab.' })}
                   </p>
                 </div>
               )}
@@ -1310,7 +1310,7 @@ function RequestTypesPage() {
     updateCustomField(fieldId, { options: newOptions });
   };
 
-  const colors = ['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899','#06b6d4','#84cc16'];
+  const colors = ['#3b82f6','#2563eb','#f59e0b','#ef4444','#8b5cf6','#ec4899','#6366f1','#6366f1'];
 
   const fieldTypeLabels: Record<FieldType, string> = {
     [FieldType.TEXT]: formatMessage({ id: 'approvals.types.create.customFields.types.text', defaultMessage: 'Text' }),

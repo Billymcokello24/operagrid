@@ -75,9 +75,9 @@ export function AICreationPanel({ isOpen, onClose, initialType = 'image', worksp
       name: intl.formatMessage({ id: 'modules.files.ai.image', defaultMessage: 'AI Image' }),
       icon: Image,
       description: intl.formatMessage({ id: 'modules.files.ai.imageDesc', defaultMessage: 'Generate professional images for presentations and content' }),
-      color: 'text-green-600',
-      bgColor: 'bg-green-50 dark:bg-green-950',
-      borderColor: 'border-green-200 dark:border-green-800',
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50 dark:bg-blue-950',
+      borderColor: 'border-blue-200 dark:border-blue-800',
     },
     {
       id: 'audio' as const,

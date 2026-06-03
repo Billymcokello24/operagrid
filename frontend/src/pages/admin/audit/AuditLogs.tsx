@@ -567,7 +567,7 @@ const AuditLogs: React.FC = () => {
 const getActionIcon = (action: string) => {
   switch (action.toLowerCase()) {
     case 'create':
-      return <CheckCircle className="h-4 w-4 text-green-600" />;
+      return <CheckCircle className="h-4 w-4 text-blue-600" />;
     case 'read':
       return <Info className="h-4 w-4 text-blue-600" />;
     case 'update':
@@ -575,7 +575,7 @@ const getActionIcon = (action: string) => {
     case 'delete':
       return <XCircle className="h-4 w-4 text-red-600" />;
     case 'login':
-      return <CheckCircle className="h-4 w-4 text-green-600" />;
+      return <CheckCircle className="h-4 w-4 text-blue-600" />;
     case 'logout':
       return <XCircle className="h-4 w-4 text-gray-600" />;
     case 'upload':

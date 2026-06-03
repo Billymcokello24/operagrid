@@ -41,7 +41,7 @@ export function SearchSuggestions({
       case 'person':
         return 'text-blue-600';
       case 'tag':
-        return 'text-green-600';
+        return 'text-blue-600';
       case 'project':
         return 'text-purple-600';
       default:

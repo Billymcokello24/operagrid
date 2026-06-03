@@ -9,7 +9,7 @@ import { PushService } from './push.service';
  * Pick a provider by setting PUSH_PROVIDER in your .env. See
  * `docs/providers/push.md`.
  *
- * No controller is registered here — deskive already ships
+ * No controller is registered here — operagrid already ships
  * `NotificationsController` which handles the HTTP surface. Modules
  * should inject `PushService` to send actual pushes.
  */

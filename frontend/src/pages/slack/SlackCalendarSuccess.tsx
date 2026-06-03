@@ -24,7 +24,7 @@ const SlackCalendarSuccess: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -37,7 +37,7 @@ const SlackCalendarSuccess: React.FC = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl"
+            className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl"
           >
             <CheckCircle className="w-14 h-14 text-white" />
           </motion.div>
@@ -46,7 +46,7 @@ const SlackCalendarSuccess: React.FC = () => {
             Calendar Connected! 🎉
           </h1>
           <p className="text-lg text-gray-600 mb-2">
-            Your Deskive Calendar app has been successfully connected to Slack.
+            Your OperaGrid Calendar app has been successfully connected to Slack.
           </p>
           <p className="text-gray-500">
             You can now create events and manage your schedule directly from Slack!
@@ -72,35 +72,35 @@ const SlackCalendarSuccess: React.FC = () => {
           <h3 className="font-bold text-gray-900 mb-3">Available Commands:</h3>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-green-600 mt-1">✓</span>
+              <span className="text-blue-600 mt-1">✓</span>
               <div>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">/calendar new [title]</code>
                 <span className="text-gray-600 text-sm ml-2">- Create a new event</span>
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-green-600 mt-1">✓</span>
+              <span className="text-blue-600 mt-1">✓</span>
               <div>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">/calendar today</code>
                 <span className="text-gray-600 text-sm ml-2">- View today's events</span>
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-green-600 mt-1">✓</span>
+              <span className="text-blue-600 mt-1">✓</span>
               <div>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">/calendar list</code>
                 <span className="text-gray-600 text-sm ml-2">- View upcoming events</span>
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-green-600 mt-1">✓</span>
+              <span className="text-blue-600 mt-1">✓</span>
               <div>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">/calendar link</code>
                 <span className="text-gray-600 text-sm ml-2">- Enable notifications in a channel</span>
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-green-600 mt-1">✓</span>
+              <span className="text-blue-600 mt-1">✓</span>
               <div>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">/calendar help</code>
                 <span className="text-gray-600 text-sm ml-2">- Show all commands</span>

@@ -1,6 +1,6 @@
 /**
  * FeaturesPage Component
- * Public page showcasing all Deskive features
+ * Public page showcasing all OperaGrid features
  */
 
 import { useEffect } from 'react';
@@ -57,7 +57,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.aiChat?.features || [],
       color: 'purple' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/3715719c-18fd-41d0-9170-ed30f87f33f7-1768813895118-1768813890335-deskive_ai_bot_in_chat.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/3715719c-18fd-41d0-9170-ed30f87f33f7-1768813895118-1768813890335-operagrid_ai_bot_in_chat.mp4',
       link: '/features/ai-chat',
     },
     {
@@ -69,7 +69,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.projects?.features || [],
       color: 'cyan' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/567da4db-5cb4-4bd7-8c76-848a39136ef0-1768813994968-1768813986300-deskive_project_template.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/567da4db-5cb4-4bd7-8c76-848a39136ef0-1768813994968-1768813986300-operagrid_project_template.mp4',
       link: '/features/projects',
     },
     {
@@ -79,7 +79,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       tagline: featData.calendar?.tagline || 'Schedule Intelligently',
       description: featData.calendar?.description || '',
       features: featData.calendar?.features || [],
-      color: 'emerald' as const,
+      color: 'blue' as const,
       mediaType: 'image' as const,
       link: '/features/calendar',
     },
@@ -92,7 +92,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.notes?.features || [],
       color: 'blue' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/85ef23ae-fe4e-4f20-9306-b7e3c0a84b03-1768813833299-1768813831429-deskive_notes.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/85ef23ae-fe4e-4f20-9306-b7e3c0a84b03-1768813833299-1768813831429-operagrid_notes.mp4',
       link: '/features/notes',
     },
     {
@@ -104,7 +104,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.videoCalls?.features || [],
       color: 'pink' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/389d91cc-2be2-4c6c-9bcb-a020d12f26ee-1768815405567-1768815401849-deskive_videocall_new.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/389d91cc-2be2-4c6c-9bcb-a020d12f26ee-1768815405567-1768815401849-operagrid_videocall_new.mp4',
       link: '/features/video-calls',
     },
     {
@@ -116,7 +116,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.teams?.features || [],
       color: 'cyan' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/a49766b5-7e80-4541-94b0-e2c1aded22dc-1768815551030-1768815547747-deskive_team_collaboration.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/a49766b5-7e80-4541-94b0-e2c1aded22dc-1768815551030-1768815547747-operagrid_team_collaboration.mp4',
       link: '/features/teams',
     },
     {
@@ -126,9 +126,9 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       tagline: featData.tools?.tagline || 'Create Together',
       description: featData.tools?.description || '',
       features: featData.tools?.features || [],
-      color: 'emerald' as const,
+      color: 'blue' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/8176683b-15f8-431f-a56d-cde57cf9301b-1768813961001-1768813954980-deskive_whiteboard.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/8176683b-15f8-431f-a56d-cde57cf9301b-1768813961001-1768813954980-operagrid_whiteboard.mp4',
       link: '/features/tools',
     },
     {
@@ -140,7 +140,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.automation?.features || [],
       color: 'purple' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/75a64999-bc61-4bd7-9d5b-ff3db2d68036-1768813927980-1768813922627-deskive_automation_ai.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/75a64999-bc61-4bd7-9d5b-ff3db2d68036-1768813927980-1768813922627-operagrid_automation_ai.mp4',
       link: '/features/automation',
     },
     {
@@ -152,7 +152,7 @@ const getFeatures = (intl: ReturnType<typeof useIntl>) => {
       features: featData.integrations?.features || [],
       color: 'blue' as const,
       mediaType: 'video' as const,
-      mediaSrc: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/582a0e04-0ff2-4857-b06c-a6831d195bd8-1768813780815-1768813778259-deskive_gmail_oauth.mp4',
+      mediaSrc: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/582a0e04-0ff2-4857-b06c-a6831d195bd8-1768813780815-1768813778259-operagrid_gmail_oauth.mp4',
       link: '/features/integrations',
     },
   ];
@@ -179,8 +179,8 @@ export default function FeaturesPage() {
   return (
     <PublicLayout>
       <PageSEO
-        title="Features - All-in-One Workspace Platform | Deskive"
-        description="Discover all Deskive features: AI Chat, Project Management, Calendar, Notes, Video Calls, Analytics, Automation, and more. Everything your team needs in one place."
+        title="Features - All-in-One Workspace Platform | OperaGrid"
+        description="Discover all OperaGrid features: AI Chat, Project Management, Calendar, Notes, Video Calls, Analytics, Automation, and more. Everything your team needs in one place."
         keywords={['workspace features', 'team collaboration', 'project management', 'AI chat', 'video conferencing', 'productivity tools']}
         ogImage="/og-images/features.png"
       />

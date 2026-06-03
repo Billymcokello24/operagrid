@@ -300,16 +300,16 @@ export const VideoRightSidebar: React.FC<VideoRightSidebarProps> = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 dark:from-green-950 dark:to-emerald-950 dark:border-green-800">
+            <Card className="bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200 dark:from-blue-950 dark:to-blue-950 dark:border-blue-800">
               <CardContent className="p-3">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-medium text-green-900 dark:text-green-100">{intl.formatMessage({ id: 'modules.videoCallsApp.analytics.totalTime' })}</p>
-                    <p className="text-xl font-bold text-green-600 dark:text-green-400">
+                    <p className="text-xs font-medium text-blue-900 dark:text-blue-100">{intl.formatMessage({ id: 'modules.videoCallsApp.analytics.totalTime' })}</p>
+                    <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
                       {formatAnalyticsDuration(userAnalytics.totalDuration)}
                     </p>
                   </div>
-                  <Clock className="h-6 w-6 text-green-500" />
+                  <Clock className="h-6 w-6 text-blue-500" />
                 </div>
               </CardContent>
             </Card>
@@ -343,7 +343,7 @@ export const VideoRightSidebar: React.FC<VideoRightSidebarProps> = () => {
         {/* Recent Meetings */}
         <div>
           <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Video className="h-5 w-5 text-green-500" />
+            <Video className="h-5 w-5 text-blue-500" />
             {intl.formatMessage({ id: 'modules.videoCallsApp.analytics.recentMeetings' })}
           </h3>
           
@@ -376,7 +376,7 @@ export const VideoRightSidebar: React.FC<VideoRightSidebarProps> = () => {
                         'outline'
                       }
                       className={
-                        meeting.status === 'ended' ? 'bg-green-500/20 text-green-300 border-green-500/30' :
+                        meeting.status === 'ended' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' :
                         meeting.status === 'active' ? 'bg-red-500/20 text-red-300 border-red-500/30' :
                         meeting.status === 'scheduled' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' :
                         'bg-gray-500/20 text-gray-300 border-gray-500/30'
@@ -391,7 +391,7 @@ export const VideoRightSidebar: React.FC<VideoRightSidebarProps> = () => {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-6 px-2 text-green-500 hover:text-green-600"
+                      className="h-6 px-2 text-blue-500 hover:text-blue-600"
                       onClick={() => setSelectedMeeting(meeting)}
                     >
                       View Details
@@ -499,7 +499,7 @@ export const VideoRightSidebar: React.FC<VideoRightSidebarProps> = () => {
         <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Video className="h-5 w-5 text-green-500" />
+              <Video className="h-5 w-5 text-blue-500" />
               Meeting Details
             </DialogTitle>
           </DialogHeader>

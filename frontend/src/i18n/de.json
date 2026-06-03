@@ -29,7 +29,7 @@
   },
   "support": {
     "title": "Hilfe & Support",
-    "description": "Erhalten Sie Hilfe zu Deskive, finden Sie Antworten auf häufige Fragen oder kontaktieren Sie unser Support-Team.",
+    "description": "Erhalten Sie Hilfe zu OperaGrid, finden Sie Antworten auf häufige Fragen oder kontaktieren Sie unser Support-Team.",
     "searchPlaceholder": "Hilfe-Artikel, FAQs oder Themen suchen...",
     "liveChat": {
       "title": "Live-Chat",
@@ -48,10 +48,10 @@
     },
     "faq": {
       "title": "Häufig gestellte Fragen",
-      "description": "Finden Sie schnelle Antworten auf häufige Fragen zu Deskive.",
+      "description": "Finden Sie schnelle Antworten auf häufige Fragen zu OperaGrid.",
       "noResults": "Keine FAQs stimmen mit Ihrer Suche überein. Versuchen Sie eine andere Anfrage.",
       "gettingStarted": {
-        "question": "Wie fange ich mit Deskive an?",
+        "question": "Wie fange ich mit OperaGrid an?",
         "answer": "Der Einstieg ist einfach! Nach der Anmeldung erstellen Sie einen Arbeitsbereich für Ihr Team. Laden Sie dann Ihre Teammitglieder per E-Mail ein. Sie können Chat für die Kommunikation, Projekte für die Aufgabenverwaltung, Dateien für die Dokumentenspeicherung, Kalender für die Terminplanung, Notizen für die Dokumentation und Videoanrufe für Meetings nutzen."
       },
       "inviteMembers": {
@@ -67,12 +67,12 @@
         "answer": "Navigieren Sie zu Videoanrufe in der linken Seitenleiste. Klicken Sie auf \"Neues Meeting\", um einen sofortigen Anruf zu starten, oder planen Sie ein Meeting für später. Sie können Teilnehmer einladen, indem Sie den Meeting-Link teilen oder Teammitglieder direkt auswählen."
       },
       "security": {
-        "question": "Wie sicher sind meine Daten bei Deskive?",
+        "question": "Wie sicher sind meine Daten bei OperaGrid?",
         "answer": "Die Sicherheit Ihrer Daten hat für uns höchste Priorität. Wir verwenden Ende-zu-Ende-Verschlüsselung für Videoanrufe, AES-256-Verschlüsselung für gespeicherte Dateien und TLS 1.3 für alle Daten im Transit. Wir sind SOC 2 Typ II zertifiziert und DSGVO-konform."
       },
       "billing": {
         "question": "Wie funktioniert die Abrechnung?",
-        "answer": "Deskive bietet monatliche und jährliche Abrechnungsoptionen. Jahrespläne sparen Ihnen 20%. Sie können Ihren Plan jederzeit unter Einstellungen > Abrechnung upgraden, downgraden oder kündigen. Änderungen treten zu Beginn Ihres nächsten Abrechnungszyklus in Kraft."
+        "answer": "OperaGrid bietet monatliche und jährliche Abrechnungsoptionen. Jahrespläne sparen Ihnen 20%. Sie können Ihren Plan jederzeit unter Einstellungen > Abrechnung upgraden, downgraden oder kündigen. Änderungen treten zu Beginn Ihres nächsten Abrechnungszyklus in Kraft."
       }
     },
     "resources": {
@@ -87,14 +87,14 @@
       },
       "apiDocs": {
         "title": "API-Dokumentation",
-        "description": "Integrieren Sie Deskive in Ihre Anwendungen"
+        "description": "Integrieren Sie OperaGrid in Ihre Anwendungen"
       }
     },
     "community": {
       "title": "Community & Feedback",
       "forum": {
         "title": "Community-Forum",
-        "description": "Vernetzen Sie sich mit anderen Deskive-Nutzern"
+        "description": "Vernetzen Sie sich mit anderen OperaGrid-Nutzern"
       },
       "bugReport": {
         "title": "Fehler melden",
@@ -107,7 +107,7 @@
     },
     "status": {
       "title": "Alle Systeme betriebsbereit",
-      "description": "Deskive-Dienste laufen normal",
+      "description": "OperaGrid-Dienste laufen normal",
       "viewStatus": "Statusseite anzeigen"
     },
     "security": {
@@ -125,8 +125,8 @@
       "phoneDescription": "Verfügbar für Enterprise-Kunden"
     },
     "seo": {
-      "title": "Hilfe & Support - Deskive",
-      "description": "Erhalten Sie Hilfe zu Deskive, finden Sie Antworten auf häufige Fragen oder kontaktieren Sie unser Support-Team."
+      "title": "Hilfe & Support - OperaGrid",
+      "description": "Erhalten Sie Hilfe zu OperaGrid, finden Sie Antworten auf häufige Fragen oder kontaktieren Sie unser Support-Team."
     },
     "form": {
       "title": "Support-Anfrage einreichen",
@@ -163,13 +163,13 @@
   },
   "tutorial": {
     "seo": {
-      "title": "Video Tutorials - Learn Deskive",
-      "description": "Watch video tutorials to master all Deskive features including chat, projects, files, calendar, notes, and video calls."
+      "title": "Video Tutorials - Learn OperaGrid",
+      "description": "Watch video tutorials to master all OperaGrid features including chat, projects, files, calendar, notes, and video calls."
     },
     "header": {
       "title": "Video",
       "titleHighlight": "Tutorials",
-      "subtitle": "Learn how to use Deskive effectively with our comprehensive video guides"
+      "subtitle": "Learn how to use OperaGrid effectively with our comprehensive video guides"
     },
     "category": {
       "all": "All Tutorials",
@@ -342,11 +342,11 @@
     },
     "exploreFeatures": "Funktionen erkunden",
     "clickModule": "Klicken Sie auf ein Modul, um es in Aktion zu sehen",
-    "browserUrl": "https://deskive.com/workspace/dashboard",
+    "browserUrl": "https://operagrid.com/workspace/dashboard",
     "slides": {
       "welcome": {
         "badge": "All-in-One",
-        "title": "Willkommen bei Deskive",
+        "title": "Willkommen bei OperaGrid",
         "description": "Ihr KI-gestützter All-in-One-Arbeitsbereich. Ersetzen Sie Slack, Notion, Trello, Google Drive und Zoom durch eine intelligente Plattform.",
         "features": {
           "aiPowered": "KI-gestützte Funktionen",
@@ -3243,7 +3243,7 @@
       },
       "connect": {
         "title": "Connect your Email",
-        "subtitle": "Choose how you want to connect your email account to Deskive",
+        "subtitle": "Choose how you want to connect your email account to OperaGrid",
         "gmail": {
           "title": "Gmail",
           "description": "Quick and secure OAuth connection",
@@ -3506,7 +3506,7 @@
         "enterPassword": "Enter password",
         "formNotAvailable": "This form is not available or has been closed.",
         "formNotExist": "The form you're looking for doesn't exist.",
-        "poweredBy": "Powered by Deskive Forms"
+        "poweredBy": "Powered by OperaGrid Forms"
       },
       "share": {
         "title": "Share Form - {title}",
@@ -3585,11 +3585,11 @@
   },
   "comparison": {
     "badge": "See The Difference",
-    "title": "How Deskive Compares",
+    "title": "How OperaGrid Compares",
     "titleHighlight": "To The Competition",
     "subtitle": "The only platform with chat, video, projects, files, and notes - all fully integrated",
-    "deskive": "Deskive",
-    "deskiveTagline": "All-in-One",
+    "operagrid": "OperaGrid",
+    "operagridTagline": "All-in-One",
     "competitors": "Others",
     "featureColumn": "Feature",
     "platforms": {
@@ -3650,7 +3650,7 @@
       }
     },
     "pricingNotes": {
-      "deskive": "All features included",
+      "operagrid": "All features included",
       "slack": "Chat & basic video only",
       "notion": "Docs & wikis only",
       "monday": "Projects & boards only",
@@ -3756,12 +3756,12 @@
       "placeholder": "Geben Sie Ihre E-Mail ein",
       "button": "Abonnieren"
     },
-    "copyright": "© {year} Deskive. Alle Rechte vorbehalten.",
+    "copyright": "© {year} OperaGrid. Alle Rechte vorbehalten.",
     "madeWith": "Mit ❤️ gemacht für Teams überall"
   },
   "downloads": {
     "badge": "Available Now",
-    "title": "Download Deskive",
+    "title": "Download OperaGrid",
     "subtitle": "Get the all-in-one workspace app for your desktop and mobile devices.",
     "subtitleSecondLine": "Available for macOS, Windows, iOS, and Android.",
     "version": "Version {version}",
@@ -3797,7 +3797,7 @@
       }
     },
     "features": {
-      "title": "Why Download Deskive?",
+      "title": "Why Download OperaGrid?",
       "nativePerformance": {
         "title": "Native Performance",
         "description": "Optimized for your device with native performance and offline support"
@@ -3861,11 +3861,11 @@
       "powerFeatures": "Power Features"
     },
     "chat": {
-      "badge": "Deskive Chat",
+      "badge": "OperaGrid Chat",
       "title": "Chat Powered by AI.",
       "titleHighlight": "Work in Perfect Sync.",
       "subtitle": "The world's most intelligent team chat. Convert conversations to tasks, summarize with AI, merge threads, and work seamlessly—all in one place.",
-      "cta": "Try Deskive Chat Free",
+      "cta": "Try OperaGrid Chat Free",
       "sections": {
         "aiSuperpowers": "AI Superpowers",
         "aiTitle": "Chat Meets Intelligence",
@@ -4660,7 +4660,7 @@
     },
     "videoCalls": {
       "meta": {
-        "title": "Video Calls & Conferencing - HD Video Meetings | Deskive",
+        "title": "Video Calls & Conferencing - HD Video Meetings | OperaGrid",
         "description": "Professional video conferencing with HD quality, AI transcription, screen sharing, recording, and seamless integration. Perfect for team meetings, webinars, and remote collaboration."
       },
       "badge": "Video Conferencing",
@@ -5223,7 +5223,7 @@
   "cta": {
     "readyToStart": {
       "title": "Ready to get started?",
-      "subtitle": "Join thousands of teams already using Deskive to collaborate better and get more done.",
+      "subtitle": "Join thousands of teams already using OperaGrid to collaborate better and get more done.",
       "button": "Get started for free",
       "features": [
         "Free 14-day trial",
@@ -5237,7 +5237,7 @@
   "pricing": {
     "meta": {
       "title": "Pricing Plans - Simple, Transparent, Affordable",
-      "description": "Choose the perfect Deskive plan for your team. Free tier available. Paid plans start at $29/month. All features included. No hidden fees. 14-day free trial.",
+      "description": "Choose the perfect OperaGrid plan for your team. Free tier available. Paid plans start at $29/month. All features included. No hidden fees. 14-day free trial.",
       "keywords": "pricing, plans, cost, free trial, workspace pricing, team collaboration pricing"
     },
     "header": {
@@ -5251,7 +5251,7 @@
       "limitedTime": "Limited Time Offer",
       "twoMonthsFree": "Get 2 Months Free with Annual Plans",
       "bestValue": "🎉 Best Value",
-      "joinThousands": "Join thousands of teams already using Deskive. Start free, upgrade anytime."
+      "joinThousands": "Join thousands of teams already using OperaGrid. Start free, upgrade anytime."
     },
     "billing": {
       "monthly": "Monatlich",
@@ -5422,7 +5422,7 @@
     "badge": "Got Questions?",
     "title": "Frequently Asked",
     "titleHighlight": "Questions",
-    "subtitle": "Everything you need to know about Deskive",
+    "subtitle": "Everything you need to know about OperaGrid",
     "category": {
       "all": "All Questions",
       "general": "General",
@@ -5433,16 +5433,16 @@
     },
     "general": {
       "what": {
-        "question": "What is Deskive and how does it work?",
-        "answer": "Deskive is an all-in-one workspace platform that combines six essential team tools: Chat, Video Calls, Projects, Files, Calendar, and Notes. It works by providing a unified platform where teams can collaborate in real-time, manage projects with Kanban boards, share files securely, schedule meetings, and create documentation—all enhanced by AI-powered features."
+        "question": "What is OperaGrid and how does it work?",
+        "answer": "OperaGrid is an all-in-one workspace platform that combines six essential team tools: Chat, Video Calls, Projects, Files, Calendar, and Notes. It works by providing a unified platform where teams can collaborate in real-time, manage projects with Kanban boards, share files securely, schedule meetings, and create documentation—all enhanced by AI-powered features."
       },
       "beginners": {
-        "question": "Is Deskive suitable for beginners?",
-        "answer": "Absolutely! Deskive is designed with simplicity in mind. Our intuitive interface makes it easy for anyone to get started. The Free plan is perfect for beginners, offering essential features forever free with no credit card required."
+        "question": "Is OperaGrid suitable for beginners?",
+        "answer": "Absolutely! OperaGrid is designed with simplicity in mind. Our intuitive interface makes it easy for anyone to get started. The Free plan is perfect for beginners, offering essential features forever free with no credit card required."
       },
       "devices": {
-        "question": "Can I use Deskive on multiple devices?",
-        "answer": "Yes! Deskive is available on web browsers, desktop apps (macOS and Windows), and mobile apps (Android available, iOS coming soon). Your data syncs automatically across all devices in real-time, so you can seamlessly switch between your computer, tablet, and phone."
+        "question": "Can I use OperaGrid on multiple devices?",
+        "answer": "Yes! OperaGrid is available on web browsers, desktop apps (macOS and Windows), and mobile apps (Android available, iOS coming soon). Your data syncs automatically across all devices in real-time, so you can seamlessly switch between your computer, tablet, and phone."
       }
     },
     "pricing": {
@@ -5466,15 +5466,15 @@
     "features": {
       "ai": {
         "question": "What AI-powered features are included?",
-        "answer": "Deskive includes AI-powered features across all modules: Smart chat summaries, AI content generation for notes, intelligent meeting scheduling suggestions, automatic task prioritization, smart file organization, and an AI assistant available across the platform."
+        "answer": "OperaGrid includes AI-powered features across all modules: Smart chat summaries, AI content generation for notes, intelligent meeting scheduling suggestions, automatic task prioritization, smart file organization, and an AI assistant available across the platform."
       },
       "modules": {
-        "question": "What modules are included in Deskive?",
-        "answer": "Deskive includes 6 core modules: Chat (real-time messaging with threads), Video Calls (HD conferencing with screen sharing), Projects (Kanban boards and task management), Files (cloud storage with version control), Calendar (scheduling with smart suggestions), and Notes (rich text documentation)."
+        "question": "What modules are included in OperaGrid?",
+        "answer": "OperaGrid includes 6 core modules: Chat (real-time messaging with threads), Video Calls (HD conferencing with screen sharing), Projects (Kanban boards and task management), Files (cloud storage with version control), Calendar (scheduling with smart suggestions), and Notes (rich text documentation)."
       },
       "video": {
         "question": "What video call features are available?",
-        "answer": "Deskive offers HD video conferencing with screen sharing, meeting recording, background blur, virtual backgrounds, and public meeting links for external participants. Video calls support up to 10 participants on Starter and unlimited on Professional/Enterprise plans."
+        "answer": "OperaGrid offers HD video conferencing with screen sharing, meeting recording, background blur, virtual backgrounds, and public meeting links for external participants. Video calls support up to 10 participants on Starter and unlimited on Professional/Enterprise plans."
       },
       "storage": {
         "question": "How much storage do I get?",
@@ -5496,7 +5496,7 @@
       },
       "browsers": {
         "question": "What browsers and platforms are supported?",
-        "answer": "Deskive works on all modern browsers including Chrome, Firefox, Safari, and Edge (latest versions). We also offer native desktop apps for macOS (Apple Silicon & Intel) and Windows, plus mobile apps (Android available, iOS coming soon)."
+        "answer": "OperaGrid works on all modern browsers including Chrome, Firefox, Safari, and Edge (latest versions). We also offer native desktop apps for macOS (Apple Silicon & Intel) and Windows, plus mobile apps (Android available, iOS coming soon)."
       },
       "uptime": {
         "question": "What is your uptime guarantee?",
@@ -5527,11 +5527,11 @@
       "badge": "Powerful Features",
       "title": "Everything Your Team Needs to",
       "titleHighlight": "Succeed",
-      "subtitle": "From AI-powered communication to comprehensive project management, Deskive brings all your tools together in one seamless workspace platform."
+      "subtitle": "From AI-powered communication to comprehensive project management, OperaGrid brings all your tools together in one seamless workspace platform."
     },
     "cta": {
       "title": "Ready to Transform How Your Team Works?",
-      "subtitle": "Join thousands of teams using Deskive to collaborate smarter, communicate better, and deliver faster.",
+      "subtitle": "Join thousands of teams using OperaGrid to collaborate smarter, communicate better, and deliver faster.",
       "getStarted": "Get Started Free",
       "viewPricing": "View Pricing"
     },
@@ -5627,7 +5627,7 @@
       "integrations": {
         "title": "Powerful Integrations",
         "tagline": "Connect Everything",
-        "description": "Connect Deskive with your favorite tools and services. Our extensive integration library ensures your workflow stays seamless across all the apps your team uses.",
+        "description": "Connect OperaGrid with your favorite tools and services. Our extensive integration library ensures your workflow stays seamless across all the apps your team uses.",
         "features": [
           "180+ pre-built integrations",
           "Custom webhook support",
@@ -5696,7 +5696,7 @@
   "auth": {
     "login": {
       "title": "Willkommen zurück",
-      "subtitle": "Melden Sie sich bei Ihrem Deskive-Konto an",
+      "subtitle": "Melden Sie sich bei Ihrem OperaGrid-Konto an",
       "email": "E-Mail-Adresse",
       "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
       "password": "Passwort",
@@ -5838,7 +5838,7 @@
         "badge": "Press Center",
         "title": "Latest News &",
         "titleHighlight": "Media Resources",
-        "subtitle": "Stay updated with the latest Deskive news, announcements, and access our comprehensive media kit for journalists and partners.",
+        "subtitle": "Stay updated with the latest OperaGrid news, announcements, and access our comprehensive media kit for journalists and partners.",
         "cta1": "Latest News",
         "cta2": "Media Kit"
       },
@@ -5852,7 +5852,7 @@
       },
       "releases": {
         "title": "Press Releases",
-        "subtitle": "Latest announcements and company news from Deskive"
+        "subtitle": "Latest announcements and company news from OperaGrid"
       },
       "awards": {
         "title": "Awards & Recognition",
@@ -5868,7 +5868,7 @@
       },
       "brandGuidelines": {
         "title": "Brand Guidelines",
-        "subtitle": "Guidelines for using Deskive brand assets correctly and consistently",
+        "subtitle": "Guidelines for using OperaGrid brand assets correctly and consistently",
         "usage": "Usage Guidelines",
         "guideline1": "Use official logos and assets provided in the media kit",
         "guideline2": "Maintain minimum clear space around logos",
@@ -5883,7 +5883,7 @@
         "title": "Press Inquiries",
         "subtitle": "For media inquiries, interviews, or additional information, please contact our press team",
         "email": "Email",
-        "emailAddr": "press@deskive.com",
+        "emailAddr": "press@operagrid.com",
         "phone": "Phone",
         "phoneNum": "+1 (555) 123-4567",
         "response": "Response Time",
@@ -5895,8 +5895,8 @@
       "hero": {
         "badge": "Product Updates",
         "title": "What's New in",
-        "titleHighlight": "Deskive",
-        "subtitle": "Stay up to date with the latest features, improvements, and bug fixes. We're constantly working to make Deskive better for your team.",
+        "titleHighlight": "OperaGrid",
+        "subtitle": "Stay up to date with the latest features, improvements, and bug fixes. We're constantly working to make OperaGrid better for your team.",
         "cta1": "View Latest Updates",
         "cta2": "Subscribe to Updates"
       },
@@ -6246,7 +6246,7 @@
     "dataDeletion": {
       "badge": "Your Rights",
       "title": "Account & Data Deletion",
-      "description": "Learn how to permanently delete your Deskive account and all associated data. We respect your right to be forgotten.",
+      "description": "Learn how to permanently delete your OperaGrid account and all associated data. We respect your right to be forgotten.",
       "warning": {
         "title": "⚠️ Important Warning",
         "description": "Account deletion is permanent and cannot be undone. Before proceeding, please review what will be deleted:",
@@ -6293,10 +6293,10 @@
       },
       "process": {
         "title": "How to Delete Your Account",
-        "description": "Follow these simple steps to permanently delete your Deskive account:",
+        "description": "Follow these simple steps to permanently delete your OperaGrid account:",
         "step1": {
           "title": "Sign in to your account",
-          "description": "Log in to Deskive using your email and password. You must be signed in to request account deletion."
+          "description": "Log in to OperaGrid using your email and password. You must be signed in to request account deletion."
         },
         "step2": {
           "title": "Go to Security Settings",
@@ -6335,7 +6335,7 @@
       },
       "contact": {
         "title": "Need Help?",
-        "description": "If you have questions about account deletion or data removal, please contact our privacy team at privacy@deskive.com",
+        "description": "If you have questions about account deletion or data removal, please contact our privacy team at privacy@operagrid.com",
         "emailButton": "Contact Privacy Team",
         "termsButton": "View Terms of Service"
       }
@@ -6343,11 +6343,11 @@
     "terms": {
       "badge": "Legal Agreement",
       "title": "Terms of Service",
-      "description": "Please read these terms carefully before using our service. By accessing Deskive, you agree to be bound by these terms.",
+      "description": "Please read these terms carefully before using our service. By accessing OperaGrid, you agree to be bound by these terms.",
       "lastUpdated": "Last updated: {date}",
       "agreement": {
         "title": "Agreement Notice",
-        "description": "By using Deskive, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you have any questions or concerns, please don't hesitate to contact us.",
+        "description": "By using OperaGrid, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you have any questions or concerns, please don't hesitate to contact us.",
         "contactButton": "Contact Us",
         "privacyButton": "Privacy Policy"
       },
@@ -6355,7 +6355,7 @@
         "section1": {
           "title": "1. Acceptance of Terms",
           "content": {
-            "0": "By accessing and using Deskive (\"Service\"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
+            "0": "By accessing and using OperaGrid (\"Service\"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
             "1": "These Terms of Service (\"Terms\") govern your access to and use of our services, including our website, applications, and any other services we may provide."
           }
         },
@@ -6380,9 +6380,9 @@
         "section4": {
           "title": "4. Intellectual Property",
           "content": {
-            "0": "The Service and its original content, features, and functionality are and will remain the exclusive property of Deskive and its licensors.",
+            "0": "The Service and its original content, features, and functionality are and will remain the exclusive property of OperaGrid and its licensors.",
             "1": "The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-            "2": "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Deskive.",
+            "2": "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of OperaGrid.",
             "3": "You retain all rights to the content you upload to the Service, but you grant us a license to use, modify, and display such content as necessary to provide the Service."
           }
         },
@@ -6413,7 +6413,7 @@
         "section8": {
           "title": "8. Limitation of Liability",
           "content": {
-            "0": "In no event shall Deskive, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages.",
+            "0": "In no event shall OperaGrid, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages.",
             "1": "This includes loss of profits, data, use, goodwill, or other intangible losses resulting from your access to or use of or inability to access or use the Service.",
             "2": "Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for consequential damages, so some of the above limitations may not apply to you."
           }
@@ -6431,7 +6431,7 @@
           "title": "10. Contact Information",
           "content": {
             "0": "If you have any questions about these Terms, please contact us at:",
-            "1": "Email: support@deskive.com",
+            "1": "Email: support@operagrid.com",
             "2": "Address: Nissho II 1F Room 1-B, 6-5-5 Nagatsuta, Midori-ku, Yokohama, Japan",
             "3": "Phone: +81 45-508-9779",
             "4": "We will respond to all inquiries within 48 business hours."
@@ -6472,7 +6472,7 @@
             "3": "• Usage Information: How you interact with our Service, features you use, and actions you take",
             "4": "• Device Information: Device type, operating system, browser type, IP address, and unique device identifiers",
             "5": "• Payment Information: Billing address and payment method details (processed securely by our payment providers)",
-            "6": "• Slack Integration Data: When you connect Deskive to Slack, we collect Slack user IDs, workspace IDs, channel IDs, email addresses, profile information (name, avatar), and OAuth tokens to enable seamless integration and notifications"
+            "6": "• Slack Integration Data: When you connect OperaGrid to Slack, we collect Slack user IDs, workspace IDs, channel IDs, email addresses, profile information (name, avatar), and OAuth tokens to enable seamless integration and notifications"
           }
         },
         "section2": {
@@ -6496,7 +6496,7 @@
             "1": "• With other users when you collaborate in shared workspaces",
             "2": "• With vendors, consultants, and service providers who need access to perform services for us",
             "3": "• In response to legal requests or to comply with applicable laws",
-            "4": "• To protect the rights, property, and safety of Deskive, our users, or others",
+            "4": "• To protect the rights, property, and safety of OperaGrid, our users, or others",
             "5": "• With your consent or at your direction",
             "6": "We do not sell your personal information to third parties. Your data is yours, and we are committed to protecting it."
           }
@@ -6516,15 +6516,15 @@
           "title": "5. Data Retention",
           "content": {
             "0": "We retain your information for as long as your account is active or as needed to provide you services.",
-            "1": "Slack Integration: When you disconnect Deskive from Slack or uninstall the app, Slack-related data (tokens, channel links) is immediately deactivated. Your workspace data (projects, events, whiteboards) remains accessible via the Deskive web platform and can be permanently deleted upon request.",
+            "1": "Slack Integration: When you disconnect OperaGrid from Slack or uninstall the app, Slack-related data (tokens, channel links) is immediately deactivated. Your workspace data (projects, events, whiteboards) remains accessible via the OperaGrid web platform and can be permanently deleted upon request.",
             "2": "Backup copies of your data may be retained for up to 90 days for disaster recovery purposes.",
-            "3": "You can request deletion of your data at any time by contacting us at support@deskive.com or using the disconnect option in the Slack App Home."
+            "3": "You can request deletion of your data at any time by contacting us at support@operagrid.com or using the disconnect option in the Slack App Home."
           }
         },
         "section6": {
           "title": "6. International Data Transfers",
           "content": {
-            "0": "Deskive is based in the United States, and we process and store information in the U.S. and other countries.",
+            "0": "OperaGrid is based in the United States, and we process and store information in the U.S. and other countries.",
             "1": "If you are accessing our Service from outside the U.S., please be aware that your information may be transferred to, stored, and processed in the U.S. and other countries.",
             "2": "We comply with applicable data protection laws and implement appropriate safeguards for international data transfers.",
             "3": "By using our Service, you consent to the transfer of your information to countries outside your country of residence."
@@ -6540,7 +6540,7 @@
             "4": "• Portability: Request a copy of your information in a portable format",
             "5": "• Opt-out: Opt-out of marketing communications",
             "6": "• Restriction: Request restriction of processing of your information",
-            "7": "To exercise these rights, please contact us at support@deskive.com. We will respond to your request within 30 days."
+            "7": "To exercise these rights, please contact us at support@operagrid.com. We will respond to your request within 30 days."
           }
         },
         "section8": {
@@ -6561,7 +6561,7 @@
           "content": {
             "0": "Our Service is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13.",
             "1": "If we learn that we have collected personal information from a child under 13, we will take steps to delete such information as quickly as possible.",
-            "2": "If you believe that a child under 13 has provided us with personal information, please contact us at support@deskive.com."
+            "2": "If you believe that a child under 13 has provided us with personal information, please contact us at support@operagrid.com."
           }
         },
         "section10": {
@@ -6578,22 +6578,22 @@
           "title": "11. Sub-Processors and Third-Party Services",
           "content": {
             "0": "We use the following third-party service providers (sub-processors) to help us deliver our Service:",
-            "1": "• deskive (Database & Backend Infrastructure) - Provides secure data storage and API services. Location: United States. Purpose: Store and process workspace data, user accounts, and application state.",
+            "1": "• operagrid (Database & Backend Infrastructure) - Provides secure data storage and API services. Location: United States. Purpose: Store and process workspace data, user accounts, and application state.",
             "2": "• Hetzner (Cloud Hosting) - Provides infrastructure and server hosting. Location: Germany/Europe. Purpose: Host application servers, databases, and file storage with GDPR-compliant data centers.",
             "3": "• Cloudflare (DNS & Security) - Provides DNS management, CDN, and DDoS protection. Location: Global network. Purpose: Improve performance, security, and reliability of our Service.",
             "4": "• Stripe (Payment Processing) - Processes subscription payments and billing. Location: United States. Purpose: Securely handle payment transactions. Note: Stripe is PCI-DSS compliant and we do not store credit card details on our servers.",
             "5": "• Google Analytics (Analytics) - Provides usage analytics and insights. Location: United States. Purpose: Understand user behavior to improve Service quality and user experience.",
-            "6": "All sub-processors are required to maintain security standards consistent with our privacy policy and are bound by data protection agreements. We regularly review and audit our sub-processors. For questions about our sub-processors, contact support@deskive.com."
+            "6": "All sub-processors are required to maintain security standards consistent with our privacy policy and are bound by data protection agreements. We regularly review and audit our sub-processors. For questions about our sub-processors, contact support@operagrid.com."
           }
         },
         "section12": {
           "title": "12. Contact Us",
           "content": {
             "0": "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:",
-            "1": "Email: support@deskive.com",
+            "1": "Email: support@operagrid.com",
             "2": "Address: Nissho II 1F Room 1-B, 6-5-5 Nagatsuta, Midori-ku, Yokohama, Japan",
             "3": "Phone: +81 45-508-9779",
-            "4": "Data Protection Officer: support@deskive.com",
+            "4": "Data Protection Officer: support@operagrid.com",
             "5": "We will respond to all inquiries within 48 business hours."
           }
         }
@@ -6608,7 +6608,7 @@
     "cookies": {
       "badge": "Cookie Policy",
       "title": "Cookie Policy",
-      "description": "Understand how Deskive uses cookies to improve your experience, provide security, and deliver personalized content.",
+      "description": "Understand how OperaGrid uses cookies to improve your experience, provide security, and deliver personalized content.",
       "lastUpdated": "Last updated: {date}",
       "glance": {
         "title": "Cookie Types at a Glance"
@@ -6624,7 +6624,7 @@
           "title": "1. What Are Cookies?",
           "content": {
             "0": "Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and to provide a better, more personalized user experience.",
-            "1": "Deskive uses cookies and similar technologies (such as web beacons, pixels, and local storage) to:",
+            "1": "OperaGrid uses cookies and similar technologies (such as web beacons, pixels, and local storage) to:",
             "2": "• Keep you signed in to your account",
             "3": "• Remember your preferences and settings",
             "4": "• Provide security and prevent fraud",
@@ -6638,11 +6638,11 @@
           "content": {
             "0": "These cookies are strictly necessary for our service to function properly. They enable core functionality such as security, network management, and accessibility. Without these cookies, services you have asked for cannot be provided.",
             "1": "Essential cookies we use include:",
-            "2": "• deskive_session - Maintains your login session (Duration: Session)",
+            "2": "• operagrid_session - Maintains your login session (Duration: Session)",
             "3": "• csrf_token - Prevents cross-site request forgery (Duration: Session)",
-            "4": "• deskive_auth - Stores authentication information (Duration: 30 days)",
+            "4": "• operagrid_auth - Stores authentication information (Duration: 30 days)",
             "5": "• load_balancer - Routes requests to appropriate servers (Duration: Session)",
-            "6": "These cookies cannot be disabled as they are necessary for the service to function. Blocking these cookies may prevent you from using Deskive properly."
+            "6": "These cookies cannot be disabled as they are necessary for the service to function. Blocking these cookies may prevent you from using OperaGrid properly."
           }
         },
         "section3": {
@@ -6656,7 +6656,7 @@
             "5": "• Notification settings",
             "6": "• Accessibility features (font size, contrast)",
             "7": "• Dashboard layout customization",
-            "8": "If you disable functional cookies, some features may not work as expected, but the core functionality of Deskive will remain available."
+            "8": "If you disable functional cookies, some features may not work as expected, but the core functionality of OperaGrid will remain available."
           }
         },
         "section4": {
@@ -6690,7 +6690,7 @@
             "8": "• Google Ads - Search and display advertising",
             "9": "• Facebook Pixel - Social media advertising and retargeting",
             "10": "• LinkedIn Insight Tag - Professional network advertising",
-            "11": "You can opt out of marketing cookies without affecting your ability to use Deskive. However, you may see less relevant advertising on other websites."
+            "11": "You can opt out of marketing cookies without affecting your ability to use OperaGrid. However, you may see less relevant advertising on other websites."
           }
         },
         "section6": {
@@ -6709,7 +6709,7 @@
           "title": "7. Managing Your Cookie Preferences",
           "content": {
             "0": "You have several options for managing cookies and controlling your privacy:",
-            "1": "Cookie Consent Manager: When you first visit Deskive, you'll see a cookie consent banner allowing you to choose which types of cookies to accept. You can change your preferences at any time by clicking the \"Cookie Settings\" link in our footer.",
+            "1": "Cookie Consent Manager: When you first visit OperaGrid, you'll see a cookie consent banner allowing you to choose which types of cookies to accept. You can change your preferences at any time by clicking the \"Cookie Settings\" link in our footer.",
             "2": "Account Settings: Logged-in users can manage certain cookie preferences through their account settings, including analytics and marketing cookies.",
             "3": "Browser Settings: You can control cookies through your browser settings:",
             "4": "• Google Chrome: Settings → Privacy and security → Cookies and other site data",
@@ -6728,7 +6728,7 @@
             "4": "Android Devices:",
             "5": "• Settings → Privacy → Ads → Opt out of Ads Personalization",
             "6": "• Chrome → Settings → Site settings → Cookies",
-            "7": "Note: Disabling all cookies may affect your ability to use Deskive and other websites properly."
+            "7": "Note: Disabling all cookies may affect your ability to use OperaGrid and other websites properly."
           }
         },
         "section9": {
@@ -6746,10 +6746,10 @@
           "title": "10. Contact Information",
           "content": {
             "0": "If you have questions about this Cookie Policy or our use of cookies, please contact us:",
-            "1": "Email: support@deskive.com",
+            "1": "Email: support@operagrid.com",
             "2": "Address: Nissho II 1F Room 1-B, 6-5-5 Nagatsuta, Midori-ku, Yokohama, Japan",
             "3": "Phone: +81 45-508-9779",
-            "4": "Data Protection Officer: support@deskive.com",
+            "4": "Data Protection Officer: support@operagrid.com",
             "5": "For more information about our data practices, please see our Privacy Policy and Terms of Service."
           }
         }
@@ -7691,7 +7691,7 @@
     "error": "Error loading settings",
     "feedback": {
       "title": "Feedback & Support",
-      "description": "Report bugs, request features, or share suggestions to help us improve Deskive.",
+      "description": "Report bugs, request features, or share suggestions to help us improve OperaGrid.",
       "newFeedback": "New Feedback",
       "tabs": {
         "all": "All",
@@ -8054,7 +8054,7 @@
       "title": "AI Assistant",
       "description": "What would you like to do?",
       "placeholder": "e.g., Create a project, schedule a meeting, or write a note",
-      "poweredBy": "AI Assistant powered by Deskive",
+      "poweredBy": "AI Assistant powered by OperaGrid",
       "pressEnter": "Press Enter to send, Shift+Enter for new line",
       "quickCommands": "Quick Commands",
       "confirmAction": "Confirm Action"
@@ -8734,7 +8734,7 @@
     "apps": {
       "page": {
         "title": "Connectors",
-        "subtitle": "Connect external apps to extend Deskive's capabilities",
+        "subtitle": "Connect external apps to extend OperaGrid's capabilities",
         "searchPlaceholder": "Search connectors...",
         "connectorsAvailable": "{count} connector{plural} available",
         "noConnectorsFound": "No connectors found",
@@ -8761,7 +8761,7 @@
         "notAvailable": "Not Available"
       },
       "descriptions": {
-        "gmail": "Send and receive emails directly within Deskive",
+        "gmail": "Send and receive emails directly within OperaGrid",
         "googleCalendar": "Sync and manage your Google Calendar events",
         "googleDrive": "Access and manage your Google Drive files",
         "github": "Connect your GitHub account to view repositories",
@@ -9020,7 +9020,7 @@
       "title": "Google Sheets Integration",
       "connected": "Connected as {email}",
       "notConnected": "Auto-sync requests to Google Sheets when submitted",
-      "description": "When a new request is submitted, it will automatically be added to a Google Sheet named 'Deskive Approvals'. Each request type will have its own sheet tab.",
+      "description": "When a new request is submitted, it will automatically be added to a Google Sheet named 'OperaGrid Approvals'. Each request type will have its own sheet tab.",
       "connect": "Connect Google Sheets",
       "disconnect": "Disconnect",
       "connectFailed": "Failed to connect Google Sheets",

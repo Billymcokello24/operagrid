@@ -260,8 +260,8 @@ export function IntegrationLogs({ integration }: IntegrationLogsProps) {
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-2">
-              <div className="p-2 bg-green-500/10 rounded-lg">
-                <CheckCircle className="w-4 h-4 text-green-600" />
+              <div className="p-2 bg-blue-500/10 rounded-lg">
+                <CheckCircle className="w-4 h-4 text-blue-600" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Total</p>

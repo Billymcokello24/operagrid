@@ -9,14 +9,14 @@ import { NotFoundException, BadRequestException } from '@nestjs/common';
 import nock from 'nock';
 import { DropboxService } from '../dropbox.service';
 import { DropboxOAuthService } from '../dropbox-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import { ConfigService } from '@nestjs/config';
 import { OAUTH_MOCK_CREDENTIALS } from '../../../../../test/helpers/mock-credentials';
 import { cleanupOAuthMocks } from '../../../../../test/helpers/oauth-mock.helper';
 
 describe('DropboxService', () => {
   let service: DropboxService;
-  let deskiveService: jest.Mocked<deskiveService>;
+  let operagridService: jest.Mocked<operagridService>;
   let oauthService: DropboxOAuthService;
 
   const mockUserId = 'user-123';
@@ -43,7 +43,7 @@ describe('DropboxService', () => {
   };
 
   beforeEach(async () => {
-    const mockdeskiveService = {
+    const mockoperagridService = {
       findOne: jest.fn(),
       findMany: jest.fn(),
       insert: jest.fn(),
@@ -58,8 +58,8 @@ describe('DropboxService', () => {
         DropboxService,
         DropboxOAuthService,
         {
-          provide: deskiveService,
-          useValue: mockdeskiveService,
+          provide: operagridService,
+          useValue: mockoperagridService,
         },
         {
           provide: ConfigService,
@@ -71,7 +71,7 @@ describe('DropboxService', () => {
     }).compile();
 
     service = module.get<DropboxService>(DropboxService);
-    deskiveService = module.get(deskiveService);
+    operagridService = module.get(operagridService);
     oauthService = module.get<DropboxOAuthService>(DropboxOAuthService);
   });
 
@@ -83,14 +83,14 @@ describe('DropboxService', () => {
   describe('Connection Management', () => {
     describe('getConnection', () => {
       it('should return connection when found', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(mockConnection);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
         expect(result).toBeDefined();
         expect(result?.workspaceId).toBe(mockWorkspaceId);
         expect(result?.dropboxEmail).toBe('test@example.com');
-        expect(deskiveService.findOne).toHaveBeenCalledWith('dropbox_connections', {
+        expect(operagridService.findOne).toHaveBeenCalledWith('dropbox_connections', {
           workspace_id: mockWorkspaceId,
           user_id: mockUserId,
           is_active: true,
@@ -98,7 +98,7 @@ describe('DropboxService', () => {
       });
 
       it('should return null when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
@@ -108,15 +108,15 @@ describe('DropboxService', () => {
 
     describe('disconnect', () => {
       it('should disconnect user from Dropbox', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
-        deskiveService.update.mockResolvedValue({ ...mockConnection, is_active: false });
+        operagridService.findOne.mockResolvedValue(mockConnection);
+        operagridService.update.mockResolvedValue({ ...mockConnection, is_active: false });
 
         // Mock token revocation
         nock('https://api.dropboxapi.com').post('/2/auth/token/revoke').reply(200, null);
 
         await service.disconnect(mockUserId, mockWorkspaceId);
 
-        expect(deskiveService.update).toHaveBeenCalledWith(
+        expect(operagridService.update).toHaveBeenCalledWith(
           'dropbox_connections',
           mockConnection.id,
           expect.objectContaining({
@@ -126,7 +126,7 @@ describe('DropboxService', () => {
       });
 
       it('should throw NotFoundException when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         await expect(service.disconnect(mockUserId, mockWorkspaceId)).rejects.toThrow(
           NotFoundException,
@@ -138,7 +138,7 @@ describe('DropboxService', () => {
   describe('File Operations', () => {
     beforeEach(() => {
       // Mock connection retrieval for all file operations
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('listFiles', () => {
@@ -448,8 +448,8 @@ describe('DropboxService', () => {
         expires_at: new Date(Date.now() - 1000).toISOString(), // Expired
       };
 
-      deskiveService.findOne.mockResolvedValue(expiredConnection);
-      deskiveService.update.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(expiredConnection);
+      operagridService.update.mockResolvedValue(mockConnection);
 
       // Mock token refresh
       nock('https://api.dropboxapi.com').post('/oauth2/token').reply(200, {
@@ -469,7 +469,7 @@ describe('DropboxService', () => {
       await service.getStorageQuota(mockUserId, mockWorkspaceId);
 
       // Verify token was refreshed
-      expect(deskiveService.update).toHaveBeenCalledWith(
+      expect(operagridService.update).toHaveBeenCalledWith(
         'dropbox_connections',
         expiredConnection.id,
         expect.objectContaining({
@@ -485,7 +485,7 @@ describe('DropboxService', () => {
         refresh_token: null,
       };
 
-      deskiveService.findOne.mockResolvedValue(expiredConnectionNoRefresh);
+      operagridService.findOne.mockResolvedValue(expiredConnectionNoRefresh);
 
       await expect(service.getStorageQuota(mockUserId, mockWorkspaceId)).rejects.toThrow(
         BadRequestException,
@@ -495,7 +495,7 @@ describe('DropboxService', () => {
 
   describe('No Connection', () => {
     it('should throw NotFoundException when no connection exists', async () => {
-      deskiveService.findOne.mockResolvedValue(null);
+      operagridService.findOne.mockResolvedValue(null);
 
       await expect(service.listFiles(mockUserId, mockWorkspaceId)).rejects.toThrow(
         NotFoundException,

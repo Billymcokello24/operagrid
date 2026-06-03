@@ -9,13 +9,13 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { NotFoundException, BadRequestException } from '@nestjs/common';
 import nock from 'nock';
 import { TelegramService } from '../telegram.service';
-import { deskiveService } from '../../deskive/deskive.service';
+import { operagridService } from '../../operagrid/operagrid.service';
 import { MOCK_CREDENTIALS } from '../../../../test/helpers/mock-credentials';
 import { cleanupOAuthMocks } from '../../../../test/helpers/oauth-mock.helper';
 
 describe('TelegramService', () => {
   let service: TelegramService;
-  let deskiveService: jest.Mocked<deskiveService>;
+  let operagridService: jest.Mocked<operagridService>;
 
   const mockUserId = 'user-123';
   const mockWorkspaceId = 'workspace-456';
@@ -46,7 +46,7 @@ describe('TelegramService', () => {
   };
 
   beforeEach(async () => {
-    const mockdeskiveService = {
+    const mockoperagridService = {
       findOne: jest.fn(),
       findMany: jest.fn(),
       insert: jest.fn(),
@@ -58,14 +58,14 @@ describe('TelegramService', () => {
       providers: [
         TelegramService,
         {
-          provide: deskiveService,
-          useValue: mockdeskiveService,
+          provide: operagridService,
+          useValue: mockoperagridService,
         },
       ],
     }).compile();
 
     service = module.get<TelegramService>(TelegramService);
-    deskiveService = module.get(deskiveService);
+    operagridService = module.get(operagridService);
   });
 
   afterEach(() => {
@@ -80,15 +80,15 @@ describe('TelegramService', () => {
           .post(`/bot${mockBotToken}/getMe`)
           .reply(200, { ok: true, result: mockBotInfo });
 
-        deskiveService.findOne.mockResolvedValue(null);
-        deskiveService.insert.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(null);
+        operagridService.insert.mockResolvedValue(mockConnection);
 
         const result = await service.saveConnection(mockUserId, mockWorkspaceId, mockBotToken);
 
         expect(result).toBeDefined();
         expect(result.botUsername).toBe('test_bot');
         expect(result.isActive).toBe(true);
-        expect(deskiveService.insert).toHaveBeenCalledWith(
+        expect(operagridService.insert).toHaveBeenCalledWith(
           'telegram_connections',
           expect.objectContaining({
             workspace_id: mockWorkspaceId,
@@ -105,13 +105,13 @@ describe('TelegramService', () => {
           .post(`/bot${mockBotToken}/getMe`)
           .reply(200, { ok: true, result: mockBotInfo });
 
-        deskiveService.findOne.mockResolvedValue(mockConnection);
-        deskiveService.update.mockResolvedValue({ ...mockConnection });
+        operagridService.findOne.mockResolvedValue(mockConnection);
+        operagridService.update.mockResolvedValue({ ...mockConnection });
 
         const result = await service.saveConnection(mockUserId, mockWorkspaceId, mockBotToken);
 
         expect(result).toBeDefined();
-        expect(deskiveService.update).toHaveBeenCalled();
+        expect(operagridService.update).toHaveBeenCalled();
       });
 
       it('should throw BadRequestException for invalid bot token', async () => {
@@ -129,13 +129,13 @@ describe('TelegramService', () => {
 
     describe('getConnection', () => {
       it('should return connection when found', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(mockConnection);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
         expect(result).toBeDefined();
         expect(result?.botUsername).toBe('test_bot');
-        expect(deskiveService.findOne).toHaveBeenCalledWith('telegram_connections', {
+        expect(operagridService.findOne).toHaveBeenCalledWith('telegram_connections', {
           workspace_id: mockWorkspaceId,
           user_id: mockUserId,
           is_active: true,
@@ -143,7 +143,7 @@ describe('TelegramService', () => {
       });
 
       it('should return null when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
@@ -153,12 +153,12 @@ describe('TelegramService', () => {
 
     describe('disconnect', () => {
       it('should disconnect user from Telegram', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
-        deskiveService.update.mockResolvedValue({ ...mockConnection, is_active: false });
+        operagridService.findOne.mockResolvedValue(mockConnection);
+        operagridService.update.mockResolvedValue({ ...mockConnection, is_active: false });
 
         await service.disconnect(mockUserId, mockWorkspaceId);
 
-        expect(deskiveService.update).toHaveBeenCalledWith(
+        expect(operagridService.update).toHaveBeenCalledWith(
           'telegram_connections',
           mockConnection.id,
           expect.objectContaining({
@@ -168,7 +168,7 @@ describe('TelegramService', () => {
       });
 
       it('should throw NotFoundException when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         await expect(service.disconnect(mockUserId, mockWorkspaceId)).rejects.toThrow(
           NotFoundException,
@@ -207,7 +207,7 @@ describe('TelegramService', () => {
 
   describe('Bot Info Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('getMe', () => {
@@ -225,7 +225,7 @@ describe('TelegramService', () => {
       });
 
       it('should throw NotFoundException when not connected', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         await expect(service.getMe(mockUserId, mockWorkspaceId)).rejects.toThrow(NotFoundException);
       });
@@ -234,8 +234,8 @@ describe('TelegramService', () => {
 
   describe('Message Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
-      deskiveService.update.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
+      operagridService.update.mockResolvedValue(mockConnection);
     });
 
     describe('sendMessage', () => {
@@ -349,8 +349,8 @@ describe('TelegramService', () => {
 
   describe('Updates Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
-      deskiveService.update.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
+      operagridService.update.mockResolvedValue(mockConnection);
     });
 
     describe('getUpdates', () => {
@@ -439,7 +439,7 @@ describe('TelegramService', () => {
 
   describe('Chat Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('getChat', () => {
@@ -504,7 +504,7 @@ describe('TelegramService', () => {
 
   describe('Webhook Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('setWebhook', () => {
@@ -634,8 +634,8 @@ describe('TelegramService', () => {
 
   describe('Last Synced Timestamp', () => {
     it('should update last_synced_at when sending messages', async () => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
-      deskiveService.update.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
+      operagridService.update.mockResolvedValue(mockConnection);
 
       nock('https://api.telegram.org')
         .post(`/bot${mockBotToken}/sendMessage`)
@@ -654,7 +654,7 @@ describe('TelegramService', () => {
         text: 'Hello',
       });
 
-      expect(deskiveService.update).toHaveBeenCalledWith(
+      expect(operagridService.update).toHaveBeenCalledWith(
         'telegram_connections',
         mockConnection.id,
         expect.objectContaining({
@@ -664,8 +664,8 @@ describe('TelegramService', () => {
     });
 
     it('should update last_synced_at when getting updates', async () => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
-      deskiveService.update.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
+      operagridService.update.mockResolvedValue(mockConnection);
 
       nock('https://api.telegram.org')
         .post(`/bot${mockBotToken}/getUpdates`)
@@ -673,7 +673,7 @@ describe('TelegramService', () => {
 
       await service.getUpdates(mockUserId, mockWorkspaceId, {});
 
-      expect(deskiveService.update).toHaveBeenCalledWith(
+      expect(operagridService.update).toHaveBeenCalledWith(
         'telegram_connections',
         mockConnection.id,
         expect.objectContaining({
@@ -685,7 +685,7 @@ describe('TelegramService', () => {
 
   describe('Error Handling', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     it('should handle network errors', async () => {
@@ -712,7 +712,7 @@ describe('TelegramService', () => {
     });
 
     it('should throw NotFoundException when not connected', async () => {
-      deskiveService.findOne.mockResolvedValue(null);
+      operagridService.findOne.mockResolvedValue(null);
 
       await expect(
         service.sendMessage(mockUserId, mockWorkspaceId, {

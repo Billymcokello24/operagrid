@@ -188,7 +188,7 @@ const changelogEntries: ChangelogEntry[] = [
     version: '2.6.5',
     date: 'February 20, 2024',
     title: 'Integration Marketplace',
-    description: 'Launch of the Deskive Integration Marketplace with 50+ new integrations.',
+    description: 'Launch of the OperaGrid Integration Marketplace with 50+ new integrations.',
     featured: true,
     changes: [
       {
@@ -256,9 +256,9 @@ const changelogEntries: ChangelogEntry[] = [
 const changeTypeConfig = {
   new: {
     icon: Plus,
-    color: 'text-green-400',
-    bgColor: 'bg-green-500/20',
-    borderColor: 'border-green-500/30',
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/20',
+    borderColor: 'border-blue-500/30',
     label: 'New'
   },
   improved: {
@@ -298,7 +298,7 @@ export default function ChangelogPage() {
     <PublicLayout>
       <PageSEO
         title="Changelog - Product Updates and Release Notes"
-        description="Track Deskive's latest features, improvements, and bug fixes. Stay updated with product releases, new capabilities, and platform enhancements."
+        description="Track OperaGrid's latest features, improvements, and bug fixes. Stay updated with product releases, new capabilities, and platform enhancements."
         keywords={['changelog', 'updates', 'release notes', 'new features', 'product updates', 'version history']}
       />
       <div className="relative overflow-hidden">
@@ -315,7 +315,7 @@ export default function ChangelogPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
               >
                 <Rocket className="h-4 w-4 text-cyan-400" />
                 <span className="text-cyan-300 font-medium">Product Updates</span>
@@ -326,24 +326,24 @@ export default function ChangelogPage() {
                 <span 
                   className="block"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                   }}
                 >
-                  Deskive
+                  OperaGrid
                 </span>
               </h1>
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Stay up to date with the latest features, improvements, and bug fixes. 
-                We're constantly working to make Deskive better for your team.
+                We're constantly working to make OperaGrid better for your team.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                   onClick={() => document.getElementById('changelog')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   View Latest Updates
@@ -378,7 +378,7 @@ export default function ChangelogPage() {
                 <div 
                   className="text-2xl font-bold mb-1"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -391,11 +391,11 @@ export default function ChangelogPage() {
               </div>
               
               <div className="glass-effect glass-card-hover border-white/10 rounded-2xl p-6">
-                <TrendingUp className="h-8 w-8 text-green-400 mx-auto mb-3" />
+                <TrendingUp className="h-8 w-8 text-blue-400 mx-auto mb-3" />
                 <div 
                   className="text-2xl font-bold mb-1"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -412,7 +412,7 @@ export default function ChangelogPage() {
                 <div 
                   className="text-2xl font-bold mb-1"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -429,7 +429,7 @@ export default function ChangelogPage() {
                 <div 
                   className="text-2xl font-bold mb-1"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -471,7 +471,7 @@ export default function ChangelogPage() {
                           onClick={() => setSelectedFilter(filter.id)}
                           className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
                             selectedFilter === filter.id
-                              ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white'
+                              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
                               : 'text-white/60 hover:text-white hover:bg-white/10'
                           }`}
                         >
@@ -507,7 +507,7 @@ export default function ChangelogPage() {
                           <div className="flex items-center gap-2">
                             <span className="text-2xl font-bold text-white">v{entry.version}</span>
                             {entry.featured && (
-                              <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-500/30 rounded-full">
+                              <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full">
                                 <Star className="h-3 w-3 text-cyan-400" />
                                 <span className="text-xs font-medium text-cyan-300">Featured</span>
                               </div>
@@ -588,7 +588,7 @@ export default function ChangelogPage() {
                   className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-sm"
                 />
                 <Button
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0 whitespace-nowrap"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 whitespace-nowrap"
                 >
                   Subscribe
                   <Mail className="ml-2 h-4 w-4" />
@@ -637,8 +637,8 @@ export default function ChangelogPage() {
                     
                     <div className="space-y-3">
                       <Button
-                        className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
-                        onClick={() => window.open('mailto:feedback@deskive.com?subject=Feature Request', '_blank')}
+                        className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
+                        onClick={() => window.open('mailto:feedback@operagrid.com?subject=Feature Request', '_blank')}
                       >
                         Submit Feature Request
                         <ArrowRight className="ml-2 h-4 w-4" />

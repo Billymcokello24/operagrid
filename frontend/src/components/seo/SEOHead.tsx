@@ -32,7 +32,7 @@ export function SEOHead({
   nofollow = false,
 }: SEOHeadProps) {
   const siteUrl = getBaseUrl();
-  const fullTitle = title && title.includes('Deskive') ? title : `${title || 'Page'} | Deskive`;
+  const fullTitle = title && title.includes('OperaGrid') ? title : `${title || 'Page'} | OperaGrid`;
   // Auto-generate canonical URL if not provided, with smart query param handling
   const canonicalUrl = canonical || getSmartCanonicalUrl();
   const ogImageUrl = ogImage?.startsWith('http') ? ogImage : `${siteUrl}${ogImage || '/og-image.png'}`;
@@ -65,7 +65,7 @@ export function SEOHead({
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Deskive" />
+      <meta property="og:site_name" content="OperaGrid" />
       <meta property="og:locale" content="en_US" />
       {/* Facebook Page link */}
       <meta property="article:publisher" content={SITE_CONFIG.social.facebook} />

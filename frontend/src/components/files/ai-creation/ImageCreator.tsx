@@ -235,7 +235,7 @@ export function ImageCreator({ onGenerate, isGenerating }: ImageCreatorProps) {
       <Button
         onClick={handleGenerate}
         disabled={!prompt.trim() || isGenerating}
-        className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white border-0"
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 text-white border-0"
       >
         {isGenerating ? (
           <>
@@ -251,12 +251,12 @@ export function ImageCreator({ onGenerate, isGenerating }: ImageCreatorProps) {
       </Button>
 
       {/* Tips Card */}
-      <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200 dark:border-green-800">
+      <Card className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950 dark:to-blue-950 border-blue-200 dark:border-blue-800">
         <CardContent className="p-4">
-          <h3 className="font-medium text-sm mb-2 text-green-900 dark:text-green-100">
+          <h3 className="font-medium text-sm mb-2 text-blue-900 dark:text-blue-100">
             💡 Image Generation Tips
           </h3>
-          <ul className="text-xs text-green-700 dark:text-green-300 space-y-1">
+          <ul className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
             <li>• Be specific about subjects, lighting, and composition</li>
             <li>• Include style keywords like "professional", "modern", "minimalist"</li>
             <li>• Mention camera angles or perspectives if needed</li>

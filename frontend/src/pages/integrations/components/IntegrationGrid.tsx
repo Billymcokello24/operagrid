@@ -23,7 +23,7 @@ interface IntegrationGridProps {
 
 const CATEGORY_COLORS: Record<string, string> = {
   'COMMUNICATION': 'bg-blue-500/10 text-blue-700 dark:text-blue-300',
-  'PROJECT_MANAGEMENT': 'bg-green-500/10 text-green-700 dark:text-green-300',
+  'PROJECT_MANAGEMENT': 'bg-blue-500/10 text-blue-700 dark:text-blue-300',
   'FILE_STORAGE': 'bg-orange-500/10 text-orange-700 dark:text-orange-300',
   'STORAGE': 'bg-orange-500/10 text-orange-700 dark:text-orange-300',
   'CALENDAR': 'bg-purple-500/10 text-purple-700 dark:text-purple-300',
@@ -34,10 +34,10 @@ const CATEGORY_COLORS: Record<string, string> = {
   'MARKETING': 'bg-rose-500/10 text-rose-700 dark:text-rose-300',
   'DOCUMENTATION': 'bg-amber-500/10 text-amber-700 dark:text-amber-300',
   'HR': 'bg-amber-500/10 text-amber-700 dark:text-amber-300',
-  'FINANCE': 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300',
+  'FINANCE': 'bg-blue-500/10 text-blue-700 dark:text-blue-300',
   'DESIGN': 'bg-violet-500/10 text-violet-700 dark:text-violet-300',
   'DEVELOPMENT': 'bg-yellow-500/10 text-yellow-700 dark:text-yellow-300',
-  'PRODUCTIVITY': 'bg-teal-500/10 text-teal-700 dark:text-teal-300',
+  'PRODUCTIVITY': 'bg-blue-500/10 text-blue-700 dark:text-blue-300',
   'TIME_TRACKING': 'bg-lime-500/10 text-lime-700 dark:text-lime-300',
   'VIDEO_CONFERENCING': 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300',
   'AUTOMATION': 'bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-300',
@@ -137,7 +137,7 @@ export function IntegrationGrid({
                   </div>
                 </div>
                 {installed && (
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 )}
               </div>
             </CardHeader>
@@ -179,7 +179,7 @@ export function IntegrationGrid({
               </div>
 
               {integration.pricing?.type === 'FREE' && (
-                <Badge variant="outline" className="text-green-600 border-green-200">
+                <Badge variant="outline" className="text-blue-600 border-blue-200">
                   {intl.formatMessage({ id: 'modules.integrations.card.free', defaultMessage: 'Free' })}
                 </Badge>
               )}

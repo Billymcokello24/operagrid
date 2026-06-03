@@ -212,7 +212,7 @@ export function VideoControls({
         onClick={toggleCaptions}
         className={cn(
           "rounded-full h-14 w-14 shadow-lg hover:scale-105 transition-transform",
-          isCaptionsEnabled && "bg-green-600 hover:bg-green-700"
+          isCaptionsEnabled && "bg-blue-600 hover:bg-blue-700"
         )}
         title={isCaptionsEnabled ? "Turn off captions" : "Turn on captions"}
       >

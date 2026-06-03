@@ -105,7 +105,7 @@ const FeedbackSettings: React.FC = () => {
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            {intl.formatMessage({ id: 'settings.feedback.description', defaultMessage: 'Report bugs, request features, or share suggestions to help us improve Deskive.' })}
+            {intl.formatMessage({ id: 'settings.feedback.description', defaultMessage: 'Report bugs, request features, or share suggestions to help us improve OperaGrid.' })}
           </p>
         </CardContent>
       </Card>
@@ -574,8 +574,8 @@ function FeedbackDetailDialog({
 
           {/* Resolution */}
           {feedback.status === 'resolved' && feedback.resolutionNotes && (
-            <div className="p-4 bg-green-50 dark:bg-green-950 border-2 border-green-200 rounded-lg">
-              <div className="flex items-center gap-2 text-green-700 dark:text-green-400 font-semibold mb-2">
+            <div className="p-4 bg-blue-50 dark:bg-blue-950 border-2 border-blue-200 rounded-lg">
+              <div className="flex items-center gap-2 text-blue-700 dark:text-blue-400 font-semibold mb-2">
                 <CheckCircle className="w-5 h-5" />
                 {intl.formatMessage({ id: 'settings.feedback.dialog.detail.resolved.title', defaultMessage: 'Resolved' })}
               </div>
@@ -614,7 +614,7 @@ function getFeedbackStatusInfo(status: FeedbackStatus) {
     pending: { label: 'Pending', icon: Clock, className: 'text-gray-600 border-gray-200' },
     in_review: { label: 'In Review', icon: AlertCircle, className: 'text-blue-600 border-blue-200' },
     in_progress: { label: 'In Progress', icon: Loader2, className: 'text-orange-600 border-orange-200' },
-    resolved: { label: 'Resolved', icon: CheckCircle, className: 'text-green-600 border-green-200' },
+    resolved: { label: 'Resolved', icon: CheckCircle, className: 'text-blue-600 border-blue-200' },
     wont_fix: { label: "Won't Fix", icon: AlertTriangle, className: 'text-red-600 border-red-200' },
     duplicate: { label: 'Duplicate', icon: AlertCircle, className: 'text-purple-600 border-purple-200' },
   };

@@ -158,7 +158,7 @@ export class DropboxImportFileDto {
   @IsString()
   path: string;
 
-  @ApiPropertyOptional({ description: 'Target folder ID in Deskive (optional)' })
+  @ApiPropertyOptional({ description: 'Target folder ID in OperaGrid (optional)' })
   @IsOptional()
   @IsString()
   targetFolderId?: string;
@@ -169,7 +169,7 @@ export class ImportFileResponseDto {
   success: boolean;
 
   @ApiProperty()
-  deskiveFileId: string;
+  operagridFileId: string;
 
   @ApiProperty()
   fileName: string;

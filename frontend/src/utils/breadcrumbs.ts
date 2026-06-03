@@ -23,7 +23,7 @@ export interface BreadcrumbListSchema {
  * Generate breadcrumb schema from array of items
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbListSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
 
   return {
     '@context': 'https://schema.org',
@@ -41,7 +41,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbLis
  * Generate breadcrumbs from URL path
  */
 export function generateBreadcrumbsFromPath(pathname: string): BreadcrumbItem[] {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
   const parts = pathname.split('/').filter(part => part.length > 0);
 
   const breadcrumbs: BreadcrumbItem[] = [

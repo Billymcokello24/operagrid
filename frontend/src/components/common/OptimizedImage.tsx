@@ -105,7 +105,7 @@ export function OptimizedImage({
 export const DEFAULT_PLACEHOLDER = '/images/placeholder.png';
 
 /**
- * Common image sizes for Deskive platform
+ * Common image sizes for OperaGrid platform
  */
 export const IMAGE_SIZES = {
   avatar: { width: 40, height: 40 },

@@ -32,7 +32,7 @@ import type {
  */
 const transformDriveFile = (file: GoogleDriveFile): FileSearchResult | FolderSearchResult => {
   const baseResult = {
-    id: `drive-${file.id}`, // Prefix to avoid ID conflicts with Deskive files
+    id: `drive-${file.id}`, // Prefix to avoid ID conflicts with OperaGrid files
     title: file.name,
     snippet: `Google Drive • ${file.mimeType}`,
     author: {
@@ -187,7 +187,7 @@ const transformSearchResult = (item: SearchResultItem): SearchResult => {
     imageUrl: undefined,
   };
 
-  // Base result - all Deskive results have source: 'deskive'
+  // Base result - all OperaGrid results have source: 'operagrid'
   const baseResult = {
     id: item.id,
     title: item.title || item.name || 'Untitled',
@@ -198,7 +198,7 @@ const transformSearchResult = (item: SearchResultItem): SearchResult => {
     relevanceScore: item.relevance_score,
     updatedAt: item.updated_at || item.created_at,
     metadata: item,
-    source: 'deskive' as const,
+    source: 'operagrid' as const,
     externalUrl: undefined,
   };
 
@@ -264,7 +264,7 @@ const transformSearchResult = (item: SearchResultItem): SearchResult => {
       };
 
     case 'events':
-      // Database events are always from Deskive (Google Calendar events are fetched separately)
+      // Database events are always from OperaGrid (Google Calendar events are fetched separately)
       return {
         ...baseResult,
         type: 'calendar',

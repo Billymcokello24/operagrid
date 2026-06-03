@@ -170,7 +170,7 @@ function MeetingRoomItem({ room, workspaceId, events }: MeetingRoomItemProps) {
     return {
       status: 'available',
       text: intl.formatMessage({ id: 'modules.calendar.rightSidebar.roomStatusAvailable' }),
-      color: 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400',
+      color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/20 dark:text-blue-400',
       booking: null,
       event: null
     }
@@ -282,7 +282,7 @@ export function CalendarRightSidebar() {
     let icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Deskive//Calendar//EN',
+      'PRODID:-//OperaGrid//Calendar//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH'
     ]
@@ -290,7 +290,7 @@ export function CalendarRightSidebar() {
     eventsToExport.forEach(event => {
       const eventLines = [
         'BEGIN:VEVENT',
-        `UID:${event.id}@deskive.com`,
+        `UID:${event.id}@operagrid.com`,
         `DTSTAMP:${formatICSDate(new Date())}`,
         `DTSTART:${formatICSDate(new Date(event.startTime))}`,
         `DTEND:${formatICSDate(new Date(event.endTime))}`,
@@ -340,7 +340,7 @@ export function CalendarRightSidebar() {
 
     const link = document.createElement('a')
     link.href = url
-    link.download = `deskive-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`
+    link.download = `operagrid-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -363,12 +363,12 @@ export function CalendarRightSidebar() {
     try {
       const icsContent = generateICSContent(events)
       const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
-      const fileName = `deskive-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`
+      const fileName = `operagrid-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`
       const file = new File([blob], fileName, { type: 'text/calendar' })
 
       await googleDriveApi.uploadFile(currentWorkspace.id, file, {
         parentId: targetFolderId,
-        description: `Calendar exported from Deskive on ${new Date().toISOString()}`
+        description: `Calendar exported from OperaGrid on ${new Date().toISOString()}`
       })
 
       toast.success(intl.formatMessage({ id: 'modules.calendar.export.driveSuccess', defaultMessage: 'Calendar exported to Google Drive' }))
@@ -756,9 +756,9 @@ export function CalendarRightSidebar() {
       {/* Today's Schedule */}
       <div>
         <h3 className="text-lg font-semibold flex items-center gap-2 mb-3">
-          <Calendar className="h-5 w-5 text-green-500" />
+          <Calendar className="h-5 w-5 text-blue-500" />
           {intl.formatMessage({ id: 'modules.calendar.rightSidebar.todaySchedule' })}
-          <Badge variant="outline" className="text-xs bg-green-50 dark:bg-green-950/50 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800">
+          <Badge variant="outline" className="text-xs bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800">
             {todayEvents.length}
           </Badge>
         </h3>
@@ -777,11 +777,11 @@ export function CalendarRightSidebar() {
               return (
                 <div 
                   key={event.id} 
-                  className="group relative overflow-hidden rounded-lg border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/50 hover:bg-green-100 dark:hover:bg-green-900/50 transition-all duration-200 hover:shadow-md"
+                  className="group relative overflow-hidden rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all duration-200 hover:shadow-md"
                 >
                   {/* Left accent bar */}
                   <div 
-                    className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 dark:bg-green-400"
+                    className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 dark:bg-blue-400"
                   />
                   
                   <div className="pl-4 pr-3 py-3">
@@ -1128,7 +1128,7 @@ export function CalendarRightSidebar() {
         isOpen={showDriveExportModal}
         onClose={() => setShowDriveExportModal(false)}
         onExport={handleExportToDrive}
-        fileName={`deskive-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`}
+        fileName={`operagrid-calendar-${format(new Date(), 'yyyy-MM-dd')}.ics`}
         isExporting={isExportingToDrive}
       />
 

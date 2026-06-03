@@ -56,7 +56,7 @@ export interface ArticleSchema {
  * Generate Article schema for blog posts
  */
 export function generateArticleSchema(article: ArticleData): ArticleSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
   const articleUrl = `${siteUrl}/blog/${article.slug}`;
 
   // Calculate word count
@@ -83,7 +83,7 @@ export function generateArticleSchema(article: ArticleData): ArticleSchema {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Deskive',
+      name: 'OperaGrid',
       logo: {
         '@type': 'ImageObject',
         url: `${siteUrl}/logo.png`,

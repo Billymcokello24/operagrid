@@ -92,7 +92,7 @@ export function CreateBudgetModal({ open, onOpenChange, workspaceId, projectId }
             categoryType: 'materials' as const,
             costNature: 'variable' as const,
             allocatedAmount: Math.round(totalBudget * 0.25), // 25%
-            color: '#10b981'
+            color: '#2563eb'
           },
           {
             name: intl.formatMessage({ id: 'budget.modal.categories.software.name' }),

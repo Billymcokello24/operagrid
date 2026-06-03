@@ -23,12 +23,12 @@ export interface WebSiteSchema {
  * Generate WebSite schema with search functionality
  */
 export function generateWebsiteSchema(): WebSiteSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Deskive',
+    name: 'OperaGrid',
     url: siteUrl,
     description: 'All-in-one workspace platform for team collaboration, project management, and productivity.',
     potentialAction: {

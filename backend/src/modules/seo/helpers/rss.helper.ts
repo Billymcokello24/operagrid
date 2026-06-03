@@ -105,7 +105,7 @@ export function generateRSS(channel: RSSChannel): string {
     pubDate,
     lastBuildDate = new Date(),
     category = [],
-    generator = 'Deskive RSS Generator',
+    generator = 'OperaGrid RSS Generator',
     docs = 'https://www.rssboard.org/rss-specification',
     ttl,
     image,
@@ -203,7 +203,7 @@ export function generateAtom(channel: RSSChannel): string {
   <link href="${escapeXml(link)}/feed.atom" rel="self" type="application/atom+xml" />
   <id>${escapeXml(link)}</id>
   <updated>${formatAtomDate(lastBuildDate)}</updated>
-  <generator uri="https://deskive.com" version="1.0">Deskive</generator>`;
+  <generator uri="https://operagrid.com" version="1.0">OperaGrid</generator>`;
 
   if (author) {
     xml += `\n  <author>

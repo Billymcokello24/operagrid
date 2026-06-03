@@ -1150,7 +1150,7 @@ export function WhiteboardPage() {
               <Users className="w-4 h-4 text-muted-foreground" />
               <span className="text-sm text-muted-foreground">{collabUsers.length}</span>
               {isCollabConnected && (
-                <span className="w-2 h-2 bg-green-500 rounded-full" title="Connected" />
+                <span className="w-2 h-2 bg-blue-500 rounded-full" title="Connected" />
               )}
             </div>
           )}

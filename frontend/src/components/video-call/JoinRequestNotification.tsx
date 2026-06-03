@@ -63,7 +63,7 @@ export const JoinRequestNotification: React.FC<JoinRequestNotificationProps> = (
             <Button
               size="sm"
               onClick={() => onAccept(request.id)}
-              className="flex-1 bg-green-600 hover:bg-green-700 h-8"
+              className="flex-1 bg-blue-600 hover:bg-blue-700 h-8"
             >
               <Check className="h-4 w-4 mr-1" />
               Accept

@@ -41,7 +41,7 @@ export default function BudgetList() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-500/10 text-green-500';
+        return 'bg-blue-500/10 text-blue-500';
       case 'exceeded':
         return 'bg-red-500/10 text-red-500';
       case 'completed':
@@ -124,7 +124,7 @@ export default function BudgetList() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-green-500">
+              <div className="text-2xl font-bold text-blue-500">
                 {budgets.filter((b) => b.status === 'active').length}
               </div>
             </CardContent>

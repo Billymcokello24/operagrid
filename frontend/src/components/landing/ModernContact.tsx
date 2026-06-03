@@ -291,10 +291,10 @@ const ModernContact: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center gap-3"
+                  className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center gap-3"
                 >
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-green-800 font-medium">{intl.formatMessage({ id: 'contact.form.success' })}</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600" />
+                  <span className="text-blue-800 font-medium">{intl.formatMessage({ id: 'contact.form.success' })}</span>
                 </motion.div>
               )}
 

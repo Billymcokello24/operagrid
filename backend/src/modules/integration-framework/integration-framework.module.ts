@@ -27,7 +27,7 @@ export class IntegrationFrameworkModule implements OnModuleInit {
   constructor(private readonly catalogService: CatalogService) {}
 
   async onModuleInit() {
-    // Idempotent auto-seed. Before re-enabling this, a fresh deskive
+    // Idempotent auto-seed. Before re-enabling this, a fresh operagrid
     // install had an empty `integration_catalog` table — which meant
     // the Connectors page in the UI only showed the 6 hardcoded tiles
     // (Gmail/Calendar/Drive/GitHub/Sheets/Dropbox) and hid all 175

@@ -100,7 +100,7 @@ export const VideoCallChat: React.FC<VideoCallChatProps> = ({
             if (isRecordingMessage) {
               return (
                 <div key={message.id} className="flex justify-center">
-                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg p-4 max-w-sm w-full">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-4 max-w-sm w-full">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="bg-white/20 rounded-full p-2">
                         <Video className="h-5 w-5 text-white" />
@@ -115,7 +115,7 @@ export const VideoCallChat: React.FC<VideoCallChatProps> = ({
                         href={message.recordingUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 bg-white text-green-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors w-full"
+                        className="flex items-center justify-center gap-2 bg-white text-blue-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors w-full"
                       >
                         <Download className="h-4 w-4" />
                         Download Recording
@@ -229,7 +229,7 @@ export const VideoCallChat: React.FC<VideoCallChatProps> = ({
 
                   {isCurrentUser && (
                     <Avatar className="h-8 w-8 mt-1">
-                      <AvatarFallback className="bg-gradient-to-br from-green-500 to-blue-600 text-white text-xs">
+                      <AvatarFallback className="bg-gradient-to-br from-blue-500 to-blue-600 text-white text-xs">
                         You
                       </AvatarFallback>
                     </Avatar>

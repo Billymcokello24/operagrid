@@ -580,7 +580,7 @@ List all action items in plain text (numbered list, no markdown):`,
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
               <DropdownMenuItem onClick={handleSummarize} className="gap-2">
-                <MessageSquareText className="h-4 w-4 text-green-500" />
+                <MessageSquareText className="h-4 w-4 text-blue-500" />
                 Summarize
               </DropdownMenuItem>
               <DropdownMenuSub>
@@ -610,9 +610,9 @@ List all action items in plain text (numbered list, no markdown):`,
                 disabled={extractTravelMutation.isPending}
               >
                 {extractTravelMutation.isPending ? (
-                  <Loader2 className="h-4 w-4 animate-spin text-emerald-500" />
+                  <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
                 ) : (
-                  <CalendarPlus className="h-4 w-4 text-emerald-500" />
+                  <CalendarPlus className="h-4 w-4 text-blue-500" />
                 )}
                 Create Event from Ticket
               </DropdownMenuItem>
@@ -745,7 +745,7 @@ List all action items in plain text (numbered list, no markdown):`,
         <DialogContent className="max-w-sm" onPointerDownOutside={(e) => e.preventDefault()}>
           <div className="flex flex-col items-center justify-center py-8 space-y-4">
             <div className="relative">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 animate-pulse" />
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-500 animate-pulse" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <Sparkles className="h-8 w-8 text-white animate-bounce" />
               </div>
@@ -772,7 +772,7 @@ List all action items in plain text (numbered list, no markdown):`,
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               {travelInfo?.travelType === 'flight' && <Plane className="h-5 w-5 text-blue-500" />}
-              {travelInfo?.travelType === 'train' && <Train className="h-5 w-5 text-green-500" />}
+              {travelInfo?.travelType === 'train' && <Train className="h-5 w-5 text-blue-500" />}
               {travelInfo?.travelType === 'bus' && <Bus className="h-5 w-5 text-orange-500" />}
               Travel Ticket Detected
             </DialogTitle>
@@ -849,11 +849,11 @@ List all action items in plain text (numbered list, no markdown):`,
               </div>
 
               {/* Event Preview */}
-              <div className="p-3 bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-lg">
-                <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 mb-1">
+              <div className="p-3 bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg">
+                <p className="text-sm font-medium text-blue-700 dark:text-blue-300 mb-1">
                   Event to be created:
                 </p>
-                <p className="text-sm text-emerald-600 dark:text-emerald-400">
+                <p className="text-sm text-blue-600 dark:text-blue-400">
                   {suggestedEventTitle}
                 </p>
               </div>
@@ -866,7 +866,7 @@ List all action items in plain text (numbered list, no markdown):`,
             </Button>
             <Button
               onClick={handleCreateTravelEvent}
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-blue-600 hover:bg-blue-700"
               disabled={createEventMutation.isPending}
             >
               {createEventMutation.isPending ? (

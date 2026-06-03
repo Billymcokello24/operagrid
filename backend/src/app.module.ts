@@ -14,7 +14,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { WebSocketModule } from './common/gateways/websocket.module';
 import { CommonModule } from './common/common.module';
 
-// Deskive specific modules
+// OperaGrid specific modules
 import { WorkspaceModule } from './modules/workspace/workspace.module';
 import { ChatModule } from './modules/chat/chat.module';
 import { CryptoModule } from './modules/crypto/crypto.module';
@@ -89,7 +89,7 @@ import { FeedbackModule } from './modules/feedback/feedback.module';
     AuthModule,
     // Core AI memory module (global)
     ConversationMemoryModule,
-    // Deskive modules
+    // OperaGrid modules
     WorkspaceModule,
     ChatModule,
     CryptoModule,

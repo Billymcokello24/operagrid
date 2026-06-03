@@ -1,5 +1,5 @@
 /**
- * Team Member Types for Deskive
+ * Team Member Types for OperaGrid
  *
  * Defines interfaces and types for workspace team member management
  */

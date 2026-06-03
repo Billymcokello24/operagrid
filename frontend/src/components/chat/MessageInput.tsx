@@ -899,7 +899,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
       case 'files':
         return 'text-purple-500 bg-purple-500/10 border-purple-200 dark:border-purple-800'
       case 'drive':
-        return 'text-green-500 bg-green-500/10 border-green-200 dark:border-green-800'
+        return 'text-blue-500 bg-blue-500/10 border-blue-200 dark:border-blue-800'
       case 'poll':
         return 'text-indigo-500 bg-indigo-500/10 border-indigo-200 dark:border-indigo-800'
       case 'youtube':
@@ -1293,7 +1293,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
                       🎬
                     </div>
                   ) : (
-                    <div className="w-8 h-8 bg-green-100 dark:bg-green-950 rounded flex items-center justify-center">
+                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-950 rounded flex items-center justify-center">
                       📄
                     </div>
                   )}

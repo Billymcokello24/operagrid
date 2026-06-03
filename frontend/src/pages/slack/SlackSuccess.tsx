@@ -1,6 +1,6 @@
 /**
  * SlackSuccess Component
- * Success page for users who installed the Deskive Slack app
+ * Success page for users who installed the OperaGrid Slack app
  * Covers all three features: Whiteboard, Calendar, and Projects
  */
 
@@ -15,7 +15,7 @@ const SlackSuccess: React.FC = () => {
   const teamId = searchParams.get('team_id');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -28,16 +28,16 @@ const SlackSuccess: React.FC = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl"
+            className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl"
           >
             <CheckCircle className="w-14 h-14 text-white" />
           </motion.div>
 
           <h1 className="text-4xl font-black text-gray-900 mb-4">
-            Welcome to Deskive! 🎉
+            Welcome to OperaGrid! 🎉
           </h1>
           <p className="text-lg text-gray-600 mb-2">
-            Your Deskive app has been successfully connected to Slack.
+            Your OperaGrid app has been successfully connected to Slack.
           </p>
           <p className="text-gray-500">
             Start using Whiteboards, Calendar, and Projects directly from Slack!
@@ -75,15 +75,15 @@ const SlackSuccess: React.FC = () => {
           </div>
 
           {/* Projects Feature */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-100">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-50 rounded-xl p-5 border border-blue-100">
             <div className="flex items-center gap-2 mb-3">
-              <FolderKanban className="w-5 h-5 text-green-600" />
+              <FolderKanban className="w-5 h-5 text-blue-600" />
               <h3 className="font-bold text-gray-900">Projects</h3>
             </div>
             <p className="text-sm text-gray-600 mb-3">
               Manage tasks and track project progress
             </p>
-            <code className="bg-white rounded px-2 py-1 text-xs text-green-600 font-mono block">
+            <code className="bg-white rounded px-2 py-1 text-xs text-blue-600 font-mono block">
               /project new
             </code>
           </div>
@@ -150,20 +150,20 @@ const SlackSuccess: React.FC = () => {
 
           {/* Projects Commands */}
           <div>
-            <h4 className="font-semibold text-green-700 mb-2 flex items-center gap-2">
+            <h4 className="font-semibold text-blue-700 mb-2 flex items-center gap-2">
               <FolderKanban className="w-4 h-4" />
               Projects
             </h4>
             <ul className="space-y-1 pl-6">
               <li className="flex items-start gap-2 text-sm">
-                <span className="text-green-600 mt-1">•</span>
+                <span className="text-blue-600 mt-1">•</span>
                 <div>
                   <code className="bg-gray-100 px-2 py-0.5 rounded text-xs">/project new</code>
                   <span className="text-gray-600 text-xs ml-2">- Create a new project</span>
                 </div>
               </li>
               <li className="flex items-start gap-2 text-sm">
-                <span className="text-green-600 mt-1">•</span>
+                <span className="text-blue-600 mt-1">•</span>
                 <div>
                   <code className="bg-gray-100 px-2 py-0.5 rounded text-xs">/project list</code>
                   <span className="text-gray-600 text-xs ml-2">- View all projects</span>

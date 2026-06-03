@@ -64,7 +64,7 @@ export function Calendar({ onReturnToCalendar }: CalendarProps = {}) {
   })
 
   // Room constants
-  const ROOM_COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316']
+  const ROOM_COLORS = ['#3b82f6', '#2563eb', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#6366f1', '#f97316']
   const FACILITY_OPTIONS = [
     { value: 'projector', label: intl.formatMessage({ id: 'modules.calendar.main.facilityProjector' }), icon: Monitor },
     { value: 'whiteboard', label: intl.formatMessage({ id: 'modules.calendar.main.facilityWhiteboard' }), icon: Edit2 },

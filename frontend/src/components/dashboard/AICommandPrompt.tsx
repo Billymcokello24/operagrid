@@ -148,17 +148,17 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
   if (compact) {
     return (
       <div className="relative w-full">
-        <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-4 shadow-sm">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-950/30 dark:to-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 shadow-sm">
           <form onSubmit={handleSubmit}>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <div className="flex-shrink-0">
                 <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100">
                   {intl.formatMessage({ id: 'ai.commandCenter.title', defaultMessage: 'AI Command Center' })}
                 </h3>
-                <p className="text-xs text-emerald-600 dark:text-emerald-400">
+                <p className="text-xs text-blue-600 dark:text-blue-400">
                   Powered by LangChain
                 </p>
               </div>
@@ -173,13 +173,13 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
                   }}
                   placeholder={intl.formatMessage({ id: 'ai.commandCenter.placeholder', defaultMessage: 'e.g., Create a new project for Q1 planning' })}
                   disabled={executeCommand.isPending}
-                  className="w-full px-4 pr-12 py-3 text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                  className="w-full px-4 pr-12 py-3 text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                 />
                 <Button
                   type="submit"
                   size="sm"
                   disabled={!prompt.trim() || executeCommand.isPending}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-emerald-600 hover:bg-emerald-700 text-white rounded-md"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
                 >
                   {executeCommand.isPending ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -192,9 +192,9 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
 
             {/* AI Response */}
             {lastResponse && (
-              <div className="mt-3 p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-emerald-800 dark:text-emerald-200">{lastResponse}</p>
+              <div className="mt-3 p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-blue-800 dark:text-blue-200">{lastResponse}</p>
               </div>
             )}
 
@@ -234,9 +234,9 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
   return (
     <div className="relative max-w-2xl mx-auto">
       {/* AI Command Input */}
-      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-800 rounded-lg p-4 shadow-sm">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-950/20 dark:to-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 shadow-sm">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
             <Bot className="w-4 h-4 text-white" />
           </div>
           <div className="flex-1">
@@ -245,7 +245,7 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
             </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400">
               {intl.formatMessage({ id: 'ai.commandCenter.description', defaultMessage: "Tell me what you'd like to do" })}
-              <span className="ml-1 text-emerald-600 dark:text-emerald-400">- Powered by LangChain</span>
+              <span className="ml-1 text-blue-600 dark:text-blue-400">- Powered by LangChain</span>
             </p>
           </div>
         </div>
@@ -262,13 +262,13 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
               }}
               placeholder={intl.formatMessage({ id: 'ai.commandCenter.placeholder', defaultMessage: 'e.g., Create a new project for Q1 planning' })}
               disabled={executeCommand.isPending}
-              className="w-full px-3 py-2 pr-10 text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-3 py-2 pr-10 text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
             <Button
               type="submit"
               size="sm"
               disabled={!prompt.trim() || executeCommand.isPending}
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 h-7 w-7 p-0 bg-emerald-600 hover:bg-emerald-700 text-white"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 h-7 w-7 p-0 bg-blue-600 hover:bg-blue-700 text-white"
             >
               {executeCommand.isPending ? (
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -280,9 +280,9 @@ export function AICommandPrompt({ compact = false }: AICommandPromptProps) {
 
           {/* AI Response */}
           {lastResponse && (
-            <div className="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-start gap-2">
-              <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
-              <p className="text-sm text-emerald-800 dark:text-emerald-200">{lastResponse}</p>
+            <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-blue-800 dark:text-blue-200">{lastResponse}</p>
             </div>
           )}
 

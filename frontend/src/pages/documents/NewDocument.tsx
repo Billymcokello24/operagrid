@@ -323,7 +323,7 @@ export const NewDocument: React.FC = () => {
             <Button
               onClick={handleCreate}
               disabled={createMutation.isPending}
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-blue-600 hover:bg-blue-700"
             >
               <Save className="w-4 h-4 mr-2" />
               {createMutation.isPending ? 'Creating...' : 'Create Document'}
@@ -340,8 +340,8 @@ export const NewDocument: React.FC = () => {
             <Card>
               <CardContent className="p-8">
                 {/* Header */}
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl mb-8 text-center">
-                  <FileText className="w-12 h-12 text-emerald-600 mx-auto mb-3" />
+                <div className="bg-gradient-to-br from-blue-50 to-blue-50 p-6 rounded-xl mb-8 text-center">
+                  <FileText className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                   <h2 className="text-xl font-bold text-gray-900 mb-2">Create Your Own Document</h2>
                   <p className="text-sm text-gray-600">
                     Start with a professionally structured template and customize it to your needs
@@ -359,8 +359,8 @@ export const NewDocument: React.FC = () => {
                           onClick={() => setFormData({ ...formData, documentType: type.value })}
                           className={`p-4 border-2 rounded-xl cursor-pointer transition-all ${
                             formData.documentType === type.value
-                              ? 'border-emerald-500 bg-emerald-50'
-                              : 'border-gray-200 hover:border-emerald-300 hover:bg-gray-50'
+                              ? 'border-blue-500 bg-blue-50'
+                              : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
                           }`}
                         >
                           <div className="text-3xl mb-2">{type.icon}</div>
@@ -368,7 +368,7 @@ export const NewDocument: React.FC = () => {
                           <div className="text-xs text-gray-600">{type.description}</div>
                           {formData.documentType === type.value && (
                             <div className="mt-2">
-                              <CheckCircle className="w-5 h-5 text-emerald-600" />
+                              <CheckCircle className="w-5 h-5 text-blue-600" />
                             </div>
                           )}
                         </div>
@@ -417,7 +417,7 @@ export const NewDocument: React.FC = () => {
                   {/* Continue Button */}
                   <Button
                     onClick={handleContinueToEditor}
-                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 py-6"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 py-6"
                     size="lg"
                   >
                     Continue to Editor

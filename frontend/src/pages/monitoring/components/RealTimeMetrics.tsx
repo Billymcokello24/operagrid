@@ -64,7 +64,7 @@ const CircularProgress: React.FC<{
   
   // Auto-determine color based on status if not provided
   const statusColors = {
-    good: '#10b981',
+    good: '#2563eb',
     warning: '#f59e0b',
     critical: '#ef4444'
   };
@@ -132,7 +132,7 @@ export const CPUMetrics: React.FC<{
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            getStatus(cpu.usage) === 'good' ? 'bg-green-100 text-green-800' :
+            getStatus(cpu.usage) === 'good' ? 'bg-blue-100 text-blue-800' :
             getStatus(cpu.usage) === 'warning' ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -232,7 +232,7 @@ export const MemoryMetrics: React.FC<{
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            getStatus(memory.usage) === 'good' ? 'bg-green-100 text-green-800' :
+            getStatus(memory.usage) === 'good' ? 'bg-blue-100 text-blue-800' :
             getStatus(memory.usage) === 'warning' ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -329,12 +329,12 @@ export const DiskMetrics: React.FC<{
     <div className="bg-white rounded-lg border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold flex items-center">
-          <HardDrive className="w-5 h-5 mr-2 text-green-600" />
+          <HardDrive className="w-5 h-5 mr-2 text-blue-600" />
           Disk Usage
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            getStatus(disk.usage) === 'good' ? 'bg-green-100 text-green-800' :
+            getStatus(disk.usage) === 'good' ? 'bg-blue-100 text-blue-800' :
             getStatus(disk.usage) === 'warning' ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -351,7 +351,7 @@ export const DiskMetrics: React.FC<{
             label="Disk"
             status={getStatus(disk.usage)}
             size={140}
-            color="#10b981"
+            color="#2563eb"
           />
           <div className="mt-4 space-y-2 w-full">
             <div className="flex justify-between text-sm">
@@ -400,8 +400,8 @@ export const DiskMetrics: React.FC<{
                 <Area 
                   type="monotone" 
                   dataKey="disk" 
-                  stroke="#10b981" 
-                  fill="#10b981" 
+                  stroke="#2563eb" 
+                  fill="#2563eb" 
                   fillOpacity={0.6}
                 />
               </AreaChart>
@@ -460,12 +460,12 @@ export const NetworkMetrics: React.FC<{
                 {formatBytes(network.bytesIn)}/s
               </div>
             </div>
-            <div className="bg-green-50 p-3 rounded-lg">
+            <div className="bg-blue-50 p-3 rounded-lg">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-green-600">Out</span>
-                <Activity className="w-4 h-4 text-green-600" />
+                <span className="text-sm text-blue-600">Out</span>
+                <Activity className="w-4 h-4 text-blue-600" />
               </div>
-              <div className="text-lg font-semibold text-green-900">
+              <div className="text-lg font-semibold text-blue-900">
                 {formatBytes(network.bytesOut)}/s
               </div>
             </div>
@@ -526,7 +526,7 @@ export const NetworkMetrics: React.FC<{
                 <Line 
                   type="monotone" 
                   dataKey="bytesOut" 
-                  stroke="#10b981" 
+                  stroke="#2563eb" 
                   name="Outgoing"
                   strokeWidth={2}
                 />

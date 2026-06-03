@@ -37,8 +37,8 @@ const DashboardExample: React.FC = () => {
       title: 'Projects',
       value: 8,
       icon: FolderOpen,
-      iconColor: 'text-green-600',
-      iconBgColor: 'bg-green-100',
+      iconColor: 'text-blue-600',
+      iconBgColor: 'bg-blue-100',
       trend: {
         value: 8,
         isPositive: true,
@@ -125,8 +125,8 @@ const DashboardExample: React.FC = () => {
 
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 text-sm font-medium">SM</span>
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <span className="text-blue-600 text-sm font-medium">SM</span>
                 </div>
               </div>
               <div className="flex-1 min-w-0">

@@ -48,7 +48,7 @@ export function ExpenseList({ budgetId }: ExpenseListProps) {
   const getStatusBadge = (expense: any) => {
     if (expense.approved) {
       return (
-        <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
+        <Badge className="bg-blue-500/10 text-blue-500 border-blue-500/20">
           <CheckCircle className="w-3 h-3 mr-1" />
           {intl.formatMessage({ id: 'budget.expenses.status.approved' })}
         </Badge>

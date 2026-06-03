@@ -3,7 +3,7 @@
     {
       "slug": "google-drive",
       "name": "Google Drive",
-      "description": "Access and manage your Google Drive files directly from Deskive. Upload, download, and organize files seamlessly.",
+      "description": "Access and manage your Google Drive files directly from OperaGrid. Upload, download, and organize files seamlessly.",
       "category": "FILE_STORAGE",
       "provider": "Google",
       "logoUrl": "https://www.gstatic.com/images/branding/product/2x/drive_2020q4_48dp.png",
@@ -54,7 +54,7 @@
     {
       "slug": "google-calendar",
       "name": "Google Calendar",
-      "description": "Sync your Google Calendar events with Deskive. View, create, and manage events without leaving the app.",
+      "description": "Sync your Google Calendar events with OperaGrid. View, create, and manage events without leaving the app.",
       "category": "CALENDAR",
       "provider": "Google",
       "logoUrl": "https://www.gstatic.com/images/branding/product/2x/calendar_2020q4_48dp.png",
@@ -100,7 +100,7 @@
     {
       "slug": "gmail",
       "name": "Gmail",
-      "description": "Access your Gmail inbox from Deskive. Read, send, and manage emails without switching apps.",
+      "description": "Access your Gmail inbox from OperaGrid. Read, send, and manage emails without switching apps.",
       "category": "EMAIL",
       "provider": "Google",
       "logoUrl": "https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_48dp.png",
@@ -193,7 +193,7 @@
     {
       "slug": "slack",
       "name": "Slack",
-      "description": "Connect Slack to receive notifications and send messages directly from Deskive.",
+      "description": "Connect Slack to receive notifications and send messages directly from OperaGrid.",
       "category": "COMMUNICATION",
       "provider": "Slack",
       "logoUrl": "https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png",
@@ -449,7 +449,7 @@
     {
       "slug": "trello",
       "name": "Trello",
-      "description": "Connect Trello to sync boards, lists, and cards with your Deskive workspace.",
+      "description": "Connect Trello to sync boards, lists, and cards with your OperaGrid workspace.",
       "category": "PROJECT_MANAGEMENT",
       "provider": "Atlassian",
       "logoUrl": "https://www.trello.com/favicon.ico",
@@ -468,7 +468,7 @@
         "clientSecretEnvKey": "TRELLO_API_SECRET",
         "extraAuthParams": {
           "expiration": "never",
-          "name": "Deskive"
+          "name": "OperaGrid"
         }
       },
       "apiBaseUrl": "https://api.trello.com/1",
@@ -537,7 +537,7 @@
       "description": "Connect Dropbox to access, upload, and share files from your cloud storage.",
       "category": "FILE_STORAGE",
       "provider": "Dropbox",
-      "logoUrl": "https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/f521a573-eadb-48c9-90c4-bbb25611811e-1769423380547-1769423379343-dropbox.png",
+      "logoUrl": "https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/f521a573-eadb-48c9-90c4-bbb25611811e-1769423380547-1769423379343-dropbox.png",
       "website": "https://dropbox.com",
       "documentationUrl": "https://www.dropbox.com/developers/documentation",
       "authType": "oauth2",
@@ -584,7 +584,7 @@
     {
       "slug": "zoom",
       "name": "Zoom",
-      "description": "Connect Zoom to schedule and manage video meetings directly from Deskive.",
+      "description": "Connect Zoom to schedule and manage video meetings directly from OperaGrid.",
       "category": "VIDEO_CONFERENCING",
       "provider": "Zoom",
       "logoUrl": "https://st1.zoom.us/zoom.ico",

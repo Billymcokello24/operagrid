@@ -98,7 +98,7 @@ export function PublicMeetingPage() {
             <p className="text-gray-300 mb-4">{error}</p>
             <Button
               onClick={() => navigate('/')}
-              className="w-full bg-emerald-600 hover:bg-emerald-700"
+              className="w-full bg-blue-600 hover:bg-blue-700"
             >
               Go to Home
             </Button>
@@ -127,7 +127,7 @@ export function PublicMeetingPage() {
       <Card className="w-full max-w-md bg-gray-800 border-gray-700">
         <CardHeader>
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
               <Video className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -176,7 +176,7 @@ export function PublicMeetingPage() {
           <Button
             onClick={handleJoinMeeting}
             disabled={!displayName.trim()}
-            className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white"
+            className="w-full bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white"
           >
             <Video className="h-4 w-4 mr-2" />
             Join Meeting

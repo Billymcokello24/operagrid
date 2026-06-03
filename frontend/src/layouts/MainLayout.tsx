@@ -141,7 +141,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <div className={`${!isSidebarOpen && 'hidden'}`}>
-              <h1 className="text-xl font-bold text-gray-900">Deskive</h1>
+              <h1 className="text-xl font-bold text-gray-900">OperaGrid</h1>
             </div>
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -206,7 +206,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           {isSidebarOpen ? (
             <div className="flex items-center space-x-3">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-medium">
                     {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}
                   </span>
@@ -228,7 +228,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <div className="flex justify-center">
               <button
                 onClick={handleLogout}
-                className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center hover:bg-emerald-700 transition-colors"
+                className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 title={intl.formatMessage({ id: 'common.signOut' })}
               >
                 <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -248,7 +248,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <div>
               {/* Page breadcrumb or title can go here */}
               <h2 className="text-xl font-semibold text-gray-900">
-                {currentWorkspace?.name || 'Deskive'}
+                {currentWorkspace?.name || 'OperaGrid'}
               </h2>
             </div>
             

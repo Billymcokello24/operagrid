@@ -111,7 +111,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery, onS
   const getResultColor = (type: string) => {
     switch (type) {
       case 'message': return 'text-blue-600';
-      case 'file': return 'text-green-600';
+      case 'file': return 'text-blue-600';
       case 'folder': return 'text-orange-600';
       case 'project': return 'text-purple-600';
       case 'note': return 'text-yellow-600';
@@ -206,7 +206,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery, onS
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-green-600" />
+                      <FileText className="h-4 w-4 text-blue-600" />
                       <span className="text-sm">
                         {intl.formatMessage({ id: 'modules.search.dashboard.files', defaultMessage: 'Files' })}
                       </span>
@@ -239,12 +239,12 @@ export function SearchResults({ results, searchType, isLoading, searchQuery, onS
             {/* <Card>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-5 w-5 text-green-600" />
+                  <Clock className="h-5 w-5 text-blue-600" />
                   <h3 className="font-semibold">Recent Activity</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium">New document uploaded</p>
                       <p className="text-xs text-muted-foreground">Q3 Marketing Strategy.pdf • 2 min ago</p>
@@ -280,7 +280,7 @@ export function SearchResults({ results, searchType, isLoading, searchQuery, onS
                     <p className="text-sm font-medium">📊 Show me this week's project updates</p>
                     <p className="text-xs text-muted-foreground mt-1">Find recent progress reports and status updates</p>
                   </div>
-                  <div className="p-3 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg cursor-pointer hover:shadow-sm transition-shadow">
+                  <div className="p-3 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-lg cursor-pointer hover:shadow-sm transition-shadow">
                     <p className="text-sm font-medium">💡 What decisions were made in recent meetings?</p>
                     <p className="text-xs text-muted-foreground mt-1">Search meeting notes for action items</p>
                   </div>
@@ -430,7 +430,7 @@ function ResultCard({ result, searchQuery, highlightText, workspaceId }: ResultC
     const basePath = `/workspaces/${workspaceId}`;
 
     // If external source, open external URL
-    if (result.source !== 'deskive' && result.externalUrl) {
+    if (result.source !== 'operagrid' && result.externalUrl) {
       window.open(result.externalUrl, '_blank');
       return;
     }
@@ -602,7 +602,7 @@ function getResultIcon(type: string) {
 function getResultColor(type: string) {
   switch (type) {
     case 'message': return 'text-blue-600';
-    case 'file': return 'text-green-600';
+    case 'file': return 'text-blue-600';
     case 'folder': return 'text-orange-600';
     case 'project': return 'text-purple-600';
     case 'note': return 'text-yellow-600';
@@ -615,7 +615,7 @@ function getResultColor(type: string) {
 function getResultBgColor(type: string) {
   switch (type) {
     case 'message': return 'bg-blue-600';
-    case 'file': return 'bg-green-600';
+    case 'file': return 'bg-blue-600';
     case 'folder': return 'bg-orange-600';
     case 'project': return 'bg-purple-600';
     case 'note': return 'bg-yellow-600';

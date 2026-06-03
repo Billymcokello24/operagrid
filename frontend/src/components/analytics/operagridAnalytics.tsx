@@ -1,19 +1,19 @@
 /**
- * Deskive Analytics Component
+ * OperaGrid Analytics Component
  * Placeholder stub - analytics tracking to be implemented
  */
 
 import React from "react";
 
-interface DeskiveAnalyticsProps {
+interface OperaGridAnalyticsProps {
   debug?: boolean;
 }
 
-export const deskiveAnalytics: React.FC<DeskiveAnalyticsProps> = ({ debug }) => {
+export const operagridAnalytics: React.FC<OperaGridAnalyticsProps> = ({ debug }) => {
   // Analytics tracking placeholder
   // TODO: Implement analytics tracking
   if (debug) {
-    console.log("[deskiveAnalytics] Analytics component loaded (stub)");
+    console.log("[operagridAnalytics] Analytics component loaded (stub)");
   }
 
   return null;

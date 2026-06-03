@@ -95,14 +95,14 @@ export function GanttView({ tasks, onAddTask }: GanttViewProps) {
     switch (priority) {
       case 'high': return { bg: 'bg-red-500', border: 'border-red-600', text: 'text-red-100', accent: 'bg-red-600' }
       case 'medium': return { bg: 'bg-yellow-500', border: 'border-yellow-600', text: 'text-yellow-900', accent: 'bg-yellow-600' }
-      case 'low': return { bg: 'bg-green-500', border: 'border-green-600', text: 'text-green-100', accent: 'bg-green-600' }
+      case 'low': return { bg: 'bg-blue-500', border: 'border-blue-600', text: 'text-blue-100', accent: 'bg-blue-600' }
       default: return { bg: 'bg-gray-500', border: 'border-gray-600', text: 'text-gray-100', accent: 'bg-gray-600' }
     }
   }
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return { bg: 'bg-emerald-500', border: 'border-emerald-600', text: 'text-emerald-100', gradient: 'from-emerald-500 to-emerald-600' }
+      case 'completed': return { bg: 'bg-blue-500', border: 'border-blue-600', text: 'text-blue-100', gradient: 'from-blue-500 to-blue-600' }
       case 'in_progress': return { bg: 'bg-blue-500', border: 'border-blue-600', text: 'text-blue-100', gradient: 'from-blue-500 to-blue-600' }
       case 'review': return { bg: 'bg-purple-500', border: 'border-purple-600', text: 'text-purple-100', gradient: 'from-purple-500 to-purple-600' }
       case 'todo': return { bg: 'bg-slate-400', border: 'border-slate-500', text: 'text-slate-100', gradient: 'from-slate-400 to-slate-500' }
@@ -218,7 +218,7 @@ export function GanttView({ tasks, onAddTask }: GanttViewProps) {
                   <span className="text-xs">Review</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-sm"></div>
+                  <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-sm"></div>
                   <span className="text-xs">Done</span>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export function GanttView({ tasks, onAddTask }: GanttViewProps) {
                   <span className="text-xs">Medium</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Circle className="w-3 h-3 text-green-500" />
+                  <Circle className="w-3 h-3 text-blue-500" />
                   <span className="text-xs">Low</span>
                 </div>
               </div>

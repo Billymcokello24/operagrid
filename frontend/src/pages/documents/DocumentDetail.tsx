@@ -134,7 +134,7 @@ export const DocumentDetail: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -153,7 +153,7 @@ export const DocumentDetail: React.FC = () => {
       [DocumentStatus.ARCHIVED]: { color: 'bg-gray-600', label: 'Archived' },
       [DocumentStatus.PENDING_SIGNATURE]: { color: 'bg-yellow-500', label: 'Pending' },
       [DocumentStatus.PARTIALLY_SIGNED]: { color: 'bg-blue-500', label: 'In Progress' },
-      [DocumentStatus.SIGNED]: { color: 'bg-green-500', label: 'Completed' },
+      [DocumentStatus.SIGNED]: { color: 'bg-blue-500', label: 'Completed' },
       [DocumentStatus.EXPIRED]: { color: 'bg-red-500', label: 'Expired' },
       [DocumentStatus.DECLINED]: { color: 'bg-red-600', label: 'Declined' },
     };
@@ -209,7 +209,7 @@ export const DocumentDetail: React.FC = () => {
                 <Button
                   onClick={handleSave}
                   disabled={updateMutation.isPending}
-                  className="bg-emerald-600 hover:bg-emerald-700"
+                  className="bg-blue-600 hover:bg-blue-700"
                 >
                   <Save className="w-4 h-4 mr-2" />
                   {updateMutation.isPending ? 'Saving...' : 'Save Changes'}

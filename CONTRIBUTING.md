@@ -1,6 +1,6 @@
-# Contributing to Deskive
+# Contributing to OperaGrid
 
-Thank you for your interest in contributing to Deskive! This guide will help you get started.
+Thank you for your interest in contributing to OperaGrid! This guide will help you get started.
 
 ## Code of Conduct
 
@@ -10,7 +10,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 ### Reporting Bugs
 
-Open a [Bug Report](https://github.com/deskive/deskive/issues/new?template=bug_report.yml) with:
+Open a [Bug Report](https://github.com/Billymcokello24/operagrid/issues/new?template=bug_report.yml) with:
 - Clear description of the issue
 - Steps to reproduce
 - Expected vs actual behavior
@@ -18,7 +18,7 @@ Open a [Bug Report](https://github.com/deskive/deskive/issues/new?template=bug_r
 
 ### Suggesting Features
 
-Open a [Feature Request](https://github.com/deskive/deskive/issues/new?template=feature_request.yml).
+Open a [Feature Request](https://github.com/Billymcokello24/operagrid/issues/new?template=feature_request.yml).
 
 ### Submitting Pull Requests
 
@@ -38,8 +38,8 @@ Open a [Feature Request](https://github.com/deskive/deskive/issues/new?template=
 ### Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/deskive.git
-cd deskive
+git clone https://github.com/YOUR_USERNAME/operagrid.git
+cd operagrid
 
 # Backend
 cd backend
@@ -63,6 +63,6 @@ npm run dev
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/deskive/deskive/discussions)
+- Open a [Discussion](https://github.com/Billymcokello24/operagrid/discussions)
 
 Thank you for contributing!

@@ -312,7 +312,7 @@ export function ProjectDashboard({ workspaceId, onProjectSelect, onEditProject }
                 <p className="text-sm font-medium text-muted-foreground">{intl.formatMessage({ id: 'projects.totalTasks' })}</p>
                 <p className="text-xl font-bold">{stats.totalTasks}</p>
               </div>
-              <CheckCircle className="w-6 h-6 text-green-500" />
+              <CheckCircle className="w-6 h-6 text-blue-500" />
             </div>
           </CardContent>
         </Card>
@@ -336,7 +336,7 @@ export function ProjectDashboard({ workspaceId, onProjectSelect, onEditProject }
                 <p className="text-sm font-medium text-muted-foreground">{intl.formatMessage({ id: 'projects.completed' })}</p>
                 <p className="text-xl font-bold">{stats.completedProjects}</p>
               </div>
-              <CheckCircle className="w-6 h-6 text-green-600" />
+              <CheckCircle className="w-6 h-6 text-blue-600" />
             </div>
           </CardContent>
         </Card>
@@ -538,7 +538,7 @@ export function ProjectDashboard({ workspaceId, onProjectSelect, onEditProject }
                     <p className="text-xs text-muted-foreground">{intl.formatMessage({ id: 'tasks.total' })}</p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-lg font-semibold text-green-600">{project.completedTaskCount || 0}</p>
+                    <p className="text-lg font-semibold text-blue-600">{project.completedTaskCount || 0}</p>
                     <p className="text-xs text-muted-foreground">{intl.formatMessage({ id: 'tasks.done' })}</p>
                   </div>
                   <div className="space-y-1">

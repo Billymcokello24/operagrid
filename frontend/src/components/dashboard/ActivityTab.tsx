@@ -72,7 +72,7 @@ export function ActivityTab({ activities, todayStats }: ActivityTabProps) {
                   {intl.formatMessage({ id: 'dashboard.activity.noData' })}
                 </p>
               </div>
-              <CheckCircle className="h-8 w-8 text-green-600" />
+              <CheckCircle className="h-8 w-8 text-blue-600" />
             </div>
           </CardContent>
         </Card>

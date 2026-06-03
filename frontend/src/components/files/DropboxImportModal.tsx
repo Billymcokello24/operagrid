@@ -135,7 +135,7 @@ export function DropboxImportModal({
           type: 'application/octet-stream'
         }) as File;
 
-        // Upload to Deskive
+        // Upload to OperaGrid
         await fileApi.uploadFile(workspaceId, {
           file: fileObj,
           workspace_id: workspaceId,

@@ -17,35 +17,35 @@ const ModernFAQ: React.FC = () => {
   const faqItems: FAQItem[] = [
     // General Questions
     {
-      question: intl.formatMessage({ id: 'faq.general.what.question', defaultMessage: 'What is Deskive and how does it work?' }),
-      answer: intl.formatMessage({ id: 'faq.general.what.answer', defaultMessage: 'Deskive is an all-in-one workspace platform that combines six essential team tools: Chat, Video Calls, Projects, Files, Calendar, and Notes. It provides a unified platform where teams can collaborate in real-time, manage projects with Kanban boards, share files securely, schedule meetings, and create documentation—all enhanced by AI-powered features.' }),
+      question: intl.formatMessage({ id: 'faq.general.what.question', defaultMessage: 'What is OperaGrid and how does it work?' }),
+      answer: intl.formatMessage({ id: 'faq.general.what.answer', defaultMessage: 'OperaGrid is an all-in-one workspace platform that combines six essential team tools: Chat, Video Calls, Projects, Files, Calendar, and Notes. It provides a unified platform where teams can collaborate in real-time, manage projects with Kanban boards, share files securely, schedule meetings, and create documentation—all enhanced by AI-powered features.' }),
       category: 'general'
     },
     {
-      question: intl.formatMessage({ id: 'faq.general.beginners.question', defaultMessage: 'Is Deskive suitable for beginners?' }),
-      answer: intl.formatMessage({ id: 'faq.general.beginners.answer', defaultMessage: 'Absolutely. Deskive is designed with simplicity in mind. Its intuitive interface makes it easy for anyone to get started, whether you are a solo user or part of a larger team.' }),
+      question: intl.formatMessage({ id: 'faq.general.beginners.question', defaultMessage: 'Is OperaGrid suitable for beginners?' }),
+      answer: intl.formatMessage({ id: 'faq.general.beginners.answer', defaultMessage: 'Absolutely. OperaGrid is designed with simplicity in mind. Its intuitive interface makes it easy for anyone to get started, whether you are a solo user or part of a larger team.' }),
       category: 'general'
     },
     {
-      question: intl.formatMessage({ id: 'faq.general.devices.question', defaultMessage: 'Can I use Deskive on multiple devices?' }),
-      answer: intl.formatMessage({ id: 'faq.general.devices.answer', defaultMessage: 'Yes. Deskive runs on modern web browsers and offers desktop and mobile clients. Your data syncs automatically across all devices in real-time so you can seamlessly switch between your computer, tablet, and phone.' }),
+      question: intl.formatMessage({ id: 'faq.general.devices.question', defaultMessage: 'Can I use OperaGrid on multiple devices?' }),
+      answer: intl.formatMessage({ id: 'faq.general.devices.answer', defaultMessage: 'Yes. OperaGrid runs on modern web browsers and offers desktop and mobile clients. Your data syncs automatically across all devices in real-time so you can seamlessly switch between your computer, tablet, and phone.' }),
       category: 'general'
     },
     {
-      question: intl.formatMessage({ id: 'faq.general.opensource.question', defaultMessage: 'Is Deskive open source?' }),
-      answer: intl.formatMessage({ id: 'faq.general.opensource.answer', defaultMessage: 'Yes. Deskive is open source, so you can self-host it, inspect the code, and contribute improvements back to the project.' }),
+      question: intl.formatMessage({ id: 'faq.general.opensource.question', defaultMessage: 'Is OperaGrid open source?' }),
+      answer: intl.formatMessage({ id: 'faq.general.opensource.answer', defaultMessage: 'Yes. OperaGrid is open source, so you can self-host it, inspect the code, and contribute improvements back to the project.' }),
       category: 'general'
     },
 
     // Features Questions
     {
       question: intl.formatMessage({ id: 'faq.features.ai.question', defaultMessage: 'What AI-powered features are included?' }),
-      answer: intl.formatMessage({ id: 'faq.features.ai.answer', defaultMessage: 'Deskive includes AI-powered features across all modules: smart chat summaries, AI content generation for notes, intelligent meeting scheduling suggestions, automatic task prioritization, smart file organization, and an AI assistant available across the platform.' }),
+      answer: intl.formatMessage({ id: 'faq.features.ai.answer', defaultMessage: 'OperaGrid includes AI-powered features across all modules: smart chat summaries, AI content generation for notes, intelligent meeting scheduling suggestions, automatic task prioritization, smart file organization, and an AI assistant available across the platform.' }),
       category: 'features'
     },
     {
-      question: intl.formatMessage({ id: 'faq.features.modules.question', defaultMessage: 'What modules are included in Deskive?' }),
-      answer: intl.formatMessage({ id: 'faq.features.modules.answer', defaultMessage: 'Deskive includes 6 core modules: Chat (real-time messaging with threads), Video Calls (HD conferencing with screen sharing), Projects (Kanban boards and task management), Files (cloud storage with version control), Calendar (scheduling with smart suggestions), and Notes (rich text documentation).' }),
+      question: intl.formatMessage({ id: 'faq.features.modules.question', defaultMessage: 'What modules are included in OperaGrid?' }),
+      answer: intl.formatMessage({ id: 'faq.features.modules.answer', defaultMessage: 'OperaGrid includes 6 core modules: Chat (real-time messaging with threads), Video Calls (HD conferencing with screen sharing), Projects (Kanban boards and task management), Files (cloud storage with version control), Calendar (scheduling with smart suggestions), and Notes (rich text documentation).' }),
       category: 'features'
     },
     {
@@ -57,7 +57,7 @@ const ModernFAQ: React.FC = () => {
     // Technical Questions
     {
       question: intl.formatMessage({ id: 'faq.technical.security.question', defaultMessage: 'How secure is my data?' }),
-      answer: intl.formatMessage({ id: 'faq.technical.security.answer', defaultMessage: 'Data is encrypted at rest and in transit using industry-standard AES-256 encryption. Connections use HTTPS, two-factor authentication is supported, and because Deskive is open source you can audit the security model yourself.' }),
+      answer: intl.formatMessage({ id: 'faq.technical.security.answer', defaultMessage: 'Data is encrypted at rest and in transit using industry-standard AES-256 encryption. Connections use HTTPS, two-factor authentication is supported, and because OperaGrid is open source you can audit the security model yourself.' }),
       category: 'technical'
     },
     {
@@ -67,12 +67,12 @@ const ModernFAQ: React.FC = () => {
     },
     {
       question: intl.formatMessage({ id: 'faq.technical.browsers.question', defaultMessage: 'What browsers and platforms are supported?' }),
-      answer: intl.formatMessage({ id: 'faq.technical.browsers.answer', defaultMessage: 'Deskive works on all modern browsers including Chrome, Firefox, Safari, and Edge (latest versions). Native desktop clients are available for macOS and Windows, plus mobile apps for Android and iOS.' }),
+      answer: intl.formatMessage({ id: 'faq.technical.browsers.answer', defaultMessage: 'OperaGrid works on all modern browsers including Chrome, Firefox, Safari, and Edge (latest versions). Native desktop clients are available for macOS and Windows, plus mobile apps for Android and iOS.' }),
       category: 'technical'
     },
     {
-      question: intl.formatMessage({ id: 'faq.technical.selfhost.question', defaultMessage: 'Can I self-host Deskive?' }),
-      answer: intl.formatMessage({ id: 'faq.technical.selfhost.answer', defaultMessage: 'Yes. Because Deskive is open source you can run the full stack on your own infrastructure. Check the repository for deployment guides and configuration options.' }),
+      question: intl.formatMessage({ id: 'faq.technical.selfhost.question', defaultMessage: 'Can I self-host OperaGrid?' }),
+      answer: intl.formatMessage({ id: 'faq.technical.selfhost.answer', defaultMessage: 'Yes. Because OperaGrid is open source you can run the full stack on your own infrastructure. Check the repository for deployment guides and configuration options.' }),
       category: 'technical'
     }
   ];
@@ -164,7 +164,7 @@ const ModernFAQ: React.FC = () => {
               variants={itemVariants}
               className="text-lg text-gray-600 max-w-2xl mx-auto"
             >
-              {intl.formatMessage({ id: 'faq.subtitle', defaultMessage: 'Everything you need to know about Deskive' })}
+              {intl.formatMessage({ id: 'faq.subtitle', defaultMessage: 'Everything you need to know about OperaGrid' })}
             </motion.p>
           </motion.div>
 

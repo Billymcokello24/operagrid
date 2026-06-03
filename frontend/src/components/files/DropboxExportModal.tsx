@@ -117,7 +117,7 @@ export function DropboxExportModal({
     try {
       setIsExporting(true);
 
-      // Download file from Deskive
+      // Download file from OperaGrid
       const response = await fetch(fileUrl);
       const blob = await response.blob();
       const file = new (window as any).File([blob], fileName) as File;

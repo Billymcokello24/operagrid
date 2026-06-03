@@ -83,7 +83,7 @@ export function AgenticSuggestions() {
       case 'unread_message':
         return 'bg-purple-500/10 text-purple-600 border-purple-200 dark:border-purple-800'
       case 'note_update':
-        return 'bg-green-500/10 text-green-600 border-green-200 dark:border-green-800'
+        return 'bg-blue-500/10 text-blue-600 border-blue-200 dark:border-blue-800'
       case 'overdue_task':
         return 'bg-red-500/10 text-red-600 border-red-200 dark:border-red-800'
       default:
@@ -160,7 +160,7 @@ export function AgenticSuggestions() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col items-center justify-center py-8 text-center">
-            <CheckCircle className="h-12 w-12 text-green-500 mb-3" />
+            <CheckCircle className="h-12 w-12 text-blue-500 mb-3" />
             <p className="text-lg font-medium text-foreground">
               {intl.formatMessage({ id: 'dashboard.suggestions.allCaughtUp', defaultMessage: "You're all caught up!" })}
             </p>
@@ -224,11 +224,11 @@ export function AgenticSuggestions() {
                   <div className="flex items-center gap-2">
                     <Avatar className="h-6 w-6">
                       <AvatarImage src={suggestion.metadata.underloaded?.userAvatar} />
-                      <AvatarFallback className="text-xs bg-green-100 text-green-700">
+                      <AvatarFallback className="text-xs bg-blue-100 text-blue-700">
                         {suggestion.metadata.underloaded?.userName?.charAt(0)}
                       </AvatarFallback>
                     </Avatar>
-                    <span className="text-xs text-green-600">
+                    <span className="text-xs text-blue-600">
                       {intl.formatMessage(
                         { id: 'dashboard.suggestions.metadata.tasks', defaultMessage: '{count} tasks' },
                         { count: suggestion.metadata.underloaded?.taskCount }

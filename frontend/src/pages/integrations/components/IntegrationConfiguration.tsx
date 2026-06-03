@@ -232,7 +232,7 @@ export function IntegrationConfiguration({ integration, onUpdate }: IntegrationC
             <div className="flex items-center gap-4">
               <Badge 
                 variant={integration.status === 'ACTIVE' ? 'default' : 'secondary'}
-                className={integration.status === 'ACTIVE' ? 'bg-green-500' : ''}
+                className={integration.status === 'ACTIVE' ? 'bg-blue-500' : ''}
               >
                 {integration.status}
               </Badge>
@@ -273,13 +273,13 @@ export function IntegrationConfiguration({ integration, onUpdate }: IntegrationC
           </div>
 
           {testResult && (
-            <Alert className={`mt-4 ${testResult.success ? 'border-green-200' : 'border-red-200'}`}>
+            <Alert className={`mt-4 ${testResult.success ? 'border-blue-200' : 'border-red-200'}`}>
               {testResult.success ? (
-                <CheckCircle className="w-4 h-4 text-green-600" />
+                <CheckCircle className="w-4 h-4 text-blue-600" />
               ) : (
                 <AlertCircle className="w-4 h-4 text-red-600" />
               )}
-              <AlertDescription className={testResult.success ? 'text-green-800' : 'text-red-800'}>
+              <AlertDescription className={testResult.success ? 'text-blue-800' : 'text-red-800'}>
                 {testResult.message}
               </AlertDescription>
             </Alert>

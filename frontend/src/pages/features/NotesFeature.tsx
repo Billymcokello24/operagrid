@@ -110,7 +110,7 @@ export default function NotesFeature() {
 
           <Card className="border-gray-200 dark:border-gray-700">
             <CardContent className="p-6">
-              <Tag className="w-10 h-10 text-green-600 mb-4" />
+              <Tag className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Smart Tagging</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Tag and categorize notes for easy discovery and cross-referencing
@@ -147,19 +147,19 @@ export default function NotesFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Knowledge Workers</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Build comprehensive knowledge bases and wikis</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Document processes and procedures</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Research and organize complex information</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Create training materials and guides</span>
                   </li>
                 </ul>
@@ -170,19 +170,19 @@ export default function NotesFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Collaborative Teams</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Take collaborative meeting notes in real-time</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Share project updates and status reports</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Brainstorm ideas with visual collaboration</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Maintain team knowledge and onboarding docs</span>
                   </li>
                 </ul>

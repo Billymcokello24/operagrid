@@ -50,7 +50,7 @@ interface APIMonitoringProps {
 
 // Status code colors
 const STATUS_COLORS = {
-  '2xx': '#10b981', // Green
+  '2xx': '#2563eb', // Green
   '4xx': '#f59e0b', // Orange
   '5xx': '#ef4444'  // Red
 };
@@ -67,7 +67,7 @@ const APIHealthCard: React.FC<{
   description?: string;
 }> = ({ title, value, unit, icon, status, trend, description }) => {
   const statusConfig = {
-    excellent: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-800', badge: 'bg-green-100' },
+    excellent: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100' },
     good: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100' },
     warning: { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-800', badge: 'bg-yellow-100' },
     critical: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-800', badge: 'bg-red-100' }
@@ -98,7 +98,7 @@ const APIHealthCard: React.FC<{
         
         {trend && (
           <div className={`flex items-center text-sm ${
-            trend.isPositive ? 'text-green-600' : 'text-red-600'
+            trend.isPositive ? 'text-blue-600' : 'text-red-600'
           }`}>
             {trend.isPositive ? (
               <TrendingUp className="w-4 h-4 mr-1" />
@@ -150,7 +150,7 @@ const EndpointTable: React.FC<{
   const getMethodBadgeColor = (method: string) => {
     const colors = {
       GET: 'bg-blue-100 text-blue-800',
-      POST: 'bg-green-100 text-green-800',
+      POST: 'bg-blue-100 text-blue-800',
       PUT: 'bg-yellow-100 text-yellow-800',
       DELETE: 'bg-red-100 text-red-800',
       PATCH: 'bg-purple-100 text-purple-800'
@@ -159,7 +159,7 @@ const EndpointTable: React.FC<{
   };
 
   const getStatusColor = (errorRate: number) => {
-    if (errorRate < 1) return 'text-green-600';
+    if (errorRate < 1) return 'text-blue-600';
     if (errorRate < 5) return 'text-yellow-600';
     return 'text-red-600';
   };
@@ -266,7 +266,7 @@ const EndpointTable: React.FC<{
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-900">
                   <span className={`font-medium ${
-                    endpoint.averageResponseTime < 200 ? 'text-green-600' :
+                    endpoint.averageResponseTime < 200 ? 'text-blue-600' :
                     endpoint.averageResponseTime < 500 ? 'text-yellow-600' :
                     'text-red-600'
                   }`}>
@@ -286,7 +286,7 @@ const EndpointTable: React.FC<{
                 </td>
                 <td className="px-4 py-3 text-sm">
                   <div className="flex space-x-1">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs bg-green-100 text-green-800">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs bg-blue-100 text-blue-800">
                       2xx: {endpoint.status2xx}
                     </span>
                     {(endpoint.status4xx || 0) > 0 && (
@@ -336,7 +336,7 @@ const ResponseTimeChart: React.FC<{
             Avg: {data.overall.averageResponseTime}ms
           </span>
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            data.overall.averageResponseTime < 200 ? 'bg-green-100 text-green-800' :
+            data.overall.averageResponseTime < 200 ? 'bg-blue-100 text-blue-800' :
             data.overall.averageResponseTime < 500 ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -374,7 +374,7 @@ const ResponseTimeChart: React.FC<{
           <Bar 
             yAxisId="throughput"
             dataKey="throughput" 
-            fill="#10b981" 
+            fill="#2563eb" 
             name="Throughput"
             opacity={0.7}
           />
@@ -405,7 +405,7 @@ const StatusCodeChart: React.FC<{
     <div className="bg-white rounded-lg border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold flex items-center">
-          <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
+          <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
           HTTP Status Code Distribution
         </h3>
         <div className="flex items-center space-x-2">
@@ -560,7 +560,7 @@ export const APIMonitoring: React.FC<APIMonitoringProps> = ({
                   <div className="flex items-center space-x-2 mb-1">
                     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
                       endpoint.method === 'GET' ? 'bg-blue-100 text-blue-800' :
-                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' :
+                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                       endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                       endpoint.method === 'DELETE' ? 'bg-red-100 text-red-800' :
                       'bg-gray-100 text-gray-800'
@@ -599,7 +599,7 @@ export const APIMonitoring: React.FC<APIMonitoringProps> = ({
                   <div className="flex items-center space-x-2 mb-1">
                     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
                       endpoint.method === 'GET' ? 'bg-blue-100 text-blue-800' :
-                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' :
+                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                       endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                       endpoint.method === 'DELETE' ? 'bg-red-100 text-red-800' :
                       'bg-gray-100 text-gray-800'

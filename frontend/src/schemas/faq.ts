@@ -40,9 +40,9 @@ export function generateFAQSchema(faqItems: FAQItem[]): FAQPageSchema {
 }
 
 /**
- * Common FAQs for Deskive platform
+ * Common FAQs for OperaGrid platform
  */
-export const deskivePricingFAQs: FAQItem[] = [
+export const operagridPricingFAQs: FAQItem[] = [
   {
     question: 'What is included in the free plan?',
     answer: 'The free plan includes up to 10 team members, 5GB storage, basic chat and project management features, and access to our mobile apps.',
@@ -73,5 +73,5 @@ export const deskivePricingFAQs: FAQItem[] = [
  * Generate pricing FAQ schema
  */
 export function generatePricingFAQSchema(): FAQPageSchema {
-  return generateFAQSchema(deskivePricingFAQs);
+  return generateFAQSchema(operagridPricingFAQs);
 }

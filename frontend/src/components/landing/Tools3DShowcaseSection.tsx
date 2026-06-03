@@ -10,46 +10,46 @@ import {
 } from 'lucide-react';
 
 // Tool data (reused from WorkBrokenSection for consistency)
-const deskiveTools = [
+const operagridTools = [
   {
     icon: MessageSquare,
     name: 'Chat',
-    image: 'https://cdn.deskive.com/deskive/message.png',
+    image: 'https://cdn.operagrid.com/operagrid/message.png',
     color: 'from-blue-500 to-cyan-500',
     desc: 'Team messaging'
   },
   {
     icon: Video,
     name: 'Video Calls',
-    image: 'https://cdn.deskive.com/deskive/video-call.png',
+    image: 'https://cdn.operagrid.com/operagrid/video-call.png',
     color: 'from-sky-500 to-blue-600',
     desc: 'HD conferencing'
   },
   {
     icon: Kanban,
     name: 'Projects',
-    image: 'https://cdn.deskive.com/deskive/project.png',
+    image: 'https://cdn.operagrid.com/operagrid/project.png',
     color: 'from-orange-500 to-red-500',
     desc: 'Kanban boards'
   },
   {
     icon: FileText,
     name: 'Files',
-    image: 'https://cdn.deskive.com/deskive/file.png',
-    color: 'from-green-500 to-emerald-500',
+    image: 'https://cdn.operagrid.com/operagrid/file.png',
+    color: 'from-blue-500 to-blue-500',
     desc: 'Cloud storage'
   },
   {
     icon: Calendar,
     name: 'Calendar',
-    image: 'https://cdn.deskive.com/deskive/calendar.png',
+    image: 'https://cdn.operagrid.com/operagrid/calendar.png',
     color: 'from-blue-500 to-sky-600',
     desc: 'Scheduling'
   },
   {
     icon: FileText,
     name: 'Notes',
-    image: 'https://cdn.deskive.com/deskive/note.png',
+    image: 'https://cdn.operagrid.com/operagrid/note.png',
     color: 'from-violet-500 to-fuchsia-500',
     desc: 'Documentation'
   }
@@ -154,7 +154,7 @@ const Tools3DShowcaseSection: React.FC = () => {
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto"
             style={{ transformStyle: 'preserve-3d' }}
           >
-            {deskiveTools.map((tool, index) => {
+            {operagridTools.map((tool, index) => {
               const Icon = tool.icon;
               return (
                 <motion.div

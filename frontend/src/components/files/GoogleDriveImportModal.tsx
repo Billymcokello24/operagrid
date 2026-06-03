@@ -53,7 +53,7 @@ function DriveFileIcon({ fileType, className }: { fileType: GoogleDriveFileType;
   const iconMap: Record<GoogleDriveFileType, React.ReactNode> = {
     folder: <Folder className={cn('text-yellow-500', className)} />,
     document: <FileText className={cn('text-blue-500', className)} />,
-    spreadsheet: <Table className={cn('text-green-500', className)} />,
+    spreadsheet: <Table className={cn('text-blue-500', className)} />,
     presentation: <Presentation className={cn('text-orange-500', className)} />,
     image: <Image className={cn('text-purple-500', className)} />,
     video: <Video className={cn('text-red-500', className)} />,
@@ -269,7 +269,7 @@ export function GoogleDriveImportModal({
             <AlertCircle className="w-16 h-16 text-muted-foreground" />
             <h3 className="text-lg font-medium">Google Drive Not Connected</h3>
             <p className="text-muted-foreground text-center max-w-md">
-              Connect your Google Drive account to import files into Deskive.
+              Connect your Google Drive account to import files into OperaGrid.
             </p>
             <Button onClick={handleConnectDrive}>
               Connect Google Drive

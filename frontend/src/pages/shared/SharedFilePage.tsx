@@ -351,9 +351,9 @@ export default function SharedFilePage() {
                 </CardContent>
               </Card>
 
-              {/* Deskive Branding */}
+              {/* OperaGrid Branding */}
               <div className="mt-4 text-center text-sm text-muted-foreground">
-                <p>Shared via <strong>Deskive</strong></p>
+                <p>Shared via <strong>OperaGrid</strong></p>
               </div>
             </div>
           </div>

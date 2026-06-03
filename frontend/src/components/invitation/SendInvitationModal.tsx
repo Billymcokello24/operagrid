@@ -148,10 +148,10 @@ const SendInvitationModal: React.FC<SendInvitationModalProps> = ({
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-4 p-3 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg flex items-center space-x-2"
+              className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg flex items-center space-x-2"
             >
-              <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0" />
-              <p className="text-sm text-green-700 dark:text-green-300">
+              <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+              <p className="text-sm text-blue-700 dark:text-blue-300">
                 Invitation sent successfully!
               </p>
             </motion.div>
@@ -184,7 +184,7 @@ const SendInvitationModal: React.FC<SendInvitationModalProps> = ({
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="colleague@example.com"
-                  className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                  className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
                   disabled={isSubmitting}
                 />
               </div>
@@ -199,7 +199,7 @@ const SendInvitationModal: React.FC<SendInvitationModalProps> = ({
                 required
                 value={formData.role}
                 onChange={(e) => setFormData({ ...formData, role: e.target.value as TeamRole })}
-                className="w-full px-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-gray-900 dark:text-gray-100"
+                className="w-full px-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 dark:text-gray-100"
                 disabled={isSubmitting}
               >
                 <option value="member">Member</option>
@@ -221,7 +221,7 @@ const SendInvitationModal: React.FC<SendInvitationModalProps> = ({
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Add a personal note to your invitation..."
                 rows={3}
-                className="w-full px-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                className="w-full px-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
                 disabled={isSubmitting}
               />
             </div>
@@ -243,7 +243,7 @@ const SendInvitationModal: React.FC<SendInvitationModalProps> = ({
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 disabled={isSubmitting || !formData.email}
-                className="flex-1 flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

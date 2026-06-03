@@ -17,7 +17,7 @@ const getPriorityColor = (priority: string) => {
     case 'medium':
       return 'bg-yellow-500'
     case 'low':
-      return 'bg-green-500'
+      return 'bg-blue-500'
     default:
       return 'bg-gray-500'
   }
@@ -64,7 +64,7 @@ export function ProjectsList({ projects, onProjectClick }: ProjectsListProps) {
                       ? 'text-blue-600'
                       : project.status === 'review'
                         ? 'text-orange-600'
-                        : 'text-green-600'
+                        : 'text-blue-600'
                   )}
                 >
                   {project.status}

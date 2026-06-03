@@ -7,7 +7,7 @@ import { ConfigService } from '@nestjs/config';
 import nock from 'nock';
 import { LinearService } from '../linear.service';
 import { LinearOAuthService } from '../linear-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import { TestFixture } from '../../../../../test/helpers/connector-test.helper';
 
 import createIssueFixture from './fixtures/create_issue.json';
@@ -42,7 +42,7 @@ describe('LinearService - Actions', () => {
           },
         },
         {
-          provide: deskiveService,
+          provide: operagridService,
           useValue: {
             findOne: jest.fn().mockResolvedValue(mockConnection),
           },

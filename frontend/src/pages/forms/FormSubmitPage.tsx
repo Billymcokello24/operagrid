@@ -312,7 +312,7 @@ export default function FormSubmitPage() {
       <div className="container mx-auto py-12 px-4 max-w-2xl">
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-12">
-            <CheckCircle className="h-16 w-16 text-green-500 mb-4" />
+            <CheckCircle className="h-16 w-16 text-blue-500 mb-4" />
             <h2 className="text-2xl font-bold mb-2">{intl.formatMessage({ id: 'modules.forms.submit.submitted', defaultMessage: 'Response Submitted!' })}</h2>
             <p className="text-gray-600 text-center mb-6">
               {form.settings.confirmationMessage}

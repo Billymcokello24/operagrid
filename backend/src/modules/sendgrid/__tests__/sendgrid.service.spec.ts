@@ -9,13 +9,13 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { NotFoundException, BadRequestException } from '@nestjs/common';
 import nock from 'nock';
 import { SendGridService } from '../sendgrid.service';
-import { deskiveService } from '../../deskive/deskive.service';
+import { operagridService } from '../../operagrid/operagrid.service';
 import { MOCK_CREDENTIALS } from '../../../../test/helpers/mock-credentials';
 import { cleanupOAuthMocks } from '../../../../test/helpers/oauth-mock.helper';
 
 describe('SendGridService', () => {
   let service: SendGridService;
-  let deskiveService: jest.Mocked<deskiveService>;
+  let operagridService: jest.Mocked<operagridService>;
 
   const mockUserId = 'user-123';
   const mockWorkspaceId = 'workspace-456';
@@ -34,7 +34,7 @@ describe('SendGridService', () => {
   };
 
   beforeEach(async () => {
-    const mockdeskiveService = {
+    const mockoperagridService = {
       findOne: jest.fn(),
       findMany: jest.fn(),
       insert: jest.fn(),
@@ -46,14 +46,14 @@ describe('SendGridService', () => {
       providers: [
         SendGridService,
         {
-          provide: deskiveService,
-          useValue: mockdeskiveService,
+          provide: operagridService,
+          useValue: mockoperagridService,
         },
       ],
     }).compile();
 
     service = module.get<SendGridService>(SendGridService);
-    deskiveService = module.get(deskiveService);
+    operagridService = module.get(operagridService);
   });
 
   afterEach(() => {
@@ -68,8 +68,8 @@ describe('SendGridService', () => {
           .get('/v3/scopes')
           .reply(200, { scopes: ['mail.send', 'templates.read'] });
 
-        deskiveService.findOne.mockResolvedValue(null);
-        deskiveService.insert.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(null);
+        operagridService.insert.mockResolvedValue(mockConnection);
 
         const result = await service.saveConnection(mockUserId, mockWorkspaceId, {
           apiKey: mockApiKey,
@@ -80,7 +80,7 @@ describe('SendGridService', () => {
         expect(result).toBeDefined();
         expect(result.isActive).toBe(true);
         expect(result.senderEmail).toBe('sender@example.com');
-        expect(deskiveService.insert).toHaveBeenCalledWith(
+        expect(operagridService.insert).toHaveBeenCalledWith(
           'sendgrid_connections',
           expect.objectContaining({
             workspace_id: mockWorkspaceId,
@@ -97,8 +97,8 @@ describe('SendGridService', () => {
           .get('/v3/scopes')
           .reply(200, { scopes: ['mail.send'] });
 
-        deskiveService.findOne.mockResolvedValue(mockConnection);
-        deskiveService.update.mockResolvedValue({ ...mockConnection });
+        operagridService.findOne.mockResolvedValue(mockConnection);
+        operagridService.update.mockResolvedValue({ ...mockConnection });
 
         const result = await service.saveConnection(mockUserId, mockWorkspaceId, {
           apiKey: mockApiKey,
@@ -106,7 +106,7 @@ describe('SendGridService', () => {
         });
 
         expect(result).toBeDefined();
-        expect(deskiveService.update).toHaveBeenCalled();
+        expect(operagridService.update).toHaveBeenCalled();
       });
 
       it('should throw BadRequestException for invalid API key', async () => {
@@ -125,14 +125,14 @@ describe('SendGridService', () => {
 
     describe('getConnection', () => {
       it('should return connection when found', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(mockConnection);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
         expect(result).toBeDefined();
         expect(result?.workspaceId).toBe(mockWorkspaceId);
         expect(result?.senderEmail).toBe('sender@example.com');
-        expect(deskiveService.findOne).toHaveBeenCalledWith('sendgrid_connections', {
+        expect(operagridService.findOne).toHaveBeenCalledWith('sendgrid_connections', {
           workspace_id: mockWorkspaceId,
           user_id: mockUserId,
           is_active: true,
@@ -140,7 +140,7 @@ describe('SendGridService', () => {
       });
 
       it('should return null when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         const result = await service.getConnection(mockUserId, mockWorkspaceId);
 
@@ -150,12 +150,12 @@ describe('SendGridService', () => {
 
     describe('disconnect', () => {
       it('should disconnect user from SendGrid', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
-        deskiveService.update.mockResolvedValue({ ...mockConnection, is_active: false });
+        operagridService.findOne.mockResolvedValue(mockConnection);
+        operagridService.update.mockResolvedValue({ ...mockConnection, is_active: false });
 
         await service.disconnect(mockUserId, mockWorkspaceId);
 
-        expect(deskiveService.update).toHaveBeenCalledWith(
+        expect(operagridService.update).toHaveBeenCalledWith(
           'sendgrid_connections',
           mockConnection.id,
           expect.objectContaining({
@@ -165,7 +165,7 @@ describe('SendGridService', () => {
       });
 
       it('should throw NotFoundException when connection not found', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         await expect(service.disconnect(mockUserId, mockWorkspaceId)).rejects.toThrow(
           NotFoundException,
@@ -175,7 +175,7 @@ describe('SendGridService', () => {
 
     describe('testConnection', () => {
       it('should return success when API key is valid', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(mockConnection);
 
         nock('https://api.sendgrid.com')
           .get('/v3/scopes')
@@ -189,7 +189,7 @@ describe('SendGridService', () => {
       });
 
       it('should return failure when API key is invalid', async () => {
-        deskiveService.findOne.mockResolvedValue(mockConnection);
+        operagridService.findOne.mockResolvedValue(mockConnection);
 
         nock('https://api.sendgrid.com')
           .get('/v3/scopes')
@@ -202,7 +202,7 @@ describe('SendGridService', () => {
       });
 
       it('should return failure when not connected', async () => {
-        deskiveService.findOne.mockResolvedValue(null);
+        operagridService.findOne.mockResolvedValue(null);
 
         const result = await service.testConnection(mockUserId, mockWorkspaceId);
 
@@ -214,7 +214,7 @@ describe('SendGridService', () => {
 
   describe('Email Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('sendEmail', () => {
@@ -391,7 +391,7 @@ describe('SendGridService', () => {
 
   describe('Template Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('listTemplates', () => {
@@ -479,7 +479,7 @@ describe('SendGridService', () => {
 
   describe('Statistics Operations', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     describe('getStats', () => {
@@ -583,7 +583,7 @@ describe('SendGridService', () => {
 
   describe('Error Handling', () => {
     beforeEach(() => {
-      deskiveService.findOne.mockResolvedValue(mockConnection);
+      operagridService.findOne.mockResolvedValue(mockConnection);
     });
 
     it('should handle 401 unauthorized error', async () => {
@@ -598,7 +598,7 @@ describe('SendGridService', () => {
     });
 
     it('should throw NotFoundException when not connected', async () => {
-      deskiveService.findOne.mockResolvedValue(null);
+      operagridService.findOne.mockResolvedValue(null);
 
       await expect(
         service.sendEmail(mockUserId, mockWorkspaceId, {

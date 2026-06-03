@@ -21,7 +21,7 @@ export function ProjectBudgets({ workspaceId, projectId, canManageBudgets }: Pro
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-500/10 text-green-500';
+        return 'bg-blue-500/10 text-blue-500';
       case 'exceeded':
         return 'bg-red-500/10 text-red-500';
       case 'completed':

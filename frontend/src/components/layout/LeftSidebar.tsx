@@ -944,11 +944,11 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                       id: bot.id,
                       user_id: bot.id,
                       name: bot.displayName || bot.name,
-                      email: `${bot.name}@bot.deskive.ai`,
+                      email: `${bot.name}@bot.operagrid.ai`,
                       avatar_url: bot.avatarUrl,
                       user: {
                         name: bot.displayName || bot.name,
-                        email: `${bot.name}@bot.deskive.ai`,
+                        email: `${bot.name}@bot.operagrid.ai`,
                         avatar: bot.avatarUrl
                       }
                     } as any;
@@ -1231,7 +1231,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                         <div
                           className={cn(
                             "h-2 rounded-full transition-all duration-300",
-                            displayStats.usagePercentage < 60 && "bg-green-600",
+                            displayStats.usagePercentage < 60 && "bg-blue-600",
                             displayStats.usagePercentage >= 60 && displayStats.usagePercentage < 80 && "bg-yellow-600",
                             displayStats.usagePercentage >= 80 && "bg-red-600"
                           )}
@@ -1241,7 +1241,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                       <div className="flex justify-between text-xs mt-1">
                         <span className={cn(
                           "font-medium",
-                          displayStats.usagePercentage < 60 && "text-green-600",
+                          displayStats.usagePercentage < 60 && "text-blue-600",
                           displayStats.usagePercentage >= 60 && displayStats.usagePercentage < 80 && "text-yellow-600",
                           displayStats.usagePercentage >= 80 && "text-red-600"
                         )}>
@@ -1268,7 +1268,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Available:</span>
-                        <span className="font-medium text-green-600">{formatFileSize(displayStats.availableSpace)}</span>
+                        <span className="font-medium text-blue-600">{formatFileSize(displayStats.availableSpace)}</span>
                       </div>
                     </div>
                     {displayStats.usagePercentage > 80 && (
@@ -1416,7 +1416,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
               <div key={member.id} className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted/70 dark:hover:bg-muted mb-1 group">
                 <Avatar className="h-8 w-8">
                   <AvatarImage src={member.user?.avatar || member.avatar_url} alt={member.user?.name} />
-                  <AvatarFallback className="text-xs bg-gradient-to-br from-emerald-500 to-teal-600 text-white">
+                  <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 to-blue-600 text-white">
                     {(member.user?.name || member.user?.email || 'U').charAt(0).toUpperCase()}
                   </AvatarFallback>
                 </Avatar>
@@ -1433,7 +1433,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-7 w-7 p-0 text-muted-foreground hover:text-green-500 hover:bg-green-500/10"
+                      className="h-7 w-7 p-0 text-muted-foreground hover:text-blue-500 hover:bg-blue-500/10"
                       onClick={async (e) => {
                         e.stopPropagation()
                         const memberName = member.user?.name || member.user?.email || 'Unknown'
@@ -1470,7 +1470,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-7 w-7 p-0 text-muted-foreground hover:text-emerald-500 hover:bg-emerald-500/10"
+                      className="h-7 w-7 p-0 text-muted-foreground hover:text-blue-500 hover:bg-blue-500/10"
                       onClick={async (e) => {
                         e.stopPropagation()
                         const memberName = member.user?.name || member.user?.email || 'Unknown'
@@ -1834,7 +1834,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
               .map(bot => ({
                 id: bot.id,
                 name: bot.displayName || bot.name,
-                email: `${bot.name}@bot.deskive.ai`,
+                email: `${bot.name}@bot.operagrid.ai`,
                 avatar: bot.avatarUrl,
                 status: 'online' as const
               }));
@@ -1884,7 +1884,7 @@ export const LeftSidebar = React.memo(function LeftSidebar({ currentView, isColl
             .map(bot => ({
               id: bot.id,
               name: bot.displayName || bot.name,
-              email: `${bot.name}@bot.deskive.ai`,
+              email: `${bot.name}@bot.operagrid.ai`,
               avatar: bot.avatarUrl,
               status: 'online' as const
             }));
@@ -1960,7 +1960,7 @@ function SidebarItem({
       className={cn(
         "flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-all duration-200 mb-1 group relative",
         !active && "hover:bg-muted/70 dark:hover:bg-muted",
-        active && "gradient-primary-active !text-white shadow-md ring-1 ring-emerald-500/20"
+        active && "gradient-primary-active !text-white shadow-md ring-1 ring-blue-500/20"
       )}
       onClick={onClick}
     >

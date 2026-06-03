@@ -1,6 +1,6 @@
 /**
  * Organization Schema
- * Defines the organization structured data for Deskive
+ * Defines the organization structured data for OperaGrid
  */
 
 export interface OrganizationSchema {
@@ -34,15 +34,15 @@ export interface OrganizationSchema {
 }
 
 /**
- * Generate Organization schema for Deskive
+ * Generate Organization schema for OperaGrid
  */
 export function generateOrganizationSchema(): OrganizationSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
 
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Deskive',
+    name: 'OperaGrid',
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description: 'All-in-one workspace platform for team collaboration, project management, and productivity.',
@@ -60,22 +60,22 @@ export function generateOrganizationSchema(): OrganizationSchema {
         '@type': 'ContactPoint',
         telephone: '+1-555-123-4567',
         contactType: 'customer support',
-        email: 'support@deskive.com',
+        email: 'support@operagrid.com',
         availableLanguage: ['English'],
       },
       {
         '@type': 'ContactPoint',
         telephone: '+1-555-123-4568',
-        email: 'sales@deskive.com',
+        email: 'sales@operagrid.com',
         contactType: 'sales',
         availableLanguage: ['English'],
       },
     ],
     sameAs: [
-      'https://twitter.com/deskive',
-      'https://www.facebook.com/deskive',
-      'https://www.linkedin.com/company/deskive',
-      'https://github.com/deskive',
+      'https://twitter.com/operagrid',
+      'https://www.facebook.com/operagrid',
+      'https://www.linkedin.com/company/operagrid',
+      'https://github.com/operagrid',
     ],
   };
 }

@@ -59,7 +59,7 @@ const getActivityColor = (type: string) => {
     case 'message':
       return 'text-blue-600 dark:text-blue-400'
     case 'project':
-      return 'text-green-600 dark:text-green-400'
+      return 'text-blue-600 dark:text-blue-400'
     case 'file':
       return 'text-purple-600 dark:text-purple-400'
     case 'calendar':

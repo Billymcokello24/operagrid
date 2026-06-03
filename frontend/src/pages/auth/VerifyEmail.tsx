@@ -98,7 +98,7 @@ export default function VerifyEmail() {
       case 'success':
         return {
           icon: <CheckCircle className="w-6 h-6 text-white" />,
-          bgColor: 'from-green-600 to-emerald-600',
+          bgColor: 'from-blue-600 to-blue-700',
           title: 'Email Verified!',
           description: 'Your email address has been successfully verified'
         }
@@ -160,11 +160,11 @@ export default function VerifyEmail() {
             {verificationState === 'success' && (
               <div className="space-y-4">
                 <div className="text-center space-y-3">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                    <CheckCircle className="w-8 h-8 text-blue-600" />
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Great! Your email address has been verified. You can now access all features of your Deskive account.
+                    Great! Your email address has been verified. You can now access all features of your OperaGrid account.
                   </p>
                   <p className="text-xs text-gray-500">
                     You will be redirected to the sign-in page shortly...
@@ -173,7 +173,7 @@ export default function VerifyEmail() {
                 
                 <Button 
                   onClick={() => navigate('/auth/login')}
-                  className="w-full h-11 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-medium shadow-lg transition-all duration-200"
+                  className="w-full h-11 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium shadow-lg transition-all duration-200"
                 >
                   Continue to Sign In
                 </Button>
@@ -197,9 +197,9 @@ export default function VerifyEmail() {
                 </div>
                 
                 {resendSuccess ? (
-                  <Alert className="border-green-200 bg-green-50">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    <AlertDescription className="text-green-700">
+                  <Alert className="border-blue-200 bg-blue-50">
+                    <CheckCircle className="h-4 w-4 text-blue-500" />
+                    <AlertDescription className="text-blue-700">
                       Verification email sent! Please check your inbox and click the new verification link.
                     </AlertDescription>
                   </Alert>

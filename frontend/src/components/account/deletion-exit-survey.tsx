@@ -60,7 +60,7 @@ const DELETION_REASONS: DeletionReasonOption[] = [
     value: DeletionReason.TOO_COMPLICATED,
     label: 'App is too complicated',
     icon: MoreHorizontal,
-    color: 'text-teal-500',
+    color: 'text-blue-500',
   },
   {
     value: DeletionReason.NOT_USING,
@@ -518,8 +518,8 @@ function getRetentionMessage(reason: DeletionReason) {
       title: 'Your privacy matters to us',
       message: 'We take privacy seriously. Would you like to review our privacy settings or talk to our support team?',
       icon: Shield,
-      colorClass: 'border-green-200 bg-green-50 dark:bg-green-950',
-      iconColor: 'text-green-500',
+      colorClass: 'border-blue-200 bg-blue-50 dark:bg-blue-950',
+      iconColor: 'text-blue-500',
       action: {
         label: 'Contact Support',
         onClick: () => {

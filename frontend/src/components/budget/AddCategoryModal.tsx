@@ -28,13 +28,13 @@ interface CategoryFormData {
 
 const CATEGORY_COLORS = [
   { nameKey: 'budget.modal.category.colors.blue', value: '#3b82f6' },
-  { nameKey: 'budget.modal.category.colors.green', value: '#10b981' },
+  { nameKey: 'budget.modal.category.colors.green', value: '#2563eb' },
   { nameKey: 'budget.modal.category.colors.yellow', value: '#f59e0b' },
   { nameKey: 'budget.modal.category.colors.red', value: '#ef4444' },
   { nameKey: 'budget.modal.category.colors.purple', value: '#8b5cf6' },
   { nameKey: 'budget.modal.category.colors.pink', value: '#ec4899' },
   { nameKey: 'budget.modal.category.colors.indigo', value: '#6366f1' },
-  { nameKey: 'budget.modal.category.colors.teal', value: '#14b8a6' },
+  { nameKey: 'budget.modal.category.colors.blue', value: '#3b82f6' },
 ];
 
 export function AddCategoryModal({ open, onOpenChange, budgetId }: AddCategoryModalProps) {

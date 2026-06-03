@@ -1,6 +1,6 @@
 /**
  * LiveKit Video Call Component
- * Uses LiveKit for professional video conferencing through deskive backend
+ * Uses LiveKit for professional video conferencing through operagrid backend
  */
 
 import React, { useEffect, useState, useRef } from 'react';
@@ -350,8 +350,8 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
         setShowJoinRequestModal(false);
         setHasCheckedAuth(true);
 
-        // Call Deskive backend to join the call
-        // Backend uses deskive SDK to generate LiveKit token
+        // Call OperaGrid backend to join the call
+        // Backend uses operagrid SDK to generate LiveKit token
         const response = await videoCallApi.joinCall(callId, {});
 
         console.log('Join call response:', response);
@@ -835,7 +835,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
                   <Brain className="h-5 w-5 text-purple-500" />
                   <h3 className="text-sm font-medium">AI Meeting Assistant</h3>
                   {isTranscribing && (
-                    <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/30 text-xs">
+                    <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/30 text-xs">
                       <Mic className="h-3 w-3 mr-1" />
                       Live
                     </Badge>
@@ -861,7 +861,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
                     className={cn(
                       "text-xs h-9",
                       activeTab === 'live'
-                        ? "bg-green-600 hover:bg-green-500"
+                        ? "bg-blue-600 hover:bg-blue-500"
                         : "bg-gray-700 hover:bg-gray-600 text-gray-300"
                     )}
                   >
@@ -953,8 +953,8 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
                     ) : (
                       <div className="px-4 py-4">
                         <div className="flex flex-col items-center text-center">
-                          <Mic className="h-10 w-10 text-green-500 mb-2" />
-                          <p className="text-sm text-green-400">Listening...</p>
+                          <Mic className="h-10 w-10 text-blue-500 mb-2" />
+                          <p className="text-sm text-blue-400">Listening...</p>
                           <p className="text-xs text-gray-500 mt-1">Speak to see transcription</p>
                         </div>
                       </div>
@@ -1056,9 +1056,9 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
               {/* Footer - Export buttons */}
               <div className="p-3 border-t border-gray-700 bg-gray-900 space-y-2 flex-shrink-0">
                 {isTranscribing && (
-                  <div className="flex items-center justify-center gap-2 py-2 px-3 bg-green-500/10 border border-green-500/20 rounded-lg">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-xs text-green-400">Live transcription active</span>
+                  <div className="flex items-center justify-center gap-2 py-2 px-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                    <span className="text-xs text-blue-400">Live transcription active</span>
                   </div>
                 )}
                 <div className="grid grid-cols-4 gap-2">
@@ -1093,7 +1093,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
                     size="sm"
                     onClick={handleSaveToNotes}
                     disabled={transcripts.length === 0}
-                    className="text-xs flex flex-col items-center gap-1 h-auto py-2 bg-green-600 hover:bg-green-500"
+                    className="text-xs flex flex-col items-center gap-1 h-auto py-2 bg-blue-600 hover:bg-blue-500"
                   >
                     <StickyNote className="h-4 w-4" />
                     <span className="text-[10px]">Notes</span>
@@ -1130,7 +1130,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
               <Button
                 size="lg"
                 onClick={() => setShowInviteModal(true)}
-                className="rounded-full h-12 w-12 p-0 shadow-lg hover:scale-105 transition-transform cursor-pointer bg-white hover:bg-gray-100 text-green-600"
+                className="rounded-full h-12 w-12 p-0 shadow-lg hover:scale-105 transition-transform cursor-pointer bg-white hover:bg-gray-100 text-blue-600"
                 title="Invite members to call"
               >
                 <UserPlus className="h-5 w-5" />
@@ -1144,7 +1144,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
               className={cn(
                 'rounded-full h-12 w-12 p-0 shadow-lg hover:scale-105 transition-transform cursor-pointer',
                 linkCopied
-                  ? 'bg-green-500 hover:bg-green-600 text-white'
+                  ? 'bg-blue-500 hover:bg-blue-600 text-white'
                   : 'bg-white hover:bg-gray-100 text-gray-700'
               )}
               title="Copy room link to invite others"
@@ -1193,7 +1193,7 @@ export const LiveKitVideoCall: React.FC<LiveKitVideoCallProps> = ({
                 showAIPanel
                   ? 'bg-purple-500 hover:bg-purple-600 text-white'
                   : 'bg-white hover:bg-gray-100 text-purple-600',
-                isTranscribing && !showAIPanel && 'ring-2 ring-green-400'
+                isTranscribing && !showAIPanel && 'ring-2 ring-blue-400'
               )}
               title={showAIPanel ? 'Close AI Assistant' : 'AI Meeting Assistant'}
             >

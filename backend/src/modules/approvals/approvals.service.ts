@@ -295,7 +295,7 @@ export class ApprovalsService {
         const spreadsheet = await this.googleSheetsService.createSpreadsheet(
           connectedUserId,
           workspaceId,
-          `Deskive Approvals - ${workspaceName}`,
+          `OperaGrid Approvals - ${workspaceName}`,
           ['Sheet1'], // Default sheet, will be renamed or we'll add new sheets
         );
         spreadsheetId = spreadsheet.spreadsheetId;

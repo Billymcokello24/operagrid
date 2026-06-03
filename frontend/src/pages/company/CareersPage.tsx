@@ -122,7 +122,7 @@ const jobOpenings: JobOpening[] = [
     department: 'Customer Success',
     location: 'Chicago, IL / Remote',
     type: 'Full-time',
-    description: 'Help our enterprise customers succeed with Deskive, driving adoption, retention, and growth within existing accounts.',
+    description: 'Help our enterprise customers succeed with OperaGrid, driving adoption, retention, and growth within existing accounts.',
     requirements: [
       '3+ years of customer success experience',
       'B2B SaaS experience preferred',
@@ -195,8 +195,8 @@ export default function CareersPage() {
   return (
     <PublicLayout>
       <PageSEO
-        title="Careers - Join Our Team at Deskive"
-        description="Join Deskive's mission to transform team collaboration. Explore open positions in engineering, product, design, and more. Remote-first culture with comprehensive benefits."
+        title="Careers - Join Our Team at OperaGrid"
+        description="Join OperaGrid's mission to transform team collaboration. Explore open positions in engineering, product, design, and more. Remote-first culture with comprehensive benefits."
         keywords={['careers', 'jobs', 'hiring', 'remote work', 'tech jobs', 'software jobs']}
       />
       <div className="relative overflow-hidden">
@@ -213,7 +213,7 @@ export default function CareersPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
               >
                 <Users className="h-4 w-4 text-cyan-400" />
                 <span className="text-cyan-300 font-medium">
@@ -226,7 +226,7 @@ export default function CareersPage() {
                 <span
                   className="block"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -242,7 +242,7 @@ export default function CareersPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                   onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   {intl.formatMessage({ id: 'company.careers.hero.cta' })}
@@ -286,7 +286,7 @@ export default function CareersPage() {
                 >
                   <Card className="glass-effect glass-card-hover border-white/10 h-full">
                     <CardContent className="p-6 text-center">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-full mb-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-4">
                         <value.icon className="h-6 w-6 text-cyan-400" />
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
@@ -329,7 +329,7 @@ export default function CareersPage() {
                   <Card className="glass-effect glass-card-hover border-white/10 h-full">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-lg flex items-center justify-center">
+                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                           <benefit.icon className="h-5 w-5 text-cyan-400" />
                         </div>
                         <div>
@@ -421,8 +421,8 @@ export default function CareersPage() {
                         
                         <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
                           <Button 
-                            className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
-                            onClick={() => window.open(`mailto:careers@deskive.com?subject=Application for ${job.title}`, '_blank')}
+                            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
+                            onClick={() => window.open(`mailto:careers@operagrid.com?subject=Application for ${job.title}`, '_blank')}
                           >
                             Apply Now
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -476,7 +476,7 @@ export default function CareersPage() {
                   viewport={{ once: true, amount: 0.3 }}
                   className="text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full text-white font-bold text-lg mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-bold text-lg mb-4">
                     {process.step}
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{process.title}</h3>
@@ -510,8 +510,8 @@ export default function CareersPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
-                  onClick={() => window.open('mailto:careers@deskive.com?subject=General Application', '_blank')}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
+                  onClick={() => window.open('mailto:careers@operagrid.com?subject=General Application', '_blank')}
                 >
                   {intl.formatMessage({ id: 'company.careers.noRole.cta' })}
                   <ArrowRight className="ml-2 h-4 w-4" />

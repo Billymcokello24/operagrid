@@ -1,7 +1,7 @@
 /**
  * Google Analytics 4 Integration
  *
- * This utility provides GA4 tracking functions for Deskive.
+ * This utility provides GA4 tracking functions for OperaGrid.
  * It only tracks when GA_MEASUREMENT_ID is configured in production.
  */
 

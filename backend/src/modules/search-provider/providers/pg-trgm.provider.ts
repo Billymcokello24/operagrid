@@ -24,7 +24,7 @@
  * trigram similarity, or faceted search on arbitrary fields. For those,
  * graduate to Meilisearch / Typesense.
  *
- * Supported deskive collections (mapped to real table names):
+ * Supported operagrid collections (mapped to real table names):
  *   'workspaces'       → workspaces.name + description
  *   'projects'         → projects.name + description
  *   'tasks'            → tasks.title + description

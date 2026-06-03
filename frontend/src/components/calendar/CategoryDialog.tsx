@@ -49,7 +49,7 @@ const DEFAULT_COLORS = [
   '#f97316', // orange
   '#eab308', // yellow
   '#22c55e', // green
-  '#06b6d4', // cyan
+  '#2563eb', // cyan
   '#3b82f6', // blue
   '#8b5cf6', // violet
   '#ec4899', // pink

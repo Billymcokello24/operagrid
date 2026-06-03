@@ -83,7 +83,7 @@ const SlackOnboarding: React.FC = () => {
               <h1 className="text-4xl font-black text-gray-900 mb-4">
                 Welcome to{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Deskive Whiteboard
+                  OperaGrid Whiteboard
                 </span>
                 ! 🎉
               </h1>
@@ -134,11 +134,11 @@ const SlackOnboarding: React.FC = () => {
           >
             {/* Header */}
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-3xl font-black text-gray-900 mb-4">
-                How to Use Deskive Whiteboard
+                How to Use OperaGrid Whiteboard
               </h2>
               <p className="text-gray-600">
                 Create and share whiteboards with your team in seconds
@@ -202,7 +202,7 @@ const SlackOnboarding: React.FC = () => {
               <button
                 onClick={completeOnboarding}
                 disabled={loading}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Loading...' : 'Start Creating'}
                 <ArrowRight className="w-5 h-5" />

@@ -182,7 +182,7 @@ export function PresenceIndicator({ users, currentUserId, maxDisplay = 5 }: Pres
             )}
             {/* Online indicator */}
             <span
-              className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-500"
+              className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-blue-500"
               title="Online"
             />
           </div>

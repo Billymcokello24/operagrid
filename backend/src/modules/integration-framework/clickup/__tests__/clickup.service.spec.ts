@@ -7,7 +7,7 @@ import { ConfigService } from '@nestjs/config';
 import nock from 'nock';
 import { ClickUpService } from '../clickup.service';
 import { ClickUpOAuthService } from '../clickup-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import { TestFixture } from '../../../../../test/helpers/connector-test.helper';
 
 // Import fixtures
@@ -43,7 +43,7 @@ describe('ClickUpService - Actions', () => {
           },
         },
         {
-          provide: deskiveService,
+          provide: operagridService,
           useValue: {
             findOne: jest.fn().mockResolvedValue(mockConnection),
           },

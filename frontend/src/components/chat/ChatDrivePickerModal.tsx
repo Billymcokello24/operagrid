@@ -43,7 +43,7 @@ const getFileIcon = (mimeType: string, fileType: string) => {
   if (mimeType?.startsWith('image/')) return <Image className="h-5 w-5 text-blue-500" />
   if (mimeType?.startsWith('video/')) return <Video className="h-5 w-5 text-red-500" />
   if (mimeType?.includes('document') || mimeType?.includes('word')) return <FileText className="h-5 w-5 text-blue-600" />
-  if (mimeType?.includes('spreadsheet') || mimeType?.includes('excel')) return <FileText className="h-5 w-5 text-green-600" />
+  if (mimeType?.includes('spreadsheet') || mimeType?.includes('excel')) return <FileText className="h-5 w-5 text-blue-600" />
   if (mimeType?.includes('presentation') || mimeType?.includes('powerpoint')) return <FileText className="h-5 w-5 text-orange-500" />
   if (mimeType?.includes('pdf')) return <FileText className="h-5 w-5 text-red-600" />
   return <File className="h-5 w-5 text-gray-500" />

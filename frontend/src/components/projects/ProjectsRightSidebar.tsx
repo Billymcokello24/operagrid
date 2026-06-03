@@ -246,9 +246,9 @@ export function ProjectsRightSidebar({ projects, allTasks, workspaceId, selected
               <div className="text-base font-bold text-amber-700 dark:text-amber-300">{activeProjects}</div>
               <div className="text-xs font-medium text-amber-600 dark:text-amber-400">{intl.formatMessage({ id: 'projects.status.active' })}</div>
             </div>
-            <div className="bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-900/40 dark:to-green-900/40 rounded-lg p-2.5 text-center border border-emerald-200 dark:border-emerald-700">
-              <div className="text-base font-bold text-emerald-700 dark:text-emerald-300">{completedProjects}</div>
-              <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400">{intl.formatMessage({ id: 'projects.status.done' })}</div>
+            <div className="bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/40 dark:to-blue-900/40 rounded-lg p-2.5 text-center border border-blue-200 dark:border-blue-700">
+              <div className="text-base font-bold text-blue-700 dark:text-blue-300">{completedProjects}</div>
+              <div className="text-xs font-medium text-blue-600 dark:text-blue-400">{intl.formatMessage({ id: 'projects.status.done' })}</div>
             </div>
           </div>
         </div>

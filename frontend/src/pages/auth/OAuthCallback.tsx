@@ -19,8 +19,8 @@ export default function OAuthCallback() {
       }
       hasProcessed.current = true
 
-      // Following deskive pattern: backend redirects here with tokens in URL params
-      const deskiveToken = searchParams.get('access_token')
+      // Following operagrid pattern: backend redirects here with tokens in URL params
+      const operagridToken = searchParams.get('access_token')
       const userId = searchParams.get('user_id')
       const email = searchParams.get('email')
       const error = searchParams.get('error')
@@ -31,18 +31,18 @@ export default function OAuthCallback() {
         return
       }
 
-      if (!deskiveToken) {
+      if (!operagridToken) {
         console.error('No access token received from OAuth callback')
         navigate('/auth/login?error=' + encodeURIComponent('Authentication failed'))
         return
       }
 
-      console.log('✅ deskive token received, exchanging for Deskive token...')
+      console.log('✅ operagrid token received, exchanging for OperaGrid token...')
 
       try {
-        // Exchange deskive token for Deskive token
+        // Exchange operagrid token for OperaGrid token
         const response = await axios.post(`${API_URL}/api/v1/auth/oauth/exchange`, {
-          deskiveToken,
+          operagridToken,
           userId,
           email
         })
@@ -50,10 +50,10 @@ export default function OAuthCallback() {
         const { token } = response.data
 
         if (!token) {
-          throw new Error('No Deskive token received')
+          throw new Error('No OperaGrid token received')
         }
 
-        console.log('✅ Deskive token received, storing...')
+        console.log('✅ OperaGrid token received, storing...')
         localStorage.setItem('auth_token', token)
 
         // Dispatch custom event to notify AuthContext

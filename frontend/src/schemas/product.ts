@@ -49,10 +49,10 @@ export interface SoftwareApplicationSchema {
 }
 
 /**
- * Generate SoftwareApplication schema for Deskive products
+ * Generate SoftwareApplication schema for OperaGrid products
  */
 export function generateProductSchema(product: ProductData): SoftwareApplicationSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
 
   const schema: SoftwareApplicationSchema = {
     '@context': 'https://schema.org',
@@ -94,13 +94,13 @@ export function generateProductSchema(product: ProductData): SoftwareApplication
 }
 
 /**
- * Generate schema for main Deskive platform
+ * Generate schema for main OperaGrid platform
  */
-export function generateDeskiveProductSchema(): SoftwareApplicationSchema {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deskive.com';
+export function generateOperaGridProductSchema(): SoftwareApplicationSchema {
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://operagrid.com';
 
   return generateProductSchema({
-    name: 'Deskive',
+    name: 'OperaGrid',
     description: 'All-in-one workspace platform for team collaboration, project management, file sharing, video calls, and productivity tools.',
     category: 'BusinessApplication',
     image: `${siteUrl}/logo.png`,

@@ -509,7 +509,7 @@ export function AllocateAndStartTimerModal({
                               {task.assignees[0].name || task.assignees[0].email}
                             </span>
                           </div>
-                          <span className="text-sm font-semibold text-green-600 dark:text-green-400">
+                          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
                             {currency} {(assigneeRates.find(r => r.userId === task.assignees![0].id)?.hourlyRate || 0).toFixed(2)}/hr
                           </span>
                         </div>

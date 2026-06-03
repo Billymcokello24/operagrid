@@ -87,12 +87,12 @@ export function PublicLayout({ children }: PublicLayoutProps) {
         }
 
         ::-webkit-scrollbar-thumb {
-          background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%);
+          background: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
           border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(135deg, #0891b2 0%, #059669 100%);
+          background: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
         }
 
         /* Smooth scroll behavior */

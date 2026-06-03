@@ -7,7 +7,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import type { FeatureData, FeaturesConfig, FeatureCategory } from '../types/features';
 import featuresConfig from '../config/features.json';
 
-const COOKIE_NAME = 'deskive_modal_seen';
+const COOKIE_NAME = 'operagrid_modal_seen';
 const COOKIE_DAYS = 365; // Cookie expires in 1 year
 const RECENT_DAYS_THRESHOLD = 30;
 

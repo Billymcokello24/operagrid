@@ -132,7 +132,7 @@ export const LiveAIOverlay: React.FC<LiveAIOverlayProps> = ({
       case 'transcription':
         return 'bg-blue-500/20 text-blue-300 border-blue-500/30'
       case 'translation':
-        return 'bg-green-500/20 text-green-300 border-green-500/30'
+        return 'bg-blue-500/20 text-blue-300 border-blue-500/30'
       case 'suggestion':
         return 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30'
       case 'summary':
@@ -274,7 +274,7 @@ export const LiveAIOverlay: React.FC<LiveAIOverlayProps> = ({
                 className={cn(
                   "h-6 text-xs",
                   isListening 
-                    ? "text-green-400 hover:text-green-300" 
+                    ? "text-blue-400 hover:text-blue-300" 
                     : "text-gray-400 hover:text-gray-300"
                 )}
               >

@@ -1,23 +1,23 @@
 /**
- * deskive Chatbot Integration for Deskive
+ * operagrid Chatbot Integration for OperaGrid
  *
  * Lightweight chatbot widget that loads via a simple script tag approach
- * Similar to deskiveAnalytics - no SDK required
+ * Similar to operagridAnalytics - no SDK required
  *
  * Usage:
- * <script defer data-api-key="anon_xxx" src="https://api.deskive.com/js/chatbot.js"></script>
+ * <script defer data-api-key="anon_xxx" src="https://api.operagrid.com/js/chatbot.js"></script>
  */
 
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Get configuration from environment
-const deskive_API_KEY = import.meta.env.VITE_deskive_ANON_KEY || '';
-const deskive_API_URL = import.meta.env.VITE_deskive_API_URL || 'https://api.deskive.com';
+const operagrid_API_KEY = import.meta.env.VITE_operagrid_ANON_KEY || '';
+const operagrid_API_URL = import.meta.env.VITE_operagrid_API_URL || 'https://api.operagrid.com';
 
 // Check if chatbot is enabled
 const isChatbotEnabled = (): boolean => {
-  return Boolean(deskive_API_KEY && deskive_API_KEY.startsWith('anon_'));
+  return Boolean(operagrid_API_KEY && operagrid_API_KEY.startsWith('anon_'));
 };
 
 // Public pages where chatbot should be shown
@@ -67,7 +67,7 @@ const isPublicPage = (pathname: string): boolean => {
   );
 };
 
-interface deskiveChatbotProps {
+interface operagridChatbotProps {
   debug?: boolean;
   position?: 'bottom-right' | 'bottom-left';
   primaryColor?: string;
@@ -76,20 +76,20 @@ interface deskiveChatbotProps {
 }
 
 /**
- * deskive Chatbot Component
+ * operagrid Chatbot Component
  *
- * Drop-in component that loads deskive Chatbot script
+ * Drop-in component that loads operagrid Chatbot script
  * Place in App.tsx to enable the chat widget
  *
  * @example
  * ```tsx
  * // In App.tsx
- * import { deskiveChatbot } from './components/chat/deskiveChatbot';
+ * import { operagridChatbot } from './components/chat/operagridChatbot';
  *
  * function App() {
  *   return (
  *     <>
- *       <deskiveChatbot
+ *       <operagridChatbot
  *         debug={process.env.NODE_ENV === 'development'}
  *         position="bottom-right"
  *         primaryColor="#8B5CF6"
@@ -101,7 +101,7 @@ interface deskiveChatbotProps {
  * }
  * ```
  */
-export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
+export const OperaGridChatbot: React.FC<operagridChatbotProps> = ({
   debug = false,
   position = 'bottom-right',
   primaryColor = '#2563EB',
@@ -114,7 +114,7 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     // Skip if API key is not configured
     if (!isChatbotEnabled()) {
       if (debug) {
-        console.log('[deskive Chatbot] Not configured - set VITE_deskive_ANON_KEY');
+        console.log('[operagrid Chatbot] Not configured - set VITE_operagrid_ANON_KEY');
       }
       return;
     }
@@ -122,11 +122,11 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     const shouldShow = isPublicPage(location.pathname);
 
     // Always aggressively close and hide the chatbot first
-    if (window.deskiveChatbot) {
+    if (window.operagridChatbot) {
       try {
-        window.deskiveChatbot.close();
+        window.operagridChatbot.close();
       } catch (e) {
-        if (debug) console.error('[deskive Chatbot] Error closing:', e);
+        if (debug) console.error('[operagrid Chatbot] Error closing:', e);
       }
     }
 
@@ -134,15 +134,15 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     const hideAllChatbotElements = () => {
       // Hide everything on internal pages
       const selectors = [
-        '#deskive-chatbot-widget',
-        '#deskive-chatbot',
-        '#deskive-chatbot-container',
-        '#deskive-chat-widget',
-        '[id*="deskive-chat"]',
-        '[class*="deskive-chat"]',
+        '#operagrid-chatbot-widget',
+        '#operagrid-chatbot',
+        '#operagrid-chatbot-container',
+        '#operagrid-chat-widget',
+        '[id*="operagrid-chat"]',
+        '[class*="operagrid-chat"]',
         '[class*="chatbot-widget"]',
         '[class*="chatbot-container"]',
-        'iframe[src*="deskive"]',
+        'iframe[src*="operagrid"]',
         'iframe[src*="chatbot"]',
       ];
 
@@ -163,7 +163,7 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     // Hide or show chatbot based on page type
     if (!shouldShow) {
       if (debug) {
-        console.log('[deskive Chatbot] Hidden on internal page:', location.pathname);
+        console.log('[operagrid Chatbot] Hidden on internal page:', location.pathname);
       }
       hideAllChatbotElements();
       return;
@@ -171,17 +171,17 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
 
     // Show chatbot on public pages (but keep dialog closed, only show button)
     if (debug) {
-      console.log('[deskive Chatbot] Showing on public page:', location.pathname);
+      console.log('[operagrid Chatbot] Showing on public page:', location.pathname);
     }
 
     // Check if script is already loaded (persists across StrictMode remounts)
-    const existingScript = document.getElementById('deskive-chatbot-script');
+    const existingScript = document.getElementById('operagrid-chatbot-script');
 
     // ALWAYS restore visibility when on public page, even if script exists
     // This fixes the issue where bot doesn't show when navigating from internal to public pages
     setTimeout(() => {
       const widgetButtons = document.querySelectorAll(
-        '#deskive-chatbot-widget, #deskive-chatbot-button, [class*="chatbot-button"], [class*="chatbot-launcher"]'
+        '#operagrid-chatbot-widget, #operagrid-chatbot-button, [class*="chatbot-button"], [class*="chatbot-launcher"]'
       );
 
       widgetButtons.forEach(el => {
@@ -205,18 +205,18 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
 
     if (existingScript) {
       if (debug) {
-        console.log('[deskive Chatbot] Script already loaded, visibility restored');
+        console.log('[operagrid Chatbot] Script already loaded, visibility restored');
       }
       return;
     }
 
     // Create and inject the script tag
     const script = document.createElement('script');
-    script.id = 'deskive-chatbot-script';
+    script.id = 'operagrid-chatbot-script';
     script.defer = true;
-    script.src = `${deskive_API_URL}/js/chatbot.js`;
-    script.setAttribute('data-api-key', deskive_API_KEY);
-    script.setAttribute('data-api-url', deskive_API_URL);
+    script.src = `${operagrid_API_URL}/js/chatbot.js`;
+    script.setAttribute('data-api-key', operagrid_API_KEY);
+    script.setAttribute('data-api-url', operagrid_API_URL);
     script.setAttribute('data-position', position);
     script.setAttribute('data-primary-color', primaryColor);
     script.setAttribute('data-greeting', greeting);
@@ -226,28 +226,28 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     }
 
     if (debug) {
-      console.log('[deskive Chatbot] Initializing with API URL:', deskive_API_URL);
+      console.log('[operagrid Chatbot] Initializing with API URL:', operagrid_API_URL);
     }
 
     script.onload = () => {
       if (debug) {
-        console.log('[deskive Chatbot] Script loaded successfully');
+        console.log('[operagrid Chatbot] Script loaded successfully');
       }
 
       // Force close chatbot on load (prevent auto-open)
       setTimeout(() => {
-        if (window.deskiveChatbot) {
-          window.deskiveChatbot.close();
+        if (window.operagridChatbot) {
+          window.operagridChatbot.close();
           if (debug) {
-            console.log('[deskive Chatbot] Forced closed on load');
+            console.log('[operagrid Chatbot] Forced closed on load');
           }
         }
       }, 100);
 
       // Additional force close after a delay
       setTimeout(() => {
-        if (window.deskiveChatbot) {
-          window.deskiveChatbot.close();
+        if (window.operagridChatbot) {
+          window.operagridChatbot.close();
         }
       }, 500);
 
@@ -270,10 +270,10 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
           e.stopPropagation();
           e.stopImmediatePropagation();
 
-          if (window.deskiveChatbot) {
-            window.deskiveChatbot.close();
+          if (window.operagridChatbot) {
+            window.operagridChatbot.close();
             if (debug) {
-              console.log('[deskive Chatbot] Closed via button click');
+              console.log('[operagrid Chatbot] Closed via button click');
             }
           }
 
@@ -301,7 +301,7 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
         // Check if chatbot dialog/container is open/visible
         const chatbotContainers = document.querySelectorAll(
           '[class*="chatbot-container"], [class*="chatbot-dialog"], [id*="chatbot-dialog"], ' +
-          '[class*="deskive-chat-container"], [class*="deskive-chat-widget"]'
+          '[class*="operagrid-chat-container"], [class*="operagrid-chat-widget"]'
         );
 
         chatbotContainers.forEach(container => {
@@ -316,15 +316,15 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
 
           // If it's visible but we're on internal page, aggressively close
           if (isVisible && !isPublicPage(window.location.pathname)) {
-            if (window.deskiveChatbot) {
-              window.deskiveChatbot.close();
+            if (window.operagridChatbot) {
+              window.operagridChatbot.close();
               lastClosedTime = Date.now();
             }
             htmlEl.style.display = 'none';
             htmlEl.classList.remove('open', 'expanded', 'visible');
 
             if (debug) {
-              console.log('[deskive Chatbot] Auto-closed on internal page');
+              console.log('[operagrid Chatbot] Auto-closed on internal page');
             }
           }
         });
@@ -340,7 +340,7 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     };
 
     script.onerror = (e) => {
-      console.error('[deskive Chatbot] Failed to load script', e);
+      console.error('[operagrid Chatbot] Failed to load script', e);
     };
 
     document.head.appendChild(script);
@@ -354,19 +354,19 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
     const isPublic = isPublicPage(location.pathname);
 
     // Create or update style tag
-    let styleTag = document.getElementById('deskive-chatbot-override-styles') as HTMLStyleElement;
+    let styleTag = document.getElementById('operagrid-chatbot-override-styles') as HTMLStyleElement;
 
     if (!styleTag) {
       styleTag = document.createElement('style');
-      styleTag.id = 'deskive-chatbot-override-styles';
+      styleTag.id = 'operagrid-chatbot-override-styles';
       document.head.appendChild(styleTag);
     }
 
     if (!isPublic) {
       // Hide on internal pages - use !important only for internal pages
       styleTag.textContent = `
-        [id*="deskive-chat"],
-        [class*="deskive-chat"],
+        [id*="operagrid-chat"],
+        [class*="operagrid-chat"],
         [class*="chatbot-widget"],
         [class*="chatbot-container"] {
           display: none !important;
@@ -379,8 +379,8 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
       // Reset styles on public pages - DON'T force display type, just remove hiding
       styleTag.textContent = `
         /* Remove all hiding on public pages */
-        [id*="deskive-chat"]:not([class*="dialog"]):not([class*="window"]),
-        [class*="deskive-chat"]:not([class*="dialog"]):not([class*="window"]),
+        [id*="operagrid-chat"]:not([class*="dialog"]):not([class*="window"]),
+        [class*="operagrid-chat"]:not([class*="dialog"]):not([class*="window"]),
         [class*="chatbot-button"],
         [class*="chatbot-launcher"],
         [class*="chatbot-widget"]:not([class*="dialog"]) {
@@ -401,9 +401,9 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
       // Multiple timeouts to catch bot loading at different times
       const restoreVisibility = () => {
         document.querySelectorAll(
-          '#deskive-chatbot-widget, #deskive-chatbot-button, ' +
+          '#operagrid-chatbot-widget, #operagrid-chatbot-button, ' +
           '[class*="chatbot-button"], [class*="chatbot-launcher"], ' +
-          '[id*="deskive-chat"]:not([id*="dialog"]), [class*="deskive-chat"]:not([class*="dialog"])'
+          '[id*="operagrid-chat"]:not([id*="dialog"]), [class*="operagrid-chat"]:not([class*="dialog"])'
         ).forEach(el => {
           const htmlEl = el as HTMLElement;
           // Remove inline hiding styles
@@ -426,10 +426,10 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
   useEffect(() => {
     const handleEscapeKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' || e.keyCode === 27) {
-        if (window.deskiveChatbot) {
-          window.deskiveChatbot.close();
+        if (window.operagridChatbot) {
+          window.operagridChatbot.close();
           if (debug) {
-            console.log('[deskive Chatbot] Closed via Escape key');
+            console.log('[operagrid Chatbot] Closed via Escape key');
           }
         }
 
@@ -453,10 +453,10 @@ export const DeskiveChatbot: React.FC<deskiveChatbotProps> = ({
   return null;
 };
 
-// Global deskive chatbot interface (set by chatbot.js script)
+// Global operagrid chatbot interface (set by chatbot.js script)
 declare global {
   interface Window {
-    deskiveChatbot?: {
+    operagridChatbot?: {
       open: () => void;
       close: () => void;
       toggle: () => void;
@@ -470,54 +470,54 @@ declare global {
 /**
  * Open the chatbot widget
  */
-export const opendeskiveChatbot = (): void => {
-  if (window.deskiveChatbot) {
-    window.deskiveChatbot.open();
+export const openoperagridChatbot = (): void => {
+  if (window.operagridChatbot) {
+    window.operagridChatbot.open();
   }
 };
 
 /**
  * Close the chatbot widget
  */
-export const closedeskiveChatbot = (): void => {
-  if (window.deskiveChatbot) {
-    window.deskiveChatbot.close();
+export const closeoperagridChatbot = (): void => {
+  if (window.operagridChatbot) {
+    window.operagridChatbot.close();
   }
 };
 
 /**
  * Toggle the chatbot widget
  */
-export const toggledeskiveChatbot = (): void => {
-  if (window.deskiveChatbot) {
-    window.deskiveChatbot.toggle();
+export const toggleoperagridChatbot = (): void => {
+  if (window.operagridChatbot) {
+    window.operagridChatbot.toggle();
   }
 };
 
 /**
  * Send a message programmatically
  */
-export const senddeskiveMessage = (message: string): void => {
-  if (window.deskiveChatbot) {
-    window.deskiveChatbot.sendMessage(message);
+export const sendoperagridMessage = (message: string): void => {
+  if (window.operagridChatbot) {
+    window.operagridChatbot.sendMessage(message);
   }
 };
 
 /**
  * Set user info for the chatbot
  */
-export const setdeskiveChatUser = (user: { id?: string; name?: string; email?: string }): void => {
-  if (window.deskiveChatbot) {
-    window.deskiveChatbot.setUser(user);
+export const setoperagridChatUser = (user: { id?: string; name?: string; email?: string }): void => {
+  if (window.operagridChatbot) {
+    window.operagridChatbot.setUser(user);
   }
 };
 
 /**
- * Hook to access deskive Chatbot
- * Returns the global deskiveChatbot object if available
+ * Hook to access operagrid Chatbot
+ * Returns the global operagridChatbot object if available
  */
-export const usedeskiveChatbot = () => {
-  return window.deskiveChatbot || null;
+export const useoperagridChatbot = () => {
+  return window.operagridChatbot || null;
 };
 
-export default DeskiveChatbot;
+export default OperaGridChatbot;

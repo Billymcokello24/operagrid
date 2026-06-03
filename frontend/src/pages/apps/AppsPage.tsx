@@ -65,8 +65,8 @@ const GitHubLogo = () => (
 );
 
 const GoogleSheetsLogo = () => (
-  <div className="w-10 h-10 flex items-center justify-center rounded bg-green-100 dark:bg-green-900/30">
-    <FileSpreadsheet className="w-7 h-7 text-green-600 dark:text-green-400" />
+  <div className="w-10 h-10 flex items-center justify-center rounded bg-blue-100 dark:bg-blue-900/30">
+    <FileSpreadsheet className="w-7 h-7 text-blue-600 dark:text-blue-400" />
   </div>
 );
 
@@ -109,7 +109,7 @@ function AppCard({
           <div className="flex items-center justify-between gap-2">
             <CardTitle className="text-base truncate">{name}</CardTitle>
             {isConnected && (
-              <Badge variant="secondary" className="bg-green-500/10 text-green-600 shrink-0">
+              <Badge variant="secondary" className="bg-blue-500/10 text-blue-600 shrink-0">
                 <Check className="w-3 h-3 mr-1" />
                 {intl.formatMessage({ id: 'integrations.status.connected', defaultMessage: 'Connected' })}
               </Badge>
@@ -192,7 +192,7 @@ function IntegrationCard({
               {integration.name}
             </CardTitle>
             {isConnected ? (
-              <Badge variant="secondary" className="bg-green-500/10 text-green-600 shrink-0">
+              <Badge variant="secondary" className="bg-blue-500/10 text-blue-600 shrink-0">
                 <Check className="w-3 h-3 mr-1" />
                 {intl.formatMessage({ id: 'integrations.status.connected', defaultMessage: 'Connected' })}
               </Badge>
@@ -606,7 +606,7 @@ function AppsGrid() {
       <div className="mb-6">
         <h1 className="text-2xl font-bold">{intl.formatMessage({ id: 'apps.page.title', defaultMessage: 'Connectors' })}</h1>
         <p className="text-muted-foreground mt-1">
-          {intl.formatMessage({ id: 'apps.page.subtitle', defaultMessage: "Connect external apps to extend Deskive's capabilities" })}
+          {intl.formatMessage({ id: 'apps.page.subtitle', defaultMessage: "Connect external apps to extend OperaGrid's capabilities" })}
         </p>
       </div>
 

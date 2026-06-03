@@ -103,7 +103,7 @@ export function TaskDetailModal({
       case 'medium':
         return <Minus className="w-4 h-4 text-yellow-500" />
       case 'low':
-        return <ArrowDown className="w-4 h-4 text-green-500" />
+        return <ArrowDown className="w-4 h-4 text-blue-500" />
       default:
         return null
     }
@@ -117,7 +117,7 @@ export function TaskDetailModal({
       case 'medium':
         return 'bg-yellow-100 text-yellow-800 border-yellow-200'
       case 'low':
-        return 'bg-green-100 text-green-800 border-green-200'
+        return 'bg-blue-100 text-blue-800 border-blue-200'
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200'
     }
@@ -157,7 +157,7 @@ export function TaskDetailModal({
     switch (fieldType) {
       case 'checkbox':
         return value ? (
-          <CheckCircle2 className="w-4 h-4 text-green-500" />
+          <CheckCircle2 className="w-4 h-4 text-blue-500" />
         ) : (
           <div className="w-4 h-4 rounded border border-muted-foreground/30" />
         )

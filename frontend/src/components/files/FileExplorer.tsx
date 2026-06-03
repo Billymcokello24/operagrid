@@ -305,7 +305,7 @@ export function FileExplorer({
 
     // Spreadsheet files
     if (mimeType?.includes('sheet') || file.name.endsWith('.xlsx')) {
-      return <FileSpreadsheet className={`${iconSize} text-green-600`} />;
+      return <FileSpreadsheet className={`${iconSize} text-blue-600`} />;
     }
 
     // Text files

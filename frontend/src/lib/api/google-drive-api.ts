@@ -70,7 +70,7 @@ export interface ImportFileParams {
 
 export interface ImportFileResponse {
   success: boolean;
-  deskiveFileId: string;
+  operagridFileId: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
@@ -297,10 +297,10 @@ export const googleDriveApi = {
     return response.data;
   },
 
-  // ==================== Import to Deskive ====================
+  // ==================== Import to OperaGrid ====================
 
   /**
-   * Import a file from Google Drive to Deskive
+   * Import a file from Google Drive to OperaGrid
    */
   async importFile(workspaceId: string, params: ImportFileParams): Promise<ImportFileResponse> {
     const response = await api.post<{ data: ImportFileResponse }>(
@@ -310,10 +310,10 @@ export const googleDriveApi = {
     return response.data;
   },
 
-  // ==================== Export from Deskive ====================
+  // ==================== Export from OperaGrid ====================
 
   /**
-   * Export a file from Deskive to Google Drive
+   * Export a file from OperaGrid to Google Drive
    */
   async exportFile(workspaceId: string, params: ExportFileParams): Promise<ExportFileResponse> {
     const response = await api.post<{ data: ExportFileResponse }>(
@@ -350,7 +350,7 @@ export function getFileTypeColor(fileType: GoogleDriveFileType): string {
   const colors: Record<GoogleDriveFileType, string> = {
     folder: 'text-yellow-500',
     document: 'text-blue-500',
-    spreadsheet: 'text-green-500',
+    spreadsheet: 'text-blue-500',
     presentation: 'text-orange-500',
     image: 'text-purple-500',
     video: 'text-red-500',

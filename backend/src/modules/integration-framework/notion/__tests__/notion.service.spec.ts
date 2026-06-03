@@ -7,7 +7,7 @@ import { ConfigService } from '@nestjs/config';
 import nock from 'nock';
 import { NotionService } from '../notion.service';
 import { NotionOAuthService } from '../notion-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import { TestFixture } from '../../../../../test/helpers/connector-test.helper';
 
 import createPageFixture from './fixtures/create_page.json';
@@ -42,7 +42,7 @@ describe('NotionService - Actions', () => {
           },
         },
         {
-          provide: deskiveService,
+          provide: operagridService,
           useValue: {
             findOne: jest.fn().mockResolvedValue(mockConnection),
           },

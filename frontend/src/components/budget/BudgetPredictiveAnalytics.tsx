@@ -148,7 +148,7 @@ export function BudgetPredictiveAnalytics({
   }
 
   const getHealthColor = (score: number) => {
-    if (score >= 80) return 'text-green-500';
+    if (score >= 80) return 'text-blue-500';
     if (score >= 60) return 'text-yellow-500';
     if (score >= 40) return 'text-orange-500';
     return 'text-red-500';
@@ -478,7 +478,7 @@ export function BudgetPredictiveAnalytics({
                 />
                 <Bar
                   dataKey="allocatedAmount"
-                  fill="#10b981"
+                  fill="#2563eb"
                   name={formatMessage({ id: 'budget.forecasting.allocated' })}
                   radius={[8, 8, 0, 0]}
                 />
@@ -522,8 +522,8 @@ export function BudgetPredictiveAnalytics({
                   </>
                 ) : (
                   <>
-                    <TrendingDown className="w-5 h-5 text-green-500" />
-                    <span className="text-lg font-bold text-green-500">{formatMessage({ id: 'budget.forecasting.onTrack' })}</span>
+                    <TrendingDown className="w-5 h-5 text-blue-500" />
+                    <span className="text-lg font-bold text-blue-500">{formatMessage({ id: 'budget.forecasting.onTrack' })}</span>
                   </>
                 )}
               </div>

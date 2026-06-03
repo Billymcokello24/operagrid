@@ -48,14 +48,14 @@ interface AIActionResultModalProps {
 }
 
 const ACTION_CONFIG: Record<AIAction, { icon: React.ComponentType<{ className?: string }>; title: string; color: string }> = {
-  create_note: { icon: FileText, title: 'Create Note', color: 'text-emerald-500' },
-  summarize: { icon: MessageSquareText, title: 'Summary', color: 'text-green-500' },
+  create_note: { icon: FileText, title: 'Create Note', color: 'text-blue-500' },
+  summarize: { icon: MessageSquareText, title: 'Summary', color: 'text-blue-500' },
   translate: { icon: Languages, title: 'Translation', color: 'text-orange-500' },
   save_bookmark: { icon: FileText, title: 'Saved Messages', color: 'text-yellow-500' },
   extract_tasks: { icon: ListChecks, title: 'Extracted Tasks', color: 'text-cyan-500' },
   create_email: { icon: Mail, title: 'Email Draft', color: 'text-red-500' },
   copy_formatted: { icon: Copy, title: 'Formatted Messages', color: 'text-gray-500' },
-  custom_prompt: { icon: Wand2, title: 'AI Response', color: 'text-teal-500' },
+  custom_prompt: { icon: Wand2, title: 'AI Response', color: 'text-blue-500' },
 };
 
 export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
@@ -151,13 +151,13 @@ export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
           {/* Animated AI Loading Indicator */}
           <div className="relative w-24 h-24">
             {/* Outer rotating ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-emerald-500 border-r-cyan-500 animate-spin" style={{ animationDuration: '2s' }} />
+            <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-blue-500 border-r-cyan-500 animate-spin" style={{ animationDuration: '2s' }} />
 
             {/* Middle pulsing ring */}
-            <div className="absolute inset-2 rounded-full border-2 border-transparent border-b-yellow-500 border-l-teal-500 animate-spin" style={{ animationDuration: '1.5s', animationDirection: 'reverse' }} />
+            <div className="absolute inset-2 rounded-full border-2 border-transparent border-b-yellow-500 border-l-blue-500 animate-spin" style={{ animationDuration: '1.5s', animationDirection: 'reverse' }} />
 
             {/* Inner gradient circle */}
-            <div className="absolute inset-4 rounded-full bg-gradient-to-br from-emerald-500 via-cyan-400 to-yellow-400 animate-pulse opacity-80" />
+            <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-500 via-cyan-400 to-yellow-400 animate-pulse opacity-80" />
 
             {/* Center icon */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -165,14 +165,14 @@ export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
             </div>
 
             {/* Floating particles */}
-            <div className="absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-emerald-400 animate-bounce" style={{ animationDuration: '1.2s', animationDelay: '0s' }} />
+            <div className="absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-blue-400 animate-bounce" style={{ animationDuration: '1.2s', animationDelay: '0s' }} />
             <div className="absolute top-1/2 -right-1 w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce" style={{ animationDuration: '1.4s', animationDelay: '0.2s' }} />
             <div className="absolute -bottom-1 left-1/2 w-2 h-2 rounded-full bg-yellow-400 animate-bounce" style={{ animationDuration: '1.3s', animationDelay: '0.4s' }} />
-            <div className="absolute top-1/2 -left-1 w-1.5 h-1.5 rounded-full bg-teal-400 animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.6s' }} />
+            <div className="absolute top-1/2 -left-1 w-1.5 h-1.5 rounded-full bg-blue-400 animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.6s' }} />
           </div>
 
           {/* Loading text with gradient */}
-          <p className="mt-6 text-base font-medium bg-gradient-to-r from-emerald-600 via-cyan-600 to-yellow-600 bg-clip-text text-transparent animate-pulse">
+          <p className="mt-6 text-base font-medium bg-gradient-to-r from-blue-600 via-cyan-600 to-yellow-600 bg-clip-text text-transparent animate-pulse">
             {action === 'summarize' && 'Summarizing messages...'}
             {action === 'translate' && 'Translating messages...'}
             {action === 'extract_tasks' && 'Extracting action items...'}
@@ -184,7 +184,7 @@ export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
 
           {/* Animated dots */}
           <div className="flex items-center gap-1 mt-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce" style={{ animationDelay: '0ms' }} />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-bounce" style={{ animationDelay: '0ms' }} />
             <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-bounce" style={{ animationDelay: '150ms' }} />
             <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-bounce" style={{ animationDelay: '300ms' }} />
           </div>
@@ -300,7 +300,7 @@ export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
               >
                 {copied ? (
                   <>
-                    <Check className="w-4 h-4 text-green-500" />
+                    <Check className="w-4 h-4 text-blue-500" />
                     Copied!
                   </>
                 ) : (
@@ -315,7 +315,7 @@ export const AIActionResultModal: React.FC<AIActionResultModalProps> = ({
                 <Button
                   onClick={handleCreateNote}
                   disabled={isSaving}
-                  className="gap-2 bg-emerald-600 hover:bg-emerald-700"
+                  className="gap-2 bg-blue-600 hover:bg-blue-700"
                 >
                   {isSaving ? (
                     <Loader2 className="w-4 h-4 animate-spin" />

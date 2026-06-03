@@ -92,7 +92,7 @@ export const DocumentBuilder: React.FC = () => {
       [DocumentStatus.DRAFT]: { color: 'bg-gray-500', label: intl.formatMessage({ id: 'documents.status.draft', defaultMessage: 'Draft' }) },
       [DocumentStatus.ARCHIVED]: { color: 'bg-gray-600', label: intl.formatMessage({ id: 'documents.status.archived', defaultMessage: 'Archived' }) },
       [DocumentStatus.PENDING_SIGNATURE]: { color: 'bg-yellow-500', label: intl.formatMessage({ id: 'documents.status.pending', defaultMessage: 'Pending' }) },
-      [DocumentStatus.SIGNED]: { color: 'bg-green-500', label: intl.formatMessage({ id: 'documents.status.completed', defaultMessage: 'Completed' }) },
+      [DocumentStatus.SIGNED]: { color: 'bg-blue-500', label: intl.formatMessage({ id: 'documents.status.completed', defaultMessage: 'Completed' }) },
       [DocumentStatus.EXPIRED]: { color: 'bg-red-500', label: intl.formatMessage({ id: 'documents.status.expired', defaultMessage: 'Expired' }) },
       [DocumentStatus.DECLINED]: { color: 'bg-red-600', label: intl.formatMessage({ id: 'documents.status.declined', defaultMessage: 'Declined' }) },
       [DocumentStatus.PARTIALLY_SIGNED]: { color: 'bg-blue-500', label: intl.formatMessage({ id: 'documents.status.inProgress', defaultMessage: 'In Progress' }) },
@@ -121,7 +121,7 @@ export const DocumentBuilder: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate(`/workspaces/${workspaceId}/more/documents/create`)}
-            className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
           >
             <Plus className="w-4 h-4 mr-2" />
             {intl.formatMessage({ id: 'documents.actions.newDocument', defaultMessage: 'New Document' })}
@@ -177,7 +177,7 @@ export const DocumentBuilder: React.FC = () => {
                 variant={selectedType === type.value ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedType(type.value)}
-                className={selectedType === type.value ? 'bg-emerald-600 hover:bg-emerald-700' : ''}
+                className={selectedType === type.value ? 'bg-blue-600 hover:bg-blue-700' : ''}
               >
                 {type.label}
               </Button>
@@ -189,7 +189,7 @@ export const DocumentBuilder: React.FC = () => {
               <Button variant="outline" size="sm">
                 <Filter className="w-4 h-4 mr-2" />
                 {intl.formatMessage({ id: 'documents.filters.status', defaultMessage: 'Status' })}
-                {selectedStatus && <Badge className="ml-2 bg-emerald-600 text-white">1</Badge>}
+                {selectedStatus && <Badge className="ml-2 bg-blue-600 text-white">1</Badge>}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -218,7 +218,7 @@ export const DocumentBuilder: React.FC = () => {
       <div className="flex-1 overflow-auto p-6">
         {isLoading ? (
           <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
           </div>
         ) : documents.length === 0 ? (
           <Card>
@@ -232,7 +232,7 @@ export const DocumentBuilder: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate(`/workspaces/${workspaceId}/more/documents/create`)}
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 {intl.formatMessage({ id: 'documents.actions.createFirst', defaultMessage: 'Create First Document' })}
@@ -284,7 +284,7 @@ export const DocumentBuilder: React.FC = () => {
                   </div>
 
                   <div onClick={() => navigate(`/workspaces/${workspaceId}/more/documents/${doc.id}`)}>
-                    <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">
                       {doc.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-3 line-clamp-2">

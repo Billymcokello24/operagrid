@@ -296,16 +296,16 @@ export class SlackCalendarService {
         };
       }
 
-      // Get Deskive user ID from Slack user mapping
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      // Get OperaGrid user ID from Slack user mapping
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text:
-            '❌ You need to be invited to the Deskive workspace first.\n\n' +
-            'Please ask your workspace admin to invite you via email to the Deskive workspace.\n\n' +
-            'Once you accept the invitation and create your Deskive account, you can use Slack commands.',
+            '❌ You need to be invited to the OperaGrid workspace first.\n\n' +
+            'Please ask your workspace admin to invite you via email to the OperaGrid workspace.\n\n' +
+            'Once you accept the invitation and create your OperaGrid account, you can use Slack commands.',
         };
       }
 
@@ -332,7 +332,7 @@ export class SlackCalendarService {
           end_time: parsedEvent.endTime,
           all_day: parsedEvent.allDay,
         },
-        deskiveUserId,
+        operagridUserId,
       );
 
       this.logger.log(`Event created: ${event.id}`);
@@ -384,7 +384,7 @@ export class SlackCalendarService {
               elements: [
                 {
                   type: 'button',
-                  text: { type: 'plain_text', text: '📅 Open in Deskive', emoji: true },
+                  text: { type: 'plain_text', text: '📅 Open in OperaGrid', emoji: true },
                   url: eventUrl,
                   style: 'primary',
                   action_id: 'open_event',
@@ -459,20 +459,20 @@ export class SlackCalendarService {
       const { trigger_id, team_id, user_id } = payload;
 
       // Run all queries in parallel for speed
-      const [deskiveUserId, workspaceId, installation] = await Promise.all([
-        this.getDeskiveUserIdFromSlack(user_id, team_id),
+      const [operagridUserId, workspaceId, installation] = await Promise.all([
+        this.getOperaGridUserIdFromSlack(user_id, team_id),
         this.getSlackWorkspaceId(team_id),
         this.getInstallation(team_id),
       ]);
 
       // Verify user is linked
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text:
-            '❌ You need to be invited to the Deskive workspace first.\n\n' +
-            'Please ask your workspace admin to invite you via email to the Deskive workspace.\n\n' +
-            'Once you accept the invitation and create your Deskive account, you can use Slack commands.',
+            '❌ You need to be invited to the OperaGrid workspace first.\n\n' +
+            'Please ask your workspace admin to invite you via email to the OperaGrid workspace.\n\n' +
+            'Once you accept the invitation and create your OperaGrid account, you can use Slack commands.',
         };
       }
 
@@ -893,17 +893,17 @@ export class SlackCalendarService {
         recurrenceRule = recurrenceMap[recurrence] || null;
       }
 
-      // Get Deskive user ID and installation in parallel
-      const [deskiveUserId, installation] = await Promise.all([
-        this.getDeskiveUserIdFromSlack(user.id, metadata.team_id),
+      // Get OperaGrid user ID and installation in parallel
+      const [operagridUserId, installation] = await Promise.all([
+        this.getOperaGridUserIdFromSlack(user.id, metadata.team_id),
         this.getInstallation(metadata.team_id),
       ]);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_action: 'errors',
           errors: {
-            title_block: 'Your account is not linked to Deskive.',
+            title_block: 'Your account is not linked to OperaGrid.',
           },
         };
       }
@@ -931,7 +931,7 @@ export class SlackCalendarService {
       const event = await this.calendarService.createEvent(
         metadata.workspace_id,
         eventData,
-        deskiveUserId,
+        operagridUserId,
       );
 
       this.logger.log(`Event created from modal: ${event.id}`);
@@ -996,7 +996,7 @@ export class SlackCalendarService {
                 elements: [
                   {
                     type: 'mrkdwn',
-                    text: `💡 View and edit this event in <${frontendUrl}/workspaces/${metadata.workspace_id}/calendar|Deskive Calendar>`,
+                    text: `💡 View and edit this event in <${frontendUrl}/workspaces/${metadata.workspace_id}/calendar|OperaGrid Calendar>`,
                   },
                 ],
               },
@@ -1094,9 +1094,9 @@ export class SlackCalendarService {
    */
   private async listTodayEvents(teamId: string, slackUserId: string) {
     try {
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text: '❌ Your account is not linked. Please reinstall the Calendar app.',
@@ -1193,9 +1193,9 @@ export class SlackCalendarService {
    */
   private async listUpcomingEvents(teamId: string, slackUserId: string, days: number = 7) {
     try {
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text: '❌ Your account is not linked. Please reinstall the Calendar app.',
@@ -1300,9 +1300,9 @@ export class SlackCalendarService {
     }
 
     try {
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text: '❌ Your account is not linked.',
@@ -1388,9 +1388,9 @@ export class SlackCalendarService {
    */
   private async linkChannel(teamId: string, slackUserId: string, channelId: string) {
     try {
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text: '❌ Your account is not linked.',
@@ -1528,7 +1528,7 @@ export class SlackCalendarService {
           elements: [
             {
               type: 'mrkdwn',
-              text: '💡 Advanced settings can be configured in Deskive web app.',
+              text: '💡 Advanced settings can be configured in OperaGrid web app.',
             },
           ],
         },
@@ -1547,7 +1547,7 @@ export class SlackCalendarService {
           type: 'section',
           text: {
             type: 'mrkdwn',
-            text: '*📅 Deskive Calendar Commands*',
+            text: '*📅 OperaGrid Calendar Commands*',
           },
         },
         { type: 'divider' },
@@ -1662,10 +1662,10 @@ export class SlackCalendarService {
     status: 'accepted' | 'tentative' | 'declined',
   ) {
     try {
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
-        this.logger.error('Cannot find Deskive user for RSVP');
+      if (!operagridUserId) {
+        this.logger.error('Cannot find OperaGrid user for RSVP');
         return;
       }
 
@@ -1684,9 +1684,9 @@ export class SlackCalendarService {
       const event = eventResult.data[0];
 
       // Update attendee status
-      await this.calendarService.respondToEvent(eventId, deskiveUserId, status);
+      await this.calendarService.respondToEvent(eventId, operagridUserId, status);
 
-      this.logger.log(`RSVP updated: ${deskiveUserId} is ${status} for event ${eventId}`);
+      this.logger.log(`RSVP updated: ${operagridUserId} is ${status} for event ${eventId}`);
     } catch (error) {
       this.logger.error('Error handling RSVP:', error);
     }
@@ -1724,11 +1724,11 @@ export class SlackCalendarService {
       const slackClient = new WebClient(installation.bot_token);
 
       // Get user's event count for today
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(userId, teamId);
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(userId, teamId);
       let todayCount = 0;
       let upcomingCount = 0;
 
-      if (deskiveUserId) {
+      if (operagridUserId) {
         const workspaceId = await this.getSlackWorkspaceId(teamId);
         if (workspaceId) {
           const today = new Date();
@@ -1768,7 +1768,7 @@ export class SlackCalendarService {
               type: 'section',
               text: {
                 type: 'mrkdwn',
-                text: '*Welcome to Deskive Calendar! 📅*\n\nManage your events and schedule directly from Slack.',
+                text: '*Welcome to OperaGrid Calendar! 📅*\n\nManage your events and schedule directly from Slack.',
               },
             },
             { type: 'divider' },
@@ -1809,7 +1809,7 @@ export class SlackCalendarService {
               elements: [
                 {
                   type: 'mrkdwn',
-                  text: '📚 <https://deskive.com/calendar|Documentation> • 🆘 <https://deskive.com/support|Support>',
+                  text: '📚 <https://operagrid.com/calendar|Documentation> • 🆘 <https://operagrid.com/support|Support>',
                 },
               ],
             },
@@ -1867,13 +1867,13 @@ export class SlackCalendarService {
 
       await slackClient.chat.postMessage({
         channel: userId,
-        text: '👋 Welcome to Deskive Calendar!',
+        text: '👋 Welcome to OperaGrid Calendar!',
         blocks: [
           {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: "*👋 Welcome to Deskive Calendar!*\n\nYou're ready to manage your schedule from Slack.",
+              text: "*👋 Welcome to OperaGrid Calendar!*\n\nYou're ready to manage your schedule from Slack.",
             },
           },
           { type: 'divider' },
@@ -1894,7 +1894,7 @@ export class SlackCalendarService {
               {
                 type: 'button',
                 text: { type: 'plain_text', text: '📖 View Tutorial', emoji: true },
-                url: 'https://deskive.com/calendar/tutorial',
+                url: 'https://operagrid.com/calendar/tutorial',
                 action_id: 'view_tutorial',
               },
             ],
@@ -2047,7 +2047,7 @@ export class SlackCalendarService {
       const actionElements: any[] = [
         {
           type: 'button',
-          text: { type: 'plain_text', text: '📅 Open in Deskive', emoji: true },
+          text: { type: 'plain_text', text: '📅 Open in OperaGrid', emoji: true },
           url: eventUrl,
           style: 'primary',
           action_id: 'open_reminder_event',
@@ -2131,10 +2131,10 @@ export class SlackCalendarService {
   }
 
   /**
-   * Get Deskive user ID from Slack user mapping
+   * Get OperaGrid user ID from Slack user mapping
    * If no mapping exists, creates one for users already in the workspace
    */
-  private async getDeskiveUserIdFromSlack(
+  private async getOperaGridUserIdFromSlack(
     slackUserId: string,
     slackTeamId: string,
   ): Promise<string | null> {
@@ -2142,14 +2142,14 @@ export class SlackCalendarService {
       // 1. Check for existing mapping
       const result = await this.db
         .table('slack_user_mappings')
-        .select('deskive_user_id')
+        .select('operagrid_user_id')
         .where('slack_user_id', '=', slackUserId)
         .where('slack_team_id', '=', slackTeamId)
         .where('is_active', '=', true)
         .execute();
 
-      if (result.data?.[0]?.deskive_user_id) {
-        return result.data[0].deskive_user_id;
+      if (result.data?.[0]?.operagrid_user_id) {
+        return result.data[0].operagrid_user_id;
       }
 
       // 2. No mapping found - try to create one for existing workspace members
@@ -2158,13 +2158,13 @@ export class SlackCalendarService {
       );
       return await this.createMappingForExistingUser(slackUserId, slackTeamId);
     } catch (error) {
-      this.logger.error('Error getting Deskive user ID:', error);
+      this.logger.error('Error getting OperaGrid user ID:', error);
       return null;
     }
   }
 
   /**
-   * Create mapping for a user who's already in the workspace (invited via Deskive)
+   * Create mapping for a user who's already in the workspace (invited via OperaGrid)
    */
   private async createMappingForExistingUser(
     slackUserId: string,
@@ -2180,14 +2180,14 @@ export class SlackCalendarService {
 
       const { email, name, avatar } = slackUserInfo;
 
-      // 2. Find Deskive user by email
-      const deskiveUserId = await this.findDeskiveUserByEmail(email);
-      if (!deskiveUserId) {
-        this.logger.log(`[Mapping] No Deskive user found with email: ${email}`);
+      // 2. Find OperaGrid user by email
+      const operagridUserId = await this.findOperaGridUserByEmail(email);
+      if (!operagridUserId) {
+        this.logger.log(`[Mapping] No OperaGrid user found with email: ${email}`);
         return null;
       }
 
-      this.logger.log(`[Mapping] Found Deskive user: ${deskiveUserId} for email: ${email}`);
+      this.logger.log(`[Mapping] Found OperaGrid user: ${operagridUserId} for email: ${email}`);
 
       // 3. Get workspace for this Slack team
       const workspaceId = await this.getSlackWorkspaceId(slackTeamId);
@@ -2197,10 +2197,10 @@ export class SlackCalendarService {
       }
 
       // 4. Check if user is a member of the workspace
-      const isMember = await this.isUserInWorkspace(workspaceId, deskiveUserId);
+      const isMember = await this.isUserInWorkspace(workspaceId, operagridUserId);
       if (!isMember) {
         this.logger.log(
-          `[Mapping] User ${deskiveUserId} is not a member of workspace ${workspaceId}`,
+          `[Mapping] User ${operagridUserId} is not a member of workspace ${workspaceId}`,
         );
         return null;
       }
@@ -2209,7 +2209,7 @@ export class SlackCalendarService {
 
       // 5. Create the mapping
       await this.createOrUpdateUserMapping(
-        deskiveUserId,
+        operagridUserId,
         slackUserId,
         slackTeamId,
         email,
@@ -2220,9 +2220,9 @@ export class SlackCalendarService {
       );
 
       this.logger.log(
-        `[Mapping] ✅ Successfully created mapping: ${slackUserId} → ${deskiveUserId}`,
+        `[Mapping] ✅ Successfully created mapping: ${slackUserId} → ${operagridUserId}`,
       );
-      return deskiveUserId;
+      return operagridUserId;
     } catch (error) {
       this.logger.error('[Mapping] Error creating mapping for existing user:', error);
       return null;
@@ -2258,9 +2258,9 @@ export class SlackCalendarService {
   }
 
   /**
-   * Find Deskive user by email
+   * Find OperaGrid user by email
    */
-  private async findDeskiveUserByEmail(email: string): Promise<string | null> {
+  private async findOperaGridUserByEmail(email: string): Promise<string | null> {
     try {
       // Query users table directly using database query builder
       const result = await this.db
@@ -2395,10 +2395,10 @@ export class SlackCalendarService {
   }
 
   /**
-   * Create or update Slack-Deskive user mapping
+   * Create or update Slack-OperaGrid user mapping
    */
   private async createOrUpdateUserMapping(
-    deskiveUserId: string,
+    operagridUserId: string,
     slackUserId: string,
     slackTeamId: string,
     slackEmail: string,
@@ -2408,7 +2408,7 @@ export class SlackCalendarService {
     onboardingCompleted: boolean,
   ) {
     const mappingData = {
-      deskive_user_id: deskiveUserId,
+      operagrid_user_id: operagridUserId,
       slack_user_id: slackUserId,
       slack_team_id: slackTeamId,
       slack_email: slackEmail,

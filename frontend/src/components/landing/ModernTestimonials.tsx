@@ -10,7 +10,7 @@ const ModernTestimonials: React.FC = () => {
       name: 'Sarah Johnson',
       role: 'CEO at TechStart',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
-      content: 'Deskive transformed how our team collaborates. We went from using 6 different tools to just one. The productivity boost has been incredible!',
+      content: 'OperaGrid transformed how our team collaborates. We went from using 6 different tools to just one. The productivity boost has been incredible!',
       rating: 5,
       company: 'TechStart Inc.',
       gradient: 'from-sky-100 via-sky-50 to-blue-50'
@@ -40,7 +40,7 @@ const ModernTestimonials: React.FC = () => {
       content: 'Finally, a platform that understands what development teams need. The project management tools are exactly what we were looking for.',
       rating: 5,
       company: 'DevCore Solutions',
-      gradient: 'from-emerald-100 via-emerald-50 to-teal-50'
+      gradient: 'from-blue-100 via-blue-50 to-blue-50'
     },
     {
       name: 'Lisa Thompson',
@@ -55,7 +55,7 @@ const ModernTestimonials: React.FC = () => {
       name: 'James Wilson',
       role: 'Startup Founder',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-      content: 'As a startup, we needed something affordable yet powerful. Deskive gave us enterprise features at a fraction of the cost.',
+      content: 'As a startup, we needed something affordable yet powerful. OperaGrid gave us enterprise features at a fraction of the cost.',
       rating: 5,
       company: 'NextGen Ventures',
       gradient: 'from-orange-100 via-orange-50 to-yellow-50'
@@ -143,7 +143,7 @@ const ModernTestimonials: React.FC = () => {
             viewport={{ once: true }}
             className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            Join thousands of satisfied teams who have transformed their workflow with Deskive
+            Join thousands of satisfied teams who have transformed their workflow with OperaGrid
           </motion.p>
         </div>
 

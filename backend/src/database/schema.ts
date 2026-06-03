@@ -1,5 +1,5 @@
 /**
- * Deskive Database Schema Definition
+ * OperaGrid Database Schema Definition
  * Using database's migration system (working format)
  */
 
@@ -2037,7 +2037,7 @@ export const schema = {
   },
 
   // ==================== GITHUB ISSUE LINKS ====================
-  // Links GitHub issues/PRs to Deskive project tasks
+  // Links GitHub issues/PRs to OperaGrid project tasks
   github_issue_links: {
     columns: [
       { name: 'id', type: 'uuid', primaryKey: true, default: 'gen_random_uuid()' },
@@ -2114,7 +2114,7 @@ export const schema = {
   },
 
   // ==================== GOOGLE SHEETS SYNCS ====================
-  // Sync configurations for importing/exporting data between Deskive and Google Sheets
+  // Sync configurations for importing/exporting data between OperaGrid and Google Sheets
   google_sheets_syncs: {
     columns: [
       { name: 'id', type: 'uuid', primaryKey: true, default: 'gen_random_uuid()' },
@@ -2130,7 +2130,7 @@ export const schema = {
       { name: 'spreadsheet_name', type: 'string', nullable: false },
       { name: 'sheet_name', type: 'string', nullable: false },
       { name: 'sync_type', type: 'string', nullable: false }, // 'import' | 'export' | 'bidirectional'
-      { name: 'deskive_entity', type: 'string', nullable: false }, // 'tasks' | 'contacts' | 'custom'
+      { name: 'operagrid_entity', type: 'string', nullable: false }, // 'tasks' | 'contacts' | 'custom'
       { name: 'column_mapping', type: 'jsonb', default: '{}' },
       { name: 'sync_frequency', type: 'string', default: 'manual' }, // 'manual' | 'hourly' | 'daily'
       { name: 'last_sync_at', type: 'timestamptz', nullable: true },
@@ -2520,7 +2520,7 @@ export const schema = {
 
   // ==================== SUBSCRIPTION MANAGEMENT ====================
   // Subscription and payment management is handled by database platform
-  // Deskive queries subscription data via database (single source of truth)
+  // OperaGrid queries subscription data via database (single source of truth)
   // No local subscription/payment tables needed
 
   // ==================== INTEGRATION FRAMEWORK ====================
@@ -3472,13 +3472,13 @@ export const schema = {
         name: 'post_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_posts' },
+        references: { table: 'operagrid_blog_posts' },
       },
       {
         name: 'category_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_categories' },
+        references: { table: 'operagrid_blog_categories' },
       },
     ],
     indexes: [{ columns: ['post_id', 'category_id'], unique: true }],
@@ -3490,9 +3490,9 @@ export const schema = {
         name: 'post_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_posts' },
+        references: { table: 'operagrid_blog_posts' },
       },
-      { name: 'tag_id', type: 'uuid', nullable: false, references: { table: 'deskive_blog_tags' } },
+      { name: 'tag_id', type: 'uuid', nullable: false, references: { table: 'operagrid_blog_tags' } },
     ],
     indexes: [{ columns: ['post_id', 'tag_id'], unique: true }],
   },
@@ -3504,13 +3504,13 @@ export const schema = {
         name: 'post_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_posts' },
+        references: { table: 'operagrid_blog_posts' },
       },
       {
         name: 'parent_id',
         type: 'uuid',
         nullable: true,
-        references: { table: 'deskive_blog_comments' },
+        references: { table: 'operagrid_blog_comments' },
       },
       { name: 'author_name', type: 'string', nullable: false },
       { name: 'author_email', type: 'string', nullable: false },
@@ -3527,7 +3527,7 @@ export const schema = {
         name: 'post_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_posts' },
+        references: { table: 'operagrid_blog_posts' },
       },
       { name: 'user_id', type: 'string', nullable: true },
       { name: 'ip_address', type: 'string', nullable: true },
@@ -3543,7 +3543,7 @@ export const schema = {
         name: 'post_id',
         type: 'uuid',
         nullable: false,
-        references: { table: 'deskive_blog_posts' },
+        references: { table: 'operagrid_blog_posts' },
       },
       { name: 'user_id', type: 'string', nullable: true },
       { name: 'user_email', type: 'string', nullable: true },
@@ -4101,7 +4101,7 @@ export const schema = {
   // ==================== SLACK WHITEBOARD INTEGRATION ====================
 
   /**
-   * Stores Slack workspace installations for the Deskive Whiteboard app
+   * Stores Slack workspace installations for the OperaGrid Whiteboard app
    * One row per Slack workspace that installed the app from marketplace
    */
   slack_whiteboard_installations: {
@@ -4129,7 +4129,7 @@ export const schema = {
   },
 
   /**
-   * Links Deskive whiteboards to Slack
+   * Links OperaGrid whiteboards to Slack
    * Tracks which whiteboards were created from Slack marketplace app
    */
   slack_whiteboard_links: {
@@ -4178,7 +4178,7 @@ export const schema = {
   },
 
   /**
-   * Links Deskive projects to Slack
+   * Links OperaGrid projects to Slack
    * Tracks which projects were created from Slack app
    */
   slack_project_links: {
@@ -4202,13 +4202,13 @@ export const schema = {
   },
 
   /**
-   * Maps Slack users to Deskive users
+   * Maps Slack users to OperaGrid users
    * Created when user opens whiteboard from Slack for the first time
    */
   slack_user_mappings: {
     columns: [
       { name: 'id', type: 'uuid', primaryKey: true, default: 'gen_random_uuid()' },
-      { name: 'deskive_user_id', type: 'string', nullable: false }, // Deskive user ID
+      { name: 'operagrid_user_id', type: 'string', nullable: false }, // OperaGrid user ID
       { name: 'slack_user_id', type: 'string', nullable: false }, // Slack user ID
       { name: 'slack_team_id', type: 'string', nullable: false }, // Slack workspace ID
       { name: 'slack_email', type: 'string', nullable: true }, // Slack user email
@@ -4221,14 +4221,14 @@ export const schema = {
       { name: 'updated_at', type: 'timestamptz', default: 'now()' },
     ],
     indexes: [
-      { columns: ['deskive_user_id'] },
+      { columns: ['operagrid_user_id'] },
       { columns: ['slack_user_id', 'slack_team_id'], unique: true }, // One mapping per Slack user per team
       { columns: ['slack_team_id'] },
       { columns: ['slack_email'] },
     ],
   },
   /**
-   * Links Deskive workspaces to Slack channels for calendar notifications
+   * Links OperaGrid workspaces to Slack channels for calendar notifications
    * Allows users to receive event notifications in specific Slack channels
    */
   slack_calendar_channel_links: {

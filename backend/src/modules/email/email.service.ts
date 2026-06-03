@@ -10,7 +10,7 @@
  * `docs/providers/email.md` for the full list (smtp, resend, sendgrid,
  * postmark, ses, mailgun, none).
  *
- * Deskive has three pre-existing email code paths that this module does
+ * OperaGrid has three pre-existing email code paths that this module does
  * NOT touch, to keep the diff reviewable:
  *
  *   1. `backend/src/modules/database/email-helpers.ts` — legacy

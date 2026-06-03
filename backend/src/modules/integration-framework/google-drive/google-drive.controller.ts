@@ -366,20 +366,20 @@ export class GoogleDriveController {
     };
   }
 
-  // ==================== Import to Deskive ====================
+  // ==================== Import to OperaGrid ====================
 
   @Post('import')
   @UseGuards(AuthGuard, WorkspaceGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: 'Import a file from Google Drive to Deskive storage' })
+  @ApiOperation({ summary: 'Import a file from Google Drive to OperaGrid storage' })
   @ApiParam({ name: 'workspaceId', description: 'Workspace ID' })
-  @ApiResponse({ status: 201, description: 'File imported to Deskive' })
+  @ApiResponse({ status: 201, description: 'File imported to OperaGrid' })
   async importFile(
     @Param('workspaceId') workspaceId: string,
     @CurrentUser('sub') userId: string,
     @Body() dto: ImportFileDto,
   ) {
-    const result = await this.googleDriveService.importFileToDeskive(
+    const result = await this.googleDriveService.importFileToOperaGrid(
       userId,
       workspaceId,
       dto.fileId,
@@ -397,14 +397,14 @@ export class GoogleDriveController {
   @Post('export')
   @UseGuards(AuthGuard, WorkspaceGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: 'Export a Deskive file to Google Drive' })
+  @ApiOperation({ summary: 'Export a OperaGrid file to Google Drive' })
   @ApiParam({ name: 'workspaceId', description: 'Workspace ID' })
   @ApiBody({
     schema: {
       type: 'object',
       required: ['fileId'],
       properties: {
-        fileId: { type: 'string', description: 'Deskive file ID to export' },
+        fileId: { type: 'string', description: 'OperaGrid file ID to export' },
         targetFolderId: {
           type: 'string',
           description: 'Google Drive folder ID (optional, defaults to root)',
@@ -571,7 +571,7 @@ export class GoogleDriveCallbackController {
         const decoded = Buffer.from(stateParam, 'base64url').toString('utf-8');
         const stateData = JSON.parse(decoded);
 
-        // If returnUrl is provided and is a mobile deep link (deskive://), use it
+        // If returnUrl is provided and is a mobile deep link (operagrid://), use it
         if (stateData.returnUrl && isCustomScheme(stateData.returnUrl)) {
           const separator = stateData.returnUrl.includes('?') ? '&' : '?';
           const params = success

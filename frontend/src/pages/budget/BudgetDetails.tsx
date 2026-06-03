@@ -77,7 +77,7 @@ export default function BudgetDetails() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-500/10 text-green-500';
+        return 'bg-blue-500/10 text-blue-500';
       case 'exceeded':
         return 'bg-red-500/10 text-red-500';
       case 'completed':
@@ -204,7 +204,7 @@ export default function BudgetDetails() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className={`text-2xl font-bold ${remaining < 0 ? 'text-red-500' : 'text-green-500'}`}>
+            <div className={`text-2xl font-bold ${remaining < 0 ? 'text-red-500' : 'text-blue-500'}`}>
               {formatCurrency(remaining, budget.currency)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">
@@ -360,7 +360,7 @@ export default function BudgetDetails() {
                           className={
                             category.costNature === 'fixed'
                               ? 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300'
-                              : 'bg-green-50 text-green-700 border-green-200 dark:bg-green-950 dark:text-green-300'
+                              : 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300'
                           }
                         >
                           {category.costNature === 'fixed' ? intl.formatMessage({ id: 'budget.details.category.fixed' }) : intl.formatMessage({ id: 'budget.details.category.variable' })}

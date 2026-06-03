@@ -88,7 +88,7 @@ const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
     pending: { color: 'bg-gray-100 text-gray-700', label: 'Pending' },
     in_review: { color: 'bg-blue-100 text-blue-700', label: 'In Review' },
     in_progress: { color: 'bg-yellow-100 text-yellow-700', label: 'In Progress' },
-    resolved: { color: 'bg-green-100 text-green-700', label: 'Resolved' },
+    resolved: { color: 'bg-blue-100 text-blue-700', label: 'Resolved' },
     wont_fix: { color: 'bg-red-100 text-red-700', label: "Won't Fix" },
     duplicate: { color: 'bg-purple-100 text-purple-700', label: 'Duplicate' },
   };
@@ -534,7 +534,7 @@ const FeedbackManagement: React.FC = () => {
             <CardTitle className="text-sm font-medium text-muted-foreground">Resolved</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">{stats.resolved}</div>
+            <div className="text-2xl font-bold text-blue-600">{stats.resolved}</div>
           </CardContent>
         </Card>
       </div>

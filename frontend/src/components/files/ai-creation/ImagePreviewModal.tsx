@@ -209,7 +209,7 @@ export function ImagePreviewModal({
           <Button
             onClick={handleKeep}
             disabled={!fileName.trim() || isSaving || isKeeping}
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
           >
             <Save className="h-4 w-4" />
             {isSaving || isKeeping ? 'Saving...' : 'Keep & Save'}

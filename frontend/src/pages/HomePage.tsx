@@ -42,19 +42,19 @@ import { generateOrganizationSchema } from '../schemas/organization';
 import { generateWebsiteSchema } from '../schemas/website';
 import { Button } from '../components/ui/button';
 
-const GITHUB_URL = 'https://github.com/deskive/deskive';
+const GITHUB_URL = 'https://github.com/Billymcokello24/operagrid';
 
-type Accent = 'violet' | 'sky' | 'emerald' | 'amber' | 'rose' | 'cyan' | 'indigo' | 'fuchsia';
+type Accent = 'violet' | 'sky' | 'blue' | 'amber' | 'rose' | 'cyan' | 'indigo' | 'fuchsia';
 
 const ACCENT_CLASSES: Record<Accent, { icon: string; ring: string; glow: string }> = {
-  violet:  { icon: 'from-violet-500 to-purple-600',   ring: 'hover:ring-violet-300',   glow: 'group-hover:shadow-violet-500/20'   },
-  sky:     { icon: 'from-sky-500 to-blue-600',        ring: 'hover:ring-sky-300',      glow: 'group-hover:shadow-sky-500/20'      },
-  emerald: { icon: 'from-emerald-500 to-teal-600',    ring: 'hover:ring-emerald-300',  glow: 'group-hover:shadow-emerald-500/20'  },
-  amber:   { icon: 'from-amber-500 to-orange-600',    ring: 'hover:ring-amber-300',    glow: 'group-hover:shadow-amber-500/20'    },
-  rose:    { icon: 'from-rose-500 to-pink-600',       ring: 'hover:ring-rose-300',     glow: 'group-hover:shadow-rose-500/20'     },
-  cyan:    { icon: 'from-cyan-500 to-teal-500',       ring: 'hover:ring-cyan-300',     glow: 'group-hover:shadow-cyan-500/20'     },
+  violet:  { icon: 'from-indigo-500 to-blue-600',     ring: 'hover:ring-indigo-300',   glow: 'group-hover:shadow-indigo-500/20'   },
+  sky:     { icon: 'from-blue-500 to-blue-600',       ring: 'hover:ring-blue-300',     glow: 'group-hover:shadow-blue-500/20'      },
+  blue: { icon: 'from-blue-500 to-blue-600',    ring: 'hover:ring-blue-300',  glow: 'group-hover:shadow-blue-500/20'  },
+  amber:   { icon: 'from-blue-500 to-indigo-600',     ring: 'hover:ring-blue-300',     glow: 'group-hover:shadow-blue-500/20'    },
+  rose:    { icon: 'from-blue-500 to-blue-600',       ring: 'hover:ring-blue-300',     glow: 'group-hover:shadow-blue-500/20'     },
+  cyan:    { icon: 'from-blue-500 to-blue-600',       ring: 'hover:ring-blue-300',     glow: 'group-hover:shadow-blue-500/20'     },
   indigo:  { icon: 'from-indigo-500 to-blue-600',     ring: 'hover:ring-indigo-300',   glow: 'group-hover:shadow-indigo-500/20'   },
-  fuchsia: { icon: 'from-fuchsia-500 to-pink-600',    ring: 'hover:ring-fuchsia-300',  glow: 'group-hover:shadow-fuchsia-500/20'  },
+  fuchsia: { icon: 'from-indigo-500 to-blue-600',     ring: 'hover:ring-indigo-300',   glow: 'group-hover:shadow-indigo-500/20'  },
 };
 
 const CAPABILITIES: Array<{ icon: typeof MessageSquare; title: string; desc: string; accent: Accent }> = [
@@ -62,12 +62,12 @@ const CAPABILITIES: Array<{ icon: typeof MessageSquare; title: string; desc: str
   { icon: Video,         accent: 'rose',    title: 'HD Video Calls',        desc: 'Screen sharing, recording, and transcription via LiveKit.' },
   { icon: Kanban,        accent: 'violet',  title: 'Project Management',    desc: 'Kanban, sprints, milestones, dependencies, time tracking.' },
   { icon: FolderOpen,    accent: 'amber',   title: 'File Management',       desc: 'Versioning, sharing, and Google Drive integration.' },
-  { icon: FileText,      accent: 'emerald', title: 'Collaborative Notes',   desc: 'Block-based editor with real-time collaboration.' },
+  { icon: FileText,      accent: 'blue', title: 'Collaborative Notes',   desc: 'Block-based editor with real-time collaboration.' },
   { icon: Calendar,      accent: 'indigo',  title: 'Calendar & Scheduling', desc: 'Events, recurring meetings, rooms, availability.' },
   { icon: PenTool,       accent: 'cyan',    title: 'Whiteboard',            desc: 'Visual workspace for brainstorming and planning.' },
   { icon: Bot,           accent: 'fuchsia', title: 'AI AutoPilot',          desc: 'Scheduling, meeting intelligence, document analysis.' },
   { icon: FormInput,     accent: 'sky',     title: 'Forms & Analytics',     desc: 'Custom form builder with response tracking.' },
-  { icon: CheckSquare,   accent: 'emerald', title: 'Approval Workflows',    desc: 'Built-in approvals for documents and processes.' },
+  { icon: CheckSquare,   accent: 'blue', title: 'Approval Workflows',    desc: 'Built-in approvals for documents and processes.' },
   { icon: Wallet,        accent: 'amber',   title: 'Budget Tracking',       desc: 'Expenses, billing rates, budget monitoring.' },
   { icon: Plug,          accent: 'violet',  title: 'Integrations',          desc: 'Slack, Google Drive, GitHub, Dropbox, and more.' },
   { icon: Search,        accent: 'indigo',  title: 'Semantic Search',       desc: 'AI-powered search across all content types.' },
@@ -109,15 +109,15 @@ const UNIQUE = [
 ];
 
 const COMPARISON_ROWS = [
-  { feature: 'Real-time Chat',     deskive: 'Channels, threads, reactions', slack: 'Yes', notion: 'Comments only', asana: 'Comments only', teams: 'Yes' },
-  { feature: 'Video Calls',        deskive: 'HD, recording, transcription', slack: 'Huddles (basic)', notion: '—', asana: '—', teams: 'Yes' },
-  { feature: 'Project Management', deskive: 'Kanban, sprints, dependencies', slack: '—', notion: 'Basic boards', asana: 'Full-featured', teams: 'Planner' },
-  { feature: 'Notes & Docs',       deskive: 'Block editor, real-time collab', slack: 'Canvas (basic)', notion: 'Full-featured', asana: '—', teams: 'Loop' },
-  { feature: 'Calendar',           deskive: 'Events, rooms, availability', slack: '—', notion: '—', asana: 'Timeline view', teams: 'Yes' },
-  { feature: 'AI Assistant',       deskive: 'AutoPilot, meeting intel', slack: 'Summary', notion: 'Writing', asana: 'Status', teams: 'Copilot' },
-  { feature: 'Self-Hosted',        deskive: 'Docker Compose', slack: '—', notion: '—', asana: '—', teams: '—' },
-  { feature: 'Open Source',        deskive: 'GNU AGPL 3.0', slack: '—', notion: '—', asana: '—', teams: '—' },
-  { feature: 'Pricing',            deskive: 'Free (self-hosted)', slack: '$8.75/user/mo', notion: '$10/user/mo', asana: '$10.99/user/mo', teams: '$4/user/mo' },
+  { feature: 'Real-time Chat',     operagrid: 'Channels, threads, reactions', slack: 'Yes', notion: 'Comments only', asana: 'Comments only', teams: 'Yes' },
+  { feature: 'Video Calls',        operagrid: 'HD, recording, transcription', slack: 'Huddles (basic)', notion: '—', asana: '—', teams: 'Yes' },
+  { feature: 'Project Management', operagrid: 'Kanban, sprints, dependencies', slack: '—', notion: 'Basic boards', asana: 'Full-featured', teams: 'Planner' },
+  { feature: 'Notes & Docs',       operagrid: 'Block editor, real-time collab', slack: 'Canvas (basic)', notion: 'Full-featured', asana: '—', teams: 'Loop' },
+  { feature: 'Calendar',           operagrid: 'Events, rooms, availability', slack: '—', notion: '—', asana: 'Timeline view', teams: 'Yes' },
+  { feature: 'AI Assistant',       operagrid: 'AutoPilot, meeting intel', slack: 'Summary', notion: 'Writing', asana: 'Status', teams: 'Copilot' },
+  { feature: 'Self-Hosted',        operagrid: 'Docker Compose', slack: '—', notion: '—', asana: '—', teams: '—' },
+  { feature: 'Open Source',        operagrid: 'GNU AGPL 3.0', slack: '—', notion: '—', asana: '—', teams: '—' },
+  { feature: 'Pricing',            operagrid: 'Free (self-hosted)', slack: '$8.75/user/mo', notion: '$10/user/mo', asana: '$10.99/user/mo', teams: '$4/user/mo' },
 ];
 
 const MODULE_CATEGORIES = [
@@ -143,13 +143,13 @@ const SHOWCASE_TABS = [
   { key: 'calendar', label: 'Calendar', icon: Calendar,      image: '/main_calendar_light.png', caption: 'Events, rooms, availability.' },
 ] as const;
 
-const DOCKER_SNIPPET = `git clone https://github.com/deskive/deskive.git
-cd deskive
+const DOCKER_SNIPPET = `git clone https://github.com/Billymcokello24/operagrid.git
+cd operagrid
 cp .env.docker .env
 docker compose up -d`;
 
 const DOT_GRID_BG =
-  'bg-[radial-gradient(circle,rgba(139,92,246,0.15)_1px,transparent_1px)] [background-size:24px_24px]';
+  'bg-[radial-gradient(circle,rgba(59,130,246,0.15)_1px,transparent_1px)] [background-size:24px_24px]';
 
 export default function HomePage() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -195,7 +195,7 @@ export default function HomePage() {
         title={intl.formatMessage({ id: 'home.seo.title', defaultMessage: 'Open-source workspace collaboration platform' })}
         description={intl.formatMessage({
           id: 'home.seo.description',
-          defaultMessage: 'Deskive is the self-hostable, all-in-one workspace: real-time chat, HD video, project management, files, calendar, notes, and AI — in one open-source app.',
+          defaultMessage: 'OperaGrid is the self-hostable, all-in-one workspace: real-time chat, HD video, project management, files, calendar, notes, and AI — in one open-source app.',
         })}
         keywords={['open source workspace', 'slack alternative', 'notion alternative', 'self-hosted collaboration', 'team chat', 'project management', 'video calls']}
         ogImage="/og_image.png"
@@ -203,7 +203,7 @@ export default function HomePage() {
         structuredData={[generateOrganizationSchema(), generateWebsiteSchema()]}
       />
 
-      <main className="relative isolate text-slate-900 overflow-hidden bg-gradient-to-b from-violet-50 via-rose-50 to-sky-50">
+      <main className="relative isolate text-slate-900 overflow-hidden bg-gradient-to-b from-blue-50 via-indigo-50 to-sky-50">
         {/* Vibrant animated background orbs shared across the whole landing */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
@@ -227,7 +227,7 @@ export default function HomePage() {
             transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute top-[170%] right-[10%] w-[32rem] h-[32rem] rounded-full bg-emerald-300/20 blur-3xl"
+            className="absolute top-[170%] right-[10%] w-[32rem] h-[32rem] rounded-full bg-blue-300/20 blur-3xl"
             animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
             transition={{ duration: 19, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -282,13 +282,13 @@ export default function HomePage() {
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-slate-950 [text-shadow:0_1px_2px_rgba(255,255,255,0.9)]">
                 One workspace for
-                <span className="block bg-gradient-to-r from-violet-700 via-fuchsia-700 to-pink-700 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
+                <span className="block bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
                   chat, video, projects &amp; AI
                 </span>
               </h1>
 
               <p className="mt-6 text-lg md:text-xl text-slate-800 font-medium max-w-2xl mx-auto leading-relaxed [text-shadow:0_1px_2px_rgba(255,255,255,0.85)]">
-                Deskive replaces Slack + Notion + Zoom + Asana with a single open-source app.
+                OperaGrid replaces Slack + Notion + Zoom + Asana with a single open-source app.
                 Real-time chat, HD video, project management, files, calendar, notes, and AI — all in one place.
               </p>
 
@@ -296,7 +296,7 @@ export default function HomePage() {
                 <Button
                   onClick={handleGetStarted}
                   size="lg"
-                  className="bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white h-12 px-7 text-base shadow-xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5 transition-all"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white h-12 px-7 text-base shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 transition-all"
                 >
                   Get Started Free <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -317,7 +317,7 @@ export default function HomePage() {
                     key={label}
                     className="inline-flex items-center gap-1.5 pl-2.5 pr-3.5 py-1.5 rounded-full bg-white/85 backdrop-blur-sm ring-1 ring-slate-200 shadow-sm"
                   >
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-700">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-100 text-blue-700">
                       <Check className="w-3 h-3" strokeWidth={3} />
                     </span>
                     {label}
@@ -339,7 +339,7 @@ export default function HomePage() {
                   key={s.label}
                   className="text-center p-5 rounded-xl bg-white/80 backdrop-blur border border-slate-200 shadow-sm"
                 >
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                     {s.value}
                   </div>
                   <div className="mt-1 text-xs md:text-sm text-slate-500">{s.label}</div>
@@ -353,7 +353,7 @@ export default function HomePage() {
         <section className="relative py-20 md:py-28 border-t border-white/40">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <span className="inline-block text-xs font-semibold tracking-widest text-violet-600 uppercase mb-3">Overview</span>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">What is Deskive?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">What is OperaGrid?</h2>
             <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
               A <strong>self-hostable workspace collaboration platform</strong> that brings together real-time
               communication, project management, and productivity tools. Built for teams who want complete
@@ -387,7 +387,7 @@ export default function HomePage() {
                     transition={{ duration: 0.4, delay: s.n * 0.05 }}
                     className="relative p-6 rounded-xl bg-white border border-slate-200 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1 transition-all"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-600 to-pink-600 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-violet-500/30">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-blue-500/30">
                       {s.n}
                     </div>
                     <h3 className="mt-4 font-semibold text-slate-900">{s.title}</h3>
@@ -436,7 +436,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto">
               <span className="inline-block text-xs font-semibold tracking-widest text-violet-600 uppercase mb-3">Product tour</span>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">See Deskive in action</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">See OperaGrid in action</h2>
               <p className="mt-4 text-lg text-slate-600">
                 A quick glance at the modules your team will use every day.
               </p>
@@ -485,7 +485,7 @@ export default function HomePage() {
               <span className="inline-block text-xs font-semibold tracking-widest text-violet-600 uppercase mb-3">Why now</span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">The fragmentation dilemma</h2>
               <p className="mt-4 text-lg text-slate-600">
-                Modern teams juggle Slack, Zoom, Asana, and Notion — costing $50+/user/month and scattering data across vendors. Deskive consolidates all of it.
+                Modern teams juggle Slack, Zoom, Asana, and Notion — costing $50+/user/month and scattering data across vendors. OperaGrid consolidates all of it.
               </p>
             </div>
 
@@ -513,19 +513,19 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="relative p-8 rounded-2xl bg-white border border-emerald-200 shadow-sm overflow-hidden">
-                <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-emerald-100/60 blur-2xl" />
+              <div className="relative p-8 rounded-2xl bg-white border border-blue-200 shadow-sm overflow-hidden">
+                <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-blue-100/60 blur-2xl" />
                 <div className="relative">
-                  <div className="flex items-center gap-2 text-emerald-600 font-semibold mb-5">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <div className="flex items-center gap-2 text-blue-600 font-semibold mb-5">
+                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">
                       <Check className="w-4 h-4" />
                     </div>
-                    Deskive's solution
+                    OperaGrid's solution
                   </div>
                   <ul className="space-y-4">
                     {SOLUTIONS.map((s) => (
                       <li key={s.title} className="flex gap-3">
-                        <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-medium text-slate-900">{s.title}</div>
                           <div className="text-sm text-slate-600">{s.desc}</div>
@@ -544,7 +544,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto">
               <span className="inline-block text-xs font-semibold tracking-widest text-violet-600 uppercase mb-3">Comparison</span>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Why Deskive?</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Why OperaGrid?</h2>
               <p className="mt-4 text-lg text-slate-600">Side-by-side with the tools you're likely already paying for.</p>
             </div>
 
@@ -553,7 +553,7 @@ export default function HomePage() {
                 <thead className="bg-gradient-to-r from-violet-50 to-pink-50">
                   <tr>
                     <th className="px-5 py-4 font-semibold text-slate-700">Feature</th>
-                    <th className="px-5 py-4 font-semibold text-violet-700 bg-white/60">Deskive</th>
+                    <th className="px-5 py-4 font-semibold text-violet-700 bg-white/60">OperaGrid</th>
                     <th className="px-5 py-4 font-semibold text-slate-700">Slack</th>
                     <th className="px-5 py-4 font-semibold text-slate-700">Notion</th>
                     <th className="px-5 py-4 font-semibold text-slate-700">Asana</th>
@@ -564,7 +564,7 @@ export default function HomePage() {
                   {COMPARISON_ROWS.map((row, i) => (
                     <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}>
                       <td className="px-5 py-3.5 font-medium text-slate-900">{row.feature}</td>
-                      <td className="px-5 py-3.5 bg-violet-50/40 text-slate-900 font-medium">{row.deskive}</td>
+                      <td className="px-5 py-3.5 bg-violet-50/40 text-slate-900 font-medium">{row.operagrid}</td>
                       <td className="px-5 py-3.5 text-slate-600">{row.slack}</td>
                       <td className="px-5 py-3.5 text-slate-600">{row.notion}</td>
                       <td className="px-5 py-3.5 text-slate-600">{row.asana}</td>
@@ -588,7 +588,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block text-xs font-semibold tracking-widest text-violet-300 uppercase mb-3">The edge</span>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">What makes Deskive unique</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">What makes OperaGrid unique</h2>
               <p className="mt-4 text-lg text-slate-300">
                 Breadth under one data model. Pluggable infrastructure. No per-seat pricing.
               </p>
@@ -606,7 +606,7 @@ export default function HomePage() {
                 >
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-violet-500/10 to-pink-500/10 -z-10" />
                   <div className="flex items-start gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center shadow-lg shadow-violet-500/30">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div className="text-sm font-mono text-violet-300 pt-3">0{i + 1}</div>
@@ -686,7 +686,7 @@ export default function HomePage() {
                   <div className="flex gap-1.5">
                     <span className="w-3 h-3 rounded-full bg-rose-500/70" />
                     <span className="w-3 h-3 rounded-full bg-amber-500/70" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/70" />
+                    <span className="w-3 h-3 rounded-full bg-blue-500/70" />
                   </div>
                   <Terminal className="w-4 h-4 ml-2" />
                   <span className="font-mono">bash</span>
@@ -696,7 +696,7 @@ export default function HomePage() {
                   onClick={handleCopy}
                   className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors"
                 >
-                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? <Check className="w-3.5 h-3.5 text-blue-400" /> : <Copy className="w-3.5 h-3.5" />}
                   {copied ? 'Copied' : 'Copy'}
                 </button>
               </div>
@@ -718,7 +718,7 @@ export default function HomePage() {
         {/* ============ FINAL CTA ============ */}
         <section className="relative py-20 md:py-28">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 via-fuchsia-600 to-pink-600 p-10 md:p-16 text-white text-center shadow-2xl shadow-violet-500/30">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 via-fuchsia-600 to-pink-600 p-10 md:p-16 text-white text-center shadow-2xl shadow-blue-500/30">
               <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:20px_20px]" />
               <motion.div
                 className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl"

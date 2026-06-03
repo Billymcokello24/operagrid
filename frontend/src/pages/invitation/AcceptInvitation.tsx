@@ -130,9 +130,9 @@ const AcceptInvitation: React.FC = () => {
   // Loading state
   if (authLoading || isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading invitation...</p>
         </div>
       </div>
@@ -142,7 +142,7 @@ const AcceptInvitation: React.FC = () => {
   // Error state
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <XCircle className="w-8 h-8 text-red-600" />
@@ -155,7 +155,7 @@ const AcceptInvitation: React.FC = () => {
               localStorage.removeItem('pending_invitation_token');
               navigate('/auth/login');
             }}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
           >
             Back to Login
           </button>
@@ -167,7 +167,7 @@ const AcceptInvitation: React.FC = () => {
   // No invitation loaded
   if (!invitation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
           <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="w-8 h-8 text-gray-400" />
@@ -182,7 +182,7 @@ const AcceptInvitation: React.FC = () => {
               localStorage.removeItem('pending_invitation_token');
               navigate('/auth/login');
             }}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
           >
             Back to Login
           </button>
@@ -193,15 +193,15 @@ const AcceptInvitation: React.FC = () => {
 
   // Success - show invitation details
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Mail className="w-8 h-8 text-emerald-600" />
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Mail className="w-8 h-8 text-blue-600" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Workspace Invitation</h1>
-          <p className="text-gray-600">You've been invited to join a workspace on Deskive</p>
+          <p className="text-gray-600">You've been invited to join a workspace on OperaGrid</p>
         </div>
 
         {/* Invitation Details */}
@@ -287,7 +287,7 @@ const AcceptInvitation: React.FC = () => {
           <button
             onClick={handleAcceptInvitation}
             disabled={isAccepting}
-            className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {isAccepting ? (
               <>
@@ -313,7 +313,7 @@ const AcceptInvitation: React.FC = () => {
               localStorage.removeItem('pending_invitation_token');
               navigate('/auth/login');
             }}
-            className="text-sm text-emerald-600 hover:text-emerald-700 font-medium mt-1"
+            className="text-sm text-blue-600 hover:text-blue-700 font-medium mt-1"
           >
             Not you? Switch account
           </button>

@@ -214,7 +214,7 @@ export default function Dashboard() {
       title: intl.formatMessage({ id: 'dashboard.quickActions.sendMessage' }),
       description: intl.formatMessage({ id: 'dashboard.quickActions.sendMessageDesc' }),
       icon: MessageCircle,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       action: () => {
         if (workspaceId) {
           navigate(`/workspaces/${workspaceId}/chat`)

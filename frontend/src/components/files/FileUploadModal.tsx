@@ -151,11 +151,11 @@ export function FileUploadModal({
   const getFileColor = (fileWithPreview: FileWithPreview) => {
     const fileType = fileWithPreview.type;
     if (!fileType) return 'text-gray-600 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 border-gray-200';
-    if (fileType.startsWith('image/')) return 'text-green-600 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200';
+    if (fileType.startsWith('image/')) return 'text-blue-600 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950 dark:to-blue-950 border-blue-200';
     if (fileType.startsWith('video/')) return 'text-blue-600 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 border-blue-200';
     if (fileType.startsWith('audio/')) return 'text-purple-600 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 border-purple-200';
     if (fileType.includes('pdf')) return 'text-red-600 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-950 dark:to-rose-950 border-red-200';
-    if (fileType.includes('document') || fileType.includes('spreadsheet')) return 'text-emerald-600 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950 border-emerald-200';
+    if (fileType.includes('document') || fileType.includes('spreadsheet')) return 'text-blue-600 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950 dark:to-blue-950 border-blue-200';
     return 'text-gray-600 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 border-gray-200';
   };
 
@@ -358,8 +358,8 @@ export function FileUploadModal({
                             {/* Status */}
                             {file.status === 'completed' && (
                               <div className="flex items-center gap-1 mt-1">
-                                <Check className="h-3 w-3 text-green-600" />
-                                <span className="text-xs text-green-600">{intl.formatMessage({ id: 'modules.files.upload.uploaded' })}</span>
+                                <Check className="h-3 w-3 text-blue-600" />
+                                <span className="text-xs text-blue-600">{intl.formatMessage({ id: 'modules.files.upload.uploaded' })}</span>
                               </div>
                             )}
 

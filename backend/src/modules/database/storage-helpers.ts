@@ -2,7 +2,7 @@
  * Real S3-compatible object storage helpers (works with AWS S3, Cloudflare R2,
  * MinIO, Backblaze B2, DigitalOcean Spaces, etc.).
  *
- * Replaces the fluxez SDK storage stubs with concrete implementations using
+ * Storage helper implementation using with concrete implementations using
  * @aws-sdk/client-s3 and @aws-sdk/s3-request-presigner.
  *
  * Required env vars:

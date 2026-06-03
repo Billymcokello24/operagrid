@@ -1176,28 +1176,28 @@ export function NotesLeftSidebar({
             )}
 
             {/* All Notes */}
-            <div className="rounded-xl bg-gradient-to-r from-green-50/80 to-emerald-50/80 dark:from-green-950/30 dark:to-emerald-950/30 border border-green-200/40 dark:border-green-800/40 shadow-sm hover:shadow-md transition-all duration-200">
+            <div className="rounded-xl bg-gradient-to-r from-blue-50/80 to-blue-50/80 dark:from-blue-950/30 dark:to-blue-950/30 border border-blue-200/40 dark:border-blue-800/40 shadow-sm hover:shadow-md transition-all duration-200">
               <div
-                className="flex items-center justify-between p-3 cursor-pointer hover:bg-green-50/50 dark:hover:bg-green-950/20 rounded-xl transition-colors duration-200"
+                className="flex items-center justify-between p-3 cursor-pointer hover:bg-blue-50/50 dark:hover:bg-blue-950/20 rounded-xl transition-colors duration-200"
                 onClick={() => toggleSection('all-notes')}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex items-center justify-center w-6 h-6">
                     {expandedSections.has('all-notes') ? (
-                      <ChevronDown className="h-4 w-4 text-green-600 dark:text-green-400" />
+                      <ChevronDown className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                     ) : (
-                      <ChevronRight className="h-4 w-4 text-green-600 dark:text-green-400" />
+                      <ChevronRight className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                     )}
                   </div>
                   <div className="flex items-center gap-2">
-                    <FileText className="h-4 w-4 text-green-600 dark:text-green-400" />
-                    <span className="text-xs font-semibold text-green-800 dark:text-green-200 tracking-wide">{intl.formatMessage({ id: 'modules.notes.leftSidebar.allNotes' })}</span>
+                    <FileText className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                    <span className="text-xs font-semibold text-blue-800 dark:text-blue-200 tracking-wide">{intl.formatMessage({ id: 'modules.notes.leftSidebar.allNotes' })}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
 
-                  <div className="flex items-center justify-center w-8 h-6 bg-green-100 dark:bg-green-900/50 rounded-full">
-                    <span className="text-xs font-bold text-green-800 dark:text-green-200">
+                  <div className="flex items-center justify-center w-8 h-6 bg-blue-100 dark:bg-blue-900/50 rounded-full">
+                    <span className="text-xs font-bold text-blue-800 dark:text-blue-200">
                       {nonDeletedNotes.filter(n => !n.isArchived).length}
                     </span>
                   </div>

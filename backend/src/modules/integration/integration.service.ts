@@ -24,7 +24,7 @@ export class IntegrationService {
   ) {
     try {
       // Generate unique room name
-      const roomName = `deskive-${workspaceId}-${uuidv4()}`;
+      const roomName = `operagrid-${workspaceId}-${uuidv4()}`;
 
       // Create video call session record
       const sessionData = {
@@ -245,7 +245,7 @@ export class IntegrationService {
     const subject = `You've been invited to join ${workspaceName}`;
     const content = `
       <h2>You're invited to join ${workspaceName}</h2>
-      <p>${inviterName} has invited you to collaborate in their Deskive workspace.</p>
+      <p>${inviterName} has invited you to collaborate in their OperaGrid workspace.</p>
       <p><a href="${process.env.FRONTEND_URL}/invite/accept/${inviteToken}" 
          style="background: #007bff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">
          Accept Invitation
@@ -357,18 +357,18 @@ export class IntegrationService {
       <html>
         <head>
           <meta charset="utf-8">
-          <title>Deskive Notification</title>
+          <title>OperaGrid Notification</title>
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
-              <h1 style="color: #007bff;">Deskive</h1>
+              <h1 style="color: #007bff;">OperaGrid</h1>
             </div>
             <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
               ${content}
             </div>
             <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #666;">
-              <p>This email was sent from Deskive. If you no longer wish to receive these emails, 
+              <p>This email was sent from OperaGrid. If you no longer wish to receive these emails, 
                  you can update your notification preferences in your account settings.</p>
             </div>
           </div>

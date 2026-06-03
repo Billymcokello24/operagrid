@@ -460,7 +460,7 @@ export default function PublicFormSubmitPage() {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <Card className="max-w-2xl w-full">
           <CardContent className="flex flex-col items-center justify-center py-12">
-            <CheckCircle className="h-16 w-16 text-green-500 mb-4" />
+            <CheckCircle className="h-16 w-16 text-blue-500 mb-4" />
             <h2 className="text-2xl font-bold mb-2">{intl.formatMessage({ id: 'modules.forms.submit.submitted', defaultMessage: 'Response Submitted!' })}</h2>
             <p className="text-gray-600 text-center mb-6">
               {form.settings.confirmationMessage}
@@ -545,7 +545,7 @@ export default function PublicFormSubmitPage() {
 
         {/* Powered by footer */}
         <div className="text-center mt-6 text-sm text-gray-500">
-          {intl.formatMessage({ id: 'modules.forms.submit.poweredBy', defaultMessage: 'Powered by Deskive Forms' })}
+          {intl.formatMessage({ id: 'modules.forms.submit.poweredBy', defaultMessage: 'Powered by OperaGrid Forms' })}
         </div>
       </div>
     </div>

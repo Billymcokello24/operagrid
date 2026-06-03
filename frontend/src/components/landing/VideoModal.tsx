@@ -119,7 +119,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUr
               {/* Video Info */}
               <div className="mt-4 text-center">
                 <p className="text-white text-lg font-semibold">
-                  See Deskive in Action
+                  See OperaGrid in Action
                 </p>
                 <p className="text-gray-400 text-sm mt-1">
                   Discover how everything works together seamlessly

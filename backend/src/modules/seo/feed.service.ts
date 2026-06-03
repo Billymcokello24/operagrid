@@ -12,7 +12,7 @@ export class FeedService {
   private readonly baseUrl: string;
 
   constructor(private configService: ConfigService) {
-    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://deskive.com';
+    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://operagrid.com';
   }
 
   // Blog-related feed methods removed - will be implemented separately
@@ -26,17 +26,17 @@ export class FeedService {
     const changelogItems = await this.getChangelogItems(50);
 
     const channel: RSSChannel = {
-      title: 'Deskive Changelog',
-      description: 'Latest product updates and new features from Deskive',
+      title: 'OperaGrid Changelog',
+      description: 'Latest product updates and new features from OperaGrid',
       link: `${this.baseUrl}/changelog`,
       language: 'en-us',
-      copyright: `Copyright ${new Date().getFullYear()} Deskive. All rights reserved.`,
+      copyright: `Copyright ${new Date().getFullYear()} OperaGrid. All rights reserved.`,
       lastBuildDate: new Date(),
       category: ['Product Updates', 'Changelog'],
       ttl: 120, // Cache for 2 hours
       image: {
         url: `${this.baseUrl}/logo.png`,
-        title: 'Deskive Changelog',
+        title: 'OperaGrid Changelog',
         link: `${this.baseUrl}/changelog`,
         width: 144,
         height: 144,
@@ -67,7 +67,7 @@ export class FeedService {
   <li>Performance improvements across all modules</li>
 </ul>`,
         category: ['New Features', 'AI', 'Performance'],
-        guid: 'deskive-changelog-v2-5-0',
+        guid: 'operagrid-changelog-v2-5-0',
         pubDate: new Date('2025-10-28'),
       },
       {
@@ -81,7 +81,7 @@ export class FeedService {
   <li>Improved Google Calendar and Outlook sync</li>
 </ul>`,
         category: ['New Features', 'Calendar'],
-        guid: 'deskive-changelog-v2-4-0',
+        guid: 'operagrid-changelog-v2-4-0',
         pubDate: new Date('2025-10-15'),
       },
     ];

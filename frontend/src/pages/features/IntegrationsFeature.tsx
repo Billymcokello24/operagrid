@@ -23,7 +23,7 @@ export default function IntegrationsFeature() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <PageSEO
         title="Integrations - Connect Your Favorite Apps"
-        description="Deskive ships with 180+ connectors in the catalog — Slack, Google Workspace, GitHub, Jira, Notion, Asana, Linear, Trello, HubSpot, and more — all driven by a pluggable OAuth framework."
+        description="OperaGrid ships with 180+ connectors in the catalog — Slack, Google Workspace, GitHub, Jira, Notion, Asana, Linear, Trello, HubSpot, and more — all driven by a pluggable OAuth framework."
         keywords={['integrations', 'app integrations', 'connect apps', 'API', 'webhooks', 'third-party apps']}
         ogImage="/og-images/features/integrations.png"
       />
@@ -102,7 +102,7 @@ export default function IntegrationsFeature() {
 
           <Card className="border-gray-200 dark:border-gray-700">
             <CardContent className="p-6">
-              <Database className="w-10 h-10 text-green-600 mb-4" />
+              <Database className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Database Connectors</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Direct connections to MySQL, PostgreSQL, MongoDB, and other popular databases
@@ -149,19 +149,19 @@ export default function IntegrationsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Developers</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Connect GitHub, GitLab, and Bitbucket repositories</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Integrate CI/CD pipelines and deployment tools</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Sync issue tracking with Jira and Linear</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Monitor deployments with DataDog and New Relic</span>
                   </li>
                 </ul>
@@ -172,19 +172,19 @@ export default function IntegrationsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Business Teams</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Sync CRM data with Salesforce and HubSpot</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Automate marketing workflows with Mailchimp</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Connect financial data from QuickBooks and Stripe</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Integrate analytics from Google Analytics and Mixpanel</span>
                   </li>
                 </ul>

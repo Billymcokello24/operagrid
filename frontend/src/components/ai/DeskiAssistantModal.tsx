@@ -102,7 +102,7 @@ interface ReferencedItem {
 const referenceTypes = [
   { type: 'event', label: 'Calendar Event', icon: Calendar, color: 'text-blue-500' },
   { type: 'note', label: 'Note', icon: StickyNote, color: 'text-yellow-500' },
-  { type: 'task', label: 'Task', icon: ListTodo, color: 'text-green-500' },
+  { type: 'task', label: 'Task', icon: ListTodo, color: 'text-blue-500' },
   { type: 'project', label: 'Project', icon: FolderKanban, color: 'text-purple-500' },
   { type: 'file', label: 'File', icon: File, color: 'text-gray-500' },
 ] as const
@@ -845,7 +845,7 @@ export function DeskiAssistantModal({
                       <ChevronLeft className="w-5 h-5" />
                     </Button>
                   ) : (
-                    <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/25">
                       <Wand2 className="w-5 h-5 text-white" />
                     </div>
                   )}
@@ -922,7 +922,7 @@ export function DeskiAssistantModal({
                   <div className="space-y-2">
                     {isLoadingSessions ? (
                       <div className="flex items-center justify-center py-8">
-                        <Loader2 className="w-6 h-6 animate-spin text-emerald-500" />
+                        <Loader2 className="w-6 h-6 animate-spin text-blue-500" />
                       </div>
                     ) : sessions.length === 0 ? (
                       <div className="text-center py-8">
@@ -947,7 +947,7 @@ export function DeskiAssistantModal({
                           initial={{ opacity: 0, y: 5 }}
                           animate={{ opacity: 1, y: 0 }}
                           className={`group flex items-center gap-3 p-3 rounded-xl cursor-pointer transition-all hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                            currentSessionId === session.sessionId ? 'bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800' : ''
+                            currentSessionId === session.sessionId ? 'bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800' : ''
                           }`}
                           onClick={() => loadSessionHistory(session.sessionId)}
                         >
@@ -976,7 +976,7 @@ export function DeskiAssistantModal({
                     {isLoadingHistory && (
                       <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-10">
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-4 flex items-center gap-3">
-                          <Loader2 className="w-5 h-5 animate-spin text-emerald-500" />
+                          <Loader2 className="w-5 h-5 animate-spin text-blue-500" />
                           <span className="text-sm">Loading conversation...</span>
                         </div>
                       </div>
@@ -992,7 +992,7 @@ export function DeskiAssistantModal({
                       animate="visible"
                       className="flex gap-3"
                     >
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                         <Wand2 className="w-4 h-4 text-white" />
                       </div>
                       <div className="max-w-[85%]">
@@ -1040,7 +1040,7 @@ export function DeskiAssistantModal({
                       {/* Avatar */}
                       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${message.role === 'user'
                           ? 'bg-gray-200 dark:bg-gray-700'
-                          : 'bg-gradient-to-br from-emerald-500 to-teal-600'
+                          : 'bg-gradient-to-br from-blue-500 to-blue-600'
                         }`}>
                         {message.role === 'user' ? (
                           <User className="w-4 h-4 text-gray-600 dark:text-gray-300" />
@@ -1052,7 +1052,7 @@ export function DeskiAssistantModal({
                       {/* Message Bubble */}
                       <div className={`max-w-[80%] ${message.role === 'user' ? 'text-right' : ''}`}>
                         <div className={`relative inline-block px-4 py-2.5 rounded-2xl ${message.role === 'user'
-                            ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-br-md'
+                            ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-br-md'
                             : message.success === false
                               ? 'bg-red-50 dark:bg-red-950/50 text-red-900 dark:text-red-100 border border-red-200 dark:border-red-800 rounded-bl-md'
                               : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-md'
@@ -1061,7 +1061,7 @@ export function DeskiAssistantModal({
                           {message.isLoading && !message.content ? (
                             <div className="space-y-2">
                               <div className="flex items-center gap-2">
-                                <Loader2 className="w-4 h-4 animate-spin text-emerald-500" />
+                                <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
                                 <span className="text-sm">{message.status || 'Thinking...'}</span>
                               </div>
                               {/* Action progress */}
@@ -1070,11 +1070,11 @@ export function DeskiAssistantModal({
                                   {message.actions.map((action, idx) => (
                                     <div key={idx} className="flex items-center gap-2 text-xs">
                                       {action.success ? (
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
                                       ) : (
                                         <XCircle className="w-3.5 h-3.5 text-red-500" />
                                       )}
-                                      <span className={action.success ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}>
+                                      <span className={action.success ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}>
                                         {action.message}
                                       </span>
                                     </div>
@@ -1090,11 +1090,11 @@ export function DeskiAssistantModal({
                                   {message.actions.map((action, idx) => (
                                     <div key={idx} className="flex items-center gap-2 text-xs">
                                       {action.success ? (
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
                                       ) : (
                                         <XCircle className="w-3.5 h-3.5 text-red-500" />
                                       )}
-                                      <span className={action.success ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}>
+                                      <span className={action.success ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}>
                                         {action.message}
                                       </span>
                                     </div>
@@ -1109,7 +1109,7 @@ export function DeskiAssistantModal({
                                   <motion.span
                                     animate={{ opacity: [1, 0, 1] }}
                                     transition={{ duration: 0.8, repeat: Infinity }}
-                                    className="inline-block w-0.5 h-4 bg-emerald-500 ml-0.5 align-middle"
+                                    className="inline-block w-0.5 h-4 bg-blue-500 ml-0.5 align-middle"
                                   />
                                 )}
                               </p>
@@ -1125,7 +1125,7 @@ export function DeskiAssistantModal({
                               className="absolute -right-10 top-1 opacity-0 group-hover:opacity-100 transition-opacity h-7 w-7 p-0"
                             >
                               {copiedMessageId === message.id ? (
-                                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                                <Check className="w-3.5 h-3.5 text-blue-500" />
                               ) : (
                                 <Copy className="w-3.5 h-3.5" />
                               )}
@@ -1179,10 +1179,10 @@ export function DeskiAssistantModal({
                         return (
                           <div
                             key={`${item.type}-${item.id}`}
-                            className="relative flex items-center gap-2 px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-700 rounded-lg group"
+                            className="relative flex items-center gap-2 px-3 py-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg group"
                           >
                             <RefIcon className={`w-4 h-4 ${getRefColor(item.type)}`} />
-                            <span className="text-xs text-emerald-700 dark:text-emerald-300 max-w-[120px] truncate">
+                            <span className="text-xs text-blue-700 dark:text-blue-300 max-w-[120px] truncate">
                               {item.title}
                             </span>
                             <button
@@ -1274,14 +1274,14 @@ export function DeskiAssistantModal({
                                   searchReferences(selectedRefType, e.target.value)
                                 }}
                                 placeholder={intl.formatMessage({ id: 'ai.reference.search', defaultMessage: 'Search...' })}
-                                className="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                className="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 autoFocus
                               />
                             </div>
                             <div className="max-h-40 overflow-y-auto space-y-1">
                               {isSearchingRefs ? (
                                 <div className="flex items-center justify-center py-4">
-                                  <Loader2 className="w-5 h-5 animate-spin text-emerald-500" />
+                                  <Loader2 className="w-5 h-5 animate-spin text-blue-500" />
                                 </div>
                               ) : refSearchResults.length > 0 ? (
                                 refSearchResults.map((item) => (
@@ -1344,10 +1344,10 @@ export function DeskiAssistantModal({
                         size="icon"
                         onClick={() => setShowReferencePicker(!showReferencePicker)}
                         disabled={isStreaming}
-                        className={`h-11 w-11 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 flex-shrink-0 ${showReferencePicker ? 'bg-emerald-100 dark:bg-emerald-900/30' : ''}`}
+                        className={`h-11 w-11 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 flex-shrink-0 ${showReferencePicker ? 'bg-blue-100 dark:bg-blue-900/30' : ''}`}
                         title={intl.formatMessage({ id: 'ai.assistant.addReference', defaultMessage: 'Add reference from workspace' })}
                       >
-                        <Link2 className={`w-5 h-5 ${showReferencePicker ? 'text-emerald-600' : 'text-gray-500'}`} />
+                        <Link2 className={`w-5 h-5 ${showReferencePicker ? 'text-blue-600' : 'text-gray-500'}`} />
                       </Button>
 
                       <div className="flex-1 relative">
@@ -1359,7 +1359,7 @@ export function DeskiAssistantModal({
                           placeholder={intl.formatMessage({ id: config.placeholderKey, defaultMessage: 'Type a message...' })}
                           disabled={isStreaming}
                           rows={1}
-                          className="w-full px-4 py-3 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 resize-none max-h-32 transition-shadow"
+                          className="w-full px-4 py-3 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 resize-none max-h-32 transition-shadow"
                           style={{ minHeight: '44px' }}
                         />
                       </div>
@@ -1367,7 +1367,7 @@ export function DeskiAssistantModal({
                         type="submit"
                         size="icon"
                         disabled={!prompt.trim() || isStreaming}
-                        className="h-11 w-11 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg shadow-emerald-500/25 disabled:opacity-50 disabled:shadow-none flex-shrink-0 transition-all"
+                        className="h-11 w-11 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:shadow-none flex-shrink-0 transition-all"
                       >
                         {isStreaming ? (
                           <Loader2 className="w-5 h-5 animate-spin" />
@@ -1407,10 +1407,10 @@ export function DeskiAssistantFloatingButton({ onClick }: { onClick: () => void 
       className="fixed bottom-6 right-6 z-40 group"
     >
       {/* Glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
 
       {/* Button */}
-      <div className="relative w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-2xl shadow-emerald-500/30">
+      <div className="relative w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/30">
         <Wand2 className="w-6 h-6 text-white" />
       </div>
 

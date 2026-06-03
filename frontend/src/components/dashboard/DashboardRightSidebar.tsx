@@ -65,7 +65,7 @@ export function DashboardRightSidebar({ activeTab = 'overview', dashboardData }:
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'online':
-        return 'bg-green-500'
+        return 'bg-blue-500'
       case 'busy':
         return 'bg-yellow-500'
       case 'offline':

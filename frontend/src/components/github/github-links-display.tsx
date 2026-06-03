@@ -79,7 +79,7 @@ export function GitHubLinksDisplay({
   const getStateColor = (state: string) => {
     switch (state) {
       case 'open':
-        return 'text-green-600 bg-green-50 border-green-200';
+        return 'text-blue-600 bg-blue-50 border-blue-200';
       case 'closed':
         return 'text-red-600 bg-red-50 border-red-200';
       case 'merged':
@@ -96,13 +96,13 @@ export function GitHubLinksDisplay({
       ) : link.state === 'closed' ? (
         <GitPullRequest className="w-4 h-4 text-red-500" />
       ) : (
-        <GitPullRequest className="w-4 h-4 text-green-500" />
+        <GitPullRequest className="w-4 h-4 text-blue-500" />
       );
     }
     return link.state === 'closed' ? (
       <CircleDot className="w-4 h-4 text-purple-500" />
     ) : (
-      <CircleDot className="w-4 h-4 text-green-500" />
+      <CircleDot className="w-4 h-4 text-blue-500" />
     );
   };
 

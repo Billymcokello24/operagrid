@@ -1,5 +1,5 @@
 /**
- * Workspace Management Types for Deskive
+ * Workspace Management Types for OperaGrid
  * Adapted from Team@Once company types
  */
 

@@ -51,7 +51,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
   
   const colorClasses = {
     default: 'bg-blue-500',
-    success: 'bg-green-500',
+    success: 'bg-blue-500',
     warning: 'bg-yellow-500',
     danger: 'bg-red-500',
   };
@@ -79,7 +79,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
         <div className="text-2xl font-bold">{value}</div>
         {change !== undefined && (
           <p className="text-xs text-muted-foreground">
-            <span className={change >= 0 ? 'text-green-600' : 'text-red-600'}>
+            <span className={change >= 0 ? 'text-blue-600' : 'text-red-600'}>
               {change >= 0 ? '+' : ''}{change}%
             </span>{' '}
             from last month
@@ -164,7 +164,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ health }) => {
         <div className="space-y-3">
           <div className="flex justify-between items-center">
             <span className="text-sm">Uptime</span>
-            <Badge variant="outline" className="text-green-600 border-green-200">
+            <Badge variant="outline" className="text-blue-600 border-blue-200">
               {formatUptime(health.uptime)}
             </Badge>
           </div>
@@ -228,7 +228,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
   const getStatusColor = (status: 'success' | 'warning' | 'error') => {
     switch (status) {
       case 'success':
-        return 'bg-green-100 text-green-800';
+        return 'bg-blue-100 text-blue-800';
       case 'warning':
         return 'bg-yellow-100 text-yellow-800';
       case 'error':
@@ -373,7 +373,7 @@ const AdminDashboard: React.FC = () => {
       description: 'Manage organization settings',
       icon: <Building2 className="h-5 w-5 text-white" />,
       href: '/admin/organizations',
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
     },
     {
       title: 'Blog Management',
@@ -411,7 +411,7 @@ const AdminDashboard: React.FC = () => {
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Admin Dashboard</h1>
         <p className="text-muted-foreground">
-          Welcome to the Deskive admin panel. Monitor your system and manage your platform.
+          Welcome to the OperaGrid admin panel. Monitor your system and manage your platform.
         </p>
       </div>
 

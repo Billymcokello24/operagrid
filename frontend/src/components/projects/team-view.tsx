@@ -57,7 +57,7 @@ export function TeamView({ tasks, onAddTask }: TeamViewProps) {
   const getWorkloadLevel = (taskCount: number) => {
     if (taskCount > 10) return { level: 'high', color: 'bg-red-500', text: 'High' }
     if (taskCount > 5) return { level: 'medium', color: 'bg-yellow-500', text: 'Medium' }
-    return { level: 'low', color: 'bg-green-500', text: 'Low' }
+    return { level: 'low', color: 'bg-blue-500', text: 'Low' }
   }
 
   const totalTasks = tasks.length
@@ -118,7 +118,7 @@ export function TeamView({ tasks, onAddTask }: TeamViewProps) {
                       <p className="text-sm font-medium text-muted-foreground">Completed</p>
                       <p className="text-2xl font-bold">{totalCompleted}</p>
                     </div>
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    <CheckCircle className="w-6 h-6 text-blue-500" />
                   </div>
                 </CardContent>
               </Card>
@@ -183,7 +183,7 @@ export function TeamView({ tasks, onAddTask }: TeamViewProps) {
                           <p className="text-xs text-muted-foreground">Total</p>
                         </div>
                         <div>
-                          <p className="text-lg font-semibold text-green-600">{member.completed}</p>
+                          <p className="text-lg font-semibold text-blue-600">{member.completed}</p>
                           <p className="text-xs text-muted-foreground">Done</p>
                         </div>
                         <div>

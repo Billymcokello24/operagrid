@@ -68,7 +68,7 @@ export const StorageContent: React.FC<StorageContentProps> = ({
       mimeType?.includes('spreadsheet') ||
       mimeType?.includes('excel')
     )
-      return { bg: 'bg-green-500', text: 'XLS' };
+      return { bg: 'bg-blue-500', text: 'XLS' };
     if (mimeType?.startsWith('image/'))
       return { bg: 'bg-purple-500', text: 'IMG' };
     if (mimeType?.startsWith('video/'))
@@ -200,7 +200,7 @@ export const StorageContent: React.FC<StorageContentProps> = ({
                   <div className="text-xs text-muted-foreground">{intl.formatMessage({ id: 'modules.files.views.documents', defaultMessage: 'Documents' })}</div>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-3 text-center">
-                  <div className="text-lg font-bold text-green-600">
+                  <div className="text-lg font-bold text-blue-600">
                     {fileTypeCounts.images}
                   </div>
                   <div className="text-xs text-muted-foreground">{intl.formatMessage({ id: 'modules.files.views.images', defaultMessage: 'Images' })}</div>

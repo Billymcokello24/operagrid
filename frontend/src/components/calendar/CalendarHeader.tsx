@@ -158,7 +158,7 @@ export function CalendarHeader({
       if (format === 'json') {
         const exportData = {
           exportDate: new Date().toISOString(),
-          calendarName: 'Deskive Calendar',
+          calendarName: 'OperaGrid Calendar',
           events: events.map(event => ({
             ...event,
             category: categories.find(c => c.id === event.categoryId)?.name || 'Uncategorized'
@@ -221,7 +221,7 @@ export function CalendarHeader({
       const endDate = formatDate(new Date(event.endTime), "yyyyMMdd'T'HHmmss")
       
       return `BEGIN:VEVENT
-UID:${event.id}@deskive.com
+UID:${event.id}@operagrid.com
 DTSTART:${startDate}
 DTEND:${endDate}
 SUMMARY:${event.title}
@@ -234,7 +234,7 @@ END:VEVENT`
 
     return `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Deskive//Calendar//EN
+PRODID:-//OperaGrid//Calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 ${icsEvents}
@@ -303,7 +303,7 @@ END:VCALENDAR`
       <!DOCTYPE html>
       <html>
         <head>
-          <title>${title} - Deskive Calendar</title>
+          <title>${title} - OperaGrid Calendar</title>
           <style>
             body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
             h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
@@ -318,7 +318,7 @@ END:VCALENDAR`
           <p style="margin-bottom: 20px;">Total Events: ${events.length}</p>
           ${eventsList}
           <p style="margin-top: 30px; font-size: 12px; color: #666;">
-            Printed from Deskive Calendar on ${formatDate(new Date(), 'PPP')}
+            Printed from OperaGrid Calendar on ${formatDate(new Date(), 'PPP')}
           </p>
         </body>
       </html>

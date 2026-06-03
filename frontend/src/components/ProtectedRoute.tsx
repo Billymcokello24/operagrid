@@ -11,7 +11,7 @@ import { useAuth } from '../contexts/AuthContext';
 const checkUserRole = (userRole: string | undefined, requiredRole: string): boolean => {
   if (!userRole) return false;
 
-  // Normalize to uppercase for comparison (deskive returns lowercase)
+  // Normalize to uppercase for comparison (operagrid returns lowercase)
   const normalizedUserRole = userRole.toUpperCase();
   const normalizedRequiredRole = requiredRole.toUpperCase();
 
@@ -58,7 +58,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, requir
   if (isLoading || mobileAuthProcessing) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         {isMobileView && (
           <p className="ml-3 text-muted-foreground">Authenticating...</p>
         )}

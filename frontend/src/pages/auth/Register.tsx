@@ -213,25 +213,25 @@ export default function Register() {
   ]
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-4">
       <div className="w-full max-w-lg mx-auto">
         <Card className="shadow-2xl border-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm">
           <CardHeader className="space-y-6 pb-8">
             <div className="flex flex-col items-center space-y-3">
-              {/* Deskive Logo - Clickable to home */}
+              {/* OperaGrid Logo - Clickable to home */}
               <Link to="/" className="flex items-center gap-3 group cursor-pointer mb-2">
                 <img
-                  src="https://cdn.deskive.com/deskive/logo.png"
-                  alt="Deskive Logo"
+                  src="/logo.png"
+                  alt="OperaGrid Logo"
                   className="w-12 h-12 transition-all duration-300 group-hover:scale-110"
                 />
                 <span className="text-gray-900 dark:text-white font-black text-2xl tracking-tight">
-                  Deskive
+                  OperaGrid
                 </span>
               </Link>
 
               <div className="text-center space-y-2">
-                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                   {intl.formatMessage({ id: 'auth.register.title' })}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-400">
@@ -292,7 +292,7 @@ export default function Register() {
                   placeholder={intl.formatMessage({ id: 'auth.register.namePlaceholder' })}
                   required
                   disabled={isLoading}
-                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
@@ -308,7 +308,7 @@ export default function Register() {
                   placeholder={intl.formatMessage({ id: 'auth.register.emailPlaceholder' })}
                   required
                   disabled={isLoading}
-                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
@@ -326,7 +326,7 @@ export default function Register() {
                     required
                     disabled={isLoading}
                     minLength={8}
-                    className="h-11 pr-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                    className="h-11 pr-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                   />
                   <Button
                     type="button"
@@ -353,16 +353,16 @@ export default function Register() {
                   id="terms"
                   checked={acceptTerms}
                   onCheckedChange={(checked) => setAcceptTerms(!!checked)}
-                  className="mt-0.5 data-[state=checked]:bg-emerald-600 data-[state=checked]:border-emerald-600"
+                  className="mt-0.5 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600"
                 />
                 <div className="text-sm">
                   <label htmlFor="terms" className="text-gray-600 dark:text-gray-400 cursor-pointer">
                     {intl.formatMessage({ id: 'auth.register.agree' })}{' '}
-                    <Link to="/terms" className="font-medium text-emerald-600 hover:text-emerald-500">
+                    <Link to="/terms" className="font-medium text-blue-600 hover:text-blue-500">
                       {intl.formatMessage({ id: 'auth.register.terms' })}
                     </Link>{' '}
                     {intl.formatMessage({ id: 'auth.register.and' })}{' '}
-                    <Link to="/privacy" className="font-medium text-emerald-600 hover:text-emerald-500">
+                    <Link to="/privacy" className="font-medium text-blue-600 hover:text-blue-500">
                       {intl.formatMessage({ id: 'auth.register.privacy' })}
                     </Link>
                   </label>
@@ -380,7 +380,7 @@ export default function Register() {
               
               <Button
                 type="submit"
-                className="w-full h-11 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium shadow-lg transition-all duration-200"
+                className="w-full h-11 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white font-medium shadow-lg transition-all duration-200"
                 disabled={isLoading || socialLoading !== ''}
               >
                 {isLoading ? (
@@ -399,7 +399,7 @@ export default function Register() {
                 {intl.formatMessage({ id: 'auth.register.haveAccount' })}{' '}
                 <Link
                   to={invitationToken ? `/auth/login?invitation=${invitationToken}` : "/auth/login"}
-                  className="font-medium text-emerald-600 hover:text-emerald-500 transition-colors"
+                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
                 >
                   {intl.formatMessage({ id: 'auth.register.signIn' })}
                 </Link>

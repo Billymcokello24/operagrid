@@ -1,4 +1,4 @@
-# Deskive Backend
+# OperaGrid Backend
 
 NestJS API server with PostgreSQL, Redis, Qdrant, and Socket.io.
 

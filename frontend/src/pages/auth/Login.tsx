@@ -242,7 +242,7 @@ export default function Login() {
   const orSignInWithText = intl.formatMessage({ id: 'auth.login.orSignInWith' })
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-4">
       <div className="w-full max-w-lg mx-auto">
         <Card className="shadow-2xl border-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm">
           <CardHeader className="space-y-6 pb-8">
@@ -250,7 +250,7 @@ export default function Login() {
               <AuthLogo />
 
               <div className="text-center space-y-2">
-                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                   {titleText}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-400">
@@ -311,7 +311,7 @@ export default function Login() {
                   placeholder={intl.formatMessage({ id: 'auth.login.emailPlaceholder' })}
                   required
                   disabled={isLoading}
-                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
@@ -322,7 +322,7 @@ export default function Login() {
                   </Label>
                   <Link
                     to="/forgot-password"
-                    className="text-sm text-emerald-600 hover:text-emerald-500 font-medium"
+                    className="text-sm text-blue-600 hover:text-blue-500 font-medium"
                   >
                     {intl.formatMessage({ id: 'auth.login.forgotPassword' })}
                   </Link>
@@ -336,7 +336,7 @@ export default function Login() {
                     placeholder={intl.formatMessage({ id: 'auth.login.passwordPlaceholder' })}
                     required
                     disabled={isLoading}
-                    className="h-11 pr-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                    className="h-11 pr-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                   />
                   <Button
                     type="button"
@@ -369,15 +369,15 @@ export default function Login() {
                     required={showTwoFactor}
                     disabled={isLoading}
                     maxLength={6}
-                    className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
+                    className="h-11 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500"
                   />
                 </div>
               )}
               
               {successMessage && (
-                <Alert className="border-green-200 bg-green-50">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <AlertDescription className="text-green-700">
+                <Alert className="border-blue-200 bg-blue-50">
+                  <CheckCircle className="h-4 w-4 text-blue-500" />
+                  <AlertDescription className="text-blue-700">
                     {successMessage}
                   </AlertDescription>
                 </Alert>
@@ -394,7 +394,7 @@ export default function Login() {
               
               <Button
                 type="submit"
-                className="w-full h-11 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium shadow-lg transition-all duration-200"
+                className="w-full h-11 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white font-medium shadow-lg transition-all duration-200"
                 disabled={isLoading || socialLoading !== ''}
               >
                 {isLoading ? (
@@ -419,7 +419,7 @@ export default function Login() {
                       ? `/auth/register?invitation=${invitationToken}`
                       : "/auth/register"
                   }
-                  className="font-medium text-emerald-600 hover:text-emerald-500 transition-colors"
+                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
                 >
                   {intl.formatMessage({ id: 'auth.login.signUp' })}
                 </Link>

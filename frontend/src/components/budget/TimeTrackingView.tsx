@@ -119,27 +119,27 @@ export function TimeTrackingView({ workspaceId, budgetId, currency, tasks = [] }
     <div className="space-y-6">
       {/* Running Timer Banner */}
       {runningTimer && runningTimer.isRunning && runningTimer.startTime && (
-        <Card className="bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800">
+        <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
           <CardContent className="py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-full bg-green-100 dark:bg-green-900">
-                  <Clock className="w-5 h-5 text-green-600 dark:text-green-400 animate-pulse" />
+                <div className="p-2 rounded-full bg-blue-100 dark:bg-blue-900">
+                  <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 animate-pulse" />
                 </div>
                 <div>
-                  <p className="font-semibold text-green-900 dark:text-green-100">
+                  <p className="font-semibold text-blue-900 dark:text-blue-100">
                     {intl.formatMessage({ id: 'budget.timeTracking.timerRunning' })}
                   </p>
-                  <p className="text-sm text-green-700 dark:text-green-300">
+                  <p className="text-sm text-blue-700 dark:text-blue-300">
                     {getTaskName(runningTimer.taskId)} • {intl.formatMessage({ id: 'budget.timeTracking.started' })} {formatDistanceToNow(new Date(runningTimer.startTime))} {intl.formatMessage({ id: 'budget.timeTracking.ago' })}
                   </p>
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-bold text-green-900 dark:text-green-100">
+                <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">
                   {formatDuration(runningTimer.durationSeconds || 0)}
                 </p>
-                <p className="text-sm text-green-700 dark:text-green-300">
+                <p className="text-sm text-blue-700 dark:text-blue-300">
                   {formatCurrency(runningTimer.billingRate || 0)}/hr
                 </p>
               </div>
@@ -173,7 +173,7 @@ export function TimeTrackingView({ workspaceId, budgetId, currency, tasks = [] }
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-2xl font-bold text-blue-600">
               {formatCurrency(stats.totalBilled)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">
@@ -286,7 +286,7 @@ export function TimeTrackingView({ workspaceId, budgetId, currency, tasks = [] }
                                 </Badge>
                               )}
                               {entry.isRunning && (
-                                <Badge variant="outline" className="text-xs border-green-500 text-green-600">
+                                <Badge variant="outline" className="text-xs border-blue-500 text-blue-600">
                                   {intl.formatMessage({ id: 'budget.timeTracking.running' })}
                                 </Badge>
                               )}
@@ -320,7 +320,7 @@ export function TimeTrackingView({ workspaceId, budgetId, currency, tasks = [] }
                               {formatDurationShort(entry.durationSeconds)}
                             </div>
                             {entry.billedAmount && entry.billedAmount > 0 && (
-                              <div className="text-sm font-medium text-green-600">
+                              <div className="text-sm font-medium text-blue-600">
                                 {formatCurrency(entry.billedAmount)}
                               </div>
                             )}

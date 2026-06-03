@@ -75,7 +75,7 @@ const FeatureHighlights: React.FC = () => {
       title: 'AI-powered calendar that works for you',
       description: 'Intelligent scheduling with AI suggestions, calendar sync, and automated meeting rooms. Never double-book or miss a meeting again.',
       image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1400&h=900&fit=crop&q=90',
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-blue-500 to-blue-600',
       features: [
         'Smart AI scheduling',
         'Google Calendar sync',
@@ -315,10 +315,10 @@ const FeatureHighlights: React.FC = () => {
                           <div className="flex gap-2">
                             <div className="w-3 h-3 rounded-full bg-red-500 shadow-sm"></div>
                             <div className="w-3 h-3 rounded-full bg-yellow-500 shadow-sm"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-500 shadow-sm"></div>
+                            <div className="w-3 h-3 rounded-full bg-blue-500 shadow-sm"></div>
                           </div>
                           <div className="flex-1 bg-white rounded-lg px-4 py-2 text-sm text-gray-600 font-medium shadow-sm">
-                            https://deskive.com/{highlight.id}
+                            https://operagrid.com/{highlight.id}
                           </div>
                         </div>
 
@@ -354,7 +354,7 @@ const FeatureHighlights: React.FC = () => {
                       background: `radial-gradient(circle at center, ${
                         highlight.color.includes('purple') ? 'rgba(14, 165, 233, 0.8)' :
                         highlight.color.includes('cyan') ? 'rgba(6, 182, 212, 0.8)' :
-                        highlight.color.includes('emerald') ? 'rgba(16, 185, 129, 0.8)' :
+                        highlight.color.includes('blue') ? 'rgba(59, 130, 246, 0.8)' :
                         highlight.color.includes('orange') ? 'rgba(249, 115, 22, 0.8)' :
                         'rgba(251, 191, 36, 0.8)'
                       }, transparent 60%)`,

@@ -113,7 +113,7 @@ export default function VideoCallsFeature() {
 
           <Card className="border-gray-200 dark:border-gray-700">
             <CardContent className="p-6">
-              <Shield className="w-10 h-10 text-green-600 mb-4" />
+              <Shield className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 End-to-end encryption, waiting rooms, and meeting locks for secure conversations
@@ -150,19 +150,19 @@ export default function VideoCallsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Remote Teams</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Daily standups and team check-ins</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Virtual coffee breaks and team building</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Code reviews and pair programming sessions</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Project planning and retrospectives</span>
                   </li>
                 </ul>
@@ -173,19 +173,19 @@ export default function VideoCallsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Client Meetings</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Professional client presentations and demos</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Sales calls and product walkthroughs</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Training sessions and workshops</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Support and consultation calls</span>
                   </li>
                 </ul>

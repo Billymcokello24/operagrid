@@ -120,7 +120,7 @@ export function AssetDashboard({ files = [], stats, isLoading, onCreateNew }: As
       name: intl.formatMessage({ id: 'modules.files.quickActions.aiImage', defaultMessage: 'AI Image' }),
       description: intl.formatMessage({ id: 'modules.files.quickActions.aiImageDesc', defaultMessage: 'Generate professional images' }),
       icon: Image,
-      color: 'text-green-600 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200',
+      color: 'text-blue-600 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950 dark:to-blue-950 border-blue-200',
       onClick: () => onCreateNew?.('image'),
     },
     {
@@ -234,8 +234,8 @@ export function AssetDashboard({ files = [], stats, isLoading, onCreateNew }: As
                   <p className="text-sm font-medium text-muted-foreground">AI Generations</p>
                   <p className="text-2xl font-bold">{metrics.aiGenerations}</p>
                 </div>
-                <div className="p-2 bg-green-50 rounded-lg">
-                  <Zap className="h-6 w-6 text-green-600" />
+                <div className="p-2 bg-blue-50 rounded-lg">
+                  <Zap className="h-6 w-6 text-blue-600" />
                 </div>
               </div>
               <div className="flex items-center mt-2 text-xs text-muted-foreground">
@@ -367,7 +367,7 @@ export function AssetDashboard({ files = [], stats, isLoading, onCreateNew }: As
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Image className="h-4 w-4 text-green-600" />
+                    <Image className="h-4 w-4 text-blue-600" />
                     <span className="text-sm font-medium">Images</span>
                   </div>
                   <span className="text-sm font-bold">{metrics.filesByType.images}</span>

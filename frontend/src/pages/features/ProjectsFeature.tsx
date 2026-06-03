@@ -115,7 +115,7 @@ export default function ProjectsFeature() {
 
           <Card className="border-gray-200 dark:border-gray-700">
             <CardContent className="p-6">
-              <BarChart3 className="w-10 h-10 text-green-600 mb-4" />
+              <BarChart3 className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Project Analytics</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Monitor project health with burndown charts, velocity tracking, and custom reports
@@ -152,19 +152,19 @@ export default function ProjectsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Development Teams</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Manage sprints with scrum and agile workflows</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Track bugs and feature requests efficiently</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Integrate with Git and CI/CD pipelines</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Release planning and version management</span>
                   </li>
                 </ul>
@@ -175,19 +175,19 @@ export default function ProjectsFeature() {
                 <h3 className="text-2xl font-semibold mb-4">For Business Teams</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Plan and execute marketing campaigns</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Coordinate product launches and events</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Manage client projects and deliverables</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-400">Track budgets and resource allocation</span>
                   </li>
                 </ul>

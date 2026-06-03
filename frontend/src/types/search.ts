@@ -9,7 +9,7 @@
 
 export type SearchType = 'all' | 'messages' | 'files' | 'folders' | 'projects' | 'notes' | 'calendar' | 'videos' | 'emails';
 export type SearchMode = 'full-text' | 'semantic' | 'hybrid';
-export type SearchSource = 'deskive' | 'google-drive' | 'google-calendar' | 'gmail' | 'smtp-imap';
+export type SearchSource = 'operagrid' | 'google-drive' | 'google-calendar' | 'gmail' | 'smtp-imap';
 
 // Filter interface for search functionality
 export interface SearchFilters {
@@ -58,7 +58,7 @@ export interface BaseSearchResult {
   relevanceScore?: number;
   updatedAt: string | Date;
   metadata?: Record<string, any>;
-  source: SearchSource; // Where the result came from (deskive, google-drive, google-calendar)
+  source: SearchSource; // Where the result came from (operagrid, google-drive, google-calendar)
   externalUrl?: string; // URL to open external content (e.g., Google Drive link)
 }
 

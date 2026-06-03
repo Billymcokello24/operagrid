@@ -61,7 +61,7 @@ export class GoogleSheetsSyncService {
       spreadsheet_name: dto.spreadsheetName,
       sheet_name: dto.sheetName,
       sync_type: dto.syncType,
-      deskive_entity: dto.deskiveEntity,
+      operagrid_entity: dto.operagridEntity,
       column_mapping: dto.columnMapping || {},
       sync_frequency: dto.syncFrequency || SyncFrequency.MANUAL,
       is_active: true,
@@ -229,7 +229,7 @@ export class GoogleSheetsSyncService {
   }
 
   /**
-   * Execute import sync - import data from Google Sheets to Deskive
+   * Execute import sync - import data from Google Sheets to OperaGrid
    */
   private async executeImportSync(
     userId: string,
@@ -278,8 +278,8 @@ export class GoogleSheetsSyncService {
         });
 
         // TODO: Implement entity-specific import logic
-        // This would insert/update records in the appropriate Deskive table
-        // based on config.deskive_entity (tasks, contacts, etc.)
+        // This would insert/update records in the appropriate OperaGrid table
+        // based on config.operagrid_entity (tasks, contacts, etc.)
 
         rowsCreated++;
       } catch (error) {
@@ -300,7 +300,7 @@ export class GoogleSheetsSyncService {
   }
 
   /**
-   * Execute export sync - export data from Deskive to Google Sheets
+   * Execute export sync - export data from OperaGrid to Google Sheets
    */
   private async executeExportSync(
     userId: string,
@@ -310,19 +310,19 @@ export class GoogleSheetsSyncService {
     this.logger.log(`Executing export sync for config ${config.id}`);
 
     // TODO: Implement entity-specific export logic
-    // This would fetch records from the appropriate Deskive table
-    // based on config.deskive_entity and export to Google Sheets
+    // This would fetch records from the appropriate OperaGrid table
+    // based on config.operagrid_entity and export to Google Sheets
 
     const columnMapping = config.column_mapping || {};
     const invertedMapping: Record<string, string> = {};
-    Object.entries(columnMapping).forEach(([sheetCol, deskiveField]) => {
-      invertedMapping[deskiveField as string] = sheetCol;
+    Object.entries(columnMapping).forEach(([sheetCol, operagridField]) => {
+      invertedMapping[operagridField as string] = sheetCol;
     });
 
     // Placeholder - would be replaced with actual data fetching
-    const deskiveData: Record<string, any>[] = [];
+    const operagridData: Record<string, any>[] = [];
 
-    if (deskiveData.length === 0) {
+    if (operagridData.length === 0) {
       return {
         success: true,
         syncId: config.id,
@@ -345,7 +345,7 @@ export class GoogleSheetsSyncService {
     const headers =
       Object.keys(invertedMapping).length > 0
         ? Object.values(invertedMapping)
-        : Object.keys(deskiveData[0]);
+        : Object.keys(operagridData[0]);
 
     const rows: any[][] = [];
 
@@ -354,7 +354,7 @@ export class GoogleSheetsSyncService {
     }
 
     // Convert data to rows
-    for (const record of deskiveData) {
+    for (const record of operagridData) {
       const row = headers.map((header) => {
         const field =
           Object.entries(invertedMapping).find(([, col]) => col === header)?.[0] || header;
@@ -375,8 +375,8 @@ export class GoogleSheetsSyncService {
     return {
       success: true,
       syncId: config.id,
-      rowsProcessed: deskiveData.length,
-      rowsCreated: deskiveData.length,
+      rowsProcessed: operagridData.length,
+      rowsCreated: operagridData.length,
       rowsUpdated: 0,
       rowsSkipped: 0,
     };
@@ -475,7 +475,7 @@ export class GoogleSheetsSyncService {
       spreadsheetName: config.spreadsheet_name,
       sheetName: config.sheet_name,
       syncType: config.sync_type,
-      deskiveEntity: config.deskive_entity,
+      operagridEntity: config.operagrid_entity,
       columnMapping: config.column_mapping || {},
       syncFrequency: config.sync_frequency,
       lastSyncAt: config.last_sync_at,

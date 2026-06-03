@@ -1,6 +1,6 @@
 /**
  * ModuleExplorerSection Component
- * Interactive module explorer showcasing all Deskive features
+ * Interactive module explorer showcasing all OperaGrid features
  */
 
 import React, { useState } from 'react';
@@ -90,14 +90,14 @@ const ModuleExplorerSection: React.FC = () => {
         intl.formatMessage({ id: 'modules.files.features.preview' }),
         intl.formatMessage({ id: 'modules.files.features.sharing' })
       ],
-      image: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/f19a9430-6f86-4ff9-a763-0589d9766976-1768992380999-1768992374841-deskive_file_manager.mp4',
+      image: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/f19a9430-6f86-4ff9-a763-0589d9766976-1768992380999-1768992374841-operagrid_file_manager.mp4',
       isVideo: true,
       benefits: intl.formatMessage({ id: 'modules.files.benefits' })
     },
     {
       icon: Calendar,
       title: intl.formatMessage({ id: 'modules.calendar.title' }),
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-blue-500 to-blue-600',
       description: intl.formatMessage({ id: 'modules.calendar.description' }),
       features: [
         intl.formatMessage({ id: 'modules.calendar.features.scheduling' }),
@@ -105,7 +105,7 @@ const ModuleExplorerSection: React.FC = () => {
         intl.formatMessage({ id: 'modules.calendar.features.sync' }),
         intl.formatMessage({ id: 'modules.calendar.features.reminders' })
       ],
-      image: 'https://cdn.deskive.com/deskive/calendar.png',
+      image: 'https://cdn.operagrid.com/operagrid/calendar.png',
       benefits: intl.formatMessage({ id: 'modules.calendar.benefits' })
     },
     {
@@ -119,7 +119,7 @@ const ModuleExplorerSection: React.FC = () => {
         intl.formatMessage({ id: 'modules.notes.features.collaboration' }),
         intl.formatMessage({ id: 'modules.notes.features.export' })
       ],
-      image: 'https://cdn.deskive.com/deskive/note.png',
+      image: 'https://cdn.operagrid.com/operagrid/note.png',
       benefits: intl.formatMessage({ id: 'modules.notes.benefits' })
     },
     {
@@ -133,7 +133,7 @@ const ModuleExplorerSection: React.FC = () => {
         intl.formatMessage({ id: 'modules.videoCalls.features.recording' }),
         intl.formatMessage({ id: 'modules.videoCalls.features.backgrounds' })
       ],
-      image: 'https://cdn-dev.deskive.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/72cb8eb7-5492-4c09-ab17-bef53e915bb7-1768994375993-1768994371329-deskive_video_full_feature.mp4',
+      image: 'https://cdn-dev.operagrid.com/projects/4493aede-e31a-4da4-8645-ca3c3a3d99a4/72cb8eb7-5492-4c09-ab17-bef53e915bb7-1768994375993-1768994371329-operagrid_video_full_feature.mp4',
       isVideo: true,
       benefits: intl.formatMessage({ id: 'modules.videoCalls.benefits' })
     },
@@ -331,7 +331,7 @@ const ModuleExplorerSection: React.FC = () => {
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                 </div>
                 <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-500 ml-3">
                   {intl.formatMessage({ id: 'hero.browserUrl' })}
@@ -371,7 +371,7 @@ const ModuleExplorerSection: React.FC = () => {
                   return (
                     <img
                       src={getImageUrl(currentModule?.image || modules[0].image)}
-                      alt={`Deskive ${selectedModule} Module`}
+                      alt={`OperaGrid ${selectedModule} Module`}
                       className="w-full h-auto object-cover transition-opacity duration-500"
                       style={{ aspectRatio: '16/9', maxHeight: '400px' }}
                     />

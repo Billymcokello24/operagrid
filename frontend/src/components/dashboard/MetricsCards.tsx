@@ -57,7 +57,7 @@ export function MetricsCards({ metrics }: MetricsCardsProps) {
       >
         <CardContent className="p-4">
           <div className="flex items-center justify-between">
-            <CheckCircle className="h-8 w-8 text-green-600" />
+            <CheckCircle className="h-8 w-8 text-blue-600" />
           </div>
           <div className="mt-2">
             <p className="text-2xl font-bold">{metrics.totalTasks}</p>

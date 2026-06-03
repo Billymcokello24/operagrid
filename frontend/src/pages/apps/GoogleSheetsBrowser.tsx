@@ -164,12 +164,12 @@ export default function GoogleSheetsBrowser() {
       <div className="h-full flex items-center justify-center p-6">
         <Card className="max-w-lg">
           <CardHeader className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-              <FileSpreadsheet className="w-8 h-8 text-green-600 dark:text-green-400" />
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+              <FileSpreadsheet className="w-8 h-8 text-blue-600 dark:text-blue-400" />
             </div>
             <CardTitle>Connect Google Sheets</CardTitle>
             <CardDescription>
-              Connect your Google account to access your spreadsheets within Deskive.
+              Connect your Google account to access your spreadsheets within OperaGrid.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center">
@@ -199,8 +199,8 @@ export default function GoogleSheetsBrowser() {
             <Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleBack}>
               <ArrowLeft className="w-4 h-4" />
             </Button>
-            <div className="w-8 h-8 rounded bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-              <FileSpreadsheet className="w-4 h-4 text-green-600 dark:text-green-400" />
+            <div className="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+              <FileSpreadsheet className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </div>
             <div className="min-w-0">
               <h1 className="text-base font-semibold truncate max-w-[300px]">{selectedSpreadsheet.name}</h1>
@@ -231,7 +231,7 @@ export default function GoogleSheetsBrowser() {
           {iframeLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-background z-10">
               <div className="text-center">
-                <Loader2 className="w-8 h-8 animate-spin mx-auto mb-3 text-green-600" />
+                <Loader2 className="w-8 h-8 animate-spin mx-auto mb-3 text-blue-600" />
                 <p className="text-sm text-muted-foreground">Loading spreadsheet...</p>
               </div>
             </div>
@@ -258,8 +258,8 @@ export default function GoogleSheetsBrowser() {
             <Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleBack}>
               <ChevronLeft className="w-4 h-4" />
             </Button>
-            <div className="w-8 h-8 rounded bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-              <FileSpreadsheet className="w-4 h-4 text-green-600 dark:text-green-400" />
+            <div className="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+              <FileSpreadsheet className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
               <h1 className="text-base font-semibold">Google Sheets</h1>
@@ -317,8 +317,8 @@ export default function GoogleSheetsBrowser() {
                   className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
                   onClick={() => handleSpreadsheetClick(spreadsheet)}
                 >
-                  <div className="w-10 h-10 rounded bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
-                    <FileSpreadsheet className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <div className="w-10 h-10 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+                    <FileSpreadsheet className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-medium truncate">{spreadsheet.name}</p>

@@ -90,7 +90,7 @@ export class TrelloOAuthService {
       callback_method: 'fragment',
       scope: 'read,write,account',
       expiration: 'never',
-      name: 'Deskive',
+      name: 'OperaGrid',
       state,
     });
 

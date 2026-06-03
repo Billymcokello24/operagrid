@@ -77,7 +77,7 @@ export function OfflineStatusBadge({
         if (status.needsSync) {
           return <RefreshCw className={cn(iconClass, 'text-amber-300')} />;
         }
-        return <CloudOff className={cn(iconClass, 'text-green-400')} />;
+        return <CloudOff className={cn(iconClass, 'text-blue-400')} />;
       case 'pending':
         return <Loader2 className={cn(iconClass, 'animate-spin text-gray-300')} />;
       default:
@@ -184,7 +184,7 @@ export function GlobalSyncStatus({ workspaceId, className }: GlobalSyncStatusPro
                 <RefreshCw className="h-4 w-4 text-amber-500" />
               )
             ) : (
-              <CheckCircle2 className="h-4 w-4 text-green-500" />
+              <CheckCircle2 className="h-4 w-4 text-blue-500" />
             )}
             <span className="text-xs text-muted-foreground">{stats.totalFiles}</span>
           </div>

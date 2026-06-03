@@ -5,8 +5,8 @@ import { ContactFormDto } from './dto/contact.dto';
 @Injectable()
 export class ContactService {
   private readonly logger = new Logger(ContactService.name);
-  // Deskive team receivers - will get contact form submissions
-  private readonly contactEmails = ['support@deskive.com'];
+  // OperaGrid team receivers - will get contact form submissions
+  private readonly contactEmails = ['support@operagrid.com'];
 
   constructor(private readonly db: DatabaseService) {}
 
@@ -26,7 +26,7 @@ export class ContactService {
       const subjectLabel = subjectLabels[dto.subject] || dto.subject;
 
       // Build email content
-      const emailSubject = `[Deskive Contact] ${subjectLabel} from ${dto.name}`;
+      const emailSubject = `[OperaGrid Contact] ${subjectLabel} from ${dto.name}`;
 
       const htmlContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -72,7 +72,7 @@ ${dto.message}
 
           <div style="background: #1f2937; padding: 20px; border-radius: 0 0 10px 10px; text-align: center;">
             <p style="color: #9ca3af; margin: 0; font-size: 12px;">
-              This email was sent from the Deskive contact form at ${new Date().toISOString()}
+              This email was sent from the OperaGrid contact form at ${new Date().toISOString()}
             </p>
           </div>
         </div>
@@ -129,13 +129,13 @@ ${dto.message}
 
             <p style="color: #1f2937; font-size: 16px; line-height: 1.6;">
               Best regards,<br/>
-              The Deskive Team
+              The OperaGrid Team
             </p>
           </div>
 
           <div style="background: #1f2937; padding: 20px; border-radius: 0 0 10px 10px; text-align: center;">
             <p style="color: #9ca3af; margin: 0; font-size: 12px;">
-              Deskive - Your All-in-One Workspace Solution
+              OperaGrid - Your All-in-One Workspace Solution
             </p>
           </div>
         </div>
@@ -143,10 +143,10 @@ ${dto.message}
 
       await /* TODO: use EmailService */ this.db.client.email.send(
         dto.email,
-        'Thank you for contacting Deskive',
+        'Thank you for contacting OperaGrid',
         htmlContent,
         {
-          replyTo: this.contactEmails[0], // support@deskive.com
+          replyTo: this.contactEmails[0], // support@operagrid.com
         },
       );
 

@@ -63,7 +63,7 @@ const PerformanceStatusCard: React.FC<{
   description?: string;
 }> = ({ title, value, unit, icon, status, trend, description }) => {
   const statusConfig = {
-    excellent: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-800', badge: 'bg-green-100' },
+    excellent: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100' },
     good: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100' },
     warning: { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-800', badge: 'bg-yellow-100' },
     critical: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-800', badge: 'bg-red-100' }
@@ -94,7 +94,7 @@ const PerformanceStatusCard: React.FC<{
         
         {trend && (
           <div className={`flex items-center text-sm ${
-            trend.isPositive ? 'text-green-600' : 'text-red-600'
+            trend.isPositive ? 'text-blue-600' : 'text-red-600'
           }`}>
             {trend.isPositive ? (
               <TrendingUp className="w-4 h-4 mr-1" />
@@ -132,7 +132,7 @@ export const ResponseTimeChart: React.FC<{
         <div className="flex items-center space-x-2">
           <span className="text-sm text-gray-600">RPS: {data.rps}</span>
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            data.averageResponseTime < 200 ? 'bg-green-100 text-green-800' :
+            data.averageResponseTime < 200 ? 'bg-blue-100 text-blue-800' :
             data.averageResponseTime < 500 ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -235,7 +235,7 @@ export const ErrorRateChart: React.FC<{
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            data.errorRate < 1 ? 'bg-green-100 text-green-800' :
+            data.errorRate < 1 ? 'bg-blue-100 text-blue-800' :
             data.errorRate < 3 ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -320,12 +320,12 @@ export const DatabasePerformanceChart: React.FC<{
     <div className="bg-white rounded-lg border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold flex items-center">
-          <Database className="w-5 h-5 mr-2 text-green-600" />
+          <Database className="w-5 h-5 mr-2 text-blue-600" />
           Database Performance
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            (data?.queryTime || 0) < 100 ? 'bg-green-100 text-green-800' :
+            (data?.queryTime || 0) < 100 ? 'bg-blue-100 text-blue-800' :
             (data?.queryTime || 0) < 300 ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -345,12 +345,12 @@ export const DatabasePerformanceChart: React.FC<{
             {data?.connections || 0}
           </div>
         </div>
-        <div className="bg-green-50 p-3 rounded-lg">
+        <div className="bg-blue-50 p-3 rounded-lg">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-green-600">Active Queries</span>
-            <Activity className="w-4 h-4 text-green-400" />
+            <span className="text-sm text-blue-600">Active Queries</span>
+            <Activity className="w-4 h-4 text-blue-400" />
           </div>
-          <div className="text-xl font-semibold text-green-900">
+          <div className="text-xl font-semibold text-blue-900">
             {data?.activeQueries || 0}
           </div>
         </div>
@@ -391,7 +391,7 @@ export const DatabasePerformanceChart: React.FC<{
             yAxisId="time"
             type="monotone" 
             dataKey="queryTime" 
-            stroke="#10b981" 
+            stroke="#2563eb" 
             name="Query Time (ms)"
             strokeWidth={2}
           />
@@ -408,7 +408,7 @@ export const CachePerformanceChart: React.FC<{
   data: ApplicationPerformanceMetrics['cache'];
 }> = ({ data }) => {
   const cacheData = [
-    { name: 'Hit Rate', value: data?.hitRate || 0, color: '#10b981' },
+    { name: 'Hit Rate', value: data?.hitRate || 0, color: '#2563eb' },
     { name: 'Miss Rate', value: data?.missRate || 0, color: '#ef4444' }
   ];
 
@@ -421,7 +421,7 @@ export const CachePerformanceChart: React.FC<{
         </h3>
         <div className="flex items-center space-x-2">
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-            (data?.hitRate || 0) > 80 ? 'bg-green-100 text-green-800' :
+            (data?.hitRate || 0) > 80 ? 'bg-blue-100 text-blue-800' :
             (data?.hitRate || 0) > 60 ? 'bg-yellow-100 text-yellow-800' :
             'bg-red-100 text-red-800'
           }`}>
@@ -434,12 +434,12 @@ export const CachePerformanceChart: React.FC<{
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="bg-green-50 p-3 rounded-lg">
+            <div className="bg-blue-50 p-3 rounded-lg">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-green-600">Hit Rate</span>
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span className="text-sm text-blue-600">Hit Rate</span>
+                <CheckCircle className="w-4 h-4 text-blue-400" />
               </div>
-              <div className="text-xl font-semibold text-green-900">
+              <div className="text-xl font-semibold text-blue-900">
                 {(data?.hitRate || 0).toFixed(1)}%
               </div>
             </div>

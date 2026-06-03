@@ -610,7 +610,7 @@ export const LogAggregationComponent: React.FC<LogAggregationProps> = ({
               onClick={onToggleRealTime}
               className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isRealTimeEnabled
-                  ? 'bg-green-600 text-white hover:bg-green-700'
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >

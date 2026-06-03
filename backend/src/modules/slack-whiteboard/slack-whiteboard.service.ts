@@ -232,30 +232,30 @@ export class SlackWhiteboardService {
       // This workspace acts as a container for Slack-created whiteboards
       const workspaceId = await this.getOrCreateSlackWorkspace(teamId, installation.team_name);
 
-      // Get Deskive user ID from Slack user ID mapping
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      // Get OperaGrid user ID from Slack user ID mapping
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
-        this.logger.error('Cannot find Deskive user for Slack user:', slackUserId);
+      if (!operagridUserId) {
+        this.logger.error('Cannot find OperaGrid user for Slack user:', slackUserId);
         return {
           response_type: 'ephemeral',
           text:
-            '❌ You need to be invited to the Deskive workspace first.\n\n' +
-            'Please ask your workspace admin to invite you via email to the Deskive workspace.\n\n' +
-            'Once you accept the invitation and create your Deskive account, you can use Slack commands.',
+            '❌ You need to be invited to the OperaGrid workspace first.\n\n' +
+            'Please ask your workspace admin to invite you via email to the OperaGrid workspace.\n\n' +
+            'Once you accept the invitation and create your OperaGrid account, you can use Slack commands.',
         };
       }
 
-      this.logger.log(`Using Deskive user ID: ${deskiveUserId} for Slack user: ${slackUserId}`);
+      this.logger.log(`Using OperaGrid user ID: ${operagridUserId} for Slack user: ${slackUserId}`);
 
-      // Create whiteboard with Deskive user ID
+      // Create whiteboard with OperaGrid user ID
       const whiteboardResult = await this.db
         .table('whiteboards')
         .insert({
           workspace_id: workspaceId,
           name: whiteboardName,
           description: `Created from Slack by ${userName}`,
-          created_by: deskiveUserId, // Use Deskive user ID, not Slack user ID!
+          created_by: operagridUserId, // Use OperaGrid user ID, not Slack user ID!
           is_public: false,
           elements: JSON.stringify([]),
           app_state: JSON.stringify({}),
@@ -354,7 +354,7 @@ export class SlackWhiteboardService {
         // If posting to channel failed, give user the direct link
         return {
           response_type: 'ephemeral',
-          text: `✅ Whiteboard created!\n\n🔗 *Link:* ${whiteboardUrl}\n\n💡 *Tip:* Invite the bot to this channel with \`/invite @Deskive Whiteboard\` to share whiteboards here.`,
+          text: `✅ Whiteboard created!\n\n🔗 *Link:* ${whiteboardUrl}\n\n💡 *Tip:* Invite the bot to this channel with \`/invite @OperaGrid Whiteboard\` to share whiteboards here.`,
         };
       }
     } catch (error) {
@@ -452,7 +452,7 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Open project creation in Deskive web UI
+   * Open project creation in OperaGrid web UI
    */
   private async openProjectCreationInBrowser(
     teamId: string,
@@ -460,16 +460,16 @@ export class SlackWhiteboardService {
     projectName?: string,
   ) {
     try {
-      // Get Deskive user ID
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      // Get OperaGrid user ID
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text:
-            '❌ You need to be invited to the Deskive workspace first.\n\n' +
-            'Please ask your workspace admin to invite you via email to the Deskive workspace.\n\n' +
-            'Once you accept the invitation and create your Deskive account, you can use Slack commands.',
+            '❌ You need to be invited to the OperaGrid workspace first.\n\n' +
+            'Please ask your workspace admin to invite you via email to the OperaGrid workspace.\n\n' +
+            'Once you accept the invitation and create your OperaGrid account, you can use Slack commands.',
         };
       }
 
@@ -478,9 +478,9 @@ export class SlackWhiteboardService {
       const workspaceId = await this.getOrCreateSlackWorkspace(teamId, installation.team_name);
 
       // Generate temporary auth token (valid for 1 hour)
-      const tempToken = await this.generateTempAuthToken(deskiveUserId, teamId, slackUserId);
+      const tempToken = await this.generateTempAuthToken(operagridUserId, teamId, slackUserId);
 
-      // Build URL to Deskive project creation page
+      // Build URL to OperaGrid project creation page
       const appUrl = this.configService.get('FRONTEND_URL') || 'http://localhost:5173';
       const params = new URLSearchParams({
         token: tempToken,
@@ -503,7 +503,7 @@ export class SlackWhiteboardService {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: '*📋 Create a New Project*\n\nClick the button below to open the project creation form in Deskive.',
+              text: '*📋 Create a New Project*\n\nClick the button below to open the project creation form in OperaGrid.',
             },
           },
           {
@@ -511,7 +511,7 @@ export class SlackWhiteboardService {
             elements: [
               {
                 type: 'button',
-                text: { type: 'plain_text', text: '➕ Create Project in Deskive', emoji: true },
+                text: { type: 'plain_text', text: '➕ Create Project in OperaGrid', emoji: true },
                 url: createProjectUrl,
                 style: 'primary',
                 action_id: 'open_create_project',
@@ -547,14 +547,14 @@ export class SlackWhiteboardService {
     try {
       this.logger.log(`Listing projects for team ${teamId}, user ${slackUserId}`);
 
-      // Get Deskive user ID
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      // Get OperaGrid user ID
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
-      if (!deskiveUserId) {
+      if (!operagridUserId) {
         return {
           response_type: 'ephemeral',
           text:
-            '❌ You need to be invited to the Deskive workspace first.\n\n' +
+            '❌ You need to be invited to the OperaGrid workspace first.\n\n' +
             'Please ask your workspace admin to invite you via email.',
         };
       }
@@ -648,15 +648,15 @@ export class SlackWhiteboardService {
    * Generate temporary auth token for browser access
    */
   private async generateTempAuthToken(
-    deskiveUserId: string,
+    operagridUserId: string,
     slackTeamId: string,
     slackUserId: string,
   ): Promise<string> {
     try {
       // Create a temporary auth token (valid for 1 hour)
       const payload = {
-        sub: deskiveUserId,
-        userId: deskiveUserId,
+        sub: operagridUserId,
+        userId: operagridUserId,
         slack_team_id: slackTeamId,
         slack_user_id: slackUserId,
         temp_auth: true,
@@ -755,20 +755,20 @@ export class SlackWhiteboardService {
       // Send confirmation DM
       await slackClient.chat.postMessage({
         channel: userId,
-        text: '✅ Deskive has been disconnected from this workspace.',
+        text: '✅ OperaGrid has been disconnected from this workspace.',
         blocks: [
           {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: '*✅ App Disconnected Successfully*\n\nDeskive has been removed from your Slack workspace.',
+              text: '*✅ App Disconnected Successfully*\n\nOperaGrid has been removed from your Slack workspace.',
             },
           },
           {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: '*What happens next?*\n• Slash commands will stop working\n• Bot will no longer post to channels\n• Your data in Deskive is safe and accessible',
+              text: '*What happens next?*\n• Slash commands will stop working\n• Bot will no longer post to channels\n• Your data in OperaGrid is safe and accessible',
             },
           },
           {
@@ -776,7 +776,7 @@ export class SlackWhiteboardService {
             elements: [
               {
                 type: 'mrkdwn',
-                text: '💡 You can reinstall Deskive anytime from the Slack App Directory',
+                text: '💡 You can reinstall OperaGrid anytime from the Slack App Directory',
               },
             ],
           },
@@ -850,7 +850,7 @@ export class SlackWhiteboardService {
 
         if (action.action_id === 'share_whiteboard') {
           this.logger.log('Share whiteboard action:', action.value);
-          // Open modal to share with Deskive users
+          // Open modal to share with OperaGrid users
           await this.openShareModal(team.id, user.id, action.value, trigger_id);
         } else if (action.action_id === 'create_whiteboard_home') {
           // Create from App Home
@@ -869,7 +869,7 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Open modal to share whiteboard with Deskive users
+   * Open modal to share whiteboard with OperaGrid users
    */
   private async openShareModal(
     teamId: string,
@@ -895,8 +895,8 @@ export class SlackWhiteboardService {
         return;
       }
 
-      // Get current user's Deskive ID
-      const currentDeskiveUserId = await this.getDeskiveUserIdFromSlack(slackUserId, teamId);
+      // Get current user's OperaGrid ID
+      const currentOperaGridUserId = await this.getOperaGridUserIdFromSlack(slackUserId, teamId);
 
       // Get all workspace members
       const workspaceMembersResult = await this.db
@@ -911,7 +911,7 @@ export class SlackWhiteboardService {
       // Get user details for each member (excluding current user)
       const userOptions: any[] = [];
       for (const member of members) {
-        if (member.user_id === currentDeskiveUserId) {
+        if (member.user_id === currentOperaGridUserId) {
           continue; // Skip current user
         }
 
@@ -1042,21 +1042,21 @@ export class SlackWhiteboardService {
       const metadata = JSON.parse(view.private_metadata);
       const { whiteboardId, workspaceId, teamId } = metadata;
 
-      // Get selected Deskive users from modal (now using multi_static_select)
-      const selectedDeskiveUsers =
+      // Get selected OperaGrid users from modal (now using multi_static_select)
+      const selectedOperaGridUsers =
         view.state.values.users_select.selected_users.selected_options?.map((opt) => opt.value) ||
         [];
       const customMessage = view.state.values.message_input?.share_message?.value || '';
 
-      this.logger.log('Share submission:', { whiteboardId, selectedDeskiveUsers, customMessage });
+      this.logger.log('Share submission:', { whiteboardId, selectedOperaGridUsers, customMessage });
 
-      if (!selectedDeskiveUsers || selectedDeskiveUsers.length === 0) {
+      if (!selectedOperaGridUsers || selectedOperaGridUsers.length === 0) {
         this.logger.warn('No users selected for sharing');
         return;
       }
 
       // Add selected users as collaborators
-      const sharePromises = selectedDeskiveUsers.map(async (userId) => {
+      const sharePromises = selectedOperaGridUsers.map(async (userId) => {
         try {
           await this.db
             .table('whiteboard_collaborators')
@@ -1087,10 +1087,10 @@ export class SlackWhiteboardService {
       await slackClient.chat.postEphemeral({
         channel: user.id,
         user: user.id,
-        text: `✅ Whiteboard shared with ${selectedDeskiveUsers.length} member(s)!`,
+        text: `✅ Whiteboard shared with ${selectedOperaGridUsers.length} member(s)!`,
       });
 
-      this.logger.log(`Whiteboard shared with ${selectedDeskiveUsers.length} workspace member(s)`);
+      this.logger.log(`Whiteboard shared with ${selectedOperaGridUsers.length} workspace member(s)`);
     } catch (error) {
       this.logger.error('Error handling share submission:', error);
     }
@@ -1104,8 +1104,8 @@ export class SlackWhiteboardService {
       const installation = await this.getInstallation(teamId);
       const slackClient = new WebClient(installation.bot_token);
 
-      // Get Deskive user ID
-      const deskiveUserId = await this.getDeskiveUserIdFromSlack(userId, teamId);
+      // Get OperaGrid user ID
+      const operagridUserId = await this.getOperaGridUserIdFromSlack(userId, teamId);
 
       // Check workspace setup status
       const workspaceId = await this.getSlackWorkspaceId(teamId);
@@ -1133,20 +1133,20 @@ export class SlackWhiteboardService {
           .where('creator_slack_user_id', '=', userId)
           .execute(),
         // Projects count (if user is linked)
-        deskiveUserId
+        operagridUserId
           ? this.db
               .table('projects')
               .select('*')
-              .where('owner_id', '=', deskiveUserId)
+              .where('owner_id', '=', operagridUserId)
               .where('status', '=', 'active')
               .execute()
           : Promise.resolve({ data: [] }),
         // Upcoming events count (next 7 days)
-        deskiveUserId
+        operagridUserId
           ? this.db
               .table('calendar_events')
               .select('*')
-              .where('organizer_id', '=', deskiveUserId)
+              .where('organizer_id', '=', operagridUserId)
               .where('start_time', '>=', new Date().toISOString())
               .where(
                 'start_time',
@@ -1170,7 +1170,7 @@ export class SlackWhiteboardService {
           type: 'header',
           text: {
             type: 'plain_text',
-            text: '🚀 Welcome to Deskive!',
+            text: '🚀 Welcome to OperaGrid!',
             emoji: true,
           },
         },
@@ -1202,7 +1202,7 @@ export class SlackWhiteboardService {
             },
             {
               type: 'mrkdwn',
-              text: `*Your Account*\n${deskiveUserId ? '✅ Linked' : '⏳ Pending'}`,
+              text: `*Your Account*\n${operagridUserId ? '✅ Linked' : '⏳ Pending'}`,
             },
             {
               type: 'mrkdwn',
@@ -1218,14 +1218,14 @@ export class SlackWhiteboardService {
       );
 
       // Getting Started Guide (especially for Slack reviewers)
-      if (!deskiveUserId || memberCount <= 1) {
+      if (!operagridUserId || memberCount <= 1) {
         blocks.push(
           {
             type: 'section',
             text: {
               type: 'mrkdwn',
               text:
-                '*📖 Getting Started Guide*\n\n' + 'Follow these steps to set up and test Deskive:',
+                '*📖 Getting Started Guide*\n\n' + 'Follow these steps to set up and test OperaGrid:',
             },
           },
           {
@@ -1234,7 +1234,7 @@ export class SlackWhiteboardService {
               type: 'mrkdwn',
               text:
                 '*Step 1️⃣: Add Team Members*\n' +
-                '├ Go to <https://deskive.com|Deskive Dashboard>\n' +
+                '├ Go to <https://operagrid.com|OperaGrid Dashboard>\n' +
                 '├ Navigate to Workspace Settings → Members\n' +
                 '├ Click "Invite Member"\n' +
                 '├ Enter their email (must match Slack email!)\n' +
@@ -1249,7 +1249,7 @@ export class SlackWhiteboardService {
                 '*Step 2️⃣: Member Accepts Invitation*\n' +
                 '├ Team member checks their email\n' +
                 '├ Clicks invitation link\n' +
-                '├ Creates Deskive account or logs in\n' +
+                '├ Creates OperaGrid account or logs in\n' +
                 '└ Now they can use Slack commands!',
             },
           },
@@ -1270,7 +1270,7 @@ export class SlackWhiteboardService {
             elements: [
               {
                 type: 'mrkdwn',
-                text: '💡 *For Slack Reviewers:* Invite a test email, accept the invitation in Deskive, then try slash commands. The auto-linking happens seamlessly!',
+                text: '💡 *For Slack Reviewers:* Invite a test email, accept the invitation in OperaGrid, then try slash commands. The auto-linking happens seamlessly!',
               },
             ],
           },
@@ -1386,7 +1386,7 @@ export class SlackWhiteboardService {
                   '*💡 Pro Tips*\n' +
                   '• Use `/whiteboard new` in any channel to start collaborating instantly\n' +
                   '• Create events with natural language: `/calendar new Team lunch tomorrow at noon`\n' +
-                  '• Mention `@Deskive help` anywhere for quick assistance',
+                  '• Mention `@OperaGrid help` anywhere for quick assistance',
               },
             },
             { type: 'divider' },
@@ -1398,19 +1398,19 @@ export class SlackWhiteboardService {
                 {
                   type: 'button',
                   text: { type: 'plain_text', text: '📖 View Tutorial', emoji: true },
-                  url: 'https://deskive.com/tutorial',
+                  url: 'https://operagrid.com/tutorial',
                   action_id: 'view_tutorial',
                 },
                 {
                   type: 'button',
                   text: { type: 'plain_text', text: '🌐 Open Dashboard', emoji: true },
-                  url: 'https://deskive.com',
+                  url: 'https://operagrid.com',
                   action_id: 'open_dashboard',
                 },
                 {
                   type: 'button',
                   text: { type: 'plain_text', text: '🆘 Get Support', emoji: true },
-                  url: 'https://deskive.com/support',
+                  url: 'https://operagrid.com/support',
                   action_id: 'get_support',
                 },
               ],
@@ -1424,10 +1424,10 @@ export class SlackWhiteboardService {
                   action_id: 'disconnect_app',
                   style: 'danger',
                   confirm: {
-                    title: { type: 'plain_text', text: 'Disconnect Deskive?' },
+                    title: { type: 'plain_text', text: 'Disconnect OperaGrid?' },
                     text: {
                       type: 'mrkdwn',
-                      text: 'Are you sure you want to disconnect Deskive from this workspace?\n\n⚠️ This will:\n• Stop all notifications\n• Disable slash commands\n• Remove bot access\n\nYour data in Deskive will remain safe and accessible.',
+                      text: 'Are you sure you want to disconnect OperaGrid from this workspace?\n\n⚠️ This will:\n• Stop all notifications\n• Disable slash commands\n• Remove bot access\n\nYour data in OperaGrid will remain safe and accessible.',
                     },
                     confirm: { type: 'plain_text', text: 'Yes, Disconnect' },
                     deny: { type: 'plain_text', text: 'Cancel' },
@@ -1470,7 +1470,7 @@ export class SlackWhiteboardService {
           '*📋 Projects*\n' +
           '• `/project new` - Create a project\n' +
           '• `/project list` - View your projects\n\n' +
-          'Need more help? Visit <https://deskive.com/tutorial|our documentation>';
+          'Need more help? Visit <https://operagrid.com/tutorial|our documentation>';
       } else {
         responseText +=
           'I can help you with Whiteboards, Calendar, and Projects! 🎨📅📋\n\n' +
@@ -1499,13 +1499,13 @@ export class SlackWhiteboardService {
 
       await slackClient.chat.postMessage({
         channel: userId, // Send DM to installer
-        text: '👋 Welcome to Deskive!',
+        text: '👋 Welcome to OperaGrid!',
         blocks: [
           {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: "*👋 Welcome to Deskive!*\n\nYou're all set to collaborate with your team using Whiteboards, Calendar, and Project Management!",
+              text: "*👋 Welcome to OperaGrid!*\n\nYou're all set to collaborate with your team using Whiteboards, Calendar, and Project Management!",
             },
           },
           { type: 'divider' },
@@ -1532,7 +1532,7 @@ export class SlackWhiteboardService {
               {
                 type: 'button',
                 text: { type: 'plain_text', text: '📖 View Tutorial', emoji: true },
-                url: 'https://deskive.com/tutorial',
+                url: 'https://operagrid.com/tutorial',
                 action_id: 'view_tutorial',
               },
             ],
@@ -1645,10 +1645,10 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Helper: Get Deskive user ID from Slack user ID
+   * Helper: Get OperaGrid user ID from Slack user ID
    * If no mapping exists, creates one for users already in the workspace
    */
-  private async getDeskiveUserIdFromSlack(
+  private async getOperaGridUserIdFromSlack(
     slackUserId: string,
     slackTeamId: string,
   ): Promise<string | null> {
@@ -1656,14 +1656,14 @@ export class SlackWhiteboardService {
       // 1. Check for existing mapping
       const mappingResult = await this.db
         .table('slack_user_mappings')
-        .select('deskive_user_id')
+        .select('operagrid_user_id')
         .where('slack_user_id', '=', slackUserId)
         .where('slack_team_id', '=', slackTeamId)
         .where('is_active', '=', true)
         .execute();
 
       if (mappingResult.data && mappingResult.data.length > 0) {
-        return mappingResult.data[0].deskive_user_id;
+        return mappingResult.data[0].operagrid_user_id;
       }
 
       // 2. No mapping found - try to create one for existing workspace members
@@ -1672,13 +1672,13 @@ export class SlackWhiteboardService {
       );
       return await this.createMappingForExistingUser(slackUserId, slackTeamId);
     } catch (error) {
-      this.logger.error('Error getting Deskive user ID:', error);
+      this.logger.error('Error getting OperaGrid user ID:', error);
       return null;
     }
   }
 
   /**
-   * Create mapping for a user who's already in the workspace (invited via Deskive)
+   * Create mapping for a user who's already in the workspace (invited via OperaGrid)
    */
   private async createMappingForExistingUser(
     slackUserId: string,
@@ -1694,14 +1694,14 @@ export class SlackWhiteboardService {
 
       const { email, name, avatar } = slackUserInfo;
 
-      // 2. Find Deskive user by email
-      const deskiveUserId = await this.findDeskiveUserByEmail(email);
-      if (!deskiveUserId) {
-        this.logger.log(`[Mapping] No Deskive user found with email: ${email}`);
+      // 2. Find OperaGrid user by email
+      const operagridUserId = await this.findOperaGridUserByEmail(email);
+      if (!operagridUserId) {
+        this.logger.log(`[Mapping] No OperaGrid user found with email: ${email}`);
         return null;
       }
 
-      this.logger.log(`[Mapping] Found Deskive user: ${deskiveUserId} for email: ${email}`);
+      this.logger.log(`[Mapping] Found OperaGrid user: ${operagridUserId} for email: ${email}`);
 
       // 3. Get workspace for this Slack team
       const workspaceId = await this.getSlackWorkspaceId(slackTeamId);
@@ -1711,10 +1711,10 @@ export class SlackWhiteboardService {
       }
 
       // 4. Check if user is a member of the workspace
-      const isMember = await this.isUserInWorkspace(workspaceId, deskiveUserId);
+      const isMember = await this.isUserInWorkspace(workspaceId, operagridUserId);
       if (!isMember) {
         this.logger.log(
-          `[Mapping] User ${deskiveUserId} is not a member of workspace ${workspaceId}`,
+          `[Mapping] User ${operagridUserId} is not a member of workspace ${workspaceId}`,
         );
         return null;
       }
@@ -1722,12 +1722,12 @@ export class SlackWhiteboardService {
       this.logger.log(`[Mapping] User is workspace member, creating mapping...`);
 
       // 5. Create the mapping
-      await this.createUserMapping(deskiveUserId, slackUserId, slackTeamId, email, name, avatar);
+      await this.createUserMapping(operagridUserId, slackUserId, slackTeamId, email, name, avatar);
 
       this.logger.log(
-        `[Mapping] ✅ Successfully created mapping: ${slackUserId} → ${deskiveUserId}`,
+        `[Mapping] ✅ Successfully created mapping: ${slackUserId} → ${operagridUserId}`,
       );
-      return deskiveUserId;
+      return operagridUserId;
     } catch (error) {
       this.logger.error('[Mapping] Error creating mapping for existing user:', error);
       return null;
@@ -1763,9 +1763,9 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Find Deskive user by email
+   * Find OperaGrid user by email
    */
-  private async findDeskiveUserByEmail(email: string): Promise<string | null> {
+  private async findOperaGridUserByEmail(email: string): Promise<string | null> {
     try {
       // Query users table directly using database query builder
       const result = await this.db
@@ -1824,7 +1824,7 @@ export class SlackWhiteboardService {
    * Create Slack user mapping
    */
   private async createUserMapping(
-    deskiveUserId: string,
+    operagridUserId: string,
     slackUserId: string,
     slackTeamId: string,
     slackEmail: string,
@@ -1833,7 +1833,7 @@ export class SlackWhiteboardService {
   ): Promise<void> {
     try {
       const mappingData = {
-        deskive_user_id: deskiveUserId,
+        operagrid_user_id: operagridUserId,
         slack_user_id: slackUserId,
         slack_team_id: slackTeamId,
         slack_email: slackEmail,
@@ -1848,7 +1848,7 @@ export class SlackWhiteboardService {
 
       await this.db.table('slack_user_mappings').insert(mappingData).execute();
 
-      this.logger.log(`Created user mapping: ${slackUserId} → ${deskiveUserId}`);
+      this.logger.log(`Created user mapping: ${slackUserId} → ${operagridUserId}`);
     } catch (error) {
       // Handle duplicate key error gracefully
       if (error.code === '23505' || error.message?.includes('duplicate')) {
@@ -1881,7 +1881,7 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Helper: Find Deskive user by email
+   * Helper: Find OperaGrid user by email
    */
   private async findUserByEmail(email: string) {
     try {
@@ -1925,9 +1925,9 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Helper: Create new Deskive user from Slack profile
+   * Helper: Create new OperaGrid user from Slack profile
    */
-  private async createDeskiveUser(email: string, name: string, avatarUrl: string) {
+  private async createOperaGridUser(email: string, name: string, avatarUrl: string) {
     // Generate secure random password (user won't use it)
     const randomPassword = randomBytes(32).toString('hex');
 
@@ -2054,7 +2054,7 @@ export class SlackWhiteboardService {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: '*✅ Project Created Successfully!*\n\nYour project has been created in Deskive.',
+              text: '*✅ Project Created Successfully!*\n\nYour project has been created in OperaGrid.',
             },
           },
           {
@@ -2220,7 +2220,7 @@ export class SlackWhiteboardService {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: '*✅ Task Created Successfully!*\n\nYour task has been created in Deskive.',
+              text: '*✅ Task Created Successfully!*\n\nYour task has been created in OperaGrid.',
             },
           },
           {
@@ -2387,10 +2387,10 @@ export class SlackWhiteboardService {
   }
 
   /**
-   * Helper: Create or update Slack-Deskive user mapping
+   * Helper: Create or update Slack-OperaGrid user mapping
    */
   private async createOrUpdateUserMapping(
-    deskiveUserId: string,
+    operagridUserId: string,
     slackUserId: string,
     slackTeamId: string,
     slackEmail: string,
@@ -2400,7 +2400,7 @@ export class SlackWhiteboardService {
     onboardingCompleted: boolean,
   ) {
     const mappingData = {
-      deskive_user_id: deskiveUserId,
+      operagrid_user_id: operagridUserId,
       slack_user_id: slackUserId,
       slack_team_id: slackTeamId,
       slack_email: slackEmail,

@@ -17,19 +17,19 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 160.1 84.1% 39.4%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 166 76% 97%;
+    --secondary: 214.3 94.6% 92.7%;
     --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 166 30% 96%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 166 76% 97%;
+    --accent: 214.3 94.6% 92.7%;
     --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 166 20% 91%;
-    --input: 166 20% 91%;
-    --ring: 160.1 84.1% 39.4%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
   }
 
@@ -40,19 +40,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 160.1 84.1% 45.5%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 166 30% 17.5%;
+    --secondary: 215 30% 25%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 166 30% 17.5%;
+    --muted: 215 25% 22%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 166 30% 17.5%;
+    --accent: 215 30% 25%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 166 30% 17.5%;
-    --input: 166 30% 17.5%;
-    --ring: 160.1 84.1% 45.5%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -140,16 +140,16 @@
 
   /* Base gradient (non-button elements like progress bars, indicators) */
   .gradient-primary {
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600;
   }
 
   /* Gradient button with hover states */
   .btn-gradient-primary {
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-sm;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-sm;
   }
 
   .btn-gradient-primary:hover:not(:disabled) {
-    @apply from-emerald-600 to-teal-700;
+    @apply from-blue-600 to-blue-700;
   }
 
   .btn-gradient-primary:disabled {
@@ -158,20 +158,20 @@
 
   /* Active/selected state gradient (for navigation, tabs, etc.) */
   .gradient-primary-active {
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg;
   }
 
   .gradient-primary-active:hover {
-    @apply from-emerald-600 to-teal-700;
+    @apply from-blue-600 to-blue-700;
   }
 
   /* AI Button Gradient - Uses the primary gradient */
   .btn-ai-gradient {
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600 text-white;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white;
   }
 
   .btn-ai-gradient:hover:not(:disabled) {
-    @apply from-emerald-600 to-teal-700;
+    @apply from-blue-600 to-blue-700;
   }
 
   .btn-ai-gradient:disabled {
@@ -215,7 +215,7 @@
   }
 
   .message-html-content a {
-    @apply text-emerald-600 dark:text-emerald-400 underline hover:text-emerald-700 dark:hover:text-emerald-300;
+    @apply text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300;
   }
 
   .message-html-content code {
@@ -266,7 +266,7 @@
 
   /* Mention highlights in messages */
   .message-html-content .mention-highlight {
-    @apply bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 px-1 py-0.5 rounded font-medium;
+    @apply bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 px-1 py-0.5 rounded font-medium;
   }
 
   /* Inline GIF styles in messages */

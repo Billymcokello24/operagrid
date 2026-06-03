@@ -583,16 +583,16 @@ export class DropboxService {
   }
 
   /**
-   * Import file from Dropbox to Deskive storage
+   * Import file from Dropbox to OperaGrid storage
    */
-  async importFileToDeskive(
+  async importFileToOperaGrid(
     userId: string,
     workspaceId: string,
     path: string,
     targetFolderId?: string,
   ): Promise<{
     success: boolean;
-    deskiveFileId: string;
+    operagridFileId: string;
     fileName: string;
     fileSize: number;
     mimeType: string;
@@ -601,10 +601,10 @@ export class DropboxService {
     // Download the file from Dropbox
     const { buffer, mimeType, fileName } = await this.downloadFile(userId, workspaceId, path);
 
-    // Upload to Deskive storage via database
+    // Upload to OperaGrid storage via database
     const storagePath = `workspaces/${workspaceId}/files/${targetFolderId || 'imports'}/${Date.now()}_${fileName}`;
     const uploadResult = await /* TODO: use StorageService */ this.db.uploadFile(
-      'deskive-files',
+      'operagrid-files',
       buffer,
       storagePath,
       {
@@ -617,7 +617,7 @@ export class DropboxService {
       },
     );
 
-    // Create file record in Deskive
+    // Create file record in OperaGrid
     const fileRecord = await this.db.insert('files', {
       workspace_id: workspaceId,
       folder_id: targetFolderId || null,
@@ -639,7 +639,7 @@ export class DropboxService {
 
     return {
       success: true,
-      deskiveFileId: fileRecord.id,
+      operagridFileId: fileRecord.id,
       fileName,
       fileSize: buffer.length,
       mimeType,
@@ -648,26 +648,26 @@ export class DropboxService {
   }
 
   /**
-   * Export a Deskive file to Dropbox
+   * Export a OperaGrid file to Dropbox
    */
   async exportFileToDropbox(
     userId: string,
     workspaceId: string,
-    deskiveFileId: string,
+    operagridFileId: string,
     targetPath?: string,
   ): Promise<{
     success: boolean;
     dropboxPath: string;
     fileName: string;
   }> {
-    // Get the Deskive file record
+    // Get the OperaGrid file record
     const fileRecord = await this.db.findOne('files', {
-      id: deskiveFileId,
+      id: operagridFileId,
       workspace_id: workspaceId,
     });
 
     if (!fileRecord) {
-      throw new NotFoundException('File not found in Deskive');
+      throw new NotFoundException('File not found in OperaGrid');
     }
 
     // Get file URL
@@ -695,7 +695,7 @@ export class DropboxService {
       });
       fileBuffer = Buffer.from(response.data);
     } catch (error) {
-      this.logger.error(`Failed to download file from Deskive storage: ${error.message}`);
+      this.logger.error(`Failed to download file from OperaGrid storage: ${error.message}`);
       throw new BadRequestException('Failed to download file from storage');
     }
 

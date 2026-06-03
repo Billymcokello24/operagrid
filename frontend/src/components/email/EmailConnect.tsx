@@ -39,7 +39,7 @@ export function EmailConnect({ onConnect, onSmtpImapSuccess }: EmailConnectProps
             {intl.formatMessage({ id: 'modules.email.connect.title', defaultMessage: 'Connect your Email' })}
           </h2>
           <p className="text-muted-foreground">
-            {intl.formatMessage({ id: 'modules.email.connect.subtitle', defaultMessage: 'Choose how you want to connect your email account to Deskive' })}
+            {intl.formatMessage({ id: 'modules.email.connect.subtitle', defaultMessage: 'Choose how you want to connect your email account to OperaGrid' })}
           </p>
         </div>
 
@@ -73,15 +73,15 @@ export function EmailConnect({ onConnect, onSmtpImapSuccess }: EmailConnectProps
               <CardContent>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li className="flex items-center gap-2">
-                    <Shield className="h-3 w-3 text-green-500" />
+                    <Shield className="h-3 w-3 text-blue-500" />
                     {intl.formatMessage({ id: 'modules.email.connect.gmail.oneClick', defaultMessage: 'One-click secure login' })}
                   </li>
                   <li className="flex items-center gap-2">
-                    <Shield className="h-3 w-3 text-green-500" />
+                    <Shield className="h-3 w-3 text-blue-500" />
                     {intl.formatMessage({ id: 'modules.email.connect.gmail.noPassword', defaultMessage: 'No password stored' })}
                   </li>
                   <li className="flex items-center gap-2">
-                    <Shield className="h-3 w-3 text-green-500" />
+                    <Shield className="h-3 w-3 text-blue-500" />
                     {intl.formatMessage({ id: 'modules.email.connect.gmail.fullAccess', defaultMessage: 'Full Gmail API access' })}
                   </li>
                 </ul>

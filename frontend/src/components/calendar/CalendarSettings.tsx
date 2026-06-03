@@ -48,12 +48,12 @@ interface RoomForm {
 
 const ROOM_COLORS = [
   '#3b82f6', // blue
-  '#10b981', // green
+  '#2563eb', // green
   '#f59e0b', // yellow
   '#ef4444', // red
   '#8b5cf6', // purple
   '#ec4899', // pink
-  '#06b6d4', // cyan
+  '#2563eb', // cyan
   '#f97316', // orange
 ];
 

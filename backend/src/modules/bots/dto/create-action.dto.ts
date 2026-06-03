@@ -67,7 +67,7 @@ export class SendAiMessageConfigDto {
   @MaxLength(2000)
   systemPrompt?: string;
 
-  @ApiPropertyOptional({ description: 'Use Deskive AutoPilot for AI response', default: true })
+  @ApiPropertyOptional({ description: 'Use OperaGrid AutoPilot for AI response', default: true })
   @IsOptional()
   @IsBoolean()
   useAutopilot?: boolean;

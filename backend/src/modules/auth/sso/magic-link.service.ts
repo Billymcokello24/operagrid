@@ -138,7 +138,7 @@ export class MagicLinkService {
     const text = `Click to sign in: ${link}\n\nThis link will expire in ${Math.round(this.ttlSeconds / 60)} minutes.\n\nIf you didn't request this, you can safely ignore this email.`;
 
     try {
-      await this.emailService.sendEmail(normalized, 'Your Deskive sign-in link', html, text);
+      await this.emailService.sendEmail(normalized, 'Your OperaGrid sign-in link', html, text);
       this.logger.log(`Magic link sent to ${normalized}`);
     } catch (e: any) {
       // Log the failure but don't surface it to the caller —
@@ -157,7 +157,7 @@ export class MagicLinkService {
     return `<!doctype html>
 <html>
   <body style="font-family:system-ui,sans-serif;max-width:600px;margin:40px auto;padding:0 20px;color:#1a1a1a;">
-    <h2 style="color:#2563eb;">Sign in to Deskive</h2>
+    <h2 style="color:#2563eb;">Sign in to OperaGrid</h2>
     <p>Click the button below to sign in. This link will expire in ${Math.round(this.ttlSeconds / 60)} minutes.</p>
     <p style="text-align:center;margin:32px 0;">
       <a href="${link}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 32px;border-radius:6px;text-decoration:none;font-weight:600;">Sign in</a>

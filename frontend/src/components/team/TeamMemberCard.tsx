@@ -49,16 +49,16 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   const getRoleColor = (role: TeamRole) => {
     switch (role) {
       case 'owner':
-        return 'from-emerald-600 to-teal-600';
+        return 'from-blue-600 to-blue-600';
       case 'admin':
-        return 'from-emerald-500 to-teal-500';
+        return 'from-blue-500 to-blue-500';
       case 'designer':
-        return 'from-teal-500 to-emerald-500';
+        return 'from-blue-500 to-blue-500';
       case 'qa':
-        return 'from-green-500 to-emerald-500';
+        return 'from-blue-500 to-blue-500';
       case 'developer':
       default:
-        return 'from-emerald-500 to-green-500';
+        return 'from-blue-500 to-blue-500';
     }
   };
 
@@ -81,7 +81,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   const getAvailabilityColor = (availability: string) => {
     switch (availability) {
       case 'available':
-        return 'bg-green-500';
+        return 'bg-blue-500';
       case 'busy':
         return 'bg-yellow-500';
       default:
@@ -92,15 +92,15 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   const getUtilizationColor = (utilization: number) => {
     if (utilization >= 100) return 'text-red-600 bg-red-50';
     if (utilization >= 80) return 'text-yellow-600 bg-yellow-50';
-    if (utilization >= 50) return 'text-emerald-600 bg-emerald-50';
-    return 'text-green-600 bg-green-50';
+    if (utilization >= 50) return 'text-blue-600 bg-blue-50';
+    return 'text-blue-600 bg-blue-50';
   };
 
   const getWorkloadBarColor = (utilization: number) => {
     if (utilization >= 100) return 'bg-red-500';
     if (utilization >= 80) return 'bg-yellow-500';
-    if (utilization >= 50) return 'bg-emerald-500';
-    return 'bg-green-500';
+    if (utilization >= 50) return 'bg-blue-500';
+    return 'bg-blue-500';
   };
 
   const RoleIcon = getRoleIcon(member.role);
@@ -117,7 +117,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         </div>
         {member.online_status && (
           <div className="absolute top-4 right-4 flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
             <span className="text-white text-xs font-semibold">{intl.formatMessage({ id: 'members.online' })}</span>
           </div>
         )}
@@ -127,7 +127,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
       <div className="p-6 -mt-12">
         <div className="flex items-start justify-between mb-4">
           <div className="relative">
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 border-4 border-white shadow-xl flex items-center justify-center text-white text-2xl font-black">
+            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 border-4 border-white shadow-xl flex items-center justify-center text-white text-2xl font-black">
               {member.avatar ? (
                 <img src={member.avatar} alt={member.name} className="w-full h-full rounded-2xl object-cover" />
               ) : (
@@ -180,9 +180,9 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
             <div className="text-xs font-semibold mb-1">{intl.formatMessage({ id: 'members.utilization' })}</div>
             <div className="text-lg font-black">{member.workload_percentage}%</div>
           </div>
-          <div className="bg-teal-50 rounded-xl p-3">
-            <div className="text-xs text-teal-600 font-semibold mb-1">{intl.formatMessage({ id: 'members.projects' })}</div>
-            <div className="text-lg font-black text-teal-600">{member.current_projects}</div>
+          <div className="bg-blue-50 rounded-xl p-3">
+            <div className="text-xs text-blue-600 font-semibold mb-1">{intl.formatMessage({ id: 'members.projects' })}</div>
+            <div className="text-lg font-black text-blue-600">{member.current_projects}</div>
           </div>
         </div>
 
@@ -207,7 +207,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
             <div className="space-y-1">
               {member.current_project_names.slice(0, 2).map((project, idx) => (
                 <div key={idx} className="text-xs text-gray-700 flex items-center space-x-1">
-                  <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                   <span className="truncate">{project}</span>
                 </div>
               ))}
@@ -227,7 +227,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               {member.skills.slice(0, 4).map((skill, idx) => (
                 <span
                   key={idx}
-                  className="px-2 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-lg text-xs font-semibold"
+                  className="px-2 py-1 bg-blue-50 border border-blue-200 text-blue-700 rounded-lg text-xs font-semibold"
                 >
                   {skill}
                 </span>
@@ -249,7 +249,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onEdit(member)}
-                  className="flex-1 flex items-center justify-center space-x-2 bg-emerald-100 hover:bg-emerald-200 text-emerald-700 px-3 py-2 rounded-xl font-bold transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-2 rounded-xl font-bold transition-colors"
                   title="Edit member"
                 >
                   <Edit className="w-4 h-4" />
@@ -260,7 +260,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onAssign(member)}
-                  className="flex-1 flex items-center justify-center space-x-2 bg-teal-100 hover:bg-teal-200 text-teal-700 px-3 py-2 rounded-xl font-bold transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-2 rounded-xl font-bold transition-colors"
                   title="Assign to project"
                 >
                   <UserCog className="w-4 h-4" />
@@ -290,7 +290,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               )}
             </>
           ) : (
-            <div className="flex-1 flex items-center justify-center space-x-2 bg-emerald-50 text-emerald-700 px-3 py-2 rounded-xl font-bold">
+            <div className="flex-1 flex items-center justify-center space-x-2 bg-blue-50 text-blue-700 px-3 py-2 rounded-xl font-bold">
               <Crown className="w-4 h-4" />
               <span className="text-sm">{intl.formatMessage({ id: 'members.you' })}</span>
             </div>

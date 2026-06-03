@@ -90,7 +90,7 @@ const ModernFeatures: React.FC = () => {
         'Timezone management',
         'Recurring events'
       ],
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-blue-500 to-blue-600',
       imageUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
       stats: { meetings: '100K+', events: '500K+', sync: '99%' }
     },
@@ -163,7 +163,7 @@ const ModernFeatures: React.FC = () => {
         'Goal tracking & KPIs'
       ],
       color: 'from-rose-500 to-rose-600',
-      imageUrl: 'https://cdn.deskive.com/deskive/screen-capture.mp4',
+      imageUrl: 'https://cdn.operagrid.com/operagrid/screen-capture.mp4',
       stats: { reports: '10K+', metrics: '50+', insights: 'Real-time' }
     },
     {
@@ -251,7 +251,7 @@ const ModernFeatures: React.FC = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            From startup to enterprise, Deskive scales with your team and adapts to your workflow
+            From startup to enterprise, OperaGrid scales with your team and adapts to your workflow
           </motion.p>
         </div>
 
@@ -344,7 +344,7 @@ const ModernFeatures: React.FC = () => {
                         module.color.includes('cyan') ? 'rgba(6, 182, 212, 0.3)' :
                         module.color.includes('purple') ? 'rgba(14, 165, 233, 0.3)' :
                         module.color.includes('blue') ? 'rgba(59, 130, 246, 0.3)' :
-                        module.color.includes('emerald') ? 'rgba(16, 185, 129, 0.3)' :
+                        module.color.includes('blue') ? 'rgba(59, 130, 246, 0.3)' :
                         module.color.includes('orange') ? 'rgba(249, 115, 22, 0.3)' :
                         module.color.includes('red') ? 'rgba(239, 68, 68, 0.3)' :
                         module.color.includes('amber') ? 'rgba(251, 191, 36, 0.3)' :
@@ -381,7 +381,7 @@ const ModernFeatures: React.FC = () => {
                         module.color.includes('cyan') ? 'rgba(6, 182, 212, 0.5)' :
                         module.color.includes('purple') ? 'rgba(14, 165, 233, 0.5)' :
                         module.color.includes('blue') ? 'rgba(59, 130, 246, 0.5)' :
-                        module.color.includes('emerald') ? 'rgba(16, 185, 129, 0.5)' :
+                        module.color.includes('blue') ? 'rgba(59, 130, 246, 0.5)' :
                         module.color.includes('orange') ? 'rgba(249, 115, 22, 0.5)' :
                         module.color.includes('red') ? 'rgba(239, 68, 68, 0.5)' :
                         module.color.includes('amber') ? 'rgba(251, 191, 36, 0.5)' :
@@ -409,7 +409,7 @@ const ModernFeatures: React.FC = () => {
             Trusted by teams worldwide
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-            From startups to enterprises, teams choose Deskive to streamline their workflow and boost productivity
+            From startups to enterprises, teams choose OperaGrid to streamline their workflow and boost productivity
           </p>
 
           {/* Auto-scrolling Company Logos */}

@@ -13,16 +13,16 @@ interface AuthLayoutProps {
 
 export const AuthLayout: React.FC<AuthLayoutProps> = ({ 
   children, 
-  title = 'Welcome to Deskive',
+  title = 'Welcome to OperaGrid',
   subtitle = 'Your collaborative workspace platform' 
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
           {/* Logo */}
-          <div className="mx-auto h-12 w-12 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+          <div className="mx-auto h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
             <svg
               className="h-8 w-8 text-white"
               fill="none"
@@ -56,7 +56,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
 
         {/* Footer */}
         <div className="text-center text-sm text-gray-500">
-          <p>&copy; 2024 Deskive. All rights reserved.</p>
+          <p>&copy; 2024 OperaGrid. All rights reserved.</p>
         </div>
       </div>
     </div>

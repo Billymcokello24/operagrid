@@ -6,7 +6,7 @@
  * whichever provider the operator has selected via SEARCH_PROVIDER in
  * .env (pg-trgm, meilisearch, typesense, none).
  *
- * Scope note: this does NOT replace deskive's existing semantic search
+ * Scope note: this does NOT replace operagrid's existing semantic search
  * (ContentIndexerService + SemanticSearchService + Qdrant) which handles
  * embedding-based vector search. The two coexist — vector search lives
  * in `modules/search`, keyword search lives here in `modules/search-provider`.

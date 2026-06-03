@@ -242,7 +242,7 @@ export function InvitePeopleModal({ open, onClose }: InvitePeopleModalProps) {
                           </AvatarFallback>
                         </Avatar>
                         <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-gray-900 ${
-                          contact.isOnline ? 'bg-green-500' : 'bg-red-500'
+                          contact.isOnline ? 'bg-blue-500' : 'bg-red-500'
                         }`} />
                       </div>
 

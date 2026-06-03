@@ -52,9 +52,9 @@ export function EventCard({
     
     if (isToday(eventDate)) {
       return {
-        className: 'border-green-200 dark:border-green-800 bg-green-50/80 dark:bg-green-950/50 hover:bg-green-100/80 dark:hover:bg-green-900/50',
-        accentBarClass: 'bg-green-500 dark:bg-green-400',
-        borderColor: 'rgb(34 197 94)', // green-500
+        className: 'border-blue-200 dark:border-blue-800 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100/80 dark:hover:bg-blue-900/50',
+        accentBarClass: 'bg-blue-500 dark:bg-blue-400',
+        borderColor: 'rgb(59 130 246)', // blue-500
         backgroundColor: 'rgb(34 197 94 / 0.08)',
         darkBackgroundColor: 'rgb(34 197 94 / 0.15)'
       }

@@ -313,11 +313,11 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
 
   if (loading && workspaces.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-center">
-              <div className="w-8 h-8 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
               <span className="ml-3 text-gray-600 dark:text-gray-300 font-semibold">{intl.formatMessage({ id: 'team.loadingData' })}</span>
             </div>
           </div>
@@ -332,7 +332,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
 
   if (error && !selectedWorkspace) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="flex items-center space-x-3 text-red-600 dark:text-red-400 mb-4">
@@ -341,7 +341,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
             </div>
             <button
               onClick={loadWorkspaces}
-              className="px-6 py-3 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition-colors"
+              className="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors"
             >
               {intl.formatMessage({ id: 'common.retry' })}
             </button>
@@ -357,7 +357,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
 
   if (workspaces.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-12 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
             <Building2 className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
@@ -374,7 +374,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
   // ============================================================================
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8 overflow-y-auto">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8 overflow-y-auto">
       <div className="max-w-7xl mx-auto space-y-6 pb-12">
         {/* Header */}
         <motion.div
@@ -383,7 +383,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
           className="flex items-center justify-between"
         >
           <div>
-            <h1 className="text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-black bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent mb-2">
               {intl.formatMessage({ id: 'team.title' })}
             </h1>
             <p className="text-gray-600 dark:text-gray-400">{intl.formatMessage({ id: 'team.description' })}</p>
@@ -409,7 +409,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
             {/* Total Members */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-2">
-                <Users className="w-8 h-8 text-emerald-600" />
+                <Users className="w-8 h-8 text-blue-600" />
                 <span className="text-3xl font-black text-gray-900 dark:text-gray-100">{stats.total_members}</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 font-semibold">{intl.formatMessage({ id: 'team.stats.totalMembers' })}</p>
@@ -418,7 +418,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
             {/* Active Members */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-2">
-                <UserPlus className="w-8 h-8 text-green-600" />
+                <UserPlus className="w-8 h-8 text-blue-600" />
                 <span className="text-3xl font-black text-gray-900 dark:text-gray-100">{stats.active_members}</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 font-semibold">{intl.formatMessage({ id: 'team.stats.activeMembers' })}</p>
@@ -428,7 +428,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
             {canManageTeam() && (
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-2">
-                  <Mail className="w-8 h-8 text-teal-600" />
+                  <Mail className="w-8 h-8 text-blue-600" />
                   <span className="text-3xl font-black text-gray-900 dark:text-gray-100">{stats.pending_invitations}</span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 font-semibold">{intl.formatMessage({ id: 'team.stats.pendingInvitations' })}</p>
@@ -453,7 +453,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
                 <Filter className="w-4 h-4" />
                 <span>{intl.formatMessage({ id: 'common.filters' })}</span>
                 {roleFilter !== 'all' && (
-                  <span className="w-2 h-2 bg-emerald-600 rounded-full" />
+                  <span className="w-2 h-2 bg-blue-600 rounded-full" />
                 )}
               </button>
 
@@ -464,12 +464,12 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    className="flex items-center space-x-2 px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg"
+                    className="flex items-center space-x-2 px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg"
                   >
                     <span className="text-sm font-semibold capitalize">{roleFilter}</span>
                     <button
                       onClick={() => setRoleFilter('all')}
-                      className="hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded p-0.5 transition-colors"
+                      className="hover:bg-blue-200 dark:hover:bg-blue-800 rounded p-0.5 transition-colors"
                     >
                       <X className="w-3 h-3" />
                     </button>
@@ -484,7 +484,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setShowInviteModal(true)}
-                className="flex items-center space-x-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
+                className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
               >
                 <UserPlus className="w-5 h-5" />
                 <span>{intl.formatMessage({ id: 'team.inviteMember' })}</span>
@@ -507,7 +507,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
                     <select
                       value={roleFilter}
                       onChange={(e) => setRoleFilter(e.target.value as TeamRole | 'all')}
-                      className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors text-gray-900 dark:text-gray-100"
+                      className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 transition-colors text-gray-900 dark:text-gray-100"
                     >
                       <option value="all">{intl.formatMessage({ id: 'roles.allRoles' })}</option>
                       <option value="owner">{intl.formatMessage({ id: 'roles.owner' })}</option>
@@ -529,14 +529,14 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
           className="space-y-4"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex items-center space-x-2">
-            <Users className="w-6 h-6 text-emerald-600" />
+            <Users className="w-6 h-6 text-blue-600" />
             <span>{intl.formatMessage({ id: 'team.activeMembers' }, { count: filteredMembers.length })}</span>
           </h2>
 
           {loading ? (
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-center">
-                <div className="w-8 h-8 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin" />
+                <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
                 <span className="ml-3 text-gray-600 dark:text-gray-300 font-semibold">{intl.formatMessage({ id: 'team.loadingMembers' })}</span>
               </div>
             </div>
@@ -573,7 +573,7 @@ const TeamManagement: React.FC<TeamManagementProps> = ({ workspaceId: propWorksp
             className="space-y-4"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex items-center space-x-2">
-              <Mail className="w-6 h-6 text-teal-600" />
+              <Mail className="w-6 h-6 text-blue-600" />
               <span>{intl.formatMessage({ id: 'invites.pendingInvitations' })}</span>
             </h2>
 
@@ -647,7 +647,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose}>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <h2 className="text-2xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+          <h2 className="text-2xl font-black bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent mb-2">
             {intl.formatMessage({ id: 'team.editMember' })}
           </h2>
           <p className="text-gray-600 dark:text-gray-400">{intl.formatMessage({ id: 'team.editMemberDescription' }, { name: member.name })}</p>
@@ -655,7 +655,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
 
         <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-lg font-bold">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-500 flex items-center justify-center text-white text-lg font-bold">
               {member.name.split(' ').map((n) => n[0]).join('')}
             </div>
             <div>
@@ -670,7 +670,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
           <select
             value={selectedRole}
             onChange={(e) => setSelectedRole(e.target.value as TeamRole)}
-            className="w-full px-4 py-3 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors font-semibold text-gray-900 dark:text-gray-100"
+            className="w-full px-4 py-3 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 transition-colors font-semibold text-gray-900 dark:text-gray-100"
             disabled={member.role === 'owner'}
           >
             <option value="admin">{intl.formatMessage({ id: 'roles.admin' })}</option>
@@ -697,7 +697,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={member.role === 'owner'}
-            className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {intl.formatMessage({ id: 'team.updateMember' })}
           </motion.button>

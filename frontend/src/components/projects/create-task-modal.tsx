@@ -566,7 +566,7 @@ export function CreateTaskModal({
       case TaskType.BUG: return 'bg-red-100 text-red-800 border-red-200'
       case TaskType.STORY: return 'bg-blue-100 text-blue-800 border-blue-200'
       case TaskType.EPIC: return 'bg-purple-100 text-purple-800 border-purple-200'
-      case TaskType.TASK: return 'bg-green-100 text-green-800 border-green-200'
+      case TaskType.TASK: return 'bg-blue-100 text-blue-800 border-blue-200'
       case TaskType.SUBTASK: return 'bg-gray-100 text-gray-800 border-gray-200'
       case TaskType.FEATURE_REQUEST: return 'bg-orange-100 text-orange-800 border-orange-200'
       default: return 'bg-gray-100 text-gray-800 border-gray-200'
@@ -598,7 +598,7 @@ export function CreateTaskModal({
     switch (priority) {
       case 'high': return <ArrowUp className="w-4 h-4 text-red-500" />
       case 'medium': return <Minus className="w-4 h-4 text-yellow-500" />
-      case 'low': return <ArrowDown className="w-4 h-4 text-green-500" />
+      case 'low': return <ArrowDown className="w-4 h-4 text-blue-500" />
       default: return null
     }
   }
@@ -987,7 +987,7 @@ export function CreateTaskModal({
                           <div className={cn(
                             "text-muted-foreground",
                             attachment.type === 'notes' && "text-blue-500",
-                            attachment.type === 'events' && "text-green-500",
+                            attachment.type === 'events' && "text-blue-500",
                             attachment.type === 'files' && "text-orange-500"
                           )}>
                             {getAttachmentIcon(attachment.type)}

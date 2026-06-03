@@ -161,7 +161,7 @@ export default function FormResponsesPage() {
                     <TableCell>{response.respondentName || intl.formatMessage({ id: 'modules.forms.responses.anonymous' })}</TableCell>
                     <TableCell>{response.respondentEmail || '-'}</TableCell>
                     <TableCell>
-                      <span className="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">
+                      <span className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">
                         {response.status}
                       </span>
                     </TableCell>

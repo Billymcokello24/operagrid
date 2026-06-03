@@ -447,7 +447,7 @@ export class WorkspaceInvitationService {
         invitation.email,
         newToken,
         workspace.name,
-        'This is a resent invitation to join our workspace on Deskive',
+        'This is a resent invitation to join our workspace on OperaGrid',
       );
 
       this.logger.log(`Resent invitation to ${invitation.email} for workspace ${workspaceId}`);
@@ -545,12 +545,12 @@ export class WorkspaceInvitationService {
   ) {
     try {
       // TODO: Replace with your actual frontend URL
-      const inviteUrl = `${process.env.FRONTEND_URL || 'https://deskive.com'}/invite/${token}`;
+      const inviteUrl = `${process.env.FRONTEND_URL || 'https://operagrid.com'}/invite/${token}`;
 
       const emailHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2>You've been invited to join ${workspaceName} on Deskive</h2>
-          <p>${message || "You've been invited to collaborate on Deskive."}</p>
+          <h2>You've been invited to join ${workspaceName} on OperaGrid</h2>
+          <p>${message || "You've been invited to collaborate on OperaGrid."}</p>
           <p>Click the button below to accept the invitation:</p>
           <div style="text-align: center; margin: 30px 0;">
             <a href="${inviteUrl}" style="background-color: #3B82F6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Accept Invitation</a>
@@ -562,9 +562,9 @@ export class WorkspaceInvitationService {
 
       await /* TODO: use EmailService */ this.db.sendEmail(
         email,
-        `Invitation to join ${workspaceName} on Deskive`,
+        `Invitation to join ${workspaceName} on OperaGrid`,
         emailHtml,
-        `You've been invited to join ${workspaceName} on Deskive. Accept invitation: ${inviteUrl}`,
+        `You've been invited to join ${workspaceName} on OperaGrid. Accept invitation: ${inviteUrl}`,
       );
     } catch (error) {
       this.logger.error('Failed to send invitation email', error);

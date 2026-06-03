@@ -76,7 +76,7 @@ function FileIcon({ fileType, className }: { fileType: GoogleDriveFileType; clas
   const iconMap: Record<GoogleDriveFileType, React.ReactNode> = {
     folder: <Folder className={cn('text-yellow-500', className)} />,
     document: <FileText className={cn('text-blue-500', className)} />,
-    spreadsheet: <Table className={cn('text-green-500', className)} />,
+    spreadsheet: <Table className={cn('text-blue-500', className)} />,
     presentation: <Presentation className={cn('text-orange-500', className)} />,
     image: <Image className={cn('text-purple-500', className)} />,
     video: <Video className={cn('text-red-500', className)} />,
@@ -718,7 +718,7 @@ export function GoogleDriveBrowser() {
                 variant={currentView === item.id ? 'secondary' : 'ghost'}
                 className={cn(
                   'w-full justify-start gap-3 h-9',
-                  currentView === item.id && 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+                  currentView === item.id && 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
                 )}
                 onClick={() => handleNavigationChange(item.id)}
               >

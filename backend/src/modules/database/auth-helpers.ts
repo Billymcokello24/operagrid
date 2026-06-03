@@ -1,7 +1,7 @@
 /**
  * Real Postgres-backed auth helpers.
  *
- * Replaces the fluxez-SDK auth stubs with concrete implementations using:
+ * Real Postgres-backed auth helpers using:
  *   - bcrypt for password hashing
  *   - jsonwebtoken (via JWT_SECRET) for access/refresh tokens
  *   - the `users` and `auth_refresh_tokens` tables created by
@@ -16,6 +16,7 @@ import { Pool } from 'pg';
 import * as bcrypt from 'bcrypt';
 import * as crypto from 'crypto';
 import * as jwt from 'jsonwebtoken';
+import { getEmailConfig, sendEmailFn } from './email-helpers';
 
 export interface AuthConfig {
   jwtSecret: string;
@@ -201,6 +202,32 @@ export async function registerUser(
   const user = rowToUser(insert.rows[0]);
   const accessToken = signAccessToken(user, cfg);
   const refreshToken = await issueRefreshToken(pool, user.id, cfg);
+
+  // Send verification email if SMTP is configured
+  if (!user.emailVerified && verificationToken && data.frontendUrl) {
+    const baseUrl = data.frontendUrl.replace(/\/verify-email.*$/, '') || 'http://localhost:5175';
+    const verifyLink = `${baseUrl}/verify-email?token=${verificationToken}`;
+    try {
+      const env = (key: string, fallback?: any) => process.env[key] || fallback;
+      const emailCfg = getEmailConfig(env);
+      if (emailCfg.host) {
+        await sendEmailFn(
+          emailCfg,
+          email,
+          'Verify your OperaGrid account',
+          `<div style="font-family:sans-serif;max-width:480px;margin:0 auto">
+            <h2>Welcome to OperaGrid!</h2>
+            <p>Click the button below to verify your email address:</p>
+            <a href="${verifyLink}" style="display:inline-block;padding:12px 24px;background:#2563eb;color:white;text-decoration:none;border-radius:6px;font-weight:600">Verify Email</a>
+            <p style="margin-top:24px;color:#666">Or copy this link:<br/>${verifyLink}</p>
+          </div>`,
+          `Welcome to OperaGrid! Verify your email: ${verifyLink}`,
+        );
+      }
+    } catch (e) {
+      console.error('Failed to send verification email:', e);
+    }
+  }
 
   return {
     user,

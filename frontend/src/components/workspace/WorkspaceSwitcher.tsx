@@ -45,13 +45,13 @@ const getPlanBadgeConfig = (plan: string | undefined) => {
     case 'professional':
       return {
         label: 'Pro',
-        className: 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white border-0 shadow-sm',
+        className: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-sm',
         icon: Crown
       };
     case 'starter':
       return {
         label: 'Starter',
-        className: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-sm',
+        className: 'bg-gradient-to-r from-blue-500 to-blue-500 text-white border-0 shadow-sm',
         icon: null
       };
     case 'free':
@@ -142,7 +142,7 @@ export const WorkspaceSwitcher: React.FC = () => {
           className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-accent transition-colors group"
         >
           {/* Workspace Icon */}
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
             {currentWorkspace.logo ? (
               <img
                 src={currentWorkspace.logo}
@@ -201,7 +201,7 @@ export const WorkspaceSwitcher: React.FC = () => {
                   </h3>
                   <button
                     onClick={handleCreateWorkspace}
-                    className="text-xs text-emerald-600 hover:text-emerald-700 font-medium flex items-center gap-1"
+                    className="text-xs text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1"
                   >
                     <Plus className="w-3 h-3" />
                     {intl.formatMessage({ id: 'workspace.newWorkspace' })}
@@ -221,11 +221,11 @@ export const WorkspaceSwitcher: React.FC = () => {
                       onClick={() => handleWorkspaceChange(workspace.id)}
                       className={cn(
                         "w-full flex items-center gap-3 px-4 py-3 hover:bg-accent transition-colors",
-                        isSelected && "bg-emerald-50 dark:bg-emerald-950/20 border-l-2 border-blue-600"
+                        isSelected && "bg-blue-50 dark:bg-blue-950/20 border-l-2 border-blue-600"
                       )}
                     >
                       {/* Workspace Icon */}
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                         {workspace.logo ? (
                           <img
                             src={workspace.logo}
@@ -256,7 +256,7 @@ export const WorkspaceSwitcher: React.FC = () => {
 
                       {/* Selection Indicator */}
                       {isSelected && (
-                        <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
                       )}
                     </button>
                   );

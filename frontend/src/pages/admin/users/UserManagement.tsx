@@ -324,7 +324,7 @@ const UserManagement: React.FC = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'ACTIVE':
-        return <CheckCircle className="h-4 w-4 text-green-600" />;
+        return <CheckCircle className="h-4 w-4 text-blue-600" />;
       case 'SUSPENDED':
         return <Lock className="h-4 w-4 text-yellow-600" />;
       case 'INACTIVE':
@@ -339,7 +339,7 @@ const UserManagement: React.FC = () => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'ACTIVE':
-        return 'bg-green-100 text-green-800';
+        return 'bg-blue-100 text-blue-800';
       case 'SUSPENDED':
         return 'bg-yellow-100 text-yellow-800';
       case 'INACTIVE':

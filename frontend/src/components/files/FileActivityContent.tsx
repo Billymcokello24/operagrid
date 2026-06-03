@@ -24,7 +24,7 @@ export const FileActivityContent: React.FC<FileActivityContentProps> = ({ file }
 
         <div className="space-y-3">
           <div className="flex items-center gap-3 p-3 bg-muted/50 rounded-lg">
-            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
               <FileIcon className="h-4 w-4 text-white" />
             </div>
             <div className="flex-1">

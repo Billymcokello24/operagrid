@@ -263,7 +263,7 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                     <Wand2 className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -296,7 +296,7 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                     <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                       message.role === 'user'
                         ? 'bg-gray-200 dark:bg-gray-700'
-                        : 'bg-gradient-to-br from-emerald-500 to-teal-600'
+                        : 'bg-gradient-to-br from-blue-500 to-blue-600'
                     }`}>
                       {message.role === 'user' ? (
                         <User className="w-4 h-4 text-gray-600 dark:text-gray-300" />
@@ -309,14 +309,14 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                     <div className={`max-w-[80%] ${message.role === 'user' ? 'text-right' : ''}`}>
                       <div className={`inline-block px-4 py-2.5 rounded-2xl ${
                         message.role === 'user'
-                          ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-br-md'
+                          ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-br-md'
                           : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-md'
                       }`}>
                         {message.isLoading ? (
                           <div className="space-y-2">
                             {/* Status indicator */}
                             <div className="flex items-center gap-2">
-                              <Loader2 className="w-4 h-4 animate-spin text-emerald-500" />
+                              <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
                               <span className="text-sm">{message.status || 'Thinking...'}</span>
                             </div>
 
@@ -326,11 +326,11 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                                 {message.actions.map((action, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-xs">
                                     {action.success ? (
-                                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
                                     ) : (
                                       <XCircle className="w-3.5 h-3.5 text-red-500" />
                                     )}
-                                    <span className={action.success ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}>
+                                    <span className={action.success ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}>
                                       {action.message}
                                     </span>
                                   </div>
@@ -346,11 +346,11 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                                 {message.actions.map((action, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-xs">
                                     {action.success ? (
-                                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
                                     ) : (
                                       <XCircle className="w-3.5 h-3.5 text-red-500" />
                                     )}
-                                    <span className={action.success ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}>
+                                    <span className={action.success ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}>
                                       {action.message}
                                     </span>
                                   </div>
@@ -383,7 +383,7 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                         placeholder="Type a message..."
                         disabled={isStreaming}
                         rows={1}
-                        className="w-full px-4 py-3 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 resize-none max-h-32"
+                        className="w-full px-4 py-3 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50 resize-none max-h-32"
                         style={{ minHeight: '44px' }}
                       />
                     </div>
@@ -391,7 +391,7 @@ export function AutoPilotModal({ isOpen, onClose }: AutoPilotModalProps) {
                       type="submit"
                       size="icon"
                       disabled={!prompt.trim() || isStreaming}
-                      className="h-11 w-11 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg disabled:opacity-50 flex-shrink-0"
+                      className="h-11 w-11 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg disabled:opacity-50 flex-shrink-0"
                     >
                       {isStreaming ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
@@ -425,7 +425,7 @@ export function AutoPilotFloatingButton({ onClick }: { onClick: () => void }) {
       className="fixed bottom-6 right-6 z-40 group"
     >
       {/* Button */}
-      <div className="relative w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-2xl">
+      <div className="relative w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl">
         <Wand2 className="w-6 h-6 text-white" />
       </div>
 

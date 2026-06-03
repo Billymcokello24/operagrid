@@ -157,8 +157,8 @@ export function OAuthCallback() {
               </div>
             )}
             {state === 'success' && (
-              <div className="p-4 bg-green-500/10 rounded-full">
-                <CheckCircle className="w-8 h-8 text-green-600" />
+              <div className="p-4 bg-blue-500/10 rounded-full">
+                <CheckCircle className="w-8 h-8 text-blue-600" />
               </div>
             )}
             {state === 'error' && (

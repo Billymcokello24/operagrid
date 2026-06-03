@@ -370,10 +370,10 @@ function WorkspaceLayoutInner({ children }: WorkspaceLayoutProps) {
 
             const notificationOptions = {
               body: incomingCall.isGroupCall ? 'Group call' : 'Direct call',
-              icon: incomingCall.from.avatar || 'https://cdn.deskive.com/deskive/logo.png',
+              icon: incomingCall.from.avatar || '/logo.png',
               tag: incomingCall.callId,
               requireInteraction: true, // Notification stays until user interacts
-              badge: 'https://cdn.deskive.com/deskive/logo.png',
+              badge: '/logo.png',
               // macOS-specific: Add vibration pattern for mobile
               vibrate: [200, 100, 200],
               // Add timestamp for macOS

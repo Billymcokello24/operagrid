@@ -219,22 +219,22 @@ export const settingsApi = {
   },
 
   async enableTwoFactor(): Promise<TwoFactorEnableResponse> {
-    // TODO: Implement 2FA with deskive SDK
+    // TODO: Implement 2FA with operagrid SDK
     throw new Error('Two-factor authentication is not yet implemented');
   },
 
   async disableTwoFactor(): Promise<{ message: string }> {
-    // TODO: Implement 2FA with deskive SDK
+    // TODO: Implement 2FA with operagrid SDK
     throw new Error('Two-factor authentication is not yet implemented');
   },
 
   async verifyTwoFactor(code: string): Promise<{ message: string }> {
-    // TODO: Implement 2FA with deskive SDK
+    // TODO: Implement 2FA with operagrid SDK
     throw new Error('Two-factor authentication is not yet implemented');
   },
 
   async regenerateBackupCodes(): Promise<{ backupCodes: string[] }> {
-    // TODO: Implement 2FA with deskive SDK
+    // TODO: Implement 2FA with operagrid SDK
     throw new Error('Two-factor authentication is not yet implemented');
   },
 

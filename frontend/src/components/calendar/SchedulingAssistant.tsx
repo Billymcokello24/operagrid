@@ -615,7 +615,7 @@ export function SchedulingAssistant({ open, onClose, onEventScheduled }: Schedul
   const renderSuggestions = () => (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-4">
-        <CheckCircle className="h-5 w-5 text-green-600" />
+        <CheckCircle className="h-5 w-5 text-blue-600" />
         <h3 className="text-lg font-semibold">{intl.formatMessage({ id: 'modules.calendar.schedulingAssistant.suggestions.title' })}</h3>
         <Badge variant="outline">
           {intl.formatMessage({ id: 'modules.calendar.schedulingAssistant.suggestions.optionsFound' }, { count: suggestions.length })}
@@ -711,7 +711,7 @@ export function SchedulingAssistant({ open, onClose, onEventScheduled }: Schedul
   const renderConfirmation = () => (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-4">
-        <CheckCircle className="h-5 w-5 text-green-600" />
+        <CheckCircle className="h-5 w-5 text-blue-600" />
         <h3 className="text-lg font-semibold">{intl.formatMessage({ id: 'modules.calendar.schedulingAssistant.confirmation.title' })}</h3>
       </div>
 

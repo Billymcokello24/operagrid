@@ -358,7 +358,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
   const SentimentIcon = ({ sentiment }: { sentiment?: string }) => {
     switch (sentiment) {
       case 'positive':
-        return <TrendingUp className="h-4 w-4 text-green-500" />
+        return <TrendingUp className="h-4 w-4 text-blue-500" />
       case 'negative':
         return <TrendingDown className="h-4 w-4 text-red-500" />
       default:
@@ -381,7 +381,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
           <Brain className="h-5 w-5 text-purple-500" />
           <h3 className="text-sm font-medium">AI Meeting Assistant</h3>
           {isLiveTranscribing && (
-            <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/30 animate-pulse">
+            <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/30 animate-pulse">
               <Mic className="h-3 w-3 mr-1" />
               Live
             </Badge>
@@ -406,7 +406,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
             className={cn(
               "text-xs flex items-center justify-center gap-1 h-9",
               activeTab === 'live'
-                ? "bg-green-600 hover:bg-green-500 text-white"
+                ? "bg-blue-600 hover:bg-blue-500 text-white"
                 : "bg-gray-700 hover:bg-gray-600 text-gray-300"
             )}
           >
@@ -510,16 +510,16 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
                 {isLiveTranscribing ? (
                   <div className="flex flex-col items-center text-center">
                     <div className="relative mb-3">
-                      <Mic className="h-10 w-10 text-green-500" />
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                      <Mic className="h-10 w-10 text-blue-500" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
                     </div>
-                    <p className="text-sm text-green-400 mb-1">Transcription Active</p>
+                    <p className="text-sm text-blue-400 mb-1">Transcription Active</p>
                     <p className="text-xs text-gray-500">
                       Speak to see real-time transcription here
                     </p>
                     <div className="flex items-center gap-2 mt-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                      <span className="text-xs text-green-400">Listening...</span>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                      <span className="text-xs text-blue-400">Listening...</span>
                     </div>
                   </div>
                 ) : (
@@ -597,12 +597,12 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
 
                   {/* Decisions */}
                   {(meetingSummary?.decisions?.length ?? 0) > 0 && (
-                    <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
-                      <h4 className="text-sm font-medium text-green-300 mb-2">Decisions Made</h4>
+                    <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                      <h4 className="text-sm font-medium text-blue-300 mb-2">Decisions Made</h4>
                       <ul className="space-y-1">
                         {meetingSummary!.decisions!.map((decision, i) => (
                           <li key={i} className="text-sm text-gray-200 flex items-start gap-2">
-                            <Check className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
+                            <Check className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                             {decision}
                           </li>
                         ))}
@@ -654,7 +654,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
                     <Button
                       size="sm"
                       onClick={handleSaveToNotes}
-                      className="text-xs flex flex-col items-center gap-1 h-auto py-2 bg-green-600 hover:bg-green-500 text-white"
+                      className="text-xs flex flex-col items-center gap-1 h-auto py-2 bg-blue-600 hover:bg-blue-500 text-white"
                       title="Save to Notes"
                     >
                       <StickyNote className="h-4 w-4" />
@@ -725,7 +725,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
                         <div className={cn(
                           "mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0",
                           item.status === 'completed'
-                            ? "bg-green-500 border-green-500 text-white"
+                            ? "bg-blue-500 border-blue-500 text-white"
                             : "border-gray-500"
                         )}>
                           {item.status === 'completed' && <Check className="h-3 w-3" />}
@@ -756,7 +756,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
                                 "text-xs",
                                 item.priority === 'high' && "border-red-500/30 text-red-300",
                                 item.priority === 'medium' && "border-yellow-500/30 text-yellow-300",
-                                item.priority === 'low' && "border-green-500/30 text-green-300"
+                                item.priority === 'low' && "border-blue-500/30 text-blue-300"
                               )}
                             >
                               {item.priority || 'medium'}
@@ -882,8 +882,8 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
                     <div className="flex items-center gap-2">
                       {(meetingSummary || localSummary) ? (
                         <>
-                          <div className="w-2 h-2 bg-green-500 rounded-full" />
-                          <span className="text-sm text-green-400">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                          <span className="text-sm text-blue-400">
                             {localSummary && !meetingSummary ? 'AI Summary Generated' : 'Summary Available'}
                           </span>
                         </>
@@ -948,9 +948,9 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
       <div className="p-4 border-t border-gray-700 bg-gray-900/50 space-y-3 flex-shrink-0">
         {/* Status indicator */}
         {isLiveTranscribing && (
-          <div className="flex items-center justify-center gap-2 py-2 px-3 bg-green-500/10 border border-green-500/20 rounded-lg">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs text-green-400">Live transcription active - speak to capture</span>
+          <div className="flex items-center justify-center gap-2 py-2 px-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+            <span className="text-xs text-blue-400">Live transcription active - speak to capture</span>
           </div>
         )}
 
@@ -1008,7 +1008,7 @@ export const AIMeetingPanel: React.FC<ExtendedAIMeetingPanelProps> = ({
             className={cn(
               "text-xs flex flex-col items-center gap-1 h-auto py-2",
               hasAnyContent
-                ? "bg-green-600 hover:bg-green-500 text-white"
+                ? "bg-blue-600 hover:bg-blue-500 text-white"
                 : "bg-gray-800/50 text-gray-500 border-gray-700"
             )}
             title="Save to Notes"

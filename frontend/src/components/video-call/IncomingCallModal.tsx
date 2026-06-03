@@ -74,14 +74,14 @@ export const IncomingCallModal: React.FC<IncomingCallModalProps> = ({
         {/* Header */}
         <div className="text-center mb-8">
           <div className="relative inline-block">
-            <Avatar className="w-24 h-24 ring-4 ring-green-500 ring-opacity-50 animate-pulse">
+            <Avatar className="w-24 h-24 ring-4 ring-blue-500 ring-opacity-50 animate-pulse">
               <AvatarImage src={callInvitation.callerAvatar} />
               <AvatarFallback className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-2xl">
                 {callInvitation.callerName.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
             {callInvitation.callType === 'video' && (
-              <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-2">
+              <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-2">
                 <Video className="h-4 w-4 text-white" />
               </div>
             )}
@@ -97,7 +97,7 @@ export const IncomingCallModal: React.FC<IncomingCallModalProps> = ({
               className={cn(
                 "text-sm",
                 callInvitation.callType === 'video' 
-                  ? "bg-green-500/20 text-green-300 border-green-500/30"
+                  ? "bg-blue-500/20 text-blue-300 border-blue-500/30"
                   : "bg-blue-500/20 text-blue-300 border-blue-500/30"
               )}
             >
@@ -130,7 +130,7 @@ export const IncomingCallModal: React.FC<IncomingCallModalProps> = ({
           </p>
 
           {/* Ring Duration */}
-          <div className="mt-4 text-lg font-mono text-green-400">
+          <div className="mt-4 text-lg font-mono text-blue-400">
             {formatRingTime(ringDuration)}
           </div>
         </div>
@@ -237,7 +237,7 @@ export const IncomingCallModal: React.FC<IncomingCallModalProps> = ({
               // Pass media settings to parent component
               onAccept({ micEnabled: isMicEnabled, cameraEnabled: finalCameraEnabled })
             }}
-            className="rounded-full p-6 h-16 w-16 bg-green-600 hover:bg-green-700 text-white border-none animate-pulse"
+            className="rounded-full p-6 h-16 w-16 bg-blue-600 hover:bg-blue-700 text-white border-none animate-pulse"
             title="Accept call"
           >
             {callInvitation.callType === 'video' ? (
@@ -277,7 +277,7 @@ export const IncomingCallModal: React.FC<IncomingCallModalProps> = ({
 
       {/* Background pulse animation */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-green-500/5 animate-pulse" />
+        <div className="absolute inset-0 bg-blue-500/5 animate-pulse" />
       </div>
     </div>
   )

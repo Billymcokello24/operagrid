@@ -1,11 +1,11 @@
 /**
- * Deskive Chatbot Component
+ * OperaGrid Chatbot Component
  * Placeholder stub - chatbot widget to be implemented
  */
 
 import React from "react";
 
-interface DeskiveChatbotProps {
+interface OperaGridChatbotProps {
   debug?: boolean;
   position?: "bottom-right" | "bottom-left" | "top-right" | "top-left";
   primaryColor?: string;
@@ -13,7 +13,7 @@ interface DeskiveChatbotProps {
   placeholder?: string;
 }
 
-export const deskiveChatbot: React.FC<DeskiveChatbotProps> = ({
+export const operagridChatbot: React.FC<OperaGridChatbotProps> = ({
   debug,
   position,
   primaryColor,
@@ -23,7 +23,7 @@ export const deskiveChatbot: React.FC<DeskiveChatbotProps> = ({
   // Chatbot widget placeholder
   // TODO: Implement chatbot widget
   if (debug) {
-    console.log("[deskiveChatbot] Chatbot component loaded (stub)", {
+    console.log("[operagridChatbot] Chatbot component loaded (stub)", {
       position,
       primaryColor,
       greeting,

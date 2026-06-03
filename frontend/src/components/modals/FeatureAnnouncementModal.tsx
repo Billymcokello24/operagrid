@@ -82,7 +82,7 @@ export function FeatureAnnouncementModal({
                 </span>
                 <Sparkles className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                 <span className="text-sm font-medium text-blue-600 dark:text-blue-300">
-                  Discover Deskive
+                  Discover OperaGrid
                 </span>
               </motion.div>
             </div>

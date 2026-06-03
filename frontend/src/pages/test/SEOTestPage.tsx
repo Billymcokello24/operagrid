@@ -6,7 +6,7 @@ export function SEOTestPage() {
       <PageSEO
         title="SEO Test Page"
         description="This is a test page to verify SEO implementation"
-        keywords={['test', 'seo', 'deskive']}
+        keywords={['test', 'seo', 'operagrid']}
         ogType="website"
         structuredData={{
           '@context': 'https://schema.org',
@@ -24,7 +24,7 @@ export function SEOTestPage() {
       <div className="mt-8 p-4 bg-gray-100 rounded">
         <h2 className="font-bold mb-2">Expected Meta Tags:</h2>
         <ul className="list-disc list-inside space-y-1 text-sm">
-          <li>title: SEO Test Page | Deskive</li>
+          <li>title: SEO Test Page | OperaGrid</li>
           <li>meta description</li>
           <li>meta keywords</li>
           <li>og:title, og:description, og:image</li>
@@ -34,9 +34,9 @@ export function SEOTestPage() {
         </ul>
       </div>
 
-      <div className="mt-8 p-4 bg-green-50 border border-green-200 rounded">
-        <h2 className="font-bold text-green-800 mb-2">✅ Phase 1: Foundation Setup Complete!</h2>
-        <p className="text-green-700 text-sm">
+      <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded">
+        <h2 className="font-bold text-blue-800 mb-2">✅ Phase 1: Foundation Setup Complete!</h2>
+        <p className="text-blue-700 text-sm">
           If you can see this page and the meta tags in the page source, the SEO foundation is working correctly.
         </p>
       </div>

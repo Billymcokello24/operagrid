@@ -177,7 +177,7 @@ export function YearView({ onDateClick, onMonthClick }: YearViewProps) {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-4 gap-4 text-center text-sm">
             <div>
-              <div className="font-semibold text-green-600">
+              <div className="font-semibold text-blue-600">
                 Q1: {events.filter(e => {
                   const month = new Date(e.startTime).getMonth()
                   return month >= 0 && month <= 2

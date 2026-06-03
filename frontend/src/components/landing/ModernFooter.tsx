@@ -16,12 +16,12 @@ const ModernFooter: React.FC = () => {
             onClick={() => navigate('/')}
           >
             <img
-              src="https://cdn.deskive.com/deskive/logo.png"
-              alt="Deskive Logo"
+              src="/logo.png"
+              alt="OperaGrid Logo"
               className="w-10 sm:w-12 h-10 sm:h-12 flex-shrink-0 transition-all duration-300 group-hover:scale-110"
             />
             <span className="text-xl sm:text-2xl font-bold text-white whitespace-nowrap">
-              Deskive
+              OperaGrid
             </span>
           </div>
 

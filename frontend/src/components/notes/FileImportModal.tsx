@@ -32,7 +32,7 @@ function DriveFileIcon({ fileType, className }: { fileType: GoogleDriveFileType;
   const iconMap: Record<string, React.ReactNode> = {
     folder: <Folder className={cn('text-yellow-500', className)} />,
     document: <FileText className={cn('text-blue-500', className)} />,
-    spreadsheet: <Table className={cn('text-green-500', className)} />,
+    spreadsheet: <Table className={cn('text-blue-500', className)} />,
     presentation: <Presentation className={cn('text-orange-500', className)} />,
     pdf: <FileText className={cn('text-red-600', className)} />,
     file: <FileText className={cn('text-gray-500', className)} />,

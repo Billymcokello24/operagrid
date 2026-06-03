@@ -25,7 +25,7 @@ export const QUERY_CONFIG = {
 };
 
 export const SITE_CONFIG = {
-  name: 'Deskive',
+  name: 'OperaGrid',
   description: 'All-in-One Workspace Platform',
   url: import.meta.env.VITE_APP_URL || 'http://localhost:5173',
 
@@ -34,14 +34,14 @@ export const SITE_CONFIG = {
 
   // Social Media Links
   social: {
-    twitter: 'https://x.com/deskive',
-    facebook: 'https://www.deskive.com',
+    twitter: 'https://x.com/operagrid',
+    facebook: 'https://www.operagrid.com',
     // linkedin: 'https://www.linkedin.com/company/info-inlet',
-    // github: 'https://github.com/deskive-com',
+    // github: 'https://github.com/operagrid-com',
   },
 
   // Social Media Handles (for meta tags)
   socialHandles: {
-    twitter: '@deskive',
+    twitter: '@operagrid',
   },
 };

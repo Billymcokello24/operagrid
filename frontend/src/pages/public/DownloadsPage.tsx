@@ -43,11 +43,11 @@ export default function DownloadsPage() {
       releaseDate: new Date().toISOString(),
       downloads: {
         macOS: {
-          arm64: '/downloads/Deskive-macOS-arm64.dmg',
-          x64: '/downloads/Deskive-macOS-x64.dmg'
+          arm64: '/downloads/OperaGrid-macOS-arm64.dmg',
+          x64: '/downloads/OperaGrid-macOS-x64.dmg'
         },
         windows: {
-          x64: '/downloads/Deskive-Windows-x64.exe'
+          x64: '/downloads/OperaGrid-Windows-x64.exe'
         }
       }
     });
@@ -84,15 +84,15 @@ export default function DownloadsPage() {
           {downloadInfo && (
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 mb-12">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                <CheckCircle2 className="w-4 h-4 text-blue-500" />
                 <span>{intl.formatMessage({ id: 'downloads.version' }, { version: downloadInfo.version })}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                <CheckCircle2 className="w-4 h-4 text-blue-500" />
                 <span>{intl.formatMessage({ id: 'downloads.freeOpenSource' })}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                <CheckCircle2 className="w-4 h-4 text-blue-500" />
                 <span>{intl.formatMessage({ id: 'downloads.regularUpdates' })}</span>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function DownloadsPage() {
               <p className="text-gray-600 mb-6">{intl.formatMessage({ id: 'downloads.platforms.iOS.description' })}</p>
 
               <Button
-                onClick={() => window.open('https://apps.apple.com/ae/app/deskive-ai-team-workspace/id6756350570', '_blank')}
+                onClick={() => window.open('https://apps.apple.com/ae/app/operagrid-ai-team-workspace/id6756350570', '_blank')}
                 className="w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 text-white group/btn"
               >
                 <FaApple className="w-4 h-4 mr-2 group-hover/btn:animate-bounce" />
@@ -216,8 +216,8 @@ export default function DownloadsPage() {
           </Card>
 
           {/* Android Card */}
-          <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-green-500 group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+          <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-blue-500 group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
 
             <div className="p-8 relative">
               {/* Android Phone Device with Android Logo */}
@@ -227,7 +227,7 @@ export default function DownloadsPage() {
                   {/* Camera/Sensor bar at top */}
                   <div className="absolute top-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-gray-900 rounded-full" />
                   {/* Screen with Android logo */}
-                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-green-600 rounded-[7px] flex items-center justify-center m-0.5">
+                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 rounded-[7px] flex items-center justify-center m-0.5">
                     <FaAndroid className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -237,8 +237,8 @@ export default function DownloadsPage() {
               <p className="text-gray-600 mb-6">{intl.formatMessage({ id: 'downloads.platforms.android.description' })}</p>
 
               <Button
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.deskive.app', '_blank')}
-                className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white group/btn"
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.operagrid.app', '_blank')}
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white group/btn"
               >
                 <FaAndroid className="w-4 h-4 mr-2 group-hover/btn:animate-bounce" />
                 {intl.formatMessage({ id: 'downloads.platforms.android.button' })}
@@ -272,8 +272,8 @@ export default function DownloadsPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle2 className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="font-semibold text-lg mb-2">{intl.formatMessage({ id: 'downloads.features.alwaysUpdated.title' })}</h3>
               <p className="text-gray-600 text-sm">{intl.formatMessage({ id: 'downloads.features.alwaysUpdated.description' })}</p>

@@ -1,7 +1,7 @@
 /**
  * Real SMTP email helpers using nodemailer.
  *
- * Replaces the fluxez SDK email stub with a concrete implementation. Works
+ * Email sending implementation using nodemailer with a concrete implementation. Works
  * with any SMTP provider (Resend, SendGrid, Mailgun, AWS SES, Postmark,
  * Gmail, self-hosted Postfix, etc.).
  *
@@ -10,7 +10,7 @@
  *   SMTP_PORT       (e.g. 587 for STARTTLS, 465 for TLS)
  *   SMTP_USER       (provider username / API key user)
  *   SMTP_PASSWORD   (provider password / API key)
- *   SMTP_FROM       (default From address, e.g. "Deskive <noreply@deskive.app>")
+ *   SMTP_FROM       (default From address, e.g. "OperaGrid <noreply@operagrid.app>")
  *   SMTP_SECURE     (optional - "true" for port 465 implicit TLS)
  */
 import * as nodemailer from 'nodemailer';

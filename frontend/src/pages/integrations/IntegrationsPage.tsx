@@ -45,7 +45,7 @@ import { IntegrationConnectButton } from './components/IntegrationConnectButton'
 
 const CATEGORY_CONFIG: Record<IntegrationCategoryType, { icon: React.ReactNode; color: string }> = {
   'COMMUNICATION': { icon: <Users className="w-4 h-4" />, color: 'bg-blue-500/10 text-blue-700 dark:text-blue-300' },
-  'PROJECT_MANAGEMENT': { icon: <Grid className="w-4 h-4" />, color: 'bg-green-500/10 text-green-700 dark:text-green-300' },
+  'PROJECT_MANAGEMENT': { icon: <Grid className="w-4 h-4" />, color: 'bg-blue-500/10 text-blue-700 dark:text-blue-300' },
   'FILE_STORAGE': { icon: <Search className="w-4 h-4" />, color: 'bg-orange-500/10 text-orange-700 dark:text-orange-300' },
   'CALENDAR': { icon: <Sparkles className="w-4 h-4" />, color: 'bg-purple-500/10 text-purple-700 dark:text-purple-300' },
   'EMAIL': { icon: <Zap className="w-4 h-4" />, color: 'bg-red-500/10 text-red-700 dark:text-red-300' },
@@ -58,9 +58,9 @@ const CATEGORY_CONFIG: Record<IntegrationCategoryType, { icon: React.ReactNode; 
   'TIME_TRACKING': { icon: <Zap className="w-4 h-4" />, color: 'bg-lime-500/10 text-lime-700 dark:text-lime-300' },
   'VIDEO_CONFERENCING': { icon: <Users className="w-4 h-4" />, color: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300' },
   'AUTOMATION': { icon: <Zap className="w-4 h-4" />, color: 'bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-300' },
-  'PRODUCTIVITY': { icon: <TrendingUp className="w-4 h-4" />, color: 'bg-teal-500/10 text-teal-700 dark:text-teal-300' },
+  'PRODUCTIVITY': { icon: <TrendingUp className="w-4 h-4" />, color: 'bg-blue-500/10 text-blue-700 dark:text-blue-300' },
   'HR': { icon: <Users className="w-4 h-4" />, color: 'bg-amber-500/10 text-amber-700 dark:text-amber-300' },
-  'FINANCE': { icon: <TrendingUp className="w-4 h-4" />, color: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300' },
+  'FINANCE': { icon: <TrendingUp className="w-4 h-4" />, color: 'bg-blue-500/10 text-blue-700 dark:text-blue-300' },
   'SUPPORT': { icon: <Users className="w-4 h-4" />, color: 'bg-sky-500/10 text-sky-700 dark:text-sky-300' },
   'SECURITY': { icon: <Shield className="w-4 h-4" />, color: 'bg-red-500/10 text-red-700 dark:text-red-300' },
   'ECOMMERCE': { icon: <TrendingUp className="w-4 h-4" />, color: 'bg-lime-500/10 text-lime-700 dark:text-lime-300' },
@@ -448,7 +448,7 @@ function IntegrationsMain() {
                               </div>
                             </div>
                             {isConnected && (
-                              <Badge variant="outline" className="text-green-600 border-green-300">
+                              <Badge variant="outline" className="text-blue-600 border-blue-300">
                                 {intl.formatMessage({ id: 'modules.integrations.status.connected', defaultMessage: 'Connected' })}
                               </Badge>
                             )}
@@ -491,7 +491,7 @@ function IntegrationsMain() {
 
                           <Badge variant="outline" className={
                             integration.pricingType === 'free'
-                              ? 'text-green-600 border-green-200'
+                              ? 'text-blue-600 border-blue-200'
                               : integration.pricingType === 'freemium'
                               ? 'text-blue-600 border-blue-200'
                               : 'text-orange-600 border-orange-200'
@@ -591,7 +591,7 @@ function IntegrationsMain() {
                             {connection.externalEmail || connection.integration?.provider}
                           </p>
                         </div>
-                        <Badge variant="outline" className="text-green-600 border-green-300">
+                        <Badge variant="outline" className="text-blue-600 border-blue-300">
                           Connected
                         </Badge>
                       </div>

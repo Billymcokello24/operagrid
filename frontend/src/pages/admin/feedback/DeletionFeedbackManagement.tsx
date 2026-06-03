@@ -99,7 +99,7 @@ const REASON_CONFIG: Record<string, { icon: React.ReactNode; color: string; labe
   privacy_concerns: { icon: <AlertTriangle className="h-3 w-3" />, color: 'bg-orange-100 text-orange-700', label: 'Privacy Concerns' },
   bugs_errors: { icon: <Bug className="h-3 w-3" />, color: 'bg-red-100 text-red-700', label: 'Bugs/Errors' },
   missing_features: { icon: <Lightbulb className="h-3 w-3" />, color: 'bg-purple-100 text-purple-700', label: 'Missing Features' },
-  too_complicated: { icon: <HelpCircle className="h-3 w-3" />, color: 'bg-teal-100 text-teal-700', label: 'Too Complicated' },
+  too_complicated: { icon: <HelpCircle className="h-3 w-3" />, color: 'bg-blue-100 text-blue-700', label: 'Too Complicated' },
   not_using: { icon: <Clock className="h-3 w-3" />, color: 'bg-gray-100 text-gray-700', label: 'Not Using' },
   other: { icon: <MoreHorizontal className="h-3 w-3" />, color: 'bg-gray-100 text-gray-700', label: 'Other' },
 };
@@ -121,7 +121,7 @@ const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
     pending: { color: 'bg-yellow-100 text-yellow-700', label: 'Pending' },
     reviewed: { color: 'bg-blue-100 text-blue-700', label: 'Reviewed' },
     actioned: { color: 'bg-purple-100 text-purple-700', label: 'Actioned' },
-    resolved: { color: 'bg-green-100 text-green-700', label: 'Resolved' },
+    resolved: { color: 'bg-blue-100 text-blue-700', label: 'Resolved' },
   };
   const { color, label } = config[status] || config.pending;
   return <Badge variant="secondary" className={color}>{label}</Badge>;
@@ -142,7 +142,7 @@ const PriorityBadge: React.FC<{ priority: string }> = ({ priority }) => {
 // Outcome badge component
 const OutcomeBadge: React.FC<{ wasRetained: boolean; deletedAccount: boolean }> = ({ wasRetained, deletedAccount }) => {
   if (wasRetained) {
-    return <Badge className="bg-green-100 text-green-700">Retained</Badge>;
+    return <Badge className="bg-blue-100 text-blue-700">Retained</Badge>;
   }
   if (deletedAccount) {
     return <Badge className="bg-red-100 text-red-700">Deleted</Badge>;
@@ -413,12 +413,12 @@ const DeletionFeedbackManagement: React.FC = () => {
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-1">
-                <TrendingUp className="h-4 w-4 text-green-500" />
+                <TrendingUp className="h-4 w-4 text-blue-500" />
                 Retained
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-green-600">{stats.retainedCount}</div>
+              <div className="text-2xl font-bold text-blue-600">{stats.retainedCount}</div>
             </CardContent>
           </Card>
           <Card>

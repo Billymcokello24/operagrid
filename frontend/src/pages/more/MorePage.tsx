@@ -27,7 +27,7 @@ import FormResponsesPage from '../forms/FormResponsesPage';
 import FormSubmitPage from '../forms/FormSubmitPage';
 import FormAnalyticsPage from '../forms/FormAnalyticsPage';
 
-// Feature card component for built-in Deskive features
+// Feature card component for built-in OperaGrid features
 interface FeatureCardProps {
   name: string;
   description: string;
@@ -66,13 +66,13 @@ function MoreGrid() {
   const navigate = useNavigate();
   const intl = useIntl();
 
-  // Deskive Features
+  // OperaGrid Features
   const features = [
     {
       name: intl.formatMessage({ id: 'tools.documentBuilder.name', defaultMessage: 'Document Builder' }),
       description: intl.formatMessage({ id: 'tools.documentBuilder.description', defaultMessage: 'Create professional documents from templates' }),
       icon: <FileText className="w-6 h-6" />,
-      color: '#10b981',
+      color: '#2563eb',
       path: 'documents',
     },
     {
@@ -100,7 +100,7 @@ function MoreGrid() {
       name: intl.formatMessage({ id: 'tools.whiteboard.name', defaultMessage: 'Whiteboard' }),
       description: intl.formatMessage({ id: 'tools.whiteboard.description', defaultMessage: 'Collaborative drawing and brainstorming' }),
       icon: <PenTool className="w-6 h-6" />,
-      color: '#10b981',
+      color: '#2563eb',
       path: 'whiteboard',
     },
     {
@@ -131,7 +131,7 @@ function MoreGrid() {
           </p>
         </div>
 
-        {/* Deskive Features Section */}
+        {/* OperaGrid Features Section */}
         <div>
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
             {intl.formatMessage({ id: 'tools.featuresSection', defaultMessage: 'Features' })}

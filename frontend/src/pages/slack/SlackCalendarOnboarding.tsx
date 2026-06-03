@@ -78,7 +78,7 @@ const SlackCalendarOnboarding: React.FC = () => {
               <h1 className="text-4xl font-black text-gray-900 mb-4">
                 Welcome to{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Deskive Calendar
+                  OperaGrid Calendar
                 </span>
                 ! 📅
               </h1>
@@ -129,11 +129,11 @@ const SlackCalendarOnboarding: React.FC = () => {
           >
             {/* Header */}
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-3xl font-black text-gray-900 mb-4">
-                How to Use Deskive Calendar
+                How to Use OperaGrid Calendar
               </h2>
               <p className="text-gray-600">
                 Create and manage events in seconds from Slack
@@ -212,7 +212,7 @@ const SlackCalendarOnboarding: React.FC = () => {
               <button
                 onClick={completeOnboarding}
                 disabled={loading}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Loading...' : 'Start Using Calendar'}
                 <ArrowRight className="w-5 h-5" />

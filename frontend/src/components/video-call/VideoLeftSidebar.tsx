@@ -208,7 +208,7 @@ export const VideoLeftSidebar: React.FC<VideoLeftSidebarProps> = ({
   // Status indicator component
   const StatusIndicator = ({ status }: { status: Contact['status'] }) => {
     const colors = {
-      online: 'bg-green-500',
+      online: 'bg-blue-500',
       busy: 'bg-red-500', 
       away: 'bg-yellow-500',
       offline: 'bg-gray-500'
@@ -406,7 +406,7 @@ export const VideoLeftSidebar: React.FC<VideoLeftSidebarProps> = ({
                   <div className="flex items-center gap-3">
                     <div className={cn(
                       "p-2 rounded-full",
-                      call.status === 'completed' ? 'bg-green-500/20 text-green-600' :
+                      call.status === 'completed' ? 'bg-blue-500/20 text-blue-600' :
                       call.status === 'missed' ? 'bg-red-500/20 text-red-600' :
                       'bg-gray-500/20 text-gray-600'
                     )}>

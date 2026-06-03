@@ -109,11 +109,11 @@ const UserProfilePage: React.FC = () => {
   const getRoleBadgeColor = (role: string) => {
     switch (role.toLowerCase()) {
       case 'owner':
-        return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200';
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'admin':
-        return 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200';
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'member':
-        return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       default:
         return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
     }
@@ -122,10 +122,10 @@ const UserProfilePage: React.FC = () => {
   // Loading state
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 text-emerald-600 animate-spin" />
+            <Loader2 className="w-8 h-8 text-blue-600 animate-spin" />
             <span className="ml-3 text-gray-600 dark:text-gray-300 font-semibold">
               {intl.formatMessage({ id: 'userProfile.loading', defaultMessage: 'Loading profile...' })}
             </span>
@@ -138,7 +138,7 @@ const UserProfilePage: React.FC = () => {
   // Error state
   if (error || !member) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
         <div className="max-w-5xl mx-auto">
           <Card>
             <CardContent className="p-6 text-center">
@@ -168,7 +168,7 @@ const UserProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-8">
       <div className="max-w-5xl mx-auto space-y-6">
         {/* Back Button */}
         <motion.div
@@ -202,7 +202,7 @@ const UserProfilePage: React.FC = () => {
                       className="w-32 h-32 rounded-2xl object-cover shadow-lg"
                     />
                   ) : (
-                    <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+                    <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-500 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
                       {userData.name.split(' ').map((n) => n[0]).join('').toUpperCase()}
                     </div>
                   )}
@@ -212,7 +212,7 @@ const UserProfilePage: React.FC = () => {
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-3">
                     <div>
-                      <h1 className="text-3xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+                      <h1 className="text-3xl font-black bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent mb-2">
                         {userData.name}
                       </h1>
                       <div className="flex items-center gap-2 flex-wrap">
@@ -223,7 +223,7 @@ const UserProfilePage: React.FC = () => {
                           })}
                         </Badge>
                         {member.status === 'active' && (
-                          <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                             {intl.formatMessage({ id: 'userProfile.status.active', defaultMessage: 'Active' })}
                           </Badge>
                         )}
@@ -233,12 +233,12 @@ const UserProfilePage: React.FC = () => {
                     {/* Action Buttons */}
                     <div className="flex gap-2">
                       {isOwnProfile ? (
-                        <Button onClick={handleEditProfile} className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
+                        <Button onClick={handleEditProfile} className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700">
                           <Settings className="w-4 h-4 mr-2" />
                           {intl.formatMessage({ id: 'userProfile.editProfile', defaultMessage: 'Edit Profile' })}
                         </Button>
                       ) : (
-                        <Button onClick={handleMessageUser} className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
+                        <Button onClick={handleMessageUser} className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700">
                           <MessageSquare className="w-4 h-4 mr-2" />
                           {intl.formatMessage({ id: 'userProfile.message', defaultMessage: 'Message' })}
                         </Button>
@@ -289,7 +289,7 @@ const UserProfilePage: React.FC = () => {
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-gray-200 dark:border-gray-700 h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <User className="w-5 h-5 text-emerald-600" />
+                  <User className="w-5 h-5 text-blue-600" />
                   {intl.formatMessage({ id: 'userProfile.contactInfo', defaultMessage: 'Contact Information' })}
                 </CardTitle>
               </CardHeader>
@@ -330,7 +330,7 @@ const UserProfilePage: React.FC = () => {
                       href={currentUser.metadata.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
                     >
                       {currentUser.metadata.website}
                     </a>
@@ -359,7 +359,7 @@ const UserProfilePage: React.FC = () => {
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-gray-200 dark:border-gray-700 h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Briefcase className="w-5 h-5 text-teal-600" />
+                  <Briefcase className="w-5 h-5 text-blue-600" />
                   {intl.formatMessage({ id: 'userProfile.workspaceInfo', defaultMessage: 'Workspace Information' })}
                 </CardTitle>
               </CardHeader>
@@ -414,7 +414,7 @@ const UserProfilePage: React.FC = () => {
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-gray-200 dark:border-gray-700">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <User className="w-5 h-5 text-emerald-600" />
+                  <User className="w-5 h-5 text-blue-600" />
                   {intl.formatMessage({ id: 'userProfile.about', defaultMessage: 'About' })}
                 </CardTitle>
               </CardHeader>
@@ -434,7 +434,7 @@ const UserProfilePage: React.FC = () => {
           <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-gray-200 dark:border-gray-700">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-green-600" />
+                <Clock className="w-5 h-5 text-blue-600" />
                 {intl.formatMessage({ id: 'userProfile.recentActivity', defaultMessage: 'Recent Activity' })}
               </CardTitle>
             </CardHeader>
@@ -455,7 +455,7 @@ const UserProfilePage: React.FC = () => {
           <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-gray-200 dark:border-gray-700">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Briefcase className="w-5 h-5 text-teal-600" />
+                <Briefcase className="w-5 h-5 text-blue-600" />
                 {intl.formatMessage({ id: 'userProfile.projects', defaultMessage: 'Projects' })}
               </CardTitle>
             </CardHeader>

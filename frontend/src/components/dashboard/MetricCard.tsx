@@ -41,7 +41,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
                 <div
                   className={cn(
                     'flex items-center gap-1 text-sm font-medium',
-                    trend.isPositive ? 'text-green-600' : 'text-red-600'
+                    trend.isPositive ? 'text-blue-600' : 'text-red-600'
                   )}
                 >
                   {trend.isPositive ? (

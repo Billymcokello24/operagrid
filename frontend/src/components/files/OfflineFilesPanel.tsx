@@ -51,7 +51,7 @@ function getFileIcon(mimeType?: string) {
 
   if (mimeType.startsWith('image/')) return <Image className="h-5 w-5 text-purple-500" />;
   if (mimeType.startsWith('video/')) return <Film className="h-5 w-5 text-pink-500" />;
-  if (mimeType.startsWith('audio/')) return <Music className="h-5 w-5 text-green-500" />;
+  if (mimeType.startsWith('audio/')) return <Music className="h-5 w-5 text-blue-500" />;
   if (mimeType.includes('pdf')) return <FileText className="h-5 w-5 text-red-500" />;
   if (mimeType.includes('zip') || mimeType.includes('rar') || mimeType.includes('tar'))
     return <Archive className="h-5 w-5 text-amber-500" />;
@@ -129,7 +129,7 @@ export function OfflineFilesPanel({ open, onClose, workspaceId }: OfflineFilesPa
     switch (status) {
       case 'synced':
         return (
-          <Badge variant="outline" className="bg-green-500/10 text-green-500 border-green-500/20">
+          <Badge variant="outline" className="bg-blue-500/10 text-blue-500 border-blue-500/20">
             Synced
           </Badge>
         );
@@ -174,7 +174,7 @@ export function OfflineFilesPanel({ open, onClose, workspaceId }: OfflineFilesPa
           <div className="flex items-center gap-2 mt-2">
             <div className={cn(
               'w-2 h-2 rounded-full',
-              isOnline ? 'bg-green-500' : 'bg-red-500'
+              isOnline ? 'bg-blue-500' : 'bg-red-500'
             )} />
             <span className="text-sm text-muted-foreground">
               {isOnline ? 'Online' : 'Offline'}
@@ -192,7 +192,7 @@ export function OfflineFilesPanel({ open, onClose, workspaceId }: OfflineFilesPa
                   <span>{formatBytes(stats.totalSize)}</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle2 className="h-4 w-4 text-green-500" />
+                  <CheckCircle2 className="h-4 w-4 text-blue-500" />
                   <span>{stats.syncedCount} synced</span>
                 </div>
                 {stats.outdatedCount > 0 && (

@@ -266,15 +266,15 @@ export class AuthController {
   }
 
   @Post('oauth/exchange')
-  @ApiOperation({ summary: 'Exchange OAuth token for Deskive JWT' })
+  @ApiOperation({ summary: 'Exchange OAuth token for OperaGrid JWT' })
   async exchangeOAuthToken(@Body() dto: { authToken: string; userId: string; email: string }) {
     return await this.authService.exchangeOAuthToken(dto.authToken, dto.userId, dto.email);
   }
 
   // NOTE: OAuth callback is handled by database backend
   // GitHub/Google/Apple redirects to: http://localhost:3000/api/v1/tenant-auth/social/{provider}/callback
-  // database backend exchanges code for tokens and redirects to Deskive frontend with tokens
-  // Deskive frontend receives tokens and exchanges them for Deskive JWT
+  // database backend exchanges code for tokens and redirects to OperaGrid frontend with tokens
+  // OperaGrid frontend receives tokens and exchanges them for OperaGrid JWT
 
   @Delete('account')
   @UseGuards(JwtAuthGuard)

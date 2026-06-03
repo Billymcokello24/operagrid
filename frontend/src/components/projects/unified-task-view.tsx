@@ -325,7 +325,7 @@ export function UnifiedTaskView({
       case 'medium':
         return 'text-yellow-700 bg-yellow-100 dark:text-yellow-300 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-900'
       case 'low':
-        return 'text-green-700 bg-green-100 dark:text-green-300 dark:bg-green-950 border border-green-200 dark:border-green-900'
+        return 'text-blue-700 bg-blue-100 dark:text-blue-300 dark:bg-blue-950 border border-blue-200 dark:border-blue-900'
       default:
         return 'text-gray-700 bg-gray-100 dark:text-gray-300 dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
     }

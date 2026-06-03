@@ -1225,9 +1225,9 @@ export function EventDialog({ open, onClose, event, defaultDate, defaultHour }: 
                                 <div className={cn(
                                   "text-muted-foreground",
                                   attachment.type === 'notes' && "text-blue-500",
-                                  attachment.type === 'events' && "text-green-500",
+                                  attachment.type === 'events' && "text-blue-500",
                                   attachment.type === 'files' && "text-orange-500",
-                                  attachment.type === 'drive' && "text-green-600"
+                                  attachment.type === 'drive' && "text-blue-600"
                                 )}>
                                   {getAttachmentIcon(attachment.type)}
                                 </div>
@@ -1831,14 +1831,14 @@ export function EventDialog({ open, onClose, event, defaultDate, defaultHour }: 
 
                     {isDriveConnected && (
                       <div
-                        className="border-2 border-dashed border-green-500/25 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors cursor-pointer bg-green-50/50 dark:bg-green-950/20"
+                        className="border-2 border-dashed border-blue-500/25 rounded-lg p-6 text-center hover:border-blue-500/50 transition-colors cursor-pointer bg-blue-50/50 dark:bg-blue-950/20"
                         onClick={() => setShowDrivePicker(true)}
                       >
-                        <HardDrive className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                        <p className="text-sm text-green-700 dark:text-green-400 font-medium mb-1">
+                        <HardDrive className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                        <p className="text-sm text-blue-700 dark:text-blue-400 font-medium mb-1">
                           Google Drive
                         </p>
-                        <p className="text-xs text-green-600/70 dark:text-green-500/70">
+                        <p className="text-xs text-blue-600/70 dark:text-blue-500/70">
                           Attach from Drive
                         </p>
                       </div>
@@ -1941,9 +1941,9 @@ export function EventDialog({ open, onClose, event, defaultDate, defaultHour }: 
                     <div className="space-y-2 mt-4">
                       <h4 className="text-sm font-medium">Google Drive Files ({descriptionAttachments.filter(att => att.type === 'drive').length})</h4>
                       {descriptionAttachments.filter(att => att.type === 'drive').map((file) => (
-                        <div key={file.id} className="flex items-center justify-between p-3 rounded-lg border bg-green-50/50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+                        <div key={file.id} className="flex items-center justify-between p-3 rounded-lg border bg-blue-50/50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
                           <div className="flex items-center gap-3">
-                            <HardDrive className="h-4 w-4 text-green-600" />
+                            <HardDrive className="h-4 w-4 text-blue-600" />
                             <div>
                               <div className="font-medium text-sm">{file.title}</div>
                               <div className="text-xs text-muted-foreground">

@@ -228,7 +228,7 @@ export function FileCommentsPanel({ fileId, fileName }: FileCommentsPanelProps) 
                   <span className="text-xs text-muted-foreground">(edited)</span>
                 )}
                 {comment.isResolved && (
-                  <span className="flex items-center gap-1 text-xs text-green-600">
+                  <span className="flex items-center gap-1 text-xs text-blue-600">
                     <CheckCircle2 className="h-3 w-3" />
                     Resolved
                   </span>

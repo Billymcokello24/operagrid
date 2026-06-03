@@ -1,5 +1,5 @@
 {
-  "name": "deskive-backend",
+  "name": "operagrid-backend",
   "version": "1.0.0",
   "description": "Comprehensive Workspace Management Platform API",
   "main": "index.js",

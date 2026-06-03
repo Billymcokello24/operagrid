@@ -1,6 +1,6 @@
 /**
  * Video Call Page - Main video calling interface
- * Using LiveKit through deskive backend for professional video conferencing
+ * Using LiveKit through operagrid backend for professional video conferencing
  *
  * Routes:
  * - /workspaces/:workspaceId/video-calls → VideoView (list/dashboard)

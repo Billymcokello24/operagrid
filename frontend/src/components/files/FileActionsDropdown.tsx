@@ -157,7 +157,7 @@ export function FileActionsDropdown({
             {/* Restore button - only show in trash view */}
             {isTrashView && onRestore && (
               <>
-                <DropdownMenuItem onSelect={handleAction(onRestore)} className="text-green-600 font-medium">
+                <DropdownMenuItem onSelect={handleAction(onRestore)} className="text-blue-600 font-medium">
                   <RotateCcw className="mr-2 h-4 w-4" />
                   {intl.formatMessage({ id: 'modules.files.contextMenu.restore' })}
                 </DropdownMenuItem>

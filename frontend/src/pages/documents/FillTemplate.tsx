@@ -16,12 +16,12 @@ import {
 
 const getDocumentTypeColor = (type: DocumentType) => {
   const colors = {
-    [DocumentType.PROPOSAL]: '#10b981',
+    [DocumentType.PROPOSAL]: '#2563eb',
     [DocumentType.CONTRACT]: '#3b82f6',
     [DocumentType.INVOICE]: '#f59e0b',
     [DocumentType.SOW]: '#8b5cf6',
   };
-  return colors[type] || '#10b981';
+  return colors[type] || '#2563eb';
 };
 
 export const FillTemplate: React.FC = () => {
@@ -90,7 +90,7 @@ export const FillTemplate: React.FC = () => {
   if (loadingTemplate) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -132,7 +132,7 @@ export const FillTemplate: React.FC = () => {
           <Button
             onClick={handleCreate}
             disabled={createMutation.isPending}
-            className="bg-emerald-600 hover:bg-emerald-700"
+            className="bg-blue-600 hover:bg-blue-700"
             style={{ backgroundColor: createMutation.isPending ? undefined : color }}
           >
             <CheckCircle className="w-4 h-4 mr-2" />

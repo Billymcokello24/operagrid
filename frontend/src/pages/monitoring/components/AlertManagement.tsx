@@ -167,7 +167,7 @@ const AlertCard: React.FC<{
               </button>
               <button
                 onClick={() => onResolve(alert.id)}
-                className="p-1 text-green-600 hover:bg-green-100 rounded transition-colors"
+                className="p-1 text-blue-600 hover:bg-blue-100 rounded transition-colors"
                 title="Resolve alert"
               >
                 <CheckCircle className="w-4 h-4" />
@@ -177,14 +177,14 @@ const AlertCard: React.FC<{
           {alert.status === 'acknowledged' && (
             <button
               onClick={() => onResolve(alert.id)}
-              className="p-1 text-green-600 hover:bg-green-100 rounded transition-colors"
+              className="p-1 text-blue-600 hover:bg-blue-100 rounded transition-colors"
               title="Resolve alert"
             >
               <CheckCircle className="w-4 h-4" />
             </button>
           )}
           {alert.status === 'resolved' && (
-            <span className="text-green-600 text-xs font-medium">RESOLVED</span>
+            <span className="text-blue-600 text-xs font-medium">RESOLVED</span>
           )}
         </div>
       </div>

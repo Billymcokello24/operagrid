@@ -9,7 +9,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 export interface VideoCall {
   id: string;
   workspace_id: string;
-  deskive_room_id: string;
+  operagrid_room_id: string;
   title: string;
   description?: string;
   host_user_id: string;
@@ -28,10 +28,10 @@ export interface VideoCall {
   updated_at: string;
   // Populated fields
   participants?: CallParticipant[];
-  deskive_room?: deskiveRoom;
+  operagrid_room?: operagridRoom;
 }
 
-export interface deskiveRoom {
+export interface operagridRoom {
   id: string;
   name: string;
   status: 'active' | 'inactive' | 'ended' | 'expired';
@@ -45,7 +45,7 @@ export interface CallParticipant {
   id: string;
   video_call_id?: string;  // Optional - set by backend
   user_id: string;
-  deskive_participant_id?: string;
+  operagrid_participant_id?: string;
   display_name?: string;
   role: 'host' | 'participant';
   joined_at?: string;
@@ -159,7 +159,7 @@ export interface InviteParticipantsRequest {
 export interface CallRecording {
   id: string;
   video_call_id: string;
-  deskive_recording_id: string;
+  operagrid_recording_id: string;
   recording_url?: string;
   transcript_url?: string;
   duration_seconds: number;

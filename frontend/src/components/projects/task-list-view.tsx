@@ -186,7 +186,7 @@ export function TaskListView({ tasks, onTaskClick }: TaskListViewProps) {
       case TaskType.BUG: return 'bg-red-200/50 text-red-900'
       case TaskType.STORY: return 'bg-blue-200/50 text-blue-900'
       case TaskType.EPIC: return 'bg-purple-200/50 text-purple-900'
-      case TaskType.TASK: return 'bg-green-200/50 text-green-900'
+      case TaskType.TASK: return 'bg-blue-200/50 text-blue-900'
       case TaskType.SUBTASK: return 'bg-neutral-200/50 text-neutral-900'
       case TaskType.FEATURE_REQUEST: return 'bg-orange-200/50 text-orange-900'
       default: return 'bg-neutral-200/50 text-neutral-900'
@@ -197,7 +197,7 @@ export function TaskListView({ tasks, onTaskClick }: TaskListViewProps) {
     switch (priority) {
       case 'high': return <ArrowUp className="w-4 h-4 text-red-500" />
       case 'medium': return <Minus className="w-4 h-4 text-yellow-500" />
-      case 'low': return <ArrowDown className="w-4 h-4 text-green-500" />
+      case 'low': return <ArrowDown className="w-4 h-4 text-blue-500" />
       default: return null
     }
   }
@@ -207,7 +207,7 @@ export function TaskListView({ tasks, onTaskClick }: TaskListViewProps) {
       case 'todo': return 'bg-blue-200/50 text-blue-900'
       case 'in_progress': return 'bg-yellow-200/50 text-yellow-900'
       case 'review': return 'bg-purple-200/50 text-purple-900'
-      case 'completed': return 'bg-green-200/50 text-green-900'
+      case 'completed': return 'bg-blue-200/50 text-blue-900'
       default: return 'bg-neutral-200/50 text-neutral-900'
     }
   }

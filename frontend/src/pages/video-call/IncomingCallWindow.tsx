@@ -13,7 +13,7 @@ import { getRingtone } from '@/utils/ringtone';
 import { io, Socket } from 'socket.io-client';
 
 // BroadcastChannel for cross-tab communication (same as in useVideoCallSocket)
-const CALL_BROADCAST_CHANNEL = 'deskive-video-call-sync';
+const CALL_BROADCAST_CHANNEL = 'operagrid-video-call-sync';
 
 export function IncomingCallWindow() {
   const [searchParams] = useSearchParams();
@@ -163,7 +163,7 @@ export function IncomingCallWindow() {
   useEffect(() => {
     if ('Notification' in window && Notification.permission === 'granted') {
       new Notification(`Incoming ${callType} call from ${callerName}`, {
-        icon: callerAvatar || 'https://cdn.deskive.com/deskive/logo.png',
+        icon: callerAvatar || '/logo.png',
         body: isGroupCall ? 'Group call' : 'Direct call',
         tag: callId || 'incoming-call',
       });
@@ -258,14 +258,14 @@ export function IncomingCallWindow() {
   }
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600">
+    <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-600 to-cyan-600">
       <div className="w-full max-w-sm mx-auto p-8 bg-white rounded-2xl shadow-2xl">
         {/* Caller Avatar */}
         <div className="flex flex-col items-center mb-6">
           <div className="relative mb-4">
             <Avatar className="h-32 w-32 border-4 border-white shadow-lg">
               <AvatarImage src={callerAvatar} alt={callerName} />
-              <AvatarFallback className="bg-gradient-to-br from-emerald-500 to-teal-500 text-white text-4xl">
+              <AvatarFallback className="bg-gradient-to-br from-blue-500 to-blue-500 text-white text-4xl">
                 {callerName.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -273,9 +273,9 @@ export function IncomingCallWindow() {
             {/* Call type indicator */}
             <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-lg">
               {callType === 'video' ? (
-                <Video className="h-6 w-6 text-teal-600" />
+                <Video className="h-6 w-6 text-blue-600" />
               ) : (
-                <Phone className="h-6 w-6 text-emerald-600" />
+                <Phone className="h-6 w-6 text-blue-600" />
               )}
             </div>
           </div>
@@ -333,7 +333,7 @@ export function IncomingCallWindow() {
 
           <Button
             onClick={handleAccept}
-            className="flex-1 rounded-full h-14 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
+            className="flex-1 rounded-full h-14 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-800"
             size="lg"
           >
             <Phone className="h-5 w-5 mr-2" />

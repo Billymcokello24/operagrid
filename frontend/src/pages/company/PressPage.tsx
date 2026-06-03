@@ -51,7 +51,7 @@ interface MediaAsset {
 const pressReleases: PressRelease[] = [
   {
     id: 'series-b-funding',
-    title: 'Deskive Raises $25M Series B to Accelerate AI-Powered Collaboration Features',
+    title: 'OperaGrid Raises $25M Series B to Accelerate AI-Powered Collaboration Features',
     date: 'March 15, 2024',
     category: 'Funding',
     summary: 'Leading collaboration platform secures funding from Sequoia Capital and Andreessen Horowitz to enhance AI capabilities and expand global reach.',
@@ -60,7 +60,7 @@ const pressReleases: PressRelease[] = [
   },
   {
     id: 'enterprise-milestone',
-    title: 'Deskive Reaches 10,000 Enterprise Customers Worldwide',
+    title: 'OperaGrid Reaches 10,000 Enterprise Customers Worldwide',
     date: 'February 28, 2024',
     category: 'Milestone',
     summary: 'Company celebrates major customer milestone while announcing new enterprise features including advanced security and compliance tools.',
@@ -69,7 +69,7 @@ const pressReleases: PressRelease[] = [
   },
   {
     id: 'ai-assistant-launch',
-    title: 'Introducing Deskive AI: Revolutionary Assistant for Team Productivity',
+    title: 'Introducing OperaGrid AI: Revolutionary Assistant for Team Productivity',
     date: 'January 22, 2024',
     category: 'Product Launch',
     summary: 'New AI-powered assistant helps teams automate routine tasks, generate insights, and streamline workflows with natural language commands.',
@@ -78,7 +78,7 @@ const pressReleases: PressRelease[] = [
   },
   {
     id: 'security-certification',
-    title: 'Deskive Achieves SOC 2 Type II and ISO 27001 Certifications',
+    title: 'OperaGrid Achieves SOC 2 Type II and ISO 27001 Certifications',
     date: 'December 18, 2023',
     category: 'Security',
     summary: 'Platform demonstrates commitment to enterprise security with industry-leading certifications and enhanced data protection measures.',
@@ -163,7 +163,7 @@ export default function PressPage() {
     <PublicLayout>
       <PageSEO
         title="Press & Media - Latest News and Resources"
-        description="Access Deskive's press releases, media kit, brand assets, and company news. Download logos, screenshots, and high-resolution images for media coverage."
+        description="Access OperaGrid's press releases, media kit, brand assets, and company news. Download logos, screenshots, and high-resolution images for media coverage."
         keywords={['press', 'media', 'news', 'media kit', 'brand assets', 'press releases']}
       />
       <div className="relative overflow-hidden">
@@ -180,7 +180,7 @@ export default function PressPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6"
               >
                 <FileText className="h-4 w-4 text-cyan-400" />
                 <span className="text-cyan-300 font-medium">Press Center</span>
@@ -191,7 +191,7 @@ export default function PressPage() {
                 <span 
                   className="block"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -201,14 +201,14 @@ export default function PressPage() {
                 </span>
               </h1>
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-                Stay updated with the latest Deskive news, announcements, and access our comprehensive media kit 
+                Stay updated with the latest OperaGrid news, announcements, and access our comprehensive media kit 
                 for journalists and partners.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                   onClick={() => document.getElementById('press-releases')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Latest News
@@ -243,7 +243,7 @@ export default function PressPage() {
                 <div 
                   className="text-3xl font-bold mb-2"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -259,7 +259,7 @@ export default function PressPage() {
                 <div 
                   className="text-3xl font-bold mb-2"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -275,7 +275,7 @@ export default function PressPage() {
                 <div 
                   className="text-3xl font-bold mb-2"
                   style={{
-                    background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+                    background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -303,7 +303,7 @@ export default function PressPage() {
                 Press Releases
               </h2>
               <p className="text-xl text-white/70 max-w-2xl mx-auto">
-                Latest announcements and company news from Deskive
+                Latest announcements and company news from OperaGrid
               </p>
             </motion.div>
 
@@ -321,7 +321,7 @@ export default function PressPage() {
                       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-500/20 to-teal-500/20 text-cyan-300 border border-cyan-500/30">
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 border border-cyan-500/30">
                               {release.category}
                             </span>
                             <div className="flex items-center gap-4 text-sm text-white/60">
@@ -347,7 +347,7 @@ export default function PressPage() {
                             <div className="flex items-center gap-2">
                               <Button 
                                 size="sm"
-                                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                               >
                                 Read More
                                 <ExternalLink className="ml-2 h-3 w-3" />
@@ -459,7 +459,7 @@ export default function PressPage() {
                       <p className="text-white/70 mb-4 text-sm">{asset.description}</p>
                       
                       <Button 
-                        className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                        className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                       >
                         <Download className="mr-2 h-4 w-4" />
                         Download
@@ -483,7 +483,7 @@ export default function PressPage() {
                   <p className="text-white/70 mb-4">Download everything in one package</p>
                   <Button 
                     size="lg"
-                    className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                   >
                     <Download className="mr-2 h-4 w-4" />
                     Download Full Kit (45 MB)
@@ -508,7 +508,7 @@ export default function PressPage() {
                 Brand Guidelines
               </h2>
               <p className="text-xl text-white/70 max-w-2xl mx-auto">
-                Guidelines for using Deskive brand assets correctly and consistently
+                Guidelines for using OperaGrid brand assets correctly and consistently
               </p>
             </motion.div>
 
@@ -541,7 +541,7 @@ export default function PressPage() {
                       </div>
                     </div>
                     <Button 
-                      className="mt-6 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
+                      className="mt-6 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                     >
                       View Full Guidelines
                       <ExternalLink className="ml-2 h-4 w-4" />
@@ -562,7 +562,7 @@ export default function PressPage() {
                     <h4 className="text-lg font-semibold text-white mb-3">Primary Colors</h4>
                     <div className="flex items-center gap-4">
                       <div className="text-center">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-2"></div>
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mb-2"></div>
                         <p className="text-xs text-white/70">#06B6D4</p>
                       </div>
                       <div className="text-center">
@@ -612,7 +612,7 @@ export default function PressPage() {
                 <div className="text-center">
                   <Mail className="h-8 w-8 text-cyan-400 mx-auto mb-3" />
                   <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-white/70">press@deskive.com</p>
+                  <p className="text-white/70">press@operagrid.com</p>
                 </div>
                 <div className="text-center">
                   <Phone className="h-8 w-8 text-cyan-400 mx-auto mb-3" />
@@ -628,8 +628,8 @@ export default function PressPage() {
               
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white border-0"
-                onClick={() => window.open('mailto:press@deskive.com?subject=Press Inquiry', '_blank')}
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
+                onClick={() => window.open('mailto:press@operagrid.com?subject=Press Inquiry', '_blank')}
               >
                 Contact Press Team
                 <ArrowRight className="ml-2 h-4 w-4" />

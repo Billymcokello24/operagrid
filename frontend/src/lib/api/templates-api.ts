@@ -543,7 +543,7 @@ export function getCategoryColor(category: TemplateCategory): string {
     research: '#06B6D4',
     personal: '#22C55E',
     sales: '#10B981',
-    finance: '#059669',
+    finance: '#2563eb',
     it_support: '#2563EB',
     education: '#EAB308',
     freelance: '#A855F7',

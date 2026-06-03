@@ -25,11 +25,11 @@ export class SlackProjectsController {
   constructor(private readonly slackProjectsService: SlackProjectsService) {}
 
   /**
-   * Slash command handler - /deskive project
+   * Slash command handler - /operagrid project
    * URL: /api/v1/slack/projects/command
    */
   @Post('command')
-  @ApiOperation({ summary: 'Handle /deskive project slash command' })
+  @ApiOperation({ summary: 'Handle /operagrid project slash command' })
   async handleCommand(
     @Body() payload: any,
     @Headers('x-slack-signature') signature: string,

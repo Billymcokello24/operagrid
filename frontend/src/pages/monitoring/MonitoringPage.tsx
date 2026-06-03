@@ -260,7 +260,7 @@ const MonitoringPage: React.FC = () => {
     unit?: string;
   }> = ({ title, value, icon, status = 'good', trend, unit }) => {
     const statusColors = {
-      good: 'text-green-600 bg-green-100',
+      good: 'text-blue-600 bg-blue-100',
       warning: 'text-yellow-600 bg-yellow-100',
       critical: 'text-red-600 bg-red-100'
     };
@@ -280,7 +280,7 @@ const MonitoringPage: React.FC = () => {
               </p>
               {trend && (
                 <div className={`ml-2 flex items-center text-sm ${
-                  trend.isPositive ? 'text-green-600' : 'text-red-600'
+                  trend.isPositive ? 'text-blue-600' : 'text-red-600'
                 }`}>
                   {trend.isPositive ? (
                     <TrendingUp className="w-4 h-4 mr-1" />
@@ -444,8 +444,8 @@ const MonitoringPage: React.FC = () => {
           <h3 className="text-lg font-semibold mb-4">System Status</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <CheckCircle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                <CheckCircle className="w-6 h-6 text-blue-600" />
               </div>
               <p className="font-medium">All Systems Operational</p>
               <p className="text-sm text-gray-600">Uptime: {Math.floor(systemHealth.uptime / 3600)}h</p>
@@ -621,9 +621,9 @@ const MonitoringPage: React.FC = () => {
                 <div className="text-2xl font-bold text-blue-600">{userActivity.activeUsers}</div>
                 <div className="text-sm text-blue-600">Active Users</div>
               </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">{userActivity.totalSessions}</div>
-                <div className="text-sm text-green-600">Total Sessions</div>
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600">{userActivity.totalSessions}</div>
+                <div className="text-sm text-blue-600">Total Sessions</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <div className="text-2xl font-bold text-purple-600">{userActivity.averageSessionDuration.toFixed(1)}min</div>
@@ -649,9 +649,9 @@ const MonitoringPage: React.FC = () => {
                 <div className="text-2xl font-bold text-yellow-600">{securityMetrics.authentication.failedLogins}</div>
                 <div className="text-sm text-yellow-600">Failed Logins</div>
               </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">{securityMetrics.vulnerabilities.length}</div>
-                <div className="text-sm text-green-600">Vulnerabilities</div>
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600">{securityMetrics.vulnerabilities.length}</div>
+                <div className="text-sm text-blue-600">Vulnerabilities</div>
               </div>
             </div>
           </div>
@@ -726,7 +726,7 @@ const MonitoringPage: React.FC = () => {
             onClick={toggleRealTimeMonitoring}
             className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
               isRealTimeEnabled
-                ? 'bg-green-600 text-white hover:bg-green-700'
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >

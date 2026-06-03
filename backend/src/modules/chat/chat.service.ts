@@ -1232,7 +1232,7 @@ export class ChatService {
             user = {
               id: botResult.id,
               name: botResult.display_name || botResult.name || 'Bot',
-              email: `${botResult.name}@bot.deskive.ai`,
+              email: `${botResult.name}@bot.operagrid.ai`,
               avatarUrl: botResult.avatar_url || null,
               status: 'online', // Bots are always "online"
               isBot: true,

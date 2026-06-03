@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://deskive.com">
-    <img src="frontend/public/logo.png" alt="Deskive" width="80">
+  <a href="https://operagrid.com">
+    <img src="frontend/public/logo.png" alt="OperaGrid" width="80">
   </a>
 </p>
 
 <p align="center">
-  <h1 align="center">Deskive</h1>
+  <h1 align="center">OperaGrid</h1>
   <p align="center">
     <strong>Plataforma de colaboración en espacios de trabajo de código abierto</strong>
   </p>
@@ -15,16 +15,16 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/deskive/deskive/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GNU%20AGPL%203.0-blue.svg" alt="License"></a>
-  <a href="https://github.com/deskive/deskive/stargazers"><img src="https://img.shields.io/github/stars/deskive/deskive?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/deskive/deskive/issues"><img src="https://img.shields.io/github/issues/deskive/deskive" alt="Issues"></a>
-  <a href="https://github.com/deskive/deskive/pulls"><img src="https://img.shields.io/github/issues-pr/deskive/deskive" alt="Pull Requests"></a>
+  <a href="https://github.com/Billymcokello24/operagrid/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GNU%20AGPL%203.0-blue.svg" alt="License"></a>
+  <a href="https://github.com/Billymcokello24/operagrid/stargazers"><img src="https://img.shields.io/github/stars/operagrid/operagrid?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/Billymcokello24/operagrid/issues"><img src="https://img.shields.io/github/issues/operagrid/operagrid" alt="Issues"></a>
+  <a href="https://github.com/Billymcokello24/operagrid/pulls"><img src="https://img.shields.io/github/issues-pr/operagrid/operagrid" alt="Pull Requests"></a>
 </p>
 
 <p align="center">
-  <a href="https://deskive.com">Sitio Web</a> |
+  <a href="https://operagrid.com">Sitio Web</a> |
   <a href="#inicio-rápido">Inicio Rápido</a> |
-  <a href="https://github.com/deskive/deskive/discussions">Discusiones</a> |
+  <a href="https://github.com/Billymcokello24/operagrid/discussions">Discusiones</a> |
   <a href="CONTRIBUTING.md">Contribuir</a>
 </p>
 
@@ -44,16 +44,16 @@
 
 ---
 
-## ¿Qué es Deskive?
+## ¿Qué es OperaGrid?
 
-Deskive es una **plataforma de colaboración en espacios de trabajo auto-alojable** que reúne comunicación en tiempo real, gestión de proyectos y herramientas de productividad. Diseñada para equipos que desean tener control completo sobre sus datos, Deskive te brinda la funcionalidad de Slack + Notion + Zoom + Asana en una única aplicación de código abierto.
+OperaGrid es una **plataforma de colaboración en espacios de trabajo auto-alojable** que reúne comunicación en tiempo real, gestión de proyectos y herramientas de productividad. Diseñada para equipos que desean tener control completo sobre sus datos, OperaGrid te brinda la funcionalidad de Slack + Notion + Zoom + Asana en una única aplicación de código abierto.
 
-A diferencia de Slack que requiere planes de pago para videollamadas o Notion que carece de chat en tiempo real, Deskive te proporciona todo lo que necesitas para colaborar efectivamente -- chat, videollamadas, tableros de proyectos, compartir archivos, asistencia de IA -- sin dependencia de proveedores ni licencias propietarias.
+A diferencia de Slack que requiere planes de pago para videollamadas o Notion que carece de chat en tiempo real, OperaGrid te proporciona todo lo que necesitas para colaborar efectivamente -- chat, videollamadas, tableros de proyectos, compartir archivos, asistencia de IA -- sin dependencia de proveedores ni licencias propietarias.
 
 <p align="center">
-  <img src="frontend/public/dashboard.png" alt="Panel de Deskive" width="800">
+  <img src="frontend/public/dashboard.png" alt="Panel de OperaGrid" width="800">
   <br>
-  <em>Panel de espacio de trabajo de Deskive con comunicación integrada y gestión de proyectos</em>
+  <em>Panel de espacio de trabajo de OperaGrid con comunicación integrada y gestión de proyectos</em>
 </p>
 
 ### Cómo Funciona
@@ -125,7 +125,7 @@ Los equipos modernos manejan múltiples suscripciones: Slack para chat ($8.75/us
 - ❌ **Complejidad de Integración** -- Cada herramienta requiere integraciones API separadas y autenticación
 - ❌ **Brechas de Características** -- Ninguna plataforma única ofrece características de colaboración completas
 
-### Solución de Deskive
+### Solución de OperaGrid
 
 ✅ **Plataforma Todo en Uno** -- Chat, video, proyectos, archivos, calendario, notas e IA en una aplicación
 
@@ -137,9 +137,9 @@ Los equipos modernos manejan múltiples suscripciones: Slack para chat ($8.75/us
 
 ✅ **Listo para Empresas** -- Firmas digitales, flujos de aprobación, registros de auditoría y soporte SSO
 
-## ¿Por Qué Deskive? (Comparación)
+## ¿Por Qué OperaGrid? (Comparación)
 
-| Característica | Deskive | Slack | Notion | Asana | Microsoft Teams |
+| Característica | OperaGrid | Slack | Notion | Asana | Microsoft Teams |
 |---------|---------|-------|--------|-------|-----------------|
 | **Chat en Tiempo Real** | ✅ Canales, hilos, reacciones | ✅ | ⚠️ Solo comentarios | ⚠️ Solo comentarios | ✅ |
 | **Videollamadas** | ✅ HD, grabación, transcripción | ⚠️ Huddles (básico) | ❌ | ❌ | ✅ |
@@ -160,7 +160,7 @@ Los equipos modernos manejan múltiples suscripciones: Slack para chat ($8.75/us
 | **Curva de Aprendizaje** | 🟢 Baja | 🟢 Baja | 🟡 Media | 🟡 Media | 🔴 Alta |
 | **Precio** | 🟢 Gratis (auto-alojado) | 💰 $8.75/usuario/mes | 💰 $10/usuario/mes | 💰 $10.99/usuario/mes | 💰 $4/usuario/mes |
 
-### ¿Qué Hace Único a Deskive?
+### ¿Qué Hace Único a OperaGrid?
 
 1. **Plataforma Verdaderamente Unificada** -- Todas las características comparten el mismo modelo de datos, permitiendo una integración profunda imposible con herramientas separadas
 2. **Auto-Alojamiento sin Compromisos** -- Paridad completa de características con alternativas SaaS, incluyendo videollamadas e IA
@@ -170,41 +170,41 @@ Los equipos modernos manejan múltiples suscripciones: Slack para chat ($8.75/us
 
 ## 📊 Actividad del Proyecto y Estadísticas
 
-Deskive es un proyecto **activamente mantenido** con una comunidad en crecimiento. Esto es lo que está sucediendo:
+OperaGrid es un proyecto **activamente mantenido** con una comunidad en crecimiento. Esto es lo que está sucediendo:
 
 ### Actividad en GitHub
 
 <p align="left">
-  <img src="https://img.shields.io/github/stars/deskive/deskive?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/forks/deskive/deskive?style=for-the-badge&logo=github&color=blue" alt="Forks">
-  <img src="https://img.shields.io/github/contributors/deskive/deskive?style=for-the-badge&logo=github&color=green" alt="Contributors">
-  <img src="https://img.shields.io/github/last-commit/deskive/deskive?style=for-the-badge&logo=github&color=orange" alt="Last Commit">
+  <img src="https://img.shields.io/github/stars/operagrid/operagrid?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/forks/operagrid/operagrid?style=for-the-badge&logo=github&color=blue" alt="Forks">
+  <img src="https://img.shields.io/github/contributors/operagrid/operagrid?style=for-the-badge&logo=github&color=green" alt="Contributors">
+  <img src="https://img.shields.io/github/last-commit/operagrid/operagrid?style=for-the-badge&logo=github&color=orange" alt="Last Commit">
 </p>
 
 <p align="left">
-  <img src="https://img.shields.io/github/issues/deskive/deskive?style=for-the-badge&logo=github&color=red" alt="Open Issues">
-  <img src="https://img.shields.io/github/issues-pr/deskive/deskive?style=for-the-badge&logo=github&color=purple" alt="Open PRs">
-  <img src="https://img.shields.io/github/issues-closed/deskive/deskive?style=for-the-badge&logo=github&color=green" alt="Closed Issues">
-  <img src="https://img.shields.io/github/issues-pr-closed/deskive/deskive?style=for-the-badge&logo=github&color=blue" alt="Closed PRs">
+  <img src="https://img.shields.io/github/issues/operagrid/operagrid?style=for-the-badge&logo=github&color=red" alt="Open Issues">
+  <img src="https://img.shields.io/github/issues-pr/operagrid/operagrid?style=for-the-badge&logo=github&color=purple" alt="Open PRs">
+  <img src="https://img.shields.io/github/issues-closed/operagrid/operagrid?style=for-the-badge&logo=github&color=green" alt="Closed Issues">
+  <img src="https://img.shields.io/github/issues-pr-closed/operagrid/operagrid?style=for-the-badge&logo=github&color=blue" alt="Closed PRs">
 </p>
 
 ### Métricas de la Comunidad
 
 | Métrica | Estado | Detalles |
 |--------|--------|---------|
-| **Contribuidores Totales** | ![Contributors](https://img.shields.io/github/contributors/deskive/deskive?style=flat-square) | Comunidad creciente de desarrolladores en todo el mundo |
-| **Commits Totales** | ![Commits](https://img.shields.io/github/commit-activity/t/deskive/deskive?style=flat-square) | Desarrollo activo desde su inicio |
-| **Commits Mensuales** | ![Commit Activity](https://img.shields.io/github/commit-activity/m/deskive/deskive?style=flat-square) | Actualizaciones y mejoras regulares |
+| **Contribuidores Totales** | ![Contributors](https://img.shields.io/github/contributors/operagrid/operagrid?style=flat-square) | Comunidad creciente de desarrolladores en todo el mundo |
+| **Commits Totales** | ![Commits](https://img.shields.io/github/commit-activity/t/operagrid/operagrid?style=flat-square) | Desarrollo activo desde su inicio |
+| **Commits Mensuales** | ![Commit Activity](https://img.shields.io/github/commit-activity/m/operagrid/operagrid?style=flat-square) | Actualizaciones y mejoras regulares |
 | **Calidad del Código** | ![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen?style=flat-square) | TypeScript, ESLint, Prettier aplicados |
 | **Documentación** | ![Docs](https://img.shields.io/badge/docs-comprehensive-blue?style=flat-square) | Guías detalladas y documentación de API |
 
 ### Estadísticas de Lenguaje y Código
 
 <p align="left">
-  <img src="https://img.shields.io/github/languages/top/deskive/deskive?style=for-the-badge&logo=typescript&color=blue" alt="Top Language">
-  <img src="https://img.shields.io/github/languages/count/deskive/deskive?style=for-the-badge&color=purple" alt="Language Count">
-  <img src="https://img.shields.io/github/repo-size/deskive/deskive?style=for-the-badge&color=orange" alt="Repo Size">
-  <img src="https://img.shields.io/github/license/deskive/deskive?style=for-the-badge&color=green" alt="License">
+  <img src="https://img.shields.io/github/languages/top/operagrid/operagrid?style=for-the-badge&logo=typescript&color=blue" alt="Top Language">
+  <img src="https://img.shields.io/github/languages/count/operagrid/operagrid?style=for-the-badge&color=purple" alt="Language Count">
+  <img src="https://img.shields.io/github/repo-size/operagrid/operagrid?style=for-the-badge&color=orange" alt="Repo Size">
+  <img src="https://img.shields.io/github/license/operagrid/operagrid?style=for-the-badge&color=green" alt="License">
 </p>
 
 ### Aspectos Destacados de Actividad Reciente
@@ -241,8 +241,8 @@ Deskive es un proyecto **activamente mantenido** con una comunidad en crecimient
 Ejecuta estos comandos desde la raíz del proyecto:
 
 ```bash
-git clone https://github.com/deskive/deskive.git
-cd deskive
+git clone https://github.com/Billymcokello24/operagrid.git
+cd operagrid
 cp .env.docker .env
 # Edita .env con tu configuración (credenciales de base de datos, claves API, etc.)
 docker compose up -d
@@ -256,8 +256,8 @@ docker compose up -d
 
 ```bash
 # Clonar
-git clone https://github.com/deskive/deskive.git
-cd deskive
+git clone https://github.com/Billymcokello24/operagrid.git
+cd operagrid
 
 # Backend
 cd backend
@@ -318,7 +318,7 @@ Para entornos de desarrollo:
 
 ## Módulos de Características
 
-Deskive viene con más de 40 módulos integrados en estas categorías:
+OperaGrid viene con más de 40 módulos integrados en estas categorías:
 
 | Categoría | Módulos |
 |----------|---------|
@@ -329,19 +329,19 @@ Deskive viene con más de 40 módulos integrados en estas categorías:
 | **IA y Automatización** | AutoPilot (agente autónomo de toda la aplicación), Sugerencias Inteligentes (recomendaciones de tareas por IA), Inteligencia de Reuniones, Análisis de Documentos, Bots (disparadores, acciones, programación) |
 | **Plataforma** | Auth (OAuth, SSO), Gestión de Espacios, Roles y Permisos, Búsqueda (semántica), Análisis, 180+ Conectores (Slack, GitHub, Google, Dropbox y más) |
 
-[Ver documentación detallada de características &rarr;](https://github.com/deskive/deskive/wiki)
+[Ver documentación detallada de características &rarr;](https://github.com/Billymcokello24/operagrid/wiki)
 
 ## Proveedores Intercambiables
 
-Cada servicio subyacente puede intercambiarse mediante una única variable de entorno. Los valores por defecto mantienen Deskive ejecutable sin credenciales de nube; cambia a un proveedor gestionado cuando estés listo.
+Cada servicio subyacente puede intercambiarse mediante una única variable de entorno. Los valores por defecto mantienen OperaGrid ejecutable sin credenciales de nube; cambia a un proveedor gestionado cuando estés listo.
 
 | Dominio | Variable de entorno | Proveedores incluidos |
 |---|---|---|
-| **Almacenamiento** (PR [#28](https://github.com/deskive/deskive/pull/28)) | `STORAGE_PROVIDER` | `local-fs` (por defecto), `s3`, `r2`, `minio`, `b2`, `gcs`, `azure`, `none` |
-| **Email** (PR [#30](https://github.com/deskive/deskive/pull/30)) | `EMAIL_PROVIDER` | `smtp`, `resend`, `sendgrid`, `postmark`, `ses`, `mailgun`, `none` |
-| **Push** (PR [#31](https://github.com/deskive/deskive/pull/31)) | `PUSH_PROVIDER` | `webpush`, `fcm`, `onesignal`, `expo`, `none` |
-| **Búsqueda** (PR [#32](https://github.com/deskive/deskive/pull/32)) | `SEARCH_PROVIDER` | `pg-trgm` (por defecto, sin infraestructura adicional), `meilisearch`, `typesense`, `none` |
-| **Auth / SSO** (PR [#33](https://github.com/deskive/deskive/pull/33)) | `AUTH_PROVIDERS` | `local`, `google`, `github`, `magic-link` (sin contraseña, basado en JWT) |
+| **Almacenamiento** (PR [#28](https://github.com/Billymcokello24/operagrid/pull/28)) | `STORAGE_PROVIDER` | `local-fs` (por defecto), `s3`, `r2`, `minio`, `b2`, `gcs`, `azure`, `none` |
+| **Email** (PR [#30](https://github.com/Billymcokello24/operagrid/pull/30)) | `EMAIL_PROVIDER` | `smtp`, `resend`, `sendgrid`, `postmark`, `ses`, `mailgun`, `none` |
+| **Push** (PR [#31](https://github.com/Billymcokello24/operagrid/pull/31)) | `PUSH_PROVIDER` | `webpush`, `fcm`, `onesignal`, `expo`, `none` |
+| **Búsqueda** (PR [#32](https://github.com/Billymcokello24/operagrid/pull/32)) | `SEARCH_PROVIDER` | `pg-trgm` (por defecto, sin infraestructura adicional), `meilisearch`, `typesense`, `none` |
+| **Auth / SSO** (PR [#33](https://github.com/Billymcokello24/operagrid/pull/33)) | `AUTH_PROVIDERS` | `local`, `google`, `github`, `magic-link` (sin contraseña, basado en JWT) |
 | **Vídeo** | `VIDEO_PROVIDER` | `livekit`, `jitsi`, `daily`, `agora`, `whereby`, `none` |
 | **IA** | `AI_PROVIDER` | `openai`, `anthropic`, `gemini`, `groq`, `ollama` (local) |
 
@@ -352,15 +352,15 @@ Cada servicio subyacente puede intercambiarse mediante una única variable de en
 
 ## i18n
 
-Deskive soporta múltiples idiomas vía react-i18next:
+OperaGrid soporta múltiples idiomas vía react-i18next:
 
 - Inglés (en), Japonés (ja)
 
 ¿Quieres agregar un nuevo idioma? Contribuye traducciones en `frontend/src/i18n/locales/`. Consulta la [guía de traducción](CONTRIBUTING.md).
 
-## 🚀 ¿Por Qué Contribuir a Deskive?
+## 🚀 ¿Por Qué Contribuir a OperaGrid?
 
-Deskive es más que solo otro proyecto de código abierto -- es una oportunidad para construir el futuro de la colaboración en equipo mientras dominas prácticas de desarrollo modernas.
+OperaGrid es más que solo otro proyecto de código abierto -- es una oportunidad para construir el futuro de la colaboración en equipo mientras dominas prácticas de desarrollo modernas.
 
 ### Lo Que Ganarás
 
@@ -403,8 +403,8 @@ Comienza a contribuir en **menos de 10 minutos**:
 
 ```bash
 # Haz fork del repositorio en GitHub, luego clona tu fork
-git clone https://github.com/TU_USUARIO/deskive.git
-cd deskive
+git clone https://github.com/TU_USUARIO/operagrid.git
+cd operagrid
 
 # Inicia con Docker (forma más fácil)
 cp .env.docker .env
@@ -415,29 +415,29 @@ docker compose up -d
 # API Backend: http://localhost:3000
 ```
 
-**¡Eso es todo!** Estás ejecutando Deskive localmente.
+**¡Eso es todo!** Estás ejecutando OperaGrid localmente.
 
 ### Paso 2: Encuentra Algo en Qué Trabajar
 
 Elige según tu nivel de experiencia:
 
 **🟢 Apto para Principiantes**
-- 📝 [Corrige errores tipográficos o mejora la documentación](https://github.com/deskive/deskive/labels/documentation)
-- 🌍 [Agrega traducciones](https://github.com/deskive/deskive/labels/i18n) -- Soportamos inglés y japonés
-- 🐛 [Corrige errores simples](https://github.com/deskive/deskive/labels/good%20first%20issue)
-- ✨ [Mejora UI/UX](https://github.com/deskive/deskive/labels/ui%2Fux)
+- 📝 [Corrige errores tipográficos o mejora la documentación](https://github.com/Billymcokello24/operagrid/labels/documentation)
+- 🌍 [Agrega traducciones](https://github.com/Billymcokello24/operagrid/labels/i18n) -- Soportamos inglés y japonés
+- 🐛 [Corrige errores simples](https://github.com/Billymcokello24/operagrid/labels/good%20first%20issue)
+- ✨ [Mejora UI/UX](https://github.com/Billymcokello24/operagrid/labels/ui%2Fux)
 
 **🟡 Intermedio**
 - 🔗 Agrega nuevas integraciones -- Consulta nuestra [Guía de Integración](backend/README.md#integrations)
-- 🧪 [Escribe pruebas](https://github.com/deskive/deskive/labels/tests)
-- 🚀 [Mejoras de rendimiento](https://github.com/deskive/deskive/labels/performance)
-- 📱 [Capacidad de respuesta móvil](https://github.com/deskive/deskive/labels/mobile)
+- 🧪 [Escribe pruebas](https://github.com/Billymcokello24/operagrid/labels/tests)
+- 🚀 [Mejoras de rendimiento](https://github.com/Billymcokello24/operagrid/labels/performance)
+- 📱 [Capacidad de respuesta móvil](https://github.com/Billymcokello24/operagrid/labels/mobile)
 
 **🔴 Avanzado**
-- 🤖 [Características de IA](https://github.com/deskive/deskive/labels/ai) -- Mejoras de AutoPilot, nuevas capacidades de IA
-- ⚙️ [Mejoras del motor central](https://github.com/deskive/deskive/labels/core)
-- 🏗️ [Mejoras de arquitectura](https://github.com/deskive/deskive/labels/architecture)
-- 🔐 [Características de seguridad](https://github.com/deskive/deskive/labels/security)
+- 🤖 [Características de IA](https://github.com/Billymcokello24/operagrid/labels/ai) -- Mejoras de AutoPilot, nuevas capacidades de IA
+- ⚙️ [Mejoras del motor central](https://github.com/Billymcokello24/operagrid/labels/core)
+- 🏗️ [Mejoras de arquitectura](https://github.com/Billymcokello24/operagrid/labels/architecture)
+- 🔐 [Características de seguridad](https://github.com/Billymcokello24/operagrid/labels/security)
 
 ### Paso 3: Realiza Tus Cambios
 
@@ -481,7 +481,7 @@ git push origin feature/nombre-de-tu-caracteristica
 
 📖 **Lee el código** -- Navega por los módulos existentes en `backend/src/modules` como referencia
 
-❓ **Haz preguntas** -- Abre una [Discusión en GitHub](https://github.com/deskive/deskive/discussions) si estás atascado
+❓ **Haz preguntas** -- Abre una [Discusión en GitHub](https://github.com/Billymcokello24/operagrid/discussions) si estás atascado
 
 🧪 **Escribe pruebas** -- Los PRs con pruebas se fusionan más rápido
 
@@ -489,16 +489,16 @@ git push origin feature/nombre-de-tu-caracteristica
 
 ### ¿Necesitas Ayuda?
 
-- 💡 [Discusiones en GitHub](https://github.com/deskive/deskive/discussions) -- Haz preguntas, comparte ideas
+- 💡 [Discusiones en GitHub](https://github.com/Billymcokello24/operagrid/discussions) -- Haz preguntas, comparte ideas
 - 📖 [Guía de Contribución](CONTRIBUTING.md) -- Directrices detalladas de contribución
-- 🐛 [Issues en GitHub](https://github.com/deskive/deskive/issues) -- Reporta errores o solicita características
+- 🐛 [Issues en GitHub](https://github.com/Billymcokello24/operagrid/issues) -- Reporta errores o solicita características
 
 ## Contribuyendo
 
 ¡Damos la bienvenida a las contribuciones! Consulta nuestra [Guía de Contribución](CONTRIBUTING.md) para comenzar.
 
 **Formas de contribuir:**
-- Reporta errores o solicita características vía [Issues en GitHub](https://github.com/deskive/deskive/issues)
+- Reporta errores o solicita características vía [Issues en GitHub](https://github.com/Billymcokello24/operagrid/issues)
 - Envía pull requests para correcciones de errores o nuevas características
 - Agrega nuevas integraciones (consulta la [Guía de Integración](backend/README.md#integrations))
 - Mejora la documentación
@@ -506,20 +506,20 @@ git push origin feature/nombre-de-tu-caracteristica
 
 ## Contribuidores
 
-¡Gracias a todas las personas increíbles que han contribuido a Deskive! 🎉
+¡Gracias a todas las personas increíbles que han contribuido a OperaGrid! 🎉
 
-<a href="https://github.com/deskive/deskive/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=deskive/deskive&anon=1&max=100&columns=10" />
+<a href="https://github.com/Billymcokello24/operagrid/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=operagrid/operagrid&anon=1&max=100&columns=10" />
 </a>
 
 ¿Quieres ver tu cara aquí? ¡Consulta nuestra [Guía de Contribución](CONTRIBUTING.md) y comienza a contribuir hoy!
 
 ## 💬 Únete a Nuestra Comunidad
 
-¡Conéctate con desarrolladores, obtén ayuda y mantente actualizado sobre los últimos desarrollos de Deskive!
+¡Conéctate con desarrolladores, obtén ayuda y mantente actualizado sobre los últimos desarrollos de OperaGrid!
 
 <p align="center">
-  <a href="https://github.com/deskive/deskive/discussions">
+  <a href="https://github.com/Billymcokello24/operagrid/discussions">
     <img src="https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Discussions">
   </a>
 </p>
@@ -528,23 +528,23 @@ git push origin feature/nombre-de-tu-caracteristica
 
 | Plataforma | Propósito | Enlace |
 |----------|---------|------|
-| 💡 **Discusiones en GitHub** | Haz preguntas, comparte ideas, solicita características | [Iniciar Discusión](https://github.com/deskive/deskive/discussions) |
-| 🐛 **Issues en GitHub** | Reportes de errores, solicitudes de características | [Abrir Issue](https://github.com/deskive/deskive/issues) |
-| 🌐 **Sitio Web** | Documentación, guías, actualizaciones | [deskive.com](https://deskive.com) |
+| 💡 **Discusiones en GitHub** | Haz preguntas, comparte ideas, solicita características | [Iniciar Discusión](https://github.com/Billymcokello24/operagrid/discussions) |
+| 🐛 **Issues en GitHub** | Reportes de errores, solicitudes de características | [Abrir Issue](https://github.com/Billymcokello24/operagrid/issues) |
+| 🌐 **Sitio Web** | Documentación, guías, actualizaciones | [operagrid.com](https://operagrid.com) |
 
 ### Directrices de la Comunidad
 
 - 🤝 **Sé Respetuoso** -- Trata a todos con respeto y amabilidad
 - 💡 **Comparte Conocimiento** -- Ayuda a otros a aprender y crecer
 - 🐛 **Reporta Problemas** -- ¿Encontraste un error? Háznoslo saber en Issues de GitHub
-- 🎉 **Celebra Victorias** -- Comparte tus implementaciones y casos de uso de Deskive
+- 🎉 **Celebra Victorias** -- Comparte tus implementaciones y casos de uso de OperaGrid
 - 🌍 **Piensa Globalmente** -- Somos una comunidad mundial que soporta múltiples idiomas
 
 ## Licencia
 
 Este proyecto está licenciado bajo la [Licencia Pública General Affero de GNU v3.0](LICENSE).
 
-Copyright 2025 Contribuidores de Deskive.
+Copyright 2025 Contribuidores de OperaGrid.
 
 ## Agradecimientos
 
@@ -553,21 +553,21 @@ Construido con NestJS, React, PostgreSQL, Redis, TypeScript, Tailwind CSS, LiveK
 ---
 
 <p align="center">
-  <a href="https://deskive.com">Sitio Web</a> |
-  <a href="https://github.com/deskive/deskive/wiki">Documentación</a> |
-  <a href="https://github.com/deskive/deskive/discussions">Discusiones</a>
+  <a href="https://operagrid.com">Sitio Web</a> |
+  <a href="https://github.com/Billymcokello24/operagrid/wiki">Documentación</a> |
+  <a href="https://github.com/Billymcokello24/operagrid/discussions">Discusiones</a>
 </p>
 
 ---
 
 <p align="center">
-  <strong>Construido con ❤️ por la comunidad de <a href="https://github.com/deskive">Deskive</a></strong>
+  <strong>Construido con ❤️ por la comunidad de <a href="https://github.com/operagrid">OperaGrid</a></strong>
 </p>
 
 <p align="center">
   Si encuentras útil este proyecto, ¡por favor considera darle una estrella! ⭐
   <br><br>
-  <a href="https://github.com/deskive/deskive/stargazers">
-    <img src="https://img.shields.io/github/stars/deskive/deskive?style=social" alt="Star on GitHub">
+  <a href="https://github.com/Billymcokello24/operagrid/stargazers">
+    <img src="https://img.shields.io/github/stars/operagrid/operagrid?style=social" alt="Star on GitHub">
   </a>
 </p>

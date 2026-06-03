@@ -8,11 +8,11 @@
  * Logo and Branding
  */
 export const BRANDING_ALT = {
-  logo: 'Deskive - All-in-One Workspace Platform',
-  logoWhite: 'Deskive Logo in White',
-  logoDark: 'Deskive Logo in Dark Mode',
-  icon: 'Deskive Icon',
-  favicon: 'Deskive Favicon',
+  logo: 'OperaGrid - All-in-One Workspace Platform',
+  logoWhite: 'OperaGrid Logo in White',
+  logoDark: 'OperaGrid Logo in Dark Mode',
+  icon: 'OperaGrid Icon',
+  favicon: 'OperaGrid Favicon',
 } as const;
 
 /**
@@ -37,7 +37,7 @@ export const FEATURES_ALT = {
  * Product Screenshots
  */
 export const SCREENSHOTS_ALT = {
-  dashboard: 'Deskive dashboard showing workspace overview with recent activity',
+  dashboard: 'OperaGrid dashboard showing workspace overview with recent activity',
   chatInterface: 'Real-time chat interface with channels, direct messages, and file sharing',
   kanbanBoard: 'Kanban board with drag-and-drop tasks organized in columns',
   fileManager: 'File manager showing folders, files, and upload interface',
@@ -52,11 +52,11 @@ export const SCREENSHOTS_ALT = {
  * Hero and Landing Page Images
  */
 export const HERO_ALT = {
-  hero: 'Teams collaborating on Deskive workspace platform',
-  heroChat: 'Team members using Deskive chat for real-time communication',
-  heroProjects: 'Project manager organizing tasks on Deskive Kanban board',
-  heroRemote: 'Remote team collaborating through Deskive video calls',
-  heroProductivity: 'Productive workspace setup with Deskive platform on screen',
+  hero: 'Teams collaborating on OperaGrid workspace platform',
+  heroChat: 'Team members using OperaGrid chat for real-time communication',
+  heroProjects: 'Project manager organizing tasks on OperaGrid Kanban board',
+  heroRemote: 'Remote team collaborating through OperaGrid video calls',
+  heroProductivity: 'Productive workspace setup with OperaGrid platform on screen',
 } as const;
 
 /**
@@ -105,12 +105,12 @@ export const CONTENT_ALT = {
  * Social Media
  */
 export const SOCIAL_ALT = {
-  twitter: 'Follow Deskive on Twitter',
-  linkedin: 'Connect with Deskive on LinkedIn',
-  facebook: 'Like Deskive on Facebook',
-  github: 'View Deskive on GitHub',
-  youtube: 'Subscribe to Deskive on YouTube',
-  instagram: 'Follow Deskive on Instagram',
+  twitter: 'Follow OperaGrid on Twitter',
+  linkedin: 'Connect with OperaGrid on LinkedIn',
+  facebook: 'Like OperaGrid on Facebook',
+  github: 'View OperaGrid on GitHub',
+  youtube: 'Subscribe to OperaGrid on YouTube',
+  instagram: 'Follow OperaGrid on Instagram',
 } as const;
 
 /**

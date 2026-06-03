@@ -402,7 +402,7 @@ export function MessageItem({
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <span className="text-xs text-green-600 dark:text-green-400 font-medium flex items-center gap-1">
+                    <span className="text-xs text-blue-600 dark:text-blue-400 font-medium flex items-center gap-1">
                       <Lock className="h-3 w-3" />
                       Encrypted
                     </span>
@@ -672,9 +672,9 @@ export function MessageItem({
                       case 'drive':
                         return {
                           icon: <HardDrive className="h-4 w-4" />,
-                          bgColor: 'bg-green-50 dark:bg-green-950/50',
-                          borderColor: 'border-green-200 dark:border-green-800',
-                          iconColor: 'text-green-600',
+                          bgColor: 'bg-blue-50 dark:bg-blue-950/50',
+                          borderColor: 'border-blue-200 dark:border-blue-800',
+                          iconColor: 'text-blue-600',
                           label: 'Drive'
                         }
                       case 'poll':

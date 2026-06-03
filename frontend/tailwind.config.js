@@ -70,8 +70,8 @@ export default {
           '100%': { transform: 'translateX(100%)' },
         },
         'glow': {
-          '0%': { boxShadow: '0 0 5px rgba(16, 185, 129, 0.5), 0 0 10px rgba(20, 184, 166, 0.3)' },
-          '100%': { boxShadow: '0 0 15px rgba(16, 185, 129, 0.8), 0 0 25px rgba(20, 184, 166, 0.5)' },
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(96, 165, 250, 0.3)' },
+          '100%': { boxShadow: '0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(96, 165, 250, 0.5)' },
         },
       },
     },

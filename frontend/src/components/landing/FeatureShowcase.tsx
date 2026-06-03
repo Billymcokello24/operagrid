@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 
-type ColorScheme = 'cyan' | 'purple' | 'blue' | 'emerald' | 'pink' | 'orange';
+type ColorScheme = 'cyan' | 'purple' | 'blue' | 'blue' | 'pink' | 'orange';
 
 interface FeatureShowcaseProps {
   id: string;
@@ -27,7 +27,7 @@ const colorClasses: Record<ColorScheme, {
   border: string;
 }> = {
   cyan: {
-    gradient: 'from-cyan-500 to-teal-500',
+    gradient: 'from-cyan-500 to-blue-500',
     iconBg: 'bg-cyan-100 dark:bg-cyan-900/30',
     iconText: 'text-cyan-600 dark:text-cyan-400',
     tagline: 'text-cyan-600 dark:text-cyan-400',
@@ -50,13 +50,13 @@ const colorClasses: Record<ColorScheme, {
     check: 'text-blue-500',
     border: 'border-blue-200 dark:border-blue-800',
   },
-  emerald: {
-    gradient: 'from-emerald-500 to-teal-500',
-    iconBg: 'bg-emerald-100 dark:bg-emerald-900/30',
-    iconText: 'text-emerald-600 dark:text-emerald-400',
-    tagline: 'text-emerald-600 dark:text-emerald-400',
-    check: 'text-emerald-500',
-    border: 'border-emerald-200 dark:border-emerald-800',
+  blue: {
+    gradient: 'from-blue-500 to-blue-500',
+    iconBg: 'bg-blue-100 dark:bg-blue-900/30',
+    iconText: 'text-blue-600 dark:text-blue-400',
+    tagline: 'text-blue-600 dark:text-blue-400',
+    check: 'text-blue-500',
+    border: 'border-blue-200 dark:border-blue-800',
   },
   pink: {
     gradient: 'from-pink-500 to-rose-500',

@@ -78,7 +78,7 @@ export function BotLogsView() {
   const getStatusIcon = (status: ExecutionStatus) => {
     switch (status) {
       case ExecutionStatus.SUCCESS:
-        return <CheckCircle2 className="h-4 w-4 text-green-500" />
+        return <CheckCircle2 className="h-4 w-4 text-blue-500" />
       case ExecutionStatus.FAILED:
         return <XCircle className="h-4 w-4 text-red-500" />
       case ExecutionStatus.PENDING:
@@ -193,7 +193,7 @@ export function BotLogsView() {
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <div className="text-2xl font-bold text-green-500">{stats.success}</div>
+                <div className="text-2xl font-bold text-blue-500">{stats.success}</div>
                 <div className="text-sm text-muted-foreground">Successful</div>
               </CardContent>
             </Card>

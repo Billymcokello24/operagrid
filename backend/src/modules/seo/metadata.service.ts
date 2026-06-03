@@ -11,7 +11,7 @@ export class MetadataService {
   private readonly baseUrl: string;
 
   constructor(private configService: ConfigService) {
-    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://deskive.com';
+    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://operagrid.com';
   }
 
   // Blog-related methods removed - will be implemented separately

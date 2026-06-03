@@ -46,15 +46,15 @@ export default function ForgotPassword() {
         <Card className="shadow-2xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader className="space-y-6 pb-8">
             <div className="flex flex-col items-center space-y-3">
-              {/* Deskive Logo - Clickable to home */}
+              {/* OperaGrid Logo - Clickable to home */}
               <Link to="/" className="flex items-center gap-3 group cursor-pointer mb-2">
                 <img
-                  src="https://cdn.deskive.com/deskive/logo.png"
-                  alt="Deskive Logo"
+                  src="/logo.png"
+                  alt="OperaGrid Logo"
                   className="w-12 h-12 transition-all duration-300 group-hover:scale-110"
                 />
                 <span className="text-gray-900 font-black text-2xl tracking-tight">
-                  Deskive
+                  OperaGrid
                 </span>
               </Link>
 
@@ -79,8 +79,8 @@ export default function ForgotPassword() {
             {isSuccess ? (
               <div className="space-y-6">
                 <div className="text-center space-y-3">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                    <Mail className="w-8 h-8 text-green-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                    <Mail className="w-8 h-8 text-blue-600" />
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {intl.formatMessage({ id: 'auth.forgotPassword.checkInbox' })}

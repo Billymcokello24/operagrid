@@ -67,7 +67,7 @@ const getVariantClasses = (variant: 'primary' | 'danger' | 'warning' | 'success'
     primary: 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/40',
     danger: 'bg-gradient-to-r from-red-600 to-red-700 hover:shadow-xl hover:shadow-red-500/40',
     warning: 'bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-xl hover:shadow-orange-500/40',
-    success: 'bg-gradient-to-r from-emerald-600 to-green-600 hover:shadow-xl hover:shadow-emerald-500/40',
+    success: 'bg-gradient-to-r from-blue-600 to-blue-600 hover:shadow-xl hover:shadow-blue-500/40',
   };
   return variants[variant];
 };
@@ -75,7 +75,7 @@ const getVariantClasses = (variant: 'primary' | 'danger' | 'warning' | 'success'
 const getAlertIcon = (type: 'info' | 'success' | 'warning' | 'error') => {
   const icons = {
     info: <Info className="w-6 h-6 text-blue-600" />,
-    success: <CheckCircle2 className="w-6 h-6 text-emerald-600" />,
+    success: <CheckCircle2 className="w-6 h-6 text-blue-600" />,
     warning: <AlertTriangle className="w-6 h-6 text-amber-600" />,
     error: <AlertCircle className="w-6 h-6 text-red-600" />,
   };
@@ -85,7 +85,7 @@ const getAlertIcon = (type: 'info' | 'success' | 'warning' | 'error') => {
 const getAlertColors = (type: 'info' | 'success' | 'warning' | 'error') => {
   const colors = {
     info: 'bg-blue-50 border-blue-200',
-    success: 'bg-emerald-50 border-emerald-200',
+    success: 'bg-blue-50 border-blue-200',
     warning: 'bg-amber-50 border-amber-200',
     error: 'bg-red-50 border-red-200',
   };

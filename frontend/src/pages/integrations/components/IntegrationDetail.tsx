@@ -241,7 +241,7 @@ export function IntegrationDetail() {
             <div className="flex items-center gap-3 mb-2">
               <h1 className="text-3xl font-bold">{integration.name}</h1>
               {installedIntegration && (
-                <CheckCircle className="w-6 h-6 text-green-500" />
+                <CheckCircle className="w-6 h-6 text-blue-500" />
               )}
               {integration.isVerified && (
                 <Shield className="w-6 h-6 text-blue-500" />
@@ -286,7 +286,7 @@ export function IntegrationDetail() {
             <>
               <Badge 
                 variant="secondary" 
-                className="justify-center py-2 text-green-700 bg-green-500/10"
+                className="justify-center py-2 text-blue-700 bg-blue-500/10"
               >
                 <CheckCircle className="w-4 h-4 mr-2" />
                 {intl.formatMessage({ id: 'modules.integrations.status.installed', defaultMessage: 'Installed' })}
@@ -299,7 +299,7 @@ export function IntegrationDetail() {
           ) : (
             <>
               {integration.pricing?.type === 'FREE' && (
-                <Badge variant="outline" className="justify-center py-2 text-green-600 border-green-200">
+                <Badge variant="outline" className="justify-center py-2 text-blue-600 border-blue-200">
                   {intl.formatMessage({ id: 'modules.integrations.pricing.free', defaultMessage: 'Free' })}
                 </Badge>
               )}
@@ -369,7 +369,7 @@ export function IntegrationDetail() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {integration.features?.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}

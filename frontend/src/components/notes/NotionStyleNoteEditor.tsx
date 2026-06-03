@@ -1993,7 +1993,7 @@ export function NotionStyleNoteEditor({
                     </>
                   ) : (
                     <>
-                      <div className="w-2 h-2 bg-green-500 rounded-full" />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full" />
                       <span>Saved</span>
                     </>
                   )}
@@ -2010,8 +2010,8 @@ export function NotionStyleNoteEditor({
                     </div>
                   ) : isCollaborationConnected && (
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-1.5 text-sm text-green-600">
-                        <div className="w-2 h-2 bg-green-500 rounded-full" />
+                      <div className="flex items-center gap-1.5 text-sm text-blue-600">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full" />
                         <span>Live</span>
                       </div>
                       <PresenceIndicator
@@ -2146,13 +2146,13 @@ export function NotionStyleNoteEditor({
                       {/* Animated AI Loading Indicator */}
                       <div className="relative w-24 h-24">
                         {/* Outer rotating ring */}
-                        <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-emerald-500 border-r-cyan-500 animate-spin" style={{ animationDuration: '2s' }} />
+                        <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-blue-500 border-r-cyan-500 animate-spin" style={{ animationDuration: '2s' }} />
 
                         {/* Middle pulsing ring */}
-                        <div className="absolute inset-2 rounded-full border-2 border-transparent border-b-yellow-500 border-l-teal-500 animate-spin" style={{ animationDuration: '1.5s', animationDirection: 'reverse' }} />
+                        <div className="absolute inset-2 rounded-full border-2 border-transparent border-b-yellow-500 border-l-blue-500 animate-spin" style={{ animationDuration: '1.5s', animationDirection: 'reverse' }} />
 
                         {/* Inner gradient circle */}
-                        <div className="absolute inset-4 rounded-full bg-gradient-to-br from-emerald-500 via-cyan-400 to-yellow-400 animate-pulse opacity-80" />
+                        <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-500 via-cyan-400 to-yellow-400 animate-pulse opacity-80" />
 
                         {/* Center icon */}
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -2160,20 +2160,20 @@ export function NotionStyleNoteEditor({
                         </div>
 
                         {/* Floating particles */}
-                        <div className="absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-emerald-400 animate-bounce" style={{ animationDuration: '1.2s', animationDelay: '0s' }} />
+                        <div className="absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-blue-400 animate-bounce" style={{ animationDuration: '1.2s', animationDelay: '0s' }} />
                         <div className="absolute top-1/2 -right-1 w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce" style={{ animationDuration: '1.4s', animationDelay: '0.2s' }} />
                         <div className="absolute -bottom-1 left-1/2 w-2 h-2 rounded-full bg-yellow-400 animate-bounce" style={{ animationDuration: '1.3s', animationDelay: '0.4s' }} />
-                        <div className="absolute top-1/2 -left-1 w-1.5 h-1.5 rounded-full bg-teal-400 animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.6s' }} />
+                        <div className="absolute top-1/2 -left-1 w-1.5 h-1.5 rounded-full bg-blue-400 animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.6s' }} />
                       </div>
 
                       {/* Loading text with gradient */}
-                      <p className="text-base font-medium bg-gradient-to-r from-emerald-600 via-cyan-600 to-yellow-600 bg-clip-text text-transparent animate-pulse">
+                      <p className="text-base font-medium bg-gradient-to-r from-blue-600 via-cyan-600 to-yellow-600 bg-clip-text text-transparent animate-pulse">
                         {summaryLoading ? 'Generating Summary...' : 'Processing Text...'}
                       </p>
 
                       {/* Animated dots */}
                       <div className="flex items-center gap-1">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-bounce" style={{ animationDelay: '0ms' }} />
                         <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-bounce" style={{ animationDelay: '150ms' }} />
                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-bounce" style={{ animationDelay: '300ms' }} />
                       </div>
@@ -2320,7 +2320,7 @@ export function NotionStyleNoteEditor({
                       <div className={cn(
                         "text-muted-foreground",
                         attachment.type === 'notes' && "text-blue-500",
-                        attachment.type === 'events' && "text-green-500",
+                        attachment.type === 'events' && "text-blue-500",
                         attachment.type === 'files' && "text-orange-500"
                       )}>
                         {getAttachmentIcon(attachment.type)}

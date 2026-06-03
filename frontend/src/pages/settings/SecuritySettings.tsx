@@ -253,7 +253,7 @@ const SecuritySettings: React.FC = () => {
   const getPasswordStrengthColor = (strength: number): string => {
     if (strength < 40) return 'bg-red-500';
     if (strength < 70) return 'bg-yellow-500';
-    return 'bg-green-500';
+    return 'bg-blue-500';
   };
 
   // Get password strength text
@@ -357,7 +357,7 @@ const SecuritySettings: React.FC = () => {
                     <span className="text-xs text-gray-500">{intl.formatMessage({ id: 'settings.security.password.strength.label' })}</span>
                     <span className={`text-xs font-medium ${
                       passwordStrength < 40 ? 'text-red-600' :
-                      passwordStrength < 70 ? 'text-yellow-600' : 'text-green-600'
+                      passwordStrength < 70 ? 'text-yellow-600' : 'text-blue-600'
                     }`}>
                       {intl.formatMessage({ id: `settings.security.password.strength.${getPasswordStrengthText(passwordStrength).toLowerCase()}` })}
                     </span>
@@ -405,7 +405,7 @@ const SecuritySettings: React.FC = () => {
             )}
             
             {success && (
-              <div className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-md">
+              <div className="flex items-center space-x-2 text-blue-600 bg-blue-50 p-3 rounded-md">
                 <CheckCircle className="w-4 h-4 flex-shrink-0" />
                 <span className="text-sm">{success}</span>
               </div>

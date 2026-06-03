@@ -47,7 +47,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       }
 
       // database JWT payload contains: userId, email, role, projectId, appId
-      // Map to standard format expected by Deskive
+      // Map to standard format expected by OperaGrid
       request.user = {
         sub: payload.userId || payload.sub,
         userId: payload.userId || payload.sub,

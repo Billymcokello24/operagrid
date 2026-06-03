@@ -11,14 +11,14 @@ export class RobotsService {
   private readonly baseUrl: string;
 
   constructor(private configService: ConfigService) {
-    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://deskive.com';
+    this.baseUrl = this.configService.get<string>('SITE_URL') || 'https://operagrid.com';
   }
 
   /**
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
-    const robotsTxt = `# Deskive Robots.txt
+    const robotsTxt = `# OperaGrid Robots.txt
 # Allow all search engines to crawl public pages
 
 User-agent: *

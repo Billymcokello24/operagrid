@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting Deskive Platform..."
+echo "Starting OperaGrid Platform..."
 echo ""
 
 GREEN='\033[0;32m'
@@ -41,7 +41,7 @@ sleep 5
 timeout=60
 counter=0
 while [ $counter -lt $timeout ]; do
-    if docker compose --env-file .env.docker ps | grep -q "deskive-postgres.*healthy"; then
+    if docker compose --env-file .env.docker ps | grep -q "operagrid-postgres.*healthy"; then
         echo -e "${GREEN}PostgreSQL ready!${NC}"
         break
     fi

@@ -204,7 +204,7 @@ export const useSearchStore = create<SearchState>()(
       reset: () => set(initialState),
     }),
     {
-      name: 'deskive-search-store',
+      name: 'operagrid-search-store',
       partialize: (state) => ({
         // Only persist these fields
         recentSearches: state.recentSearches,

@@ -151,7 +151,7 @@ export const MessageSelectionAIToolbar: React.FC<MessageSelectionAIToolbarProps>
             disabled={isProcessing}
             className="gap-2 cursor-pointer"
           >
-            <MessageSquareText className="w-4 h-4 text-green-500" />
+            <MessageSquareText className="w-4 h-4 text-blue-500" />
             <div className="flex flex-col">
               <span>Summarize</span>
               <span className="text-xs text-muted-foreground">

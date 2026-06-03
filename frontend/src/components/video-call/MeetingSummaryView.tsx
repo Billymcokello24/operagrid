@@ -137,7 +137,7 @@ export const MeetingSummaryView: React.FC<MeetingSummaryViewProps> = ({
   const getSentimentIcon = (sentiment: string) => {
     switch (sentiment) {
       case 'positive':
-        return <ThumbsUp className="h-4 w-4 text-green-400" />
+        return <ThumbsUp className="h-4 w-4 text-blue-400" />
       case 'negative':
         return <ThumbsDown className="h-4 w-4 text-red-400" />
       default:
@@ -258,13 +258,13 @@ export const MeetingSummaryView: React.FC<MeetingSummaryViewProps> = ({
                     {summary.key_points.length > 0 && (
                       <div className="p-4 bg-gray-800/50 rounded-lg">
                         <h4 className="text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
-                          <ListTodo className="h-4 w-4 text-green-400" />
+                          <ListTodo className="h-4 w-4 text-blue-400" />
                           Key Points ({summary.key_points.length})
                         </h4>
                         <ul className="space-y-2">
                           {summary.key_points.map((point, index) => (
                             <li key={index} className="flex items-start gap-2">
-                              <span className="text-green-400 mt-1">•</span>
+                              <span className="text-blue-400 mt-1">•</span>
                               <span className="text-gray-200">{point}</span>
                             </li>
                           ))}
@@ -424,7 +424,7 @@ export const MeetingSummaryView: React.FC<MeetingSummaryViewProps> = ({
                       </div>
 
                       <div className="p-4 bg-gray-800/50 rounded-lg text-center">
-                        <CheckSquare className="h-4 w-4 text-green-400 mx-auto mb-2" />
+                        <CheckSquare className="h-4 w-4 text-blue-400 mx-auto mb-2" />
                         <p className="text-xs text-gray-400">Action Items</p>
                         <p className="text-sm font-medium text-gray-200">
                           {summary.action_items.length}
@@ -502,7 +502,7 @@ const ActionItemCard: React.FC<{ item: MeetingActionItem }> = ({ item }) => {
   const priorityColors = {
     high: 'bg-red-500/10 border-red-500/30 text-red-300',
     medium: 'bg-yellow-500/10 border-yellow-500/30 text-yellow-300',
-    low: 'bg-green-500/10 border-green-500/30 text-green-300',
+    low: 'bg-blue-500/10 border-blue-500/30 text-blue-300',
   }
 
   return (
@@ -512,7 +512,7 @@ const ActionItemCard: React.FC<{ item: MeetingActionItem }> = ({ item }) => {
           className={cn(
             'mt-1 w-4 h-4 rounded border-2 flex-shrink-0',
             item.status === 'completed'
-              ? 'bg-green-500 border-green-500'
+              ? 'bg-blue-500 border-blue-500'
               : 'border-gray-500'
           )}
         />

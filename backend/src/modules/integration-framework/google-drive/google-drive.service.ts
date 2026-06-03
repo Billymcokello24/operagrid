@@ -677,9 +677,9 @@ export class GoogleDriveService {
   }
 
   /**
-   * Import file from Google Drive to Deskive storage
+   * Import file from Google Drive to OperaGrid storage
    */
-  async importFileToDeskive(
+  async importFileToOperaGrid(
     userId: string,
     workspaceId: string,
     fileId: string,
@@ -687,7 +687,7 @@ export class GoogleDriveService {
     convertTo?: string,
   ): Promise<{
     success: boolean;
-    deskiveFileId: string;
+    operagridFileId: string;
     fileName: string;
     fileSize: number;
     mimeType: string;
@@ -701,10 +701,10 @@ export class GoogleDriveService {
       convertTo,
     );
 
-    // Upload to Deskive storage via database
+    // Upload to OperaGrid storage via database
     const storagePath = `workspaces/${workspaceId}/files/${targetFolderId || 'imports'}/${Date.now()}_${fileName}`;
     const uploadResult = await /* TODO: use StorageService */ this.db.uploadFile(
-      'deskive-files',
+      'operagrid-files',
       buffer,
       storagePath,
       {
@@ -717,7 +717,7 @@ export class GoogleDriveService {
       },
     );
 
-    // Create file record in Deskive
+    // Create file record in OperaGrid
     const fileRecord = await this.db.insert('files', {
       workspace_id: workspaceId,
       folder_id: targetFolderId || null,
@@ -739,7 +739,7 @@ export class GoogleDriveService {
 
     return {
       success: true,
-      deskiveFileId: fileRecord.id,
+      operagridFileId: fileRecord.id,
       fileName,
       fileSize: buffer.length,
       mimeType,
@@ -748,13 +748,13 @@ export class GoogleDriveService {
   }
 
   /**
-   * Export a Deskive file to Google Drive
-   * Downloads file from Deskive storage and uploads to user's Google Drive
+   * Export a OperaGrid file to Google Drive
+   * Downloads file from OperaGrid storage and uploads to user's Google Drive
    */
   async exportFileToDrive(
     userId: string,
     workspaceId: string,
-    deskiveFileId: string,
+    operagridFileId: string,
     targetFolderId?: string,
   ): Promise<{
     success: boolean;
@@ -763,14 +763,14 @@ export class GoogleDriveService {
     webViewLink?: string;
     webContentLink?: string;
   }> {
-    // 1. Get the Deskive file record
+    // 1. Get the OperaGrid file record
     const fileRecord = await this.db.findOne('files', {
-      id: deskiveFileId,
+      id: operagridFileId,
       workspace_id: workspaceId,
     });
 
     if (!fileRecord) {
-      throw new NotFoundException('File not found in Deskive');
+      throw new NotFoundException('File not found in OperaGrid');
     }
 
     // Get file URL - use stored URL or generate from storage_path
@@ -798,7 +798,7 @@ export class GoogleDriveService {
       });
       fileBuffer = Buffer.from(response.data);
     } catch (error) {
-      this.logger.error(`Failed to download file from Deskive storage: ${error.message}`);
+      this.logger.error(`Failed to download file from OperaGrid storage: ${error.message}`);
       throw new BadRequestException('Failed to download file from storage');
     }
 
@@ -813,7 +813,7 @@ export class GoogleDriveService {
       },
       {
         parentId: targetFolderId,
-        description: `Exported from Deskive on ${new Date().toISOString()}`,
+        description: `Exported from OperaGrid on ${new Date().toISOString()}`,
       },
     );
 

@@ -17,12 +17,12 @@ import { useDocumentTemplate, DocumentType } from '../../lib/api/document-api';
 
 const getDocumentTypeColor = (type: DocumentType) => {
   const colors = {
-    [DocumentType.PROPOSAL]: '#10b981',
+    [DocumentType.PROPOSAL]: '#2563eb',
     [DocumentType.CONTRACT]: '#3b82f6',
     [DocumentType.INVOICE]: '#f59e0b',
     [DocumentType.SOW]: '#8b5cf6',
   };
-  return colors[type] || '#10b981';
+  return colors[type] || '#2563eb';
 };
 
 export const TemplatePreview: React.FC = () => {
@@ -34,7 +34,7 @@ export const TemplatePreview: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -97,7 +97,7 @@ export const TemplatePreview: React.FC = () => {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              <Badge className="bg-emerald-600 text-white">
+              <Badge className="bg-blue-600 text-white">
                 <FileText className="w-3 h-3 mr-1" />
                 {template.documentType}
               </Badge>
@@ -144,7 +144,7 @@ export const TemplatePreview: React.FC = () => {
                         key={index}
                         className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
                       >
-                        <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
                         <div className="flex-1">
                           <div className="font-medium text-gray-900 text-sm">
                             {placeholderText}

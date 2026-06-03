@@ -28,7 +28,7 @@ const SlackCalendar: React.FC = () => {
             <Calendar className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-black text-gray-900 mb-4">
-            Deskive Calendar
+            OperaGrid Calendar
           </h1>
           <p className="text-lg text-gray-600">
             Manage your schedule directly from Slack
@@ -47,12 +47,12 @@ const SlackCalendar: React.FC = () => {
             </code>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-50 rounded-xl p-6 border border-blue-100">
             <div className="flex items-center gap-3 mb-3">
-              <Calendar className="w-5 h-5 text-green-600" />
+              <Calendar className="w-5 h-5 text-blue-600" />
               <h3 className="font-bold text-gray-900">Today's Events</h3>
             </div>
-            <code className="text-sm bg-white px-3 py-2 rounded block border border-gray-200 text-green-600">
+            <code className="text-sm bg-white px-3 py-2 rounded block border border-gray-200 text-blue-600">
               /calendar today
             </code>
           </div>

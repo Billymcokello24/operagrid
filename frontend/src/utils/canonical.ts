@@ -19,7 +19,7 @@ export function getBaseUrl(): string {
   }
 
   // Fallback for SSR or build time
-  return 'https://deskive.com';
+  return 'https://operagrid.com';
 }
 
 /**

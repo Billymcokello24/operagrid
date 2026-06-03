@@ -41,7 +41,7 @@ const ModernHero: React.FC = () => {
       color: 'from-cyan-500 to-cyan-600',
       description: 'Real-time messaging and collaboration',
       features: ['Channels & DMs', 'File Sharing', 'Threads', '@Mentions'],
-      image: 'https://cdn.deskive.com/deskive/message.png',
+      image: 'https://cdn.operagrid.com/operagrid/message.png',
       setupSteps: [
         'Create team channels',
         'Invite team members',
@@ -56,7 +56,7 @@ const ModernHero: React.FC = () => {
       color: 'from-sky-500 to-sky-600',
       description: 'Kanban boards and task management',
       features: ['Kanban Boards', 'Gantt Charts', 'Sprints', 'Time Tracking'],
-      image: 'https://cdn.deskive.com/deskive/project.png',
+      image: 'https://cdn.operagrid.com/operagrid/project.png',
       setupSteps: [
         'Create project boards',
         'Add tasks and assign team',
@@ -71,7 +71,7 @@ const ModernHero: React.FC = () => {
       color: 'from-blue-500 to-blue-600',
       description: 'Cloud storage and file management',
       features: ['Cloud Storage', 'Version Control', 'Preview', 'Sharing'],
-      image: 'https://cdn.deskive.com/deskive/file.png',
+      image: 'https://cdn.operagrid.com/operagrid/file.png',
       setupSteps: [
         'Upload your documents',
         'Organize in folders',
@@ -83,10 +83,10 @@ const ModernHero: React.FC = () => {
     {
       icon: Calendar,
       title: 'Calendar',
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-blue-500 to-blue-600',
       description: 'Schedule meetings and events',
       features: ['Event Scheduling', 'Meeting Rooms', 'Sync', 'Reminders'],
-      image: 'https://cdn.deskive.com/deskive/calendar.png',
+      image: 'https://cdn.operagrid.com/operagrid/calendar.png',
       setupSteps: [
         'Schedule meetings',
         'Set reminders',
@@ -101,7 +101,7 @@ const ModernHero: React.FC = () => {
       color: 'from-orange-500 to-orange-600',
       description: 'Rich text editor and documentation',
       features: ['Rich Editor', 'Templates', 'Collaboration', 'Export'],
-      image: 'https://cdn.deskive.com/deskive/note.png',
+      image: 'https://cdn.operagrid.com/operagrid/note.png',
       setupSteps: [
         'Create notebooks',
         'Use rich text editor',
@@ -116,7 +116,7 @@ const ModernHero: React.FC = () => {
       color: 'from-red-500 to-red-600',
       description: 'HD video conferencing',
       features: ['HD Video', 'Screen Share', 'Recording', 'Backgrounds'],
-      image: 'https://cdn.deskive.com/deskive/video-call.png',
+      image: 'https://cdn.operagrid.com/operagrid/video-call.png',
       setupSteps: [
         'Start instant video calls',
         'Share your screen',
@@ -213,7 +213,7 @@ const ModernHero: React.FC = () => {
             {' '}of working
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-8">
-            What would you like to manage with Deskive Work OS?
+            What would you like to manage with OperaGrid Work OS?
           </p>
           {!isAuthenticated && (
             <Button
@@ -374,10 +374,10 @@ const ModernHero: React.FC = () => {
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                 </div>
                 <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-500 ml-3">
-                  https://deskive.com/workspace/dashboard
+                  https://operagrid.com/workspace/dashboard
                 </div>
               </div>
 
@@ -385,7 +385,7 @@ const ModernHero: React.FC = () => {
               <div className="relative">
                 <img
                   src={modules.find(m => m.title === selectedModule)?.image || modules[0].image}
-                  alt={`Deskive ${selectedModule} Module`}
+                  alt={`OperaGrid ${selectedModule} Module`}
                   className="w-full h-auto object-cover transition-opacity duration-500"
                   style={{ aspectRatio: '16/9', maxHeight: '400px' }}
                 />

@@ -49,7 +49,7 @@ export class SlackWhiteboardController {
       const clientId = process.env.SLACK_WHITEBOARD_CLIENT_ID;
       const redirectUri = encodeURIComponent(
         process.env.SLACK_REDIRECT_URI ||
-          'https://api.deskive.com/api/v1/slack/whiteboard/oauth/callback',
+          'https://api.operagrid.com/api/v1/slack/whiteboard/oauth/callback',
       );
       const scopes = encodeURIComponent(
         'app_mentions:read,channels:join,channels:read,chat:write,commands,im:read,im:write,users:read,users:read.email,chat:write.public,groups:read,groups:write',
@@ -63,7 +63,7 @@ export class SlackWhiteboardController {
       return res.redirect(302, oauthUrl);
     } catch (error) {
       this.logger.error('❌ Installation endpoint error:', error);
-      const frontendUrl = process.env.FRONTEND_URL || 'https://deskive.com';
+      const frontendUrl = process.env.FRONTEND_URL || 'https://operagrid.com';
       return res.redirect(`${frontendUrl}/slack/error?reason=install_failed`);
     }
   }
@@ -84,7 +84,7 @@ export class SlackWhiteboardController {
 
       if (!code) {
         this.logger.error('No code provided in OAuth callback');
-        const frontendUrl = process.env.FRONTEND_URL || 'https://deskive.com';
+        const frontendUrl = process.env.FRONTEND_URL || 'https://operagrid.com';
         return res.redirect(`${frontendUrl}/slack/error?reason=no_code`);
       }
 
@@ -92,13 +92,13 @@ export class SlackWhiteboardController {
 
       this.logger.log('OAuth callback successful, redirecting user...');
 
-      const frontendUrl = process.env.FRONTEND_URL || 'https://deskive.com';
+      const frontendUrl = process.env.FRONTEND_URL || 'https://operagrid.com';
 
       // Redirect to login/register page with setup token
       return res.redirect(`${frontendUrl}/auth/login?slack_setup=${result.setupToken}`);
     } catch (error) {
       this.logger.error('OAuth callback error:', error);
-      const frontendUrl = process.env.FRONTEND_URL || 'https://deskive.com';
+      const frontendUrl = process.env.FRONTEND_URL || 'https://operagrid.com';
       return res.redirect(
         `${frontendUrl}/slack/error?reason=oauth_failed&message=${encodeURIComponent(error.message)}`,
       );

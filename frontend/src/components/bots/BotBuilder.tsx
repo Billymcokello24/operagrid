@@ -612,8 +612,8 @@ export function BotBuilder() {
                                 {index + 1}.
                               </span>
                             </div>
-                            <div className="h-10 w-10 rounded-full bg-green-500/10 flex items-center justify-center">
-                              <Play className="h-5 w-5 text-green-500" />
+                            <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                              <Play className="h-5 w-5 text-blue-500" />
                             </div>
                             <div>
                               <div className="font-medium">{action.name}</div>

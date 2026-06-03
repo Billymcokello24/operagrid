@@ -12,7 +12,7 @@ import { getRingtone } from '@/utils/ringtone'
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
 
 // BroadcastChannel for cross-tab communication
-const CALL_BROADCAST_CHANNEL = 'deskive-video-call-sync'
+const CALL_BROADCAST_CHANNEL = 'operagrid-video-call-sync'
 
 interface IncomingCallData {
   callId: string

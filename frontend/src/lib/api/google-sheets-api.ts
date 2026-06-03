@@ -68,7 +68,7 @@ export interface CreateSpreadsheetResponse {
 
 export type SyncType = 'import' | 'export' | 'bidirectional';
 export type SyncFrequency = 'manual' | 'hourly' | 'daily';
-export type DeskiveEntity = 'tasks' | 'contacts' | 'custom';
+export type OperaGridEntity = 'tasks' | 'contacts' | 'custom';
 
 export interface SyncConfig {
   id: string;
@@ -79,7 +79,7 @@ export interface SyncConfig {
   spreadsheetName: string;
   sheetName: string;
   syncType: SyncType;
-  deskiveEntity: DeskiveEntity;
+  operagridEntity: OperaGridEntity;
   columnMapping: Record<string, string>;
   syncFrequency: SyncFrequency;
   lastSyncAt?: string;
@@ -96,7 +96,7 @@ export interface CreateSyncConfigParams {
   spreadsheetName: string;
   sheetName: string;
   syncType: SyncType;
-  deskiveEntity: DeskiveEntity;
+  operagridEntity: OperaGridEntity;
   columnMapping?: Record<string, string>;
   syncFrequency?: SyncFrequency;
 }
@@ -394,7 +394,7 @@ export function getSheetsIconUrl(): string {
  */
 export function formatSyncStatus(status?: string): { label: string; color: string } {
   const statuses: Record<string, { label: string; color: string }> = {
-    success: { label: 'Success', color: 'text-green-500' },
+    success: { label: 'Success', color: 'text-blue-500' },
     error: { label: 'Failed', color: 'text-red-500' },
     pending: { label: 'Pending', color: 'text-yellow-500' },
     running: { label: 'Running', color: 'text-blue-500' },

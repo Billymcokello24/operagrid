@@ -233,7 +233,7 @@ export function UniversalSearchView() {
   const searchTypeConfig = {
     all: { icon: Search, label: intl.formatMessage({ id: 'modules.search.filters.all', defaultMessage: 'All' }), color: 'text-gray-600' },
     messages: { icon: MessageSquare, label: intl.formatMessage({ id: 'modules.search.filters.messages', defaultMessage: 'Messages' }), color: 'text-blue-600' },
-    files: { icon: FileText, label: intl.formatMessage({ id: 'modules.search.filters.files', defaultMessage: 'Files' }), color: 'text-green-600' },
+    files: { icon: FileText, label: intl.formatMessage({ id: 'modules.search.filters.files', defaultMessage: 'Files' }), color: 'text-blue-600' },
     folders: { icon: FolderOpen, label: intl.formatMessage({ id: 'modules.search.filters.folders', defaultMessage: 'Folders' }), color: 'text-orange-600' },
     projects: { icon: FolderOpen, label: intl.formatMessage({ id: 'modules.search.filters.projects', defaultMessage: 'Projects' }), color: 'text-purple-600' },
     notes: { icon: StickyNote, label: intl.formatMessage({ id: 'modules.search.filters.notes', defaultMessage: 'Notes' }), color: 'text-yellow-600' },

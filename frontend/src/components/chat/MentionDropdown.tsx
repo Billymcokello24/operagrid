@@ -188,7 +188,7 @@ export function MentionDropdown({
                   className={cn(
                     'h-2 w-2 rounded-full',
                     user.isOnline
-                      ? 'bg-green-500 dark:bg-green-400'
+                      ? 'bg-blue-500 dark:bg-blue-400'
                       : 'bg-gray-400 dark:bg-gray-600'
                   )}
                   title={user.isOnline ? 'Online' : 'Offline'}

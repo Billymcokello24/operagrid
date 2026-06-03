@@ -471,7 +471,7 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
       <div className="flex-shrink-0 p-4 border-b">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -543,14 +543,14 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
                   className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   {message.role === 'assistant' && (
-                    <div className={`w-7 h-7 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 ${isThinking ? 'animate-pulse' : ''}`}>
+                    <div className={`w-7 h-7 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 ${isThinking ? 'animate-pulse' : ''}`}>
                       <Sparkles className="w-4 h-4 text-white" />
                     </div>
                   )}
                   <div
                     className={`max-w-[85%] rounded-lg px-3 py-2.5 text-sm shadow-sm ${
                       message.role === 'user'
-                        ? 'bg-emerald-600 text-white rounded-br-none'
+                        ? 'bg-blue-600 text-white rounded-br-none'
                         : message.success === false
                         ? 'bg-red-50 dark:bg-red-950 text-red-900 dark:text-red-100 border border-red-200 dark:border-red-800 rounded-bl-none'
                         : 'bg-muted text-foreground border border-border rounded-bl-none'
@@ -561,16 +561,16 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
                       <div className="flex items-center gap-2">
                         <span className="text-muted-foreground font-medium">AI is thinking</span>
                         <div className="flex gap-1">
-                          <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                          <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                          <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
                         </div>
                       </div>
                     ) : (
                       <>
                         <p className="whitespace-pre-wrap break-words leading-relaxed">{message.content}</p>
                         {message.role === 'assistant' && message.success && (
-                          <div className="flex items-center gap-1 mt-2 pt-2 border-t border-border/50 text-xs text-green-600 dark:text-green-400">
+                          <div className="flex items-center gap-1 mt-2 pt-2 border-t border-border/50 text-xs text-blue-600 dark:text-blue-400">
                             <CheckCircle className="w-3.5 h-3.5" />
                             <span className="font-medium">Completed</span>
                           </div>
@@ -595,7 +595,7 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
       {/* Input Form */}
       <div className="flex-shrink-0 p-4 border-t">
         {isProcessing && (
-          <div className="mb-3 flex items-center gap-2 text-xs text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-3 py-2 rounded-lg border border-emerald-200 dark:border-emerald-800">
+          <div className="mb-3 flex items-center gap-2 text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 px-3 py-2 rounded-lg border border-blue-200 dark:border-blue-800">
             <Loader2 className="w-3.5 h-3.5 animate-spin" />
             <span className="font-medium">Processing your command...</span>
           </div>
@@ -607,7 +607,7 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
               onChange={(e) => setPrompt(e.target.value)}
               placeholder={config.placeholder}
               rows={3}
-              className="w-full px-3 py-2 pr-10 text-sm bg-muted/50 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-foreground placeholder-muted-foreground resize-none"
+              className="w-full px-3 py-2 pr-10 text-sm bg-muted/50 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-foreground placeholder-muted-foreground resize-none"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault()
@@ -619,7 +619,7 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
               type="submit"
               size="sm"
               disabled={!prompt.trim() || isProcessing}
-              className="absolute right-2 bottom-2 h-7 w-7 p-0 bg-emerald-600 hover:bg-emerald-700 text-white disabled:opacity-50"
+              className="absolute right-2 bottom-2 h-7 w-7 p-0 bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50"
             >
               {isProcessing ? (
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -637,7 +637,7 @@ export function AskAIModal({ isOpen, onClose, currentView, projects = [], onProj
       {/* Footer */}
       <div className="flex-shrink-0 p-4 border-t bg-muted/30">
         <p className="text-xs text-muted-foreground text-center">
-          {intl.formatMessage({ id: 'ai.assistant.poweredBy', defaultMessage: 'AI Assistant powered by Deskive' })}
+          {intl.formatMessage({ id: 'ai.assistant.poweredBy', defaultMessage: 'AI Assistant powered by OperaGrid' })}
         </p>
       </div>
     </div>

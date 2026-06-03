@@ -586,7 +586,7 @@ export function NotesRightSidebar() {
           <body>
             <h1 class="document-title">${escapedTitle}</h1>
             <div class="document-meta">
-              Exported from Deskive • ${new Date().toLocaleDateString('en-US', {
+              Exported from OperaGrid • ${new Date().toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -669,7 +669,7 @@ export function NotesRightSidebar() {
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; padding: 20px; ${hasRTL ? 'direction: rtl;' : ''}">
           <h1 style="font-size: 28px; font-weight: 700; margin-bottom: 8px; border-bottom: 3px solid #3b82f6; padding-bottom: 12px;">${escapedTitle}</h1>
           <div style="font-size: 11px; color: #666; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #e5e5e5;">
-            Exported from Deskive • ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            Exported from OperaGrid • ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </div>
           <div style="font-size: 14px;">${safeHtmlContent}</div>
         </div>
@@ -694,7 +694,7 @@ export function NotesRightSidebar() {
       // Upload to Google Drive
       const result = await googleDriveApi.uploadFile(workspaceId, file, {
         parentId: targetFolderId,
-        description: `Note exported from Deskive on ${new Date().toISOString()}`
+        description: `Note exported from OperaGrid on ${new Date().toISOString()}`
       })
 
       toast.success(intl.formatMessage(
@@ -1064,7 +1064,7 @@ export function RightSidebar({ currentView, isCollapsed }: RightSidebarProps) {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Completed Today</span>
-                    <span className="font-semibold text-green-600">0</span>
+                    <span className="font-semibold text-blue-600">0</span>
                   </div>
                 </CardContent>
               </Card>

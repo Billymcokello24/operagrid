@@ -20,8 +20,8 @@ import { WorkspaceLayout } from './components/layout/WorkspaceLayout';
 import AdminLayout from './layouts/AdminLayout';
 import { Toaster } from './components/ui/toast';
 import { ThemeProvider } from './contexts/ThemeProvider';
-import { deskiveAnalytics as DeskiveAnalytics } from './components/analytics/deskiveAnalytics';
-import { deskiveChatbot as DeskiveChatbot } from './components/chat/deskiveChatbot';
+import { operagridAnalytics as OperaGridAnalytics } from './components/analytics/operagridAnalytics';
+import { operagridChatbot as OperaGridChatbot } from './components/chat/operagridChatbot';
 import { FeatureAnnouncementProvider } from './providers/FeatureAnnouncementProvider';
 import { PageLoader, InlinePageLoader } from './components/common/PageLoader';
 
@@ -252,12 +252,12 @@ function App() {
       <LanguageProvider>
         <QueryClientProvider client={queryClient}>
           <Router>
-            <DeskiveAnalytics debug={process.env.NODE_ENV === 'development'} />
-            <DeskiveChatbot
+            <OperaGridAnalytics debug={process.env.NODE_ENV === 'development'} />
+            <OperaGridChatbot
               debug={process.env.NODE_ENV === 'development'}
               position="bottom-right"
               primaryColor="#2563EB"
-              greeting="Hi! How can I help you with Deskive today?"
+              greeting="Hi! How can I help you with OperaGrid today?"
               placeholder="Type your message..."
             />
             <FeatureAnnouncementProvider>

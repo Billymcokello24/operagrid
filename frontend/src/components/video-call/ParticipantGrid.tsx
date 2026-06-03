@@ -83,7 +83,7 @@ function ParticipantVideo({
               "text-2xl font-bold text-white",
               isCurrentUser 
                 ? "bg-gradient-to-br from-blue-500 to-indigo-600"
-                : "bg-gradient-to-br from-green-500 to-blue-600"
+                : "bg-gradient-to-br from-blue-500 to-blue-600"
             )}>
               {isCurrentUser ? 'You' : (participant.name || 'U').split(' ').map(n => n[0]).join('')}
             </AvatarFallback>
@@ -117,7 +117,7 @@ function ParticipantVideo({
       {/* Speaking indicator */}
       {participant.isSpeaking && !participant.isAudioMuted && (
         <div className="absolute top-2 right-2">
-          <div className="bg-green-500 rounded-full p-2 animate-pulse shadow-lg">
+          <div className="bg-blue-500 rounded-full p-2 animate-pulse shadow-lg">
             <div className="w-2 h-2 bg-white rounded-full"></div>
           </div>
         </div>
@@ -125,7 +125,7 @@ function ParticipantVideo({
 
       {/* Enhanced ring for speaking participants in audio calls */}
       {callType === 'audio' && participant.isSpeaking && !participant.isAudioMuted && (
-        <div className="absolute inset-0 rounded-lg border-4 border-green-400 animate-pulse"></div>
+        <div className="absolute inset-0 rounded-lg border-4 border-blue-400 animate-pulse"></div>
       )}
 
       {/* Screen sharing indicator */}

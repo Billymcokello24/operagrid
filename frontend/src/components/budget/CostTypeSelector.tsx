@@ -51,7 +51,7 @@ const CostTypeSelector: FC<CostTypeSelectorProps> = ({ value, onChange }) => {
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="variable" id="variable" />
           <Label htmlFor="variable" className="font-normal cursor-pointer">
-            <span className="font-medium text-green-700 dark:text-green-400">Variable</span>
+            <span className="font-medium text-blue-700 dark:text-blue-400">Variable</span>
             <span className="text-xs text-muted-foreground ml-1">(changes)</span>
           </Label>
         </div>

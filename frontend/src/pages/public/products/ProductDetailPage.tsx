@@ -24,7 +24,7 @@ const PRODUCTS: Record<string, ProductMeta> = {
   chat: { slug: 'chat', icon: MessageSquare, color: 'from-cyan-500 to-cyan-600', featureCount: 6 },
   projects: { slug: 'projects', icon: Kanban, color: 'from-sky-500 to-sky-600', featureCount: 6 },
   files: { slug: 'files', icon: FolderOpen, color: 'from-blue-500 to-blue-600', featureCount: 6 },
-  calendar: { slug: 'calendar', icon: Calendar, color: 'from-emerald-500 to-emerald-600', featureCount: 6 },
+  calendar: { slug: 'calendar', icon: Calendar, color: 'from-blue-500 to-blue-600', featureCount: 6 },
   notes: { slug: 'notes', icon: FileText, color: 'from-orange-500 to-orange-600', featureCount: 6 },
   'video-calls': { slug: 'video-calls', icon: Video, color: 'from-red-500 to-red-600', featureCount: 6 },
 };
@@ -52,7 +52,7 @@ const ProductDetailPage: React.FC = () => {
 
   return (
     <PublicLayout>
-      <PageSEO title={`${name} — Deskive`} description={description} />
+      <PageSEO title={`${name} — OperaGrid`} description={description} />
       <main className="min-h-[70vh] bg-gradient-to-b from-gray-50 via-white to-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <div className="flex items-center gap-4 mb-6">

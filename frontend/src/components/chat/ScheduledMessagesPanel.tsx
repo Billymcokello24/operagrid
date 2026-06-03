@@ -73,7 +73,7 @@ export function ScheduledMessagesPanel({ open, onClose, workspaceId }: Scheduled
       case 'pending':
         return <Badge variant="outline" className="bg-blue-500/10 text-blue-500 border-blue-500/20">Pending</Badge>;
       case 'sent':
-        return <Badge variant="outline" className="bg-green-500/10 text-green-500 border-green-500/20">Sent</Badge>;
+        return <Badge variant="outline" className="bg-blue-500/10 text-blue-500 border-blue-500/20">Sent</Badge>;
       case 'cancelled':
         return <Badge variant="outline" className="bg-gray-500/10 text-gray-500 border-gray-500/20">Cancelled</Badge>;
       case 'failed':

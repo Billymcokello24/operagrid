@@ -11,9 +11,9 @@ const ComparisonTable: React.FC = () => {
   const navigate = useNavigate();
   const intl = useIntl();
 
-  const renderFeatureCell = (value: FeatureValue, isDeskive: boolean = false) => {
+  const renderFeatureCell = (value: FeatureValue, isOperaGrid: boolean = false) => {
     if (value === "full") {
-      if (isDeskive) {
+      if (isOperaGrid) {
         return (
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-4 py-2 rounded-full font-bold shadow-lg">
             <CheckCircle2 className="w-5 h-5" />
@@ -21,9 +21,9 @@ const ComparisonTable: React.FC = () => {
           </div>
         );
       }
-      return <CheckCircle2 className="w-6 h-6 text-green-500 mx-auto" />;
+      return <CheckCircle2 className="w-6 h-6 text-blue-500 mx-auto" />;
     } else if (value === "partial") {
-      if (isDeskive) {
+      if (isOperaGrid) {
         return (
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full font-bold">
             <span>{intl.formatMessage({ id: 'comparison.values.partial' })}</span>
@@ -81,12 +81,12 @@ const ComparisonTable: React.FC = () => {
                       <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-2 p-1">
                         <img
                           src="/logo.png"
-                          alt="Deskive"
+                          alt="OperaGrid"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <div className="text-base md:text-lg font-black text-white">{intl.formatMessage({ id: 'comparison.deskive' })}</div>
-                      <div className="text-xs text-white/90">{intl.formatMessage({ id: 'comparison.deskiveTagline' })}</div>
+                      <div className="text-base md:text-lg font-black text-white">{intl.formatMessage({ id: 'comparison.operagrid' })}</div>
+                      <div className="text-xs text-white/90">{intl.formatMessage({ id: 'comparison.operagridTagline' })}</div>
                     </div>
                   </th>
                   <th className="px-6 md:px-8 py-6 text-center min-w-[120px]">
@@ -122,7 +122,7 @@ const ComparisonTable: React.FC = () => {
                       <div className="text-xs md:text-sm text-gray-600 mt-1">{intl.formatMessage({ id: row.featureDescKey })}</div>
                     </td>
                     <td className="px-6 md:px-8 py-5 text-center bg-gradient-to-r from-sky-50 to-blue-50">
-                      {renderFeatureCell(row.deskive, true)}
+                      {renderFeatureCell(row.operagrid, true)}
                     </td>
                     <td className="px-6 md:px-8 py-5 text-center">
                       {renderFeatureCell(row.slack)}
@@ -143,9 +143,9 @@ const ComparisonTable: React.FC = () => {
                 <tr className="bg-gradient-to-r from-gray-50 to-blue-50">
                   <td className="px-6 md:px-8 py-6 font-black text-gray-900 text-base md:text-lg">{intl.formatMessage({ id: 'comparison.pricing.label' })}</td>
                   <td className="px-6 md:px-8 py-6 text-center bg-gradient-to-br from-sky-500 via-blue-600 to-cyan-600">
-                    <div className="text-xl md:text-2xl font-black text-white">{pricingData.deskive.monthlyPrice}</div>
-                    {pricingData.deskive.noteKey && (
-                      <div className="text-xs text-white/90 mt-1">{intl.formatMessage({ id: pricingData.deskive.noteKey })}</div>
+                    <div className="text-xl md:text-2xl font-black text-white">{pricingData.operagrid.monthlyPrice}</div>
+                    {pricingData.operagrid.noteKey && (
+                      <div className="text-xs text-white/90 mt-1">{intl.formatMessage({ id: pricingData.operagrid.noteKey })}</div>
                     )}
                   </td>
                   <td className="px-6 md:px-8 py-6 text-center">

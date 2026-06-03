@@ -191,13 +191,13 @@ export function GitHubLinkModal({
       ) : issue.state === 'closed' ? (
         <GitPullRequest className="w-4 h-4 text-red-500" />
       ) : (
-        <GitPullRequest className="w-4 h-4 text-green-500" />
+        <GitPullRequest className="w-4 h-4 text-blue-500" />
       );
     }
     return issue.state === 'closed' ? (
       <CircleDot className="w-4 h-4 text-purple-500" />
     ) : (
-      <CircleDot className="w-4 h-4 text-green-500" />
+      <CircleDot className="w-4 h-4 text-blue-500" />
     );
   };
 

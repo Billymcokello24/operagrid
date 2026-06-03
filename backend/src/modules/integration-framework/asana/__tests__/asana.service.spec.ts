@@ -8,7 +8,7 @@ import { ConfigService } from '@nestjs/config';
 import nock from 'nock';
 import { AsanaService } from '../asana.service';
 import { AsanaOAuthService } from '../asana-oauth.service';
-import { deskiveService } from '../../../deskive/deskive.service';
+import { operagridService } from '../../../operagrid/operagrid.service';
 import {
   ConnectorTestHelper,
   TestFixture,
@@ -20,7 +20,7 @@ import getTasksFixture from './fixtures/get_tasks.json';
 
 describe('AsanaService - Actions', () => {
   let service: AsanaService;
-  let deskiveService: deskiveService;
+  let operagridService: operagridService;
 
   const mockConnection = {
     id: 'conn-123',
@@ -49,7 +49,7 @@ describe('AsanaService - Actions', () => {
           },
         },
         {
-          provide: deskiveService,
+          provide: operagridService,
           useValue: {
             findOne: jest.fn().mockResolvedValue(mockConnection),
             insert: jest.fn(),
@@ -60,7 +60,7 @@ describe('AsanaService - Actions', () => {
     }).compile();
 
     service = module.get<AsanaService>(AsanaService);
-    deskiveService = module.get<deskiveService>(deskiveService);
+    operagridService = module.get<operagridService>(operagridService);
   });
 
   afterEach(() => {
@@ -86,7 +86,7 @@ describe('AsanaService - Actions', () => {
     });
 
     it('should throw error when not connected', async () => {
-      jest.spyOn(deskiveService, 'findOne').mockResolvedValue(null);
+      jest.spyOn(operagridService, 'findOne').mockResolvedValue(null);
 
       await expect(service.getConnection('user-123', 'workspace-456')).rejects.toThrow(
         'Asana not connected',

@@ -101,7 +101,7 @@ export function AIToolsMenu({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-64">
         <DropdownMenuLabel className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-emerald-500" />
+          <Sparkles className="w-4 h-4 text-blue-500" />
           {intl.formatMessage({ id: 'modules.notes.aiToolsMenu.aiActions' })}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -138,7 +138,7 @@ export function AIToolsMenu({
           disabled={summaryLoading}
           className="gap-2 cursor-pointer"
         >
-          <FileText className="w-4 h-4 text-teal-500" />
+          <FileText className="w-4 h-4 text-blue-500" />
           <div className="flex flex-col">
             <span>{intl.formatMessage({ id: 'modules.notes.aiToolsMenu.summarizeText' })}</span>
             <span className="text-xs text-muted-foreground">
@@ -172,7 +172,7 @@ export function AIToolsMenu({
           disabled={textGenerationLoading}
           className="gap-2 cursor-pointer"
         >
-          <CheckCheck className="w-4 h-4 text-green-500" />
+          <CheckCheck className="w-4 h-4 text-blue-500" />
           <div className="flex flex-col">
             <span>{intl.formatMessage({ id: 'modules.notes.aiToolsMenu.fixGrammar' })}</span>
             <span className="text-xs text-muted-foreground">
@@ -189,7 +189,7 @@ export function AIToolsMenu({
           disabled={textGenerationLoading}
           className="gap-2 cursor-pointer"
         >
-          <ArrowUpRight className="w-4 h-4 text-teal-500" />
+          <ArrowUpRight className="w-4 h-4 text-blue-500" />
           <div className="flex flex-col">
             <span>{intl.formatMessage({ id: 'modules.notes.aiToolsMenu.makeLonger' })}</span>
             <span className="text-xs text-muted-foreground">
