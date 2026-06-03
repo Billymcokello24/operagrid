@@ -1,5 +1,5 @@
 /**
- * Smoke test for the deskive setup wizard.
+ * Smoke test for the operagrid setup wizard.
  *
  * Uses `prompts.inject()` to feed pre-baked answers and verifies the
  * wizard runs end-to-end, writes a .env file, and all selections land.
@@ -63,7 +63,7 @@ async function testRenderEnv(): Promise<number> {
 async function testFullWizard(): Promise<number> {
   console.log('\nTest: full wizard run with injected answers');
 
-  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'deskive-wizard-'));
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'operagrid-wizard-'));
   const backendDir = path.join(sandbox, 'backend');
   fs.mkdirSync(backendDir, { recursive: true });
 
@@ -136,7 +136,7 @@ async function testFullWizard(): Promise<number> {
 }
 
 async function main(): Promise<void> {
-  console.log('=== Deskive setup wizard smoke test ===\n');
+  console.log('=== OperaGrid setup wizard smoke test ===\n');
   let fail = 0;
   fail += await testRenderEnv();
   fail += await testFullWizard();

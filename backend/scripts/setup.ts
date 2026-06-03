@@ -1,5 +1,5 @@
 /**
- * Deskive first-run setup wizard.
+ * OperaGrid first-run setup wizard.
  *
  * Interactive CLI that walks a new user through picking providers for each
  * pluggable infrastructure concern, writes a working `.env` file, and prints
@@ -16,7 +16,7 @@
  * - Prints a summary before writing
  * - Works fully offline — no network calls
  *
- * This wizard is the honest source of truth for what deskive currently
+ * This wizard is the honest source of truth for what operagrid currently
  * supports. As provider-adapter PRs land on main, flip the matching
  * concern's `status` from 'planned' to 'implemented' — the prompts
  * reflect the real state of the repo.
@@ -72,7 +72,7 @@ const PROVIDERS: ProviderConcern[] = [
       {
         value: 'r2',
         title: 'Cloudflare R2  (current)',
-        description: '10GB free forever. What deskive uses today.',
+        description: '10GB free forever. What operagrid uses today.',
         envVars: ['R2_ACCOUNT_ID', 'R2_ACCESS_KEY_ID', 'R2_SECRET_ACCESS_KEY'],
       },
       {
@@ -121,7 +121,7 @@ const PROVIDERS: ProviderConcern[] = [
       {
         value: 'openai',
         title: 'OpenAI  (current default)',
-        description: 'GPT-4o + vision + embeddings. What deskive uses today.',
+        description: 'GPT-4o + vision + embeddings. What operagrid uses today.',
         isDefault: true,
         envVars: ['OPENAI_API_KEY'],
       },
@@ -216,7 +216,7 @@ const PROVIDERS: ProviderConcern[] = [
       {
         value: 'fcm',
         title: 'Firebase Cloud Messaging  (current default)',
-        description: 'What deskive uses today. Android + iOS + Web.',
+        description: 'What operagrid uses today. Android + iOS + Web.',
         isDefault: true,
         envVars: ['FIREBASE_SERVICE_ACCOUNT'],
       },
@@ -409,7 +409,7 @@ function renderEnv(baseline: string, updates: Record<string, string>): string {
 async function runWizard(
   existingEnv: Record<string, string> | null,
 ): Promise<WizardResult> {
-  header('Deskive first-run setup');
+  header('OperaGrid first-run setup');
 
   console.log('This wizard picks providers for each piece of infrastructure.');
   console.log('Every question has a zero-infra default marked (in parentheses).');

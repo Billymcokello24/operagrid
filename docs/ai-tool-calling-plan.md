@@ -2,7 +2,7 @@
 
 Closes #36.
 
-Every AI provider in deskive now speaks one unified tool/function-calling
+Every AI provider in operagrid now speaks one unified tool/function-calling
 shape. Callers hand the same `ToolDefinition[]` to OpenAI, Anthropic,
 Gemini, Groq, or Ollama; the provider adapter translates the request to
 the vendor's native wire format, then normalizes the response back to a

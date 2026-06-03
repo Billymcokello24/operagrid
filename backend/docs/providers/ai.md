@@ -1,6 +1,6 @@
 # AI / LLM providers
 
-Deskive supports five AI backends plus a `none` default. Pick one by
+OperaGrid supports five AI backends plus a `none` default. Pick one by
 setting `AI_PROVIDER` in your `.env`.
 
 ```
@@ -75,7 +75,7 @@ The provider translates our `{ role: 'system' }` messages to Gemini's top-level 
 
 ### ollama (recommended for dev)
 
-Ollama is the recommended zero-cost path for local development. It lets new contributors run Deskive's AI features without setting up any paid API keys.
+Ollama is the recommended zero-cost path for local development. It lets new contributors run OperaGrid's AI features without setting up any paid API keys.
 
 #### 1) Install Ollama
 
@@ -117,7 +117,7 @@ ollama serve
 
 #### 5) Verify the setup
 
-Use any Deskive route or feature that calls the AI provider and confirm it responds successfully.
+Use any OperaGrid route or feature that calls the AI provider and confirm it responds successfully.
 
 If you want to sanity-check the Ollama server itself first, this should return the locally available models:
 
@@ -155,7 +155,7 @@ Until then, prefer the standard local Ollama flow above.
 
 ### ollama (recommended for dev)
 
-Ollama is the recommended zero-cost path for local development. It lets new contributors run Deskive's AI features without setting up any paid API keys.
+Ollama is the recommended zero-cost path for local development. It lets new contributors run OperaGrid's AI features without setting up any paid API keys.
 
 #### 1) Install Ollama
 
@@ -197,7 +197,7 @@ ollama serve
 
 #### 5) Verify the setup
 
-Use any Deskive route or feature that calls the AI provider and confirm it responds successfully.
+Use any OperaGrid route or feature that calls the AI provider and confirm it responds successfully.
 
 If you want to sanity-check the Ollama server itself first, this should return the locally available models:
 

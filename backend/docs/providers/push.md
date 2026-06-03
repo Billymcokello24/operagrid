@@ -1,6 +1,6 @@
 # Push notification providers
 
-Deskive supports four push backends plus a `none` default for
+OperaGrid supports four push backends plus a `none` default for
 delivering chat messages, task updates, meeting reminders, and
 workspace notifications.
 

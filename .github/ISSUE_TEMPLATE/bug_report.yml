@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug to help us improve Deskive
+description: Report a bug to help us improve OperaGrid
 title: "[Bug]: "
 labels: ["bug", "triage"]
 body:
@@ -78,8 +78,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Deskive Version
-      description: What version of Deskive are you running?
+      label: OperaGrid Version
+      description: What version of OperaGrid are you running?
       placeholder: e.g., v0.1.0 or commit hash
 
   - type: dropdown

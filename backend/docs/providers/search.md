@@ -1,10 +1,10 @@
 # Search providers
 
-Deskive supports pluggable keyword search across workspace content
+OperaGrid supports pluggable keyword search across workspace content
 (workspaces, projects, tasks, channels, files, calendar events). Pick
 a provider by setting `SEARCH_PROVIDER` in your `.env`.
 
-Keyword search is separate from deskive's existing Qdrant-backed
+Keyword search is separate from operagrid's existing Qdrant-backed
 semantic / vector search — the two coexist. Use `SearchProviderService`
 (this module) for keyword queries and `SemanticSearchService` (from
 `modules/search`) for embedding-based similarity.
@@ -142,7 +142,7 @@ rather than a silent bug — you'll get a clear warning at startup.
 Every method throws `SearchProviderNotConfiguredError`. The startup
 log prints which env var to set.
 
-## Migration for existing deskive callers
+## Migration for existing operagrid callers
 
 Modules that currently run ad-hoc `ILIKE '%q%'` queries over workspace
 content should inject `SearchProviderService` and call

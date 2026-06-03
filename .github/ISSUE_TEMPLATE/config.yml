@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://docs.deskive.com
+    url: https://docs.operagrid.com
     about: Check the documentation before opening an issue
   - name: GitHub Discussions
     url: https://github.com/Billymcokello24/operagrid/discussions

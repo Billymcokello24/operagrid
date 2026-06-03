@@ -1,6 +1,6 @@
 # Self-Hosted Migration Guide
 
-This is the open-source self-hosted edition of Deskive. The original codebase
+This is the open-source self-hosted edition of OperaGrid. The original codebase
 depended on a proprietary all-in-one BaaS SDK; the migration replaces that
 SDK with standard, self-hostable open-source infrastructure.
 
@@ -9,7 +9,7 @@ This guide tells you which pieces are **wired up and ready**, which are
 
 ---
 
-## What you need to run Deskive
+## What you need to run OperaGrid
 
 - **PostgreSQL 14+** (or any pg-compatible Postgres-as-a-service)
 - **Node.js 18+**
@@ -59,7 +59,7 @@ STORAGE_ENDPOINT=https://<account>.r2.cloudflarestorage.com
 STORAGE_REGION=auto
 STORAGE_ACCESS_KEY_ID=<your R2 access key>
 STORAGE_SECRET_ACCESS_KEY=<your R2 secret key>
-STORAGE_BUCKET_DEFAULT=deskive-uploads
+STORAGE_BUCKET_DEFAULT=operagrid-uploads
 STORAGE_PUBLIC_BASE_URL=https://cdn.your-domain.com  # optional, for getPublicUrl
 ```
 
@@ -68,7 +68,7 @@ For AWS S3:
 STORAGE_REGION=us-east-1
 STORAGE_ACCESS_KEY_ID=<aws access key>
 STORAGE_SECRET_ACCESS_KEY=<aws secret key>
-STORAGE_BUCKET_DEFAULT=deskive-uploads
+STORAGE_BUCKET_DEFAULT=operagrid-uploads
 # leave STORAGE_ENDPOINT unset
 ```
 
@@ -78,7 +78,7 @@ STORAGE_ENDPOINT=https://minio.your-domain.com
 STORAGE_REGION=us-east-1
 STORAGE_ACCESS_KEY_ID=minioadmin
 STORAGE_SECRET_ACCESS_KEY=minioadmin
-STORAGE_BUCKET_DEFAULT=deskive-uploads
+STORAGE_BUCKET_DEFAULT=operagrid-uploads
 STORAGE_FORCE_PATH_STYLE=true
 ```
 
@@ -93,7 +93,7 @@ SMTP_HOST=smtp.resend.com
 SMTP_PORT=587
 SMTP_USER=resend
 SMTP_PASSWORD=re_<your resend api key>
-SMTP_FROM=Deskive <noreply@your-domain.com>
+SMTP_FROM=OperaGrid <noreply@your-domain.com>
 ```
 
 For AWS SES:
@@ -123,7 +123,7 @@ bodies in `src/modules/database/database.service.ts`. Suggested providers:
 - **Anthropic** (`@anthropic-ai/sdk`)
 - **Google Gemini** (`@google/genai`)
 
-The deskive AI services already have an `aiProvider` getter alias that
+The operagrid AI services already have an `aiProvider` getter alias that
 points at `db.getAI()`, so once `getAI()` returns a real client every
 caller works automatically.
 
@@ -139,7 +139,7 @@ To wire up, pick one:
 
 ### Video conferencing — multi-provider, picks one with `VIDEO_PROVIDER`
 
-Deskive ships with a pluggable video provider system supporting **5 of
+OperaGrid ships with a pluggable video provider system supporting **5 of
 the most popular video platforms** in the world. Pick whichever fits
 your stack and infra appetite by setting `VIDEO_PROVIDER` in `.env`:
 
@@ -225,7 +225,7 @@ That's the entire frontend. No SDK install, no build step.
 VIDEO_PROVIDER=jitsi
 ```
 
-That's it. With no other config, deskive uses the **free public**
+That's it. With no other config, operagrid uses the **free public**
 `meet.jit.si` instance — no signup, no API key, no infra. Rooms work,
 participants work, screen-share works, chat works. Recording is the only
 feature missing.
@@ -269,7 +269,7 @@ LIVEKIT_API_SECRET=secretxxxxxxxxxx
 
 # Optional: enable recording uploads to S3-compatible storage
 # (uses the same STORAGE_* env vars as the rest of the app)
-LIVEKIT_RECORDING_BUCKET=deskive-recordings
+LIVEKIT_RECORDING_BUCKET=operagrid-recordings
 LIVEKIT_WEBHOOK_SECRET=xxxxxx        # for webhook signature validation
 ```
 

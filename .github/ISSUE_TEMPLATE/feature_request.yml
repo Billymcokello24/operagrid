@@ -1,12 +1,12 @@
 name: Feature Request
-description: Suggest an idea for Deskive
+description: Suggest an idea for OperaGrid
 title: "[Feature]: "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a feature! We appreciate your input in making Deskive better.
+        Thanks for suggesting a feature! We appreciate your input in making OperaGrid better.
 
   - type: textarea
     id: problem

@@ -4,7 +4,7 @@
  * Provides utilities for testing connector implementations.
  */
 import nock from 'nock';
-import { BaseConnector } from '../../src/modules/deskive/connectors/base/base.connector';
+import { BaseConnector } from '../../src/modules/operagrid/connectors/base/base.connector';
 import { getMockCredentials } from './mock-credentials';
 
 export interface TestFixture {
